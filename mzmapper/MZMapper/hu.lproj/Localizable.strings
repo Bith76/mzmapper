@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  MZMapper
+
+  Created by Zalan Mergl on 9/9/12.
+
+*/
+
+/* Message of connection problem alert view. */
+"CommunicationErrorMessageKey" = "Hálózati hiba lépett fel. Kérlek próbáld meg később.";
+
+/* Title of connection problem alert view. */
+"CommunicationErrorTitleKey" = "Hálózati hiba";
+
+/* "Text of the notification label which appears while user is logging in." */
+"LoggingInKey" = "Bejelentkezés";
+
+/* Title of login error alert view. */
+"LoginErrorMessageKey" = "Sajnálom, ilyen adatokkal nem tudsz bejelentkezni.";
+
+/* Title of login error alert view. */
+"LoginErrorTitleKey" = "Bejelentkezés";

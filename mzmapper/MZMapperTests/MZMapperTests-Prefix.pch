@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'MZMapperTests' target in the 'MZMapperTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

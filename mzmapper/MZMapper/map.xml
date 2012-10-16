@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="CGImap 0.0.2">
+ <bounds minlat="46.2574010" minlon="20.1445140" maxlat="46.2600750" maxlon="20.1489400"/>
+ <node id="1252343249" lat="46.2585303" lon="20.1459163" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:47Z"/>
+ <node id="929138485" lat="46.2558626" lon="20.1481753" user="pethy" uid="201021" visible="true" version="3" changeset="6832143" timestamp="2011-01-01T20:38:42Z"/>
+ <node id="411729234" lat="46.2587001" lon="20.1497002" user="pethy" uid="201021" visible="true" version="3" changeset="7224058" timestamp="2011-02-08T07:53:01Z"/>
+ <node id="1252343453" lat="46.2591256" lon="20.1448542" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:52Z"/>
+ <node id="1185703669" lat="46.2588145" lon="20.1470658" user="att" uid="338516" visible="true" version="1" changeset="7453429" timestamp="2011-03-04T11:08:26Z"/>
+ <node id="1252343353" lat="46.2590867" lon="20.1449078" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:50Z"/>
+ <node id="1125371356" lat="46.2571669" lon="20.1440320" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:22Z"/>
+ <node id="30766192" lat="46.2638662" lon="20.1362107" user="pethy" uid="201021" visible="true" version="4" changeset="5714884" timestamp="2010-09-08T08:21:39Z"/>
+ <node id="1252343511" lat="46.2592925" lon="20.1449990" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:54Z"/>
+ <node id="1125371334" lat="46.2574051" lon="20.1440263" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:22Z"/>
+ <node id="410221055" lat="46.2596565" lon="20.1493729" user="pethy" uid="201021" visible="true" version="3" changeset="7041126" timestamp="2011-01-21T15:05:23Z"/>
+ <node id="410221050" lat="46.2593808" lon="20.1471233" user="Halike" uid="117930" visible="true" version="1" changeset="1296168" timestamp="2009-05-23T16:46:07Z"/>
+ <node id="1262900705" lat="46.2585631" lon="20.1485573" user="Beroesz" uid="352715" visible="true" version="1" changeset="7990934" timestamp="2011-04-28T04:02:48Z"/>
+ <node id="1185703668" lat="46.2588630" lon="20.1471137" user="att" uid="338516" visible="true" version="1" changeset="7453429" timestamp="2011-03-04T11:08:26Z"/>
+ <node id="1125371467" lat="46.2570971" lon="20.1444753" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:27Z"/>
+ <node id="31633381" lat="46.2611111" lon="20.1438704" user="pethy" uid="201021" visible="true" version="3" changeset="6966846" timestamp="2011-01-14T12:40:35Z"/>
+ <node id="1252343457" lat="46.2589884" lon="20.1450473" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:53Z"/>
+ <node id="30452226" lat="46.2595120" lon="20.1447646" user="City-busz" uid="36129" visible="true" version="4" changeset="1930332" timestamp="2009-07-25T02:37:36Z"/>
+ <node id="1252343467" lat="46.2580519" lon="20.1454684" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:53Z"/>
+ <node id="1252343300" lat="46.2585674" lon="20.1458573" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:49Z"/>
+ <node id="1252343370" lat="46.2582161" lon="20.1451376" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:51Z"/>
+ <node id="968051371" lat="46.2605171" lon="20.1397388" user="Beroesz" uid="352715" visible="true" version="1" changeset="6210616" timestamp="2010-10-28T17:18:05Z"/>
+ <node id="1252343297" lat="46.2576105" lon="20.1452216" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:49Z"/>
+ <node id="1252343421" lat="46.2581761" lon="20.1450097" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:52Z"/>
+ <node id="1252343295" lat="46.2591071" lon="20.1448193" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:48Z"/>
+ <node id="410221051" lat="46.2604267" lon="20.1482002" user="Halike" uid="117930" visible="true" version="1" changeset="1296168" timestamp="2009-05-23T16:46:07Z"/>
+ <node id="1252343351" lat="46.2583486" lon="20.1457554" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:50Z"/>
+ <node id="1252343320" lat="46.2586175" lon="20.1462784" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:49Z"/>
+ <node id="1252343501" lat="46.2588289" lon="20.1444357" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:54Z"/>
+ <node id="1252343241" lat="46.2582559" lon="20.1446074" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:47Z"/>
+ <node id="1252343367" lat="46.2575975" lon="20.1451921" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:50Z"/>
+ <node id="1252343266" lat="46.2577626" lon="20.1451814" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:48Z"/>
+ <node id="30766188" lat="46.2627536" lon="20.1383938" user="pethy" uid="201021" visible="true" version="5" changeset="6966846" timestamp="2011-01-14T12:40:26Z"/>
+ <node id="31034366" lat="46.2603570" lon="20.1430310" user="pethy" uid="201021" visible="true" version="4" changeset="6966846" timestamp="2011-01-14T12:40:26Z"/>
+ <node id="512060219" lat="46.2563665" lon="20.1441970" user="pethy" uid="201021" visible="true" version="2" changeset="7116570" timestamp="2011-01-28T20:21:32Z"/>
+ <node id="1252343231" lat="46.2581019" lon="20.1449319" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:47Z"/>
+ <node id="31034349" lat="46.2614011" lon="20.1410024" user="pethy" uid="201021" visible="true" version="3" changeset="6966846" timestamp="2011-01-14T12:40:32Z"/>
+ <node id="1252343477" lat="46.2589124" lon="20.1453852" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:53Z"/>
+ <node id="1252343406" lat="46.2589087" lon="20.1448381" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:51Z"/>
+ <node id="929138533" lat="46.2564224" lon="20.1471771" user="pethy" uid="201021" visible="true" version="3" changeset="6838809" timestamp="2011-01-02T14:16:12Z"/>
+ <node id="1252343248" lat="46.2579315" lon="20.1452659" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:47Z"/>
+ <node id="1262904772" lat="46.2583839" lon="20.1483112" user="Beroesz" uid="352715" visible="true" version="1" changeset="7990934" timestamp="2011-04-28T04:05:02Z"/>
+ <node id="1252343262" lat="46.2589235" lon="20.1449963" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:48Z"/>
+ <node id="929138516" lat="46.2557864" lon="20.1483122" user="pethy" uid="201021" visible="true" version="3" changeset="6832143" timestamp="2011-01-01T20:38:44Z"/>
+ <node id="1252343301" lat="46.2591701" lon="20.1447281" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:49Z"/>
+ <node id="1252343315" lat="46.2589457" lon="20.1451251" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:49Z"/>
+ <node id="1252343535" lat="46.2579666" lon="20.1456025" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:55Z"/>
+ <node id="1252343536" lat="46.2587974" lon="20.1447147" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:55Z"/>
+ <node id="1252343402" lat="46.2588845" lon="20.1455435" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:51Z"/>
+ <node id="1252343465" lat="46.2587473" lon="20.1443311" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:53Z"/>
+ <node id="1252343230" lat="46.2586676" lon="20.1442185" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:47Z"/>
+ <node id="1262900709" lat="46.2585324" lon="20.1482443" user="Beroesz" uid="352715" visible="true" version="1" changeset="7990934" timestamp="2011-04-28T04:02:48Z"/>
+ <node id="929138482" lat="46.2586304" lon="20.1431594" user="pethy" uid="201021" visible="true" version="2" changeset="5952995" timestamp="2010-10-04T12:12:46Z"/>
+ <node id="1252343366" lat="46.2581316" lon="20.1450848" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:50Z"/>
+ <node id="1252343336" lat="46.2582818" lon="20.1459136" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:50Z"/>
+ <node id="1252343455" lat="46.2590725" lon="20.1451440" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:53Z"/>
+ <node id="1294235498" lat="46.2584648" lon="20.1486244" user="xybot" uid="70696" visible="true" version="2" changeset="8208952" timestamp="2011-05-21T17:45:16Z">
+  <tag k="name" v="úty"/>
+ </node>
+ <node id="1252343518" lat="46.2587418" lon="20.1460317" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:54Z"/>
+ <node id="1252343520" lat="46.2590477" lon="20.1454791" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:54Z"/>
+ <node id="1125371595" lat="46.2576118" lon="20.1442711" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:32Z"/>
+ <node id="929138442" lat="46.2558779" lon="20.1482198" user="pethy" uid="201021" visible="true" version="3" changeset="6832143" timestamp="2011-01-01T20:38:36Z"/>
+ <node id="936229713" lat="46.2569306" lon="20.1497681" user="pethy" uid="201021" visible="true" version="2" changeset="6838809" timestamp="2011-01-02T14:16:13Z"/>
+ <node id="1125371280" lat="46.2574056" lon="20.1447072" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:20Z"/>
+ <node id="1252343317" lat="46.2578164" lon="20.1451465" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:49Z"/>
+ <node id="410221053" lat="46.2580442" lon="20.1475730" user="pethy" uid="201021" visible="true" version="2" changeset="7041126" timestamp="2011-01-21T15:05:24Z"/>
+ <node id="1252343444" lat="46.2588901" lon="20.1453665" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:52Z"/>
+ <node id="1252343331" lat="46.2584543" lon="20.1460397" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:49Z"/>
+ <node id="1252343377" lat="46.2580389" lon="20.1447201" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:51Z"/>
+ <node id="1262900711" lat="46.2586585" lon="20.1483838" user="Beroesz" uid="352715" visible="true" version="1" changeset="7990934" timestamp="2011-04-28T04:02:48Z"/>
+ <node id="1252343404" lat="46.2584265" lon="20.1458037" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:51Z"/>
+ <node id="1262900702" lat="46.2585324" lon="20.1484428" user="Beroesz" uid="352715" visible="true" version="1" changeset="7990934" timestamp="2011-04-28T04:02:48Z"/>
+ <node id="1252343374" lat="46.2589420" lon="20.1453665" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:51Z"/>
+ <node id="30766186" lat="46.2615095" lon="20.1407743" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="5" changeset="7914069" timestamp="2011-04-20T10:02:13Z"/>
+ <node id="929138469" lat="46.2569335" lon="20.1463320" user="pethy" uid="201021" visible="true" version="3" changeset="6838809" timestamp="2011-01-02T14:16:14Z"/>
+ <node id="1125371522" lat="46.2571659" lon="20.1437857" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:29Z"/>
+ <node id="1262904776" lat="46.2584544" lon="20.1481640" user="Beroesz" uid="352715" visible="true" version="1" changeset="7990934" timestamp="2011-04-28T04:05:03Z"/>
+ <node id="929138443" lat="46.2563880" lon="20.1471956" user="pethy" uid="201021" visible="true" version="3" changeset="6838809" timestamp="2011-01-02T14:16:13Z"/>
+ <node id="1185703670" lat="46.2587490" lon="20.1472043" user="att" uid="338516" visible="true" version="1" changeset="7453429" timestamp="2011-03-04T11:08:26Z"/>
+ <node id="1252343478" lat="46.2586750" lon="20.1455489" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:53Z"/>
+ <node id="1250142048" lat="46.2575651" lon="20.1452367" user="Beroesz" uid="352715" visible="true" version="1" changeset="7898652" timestamp="2011-04-18T16:35:45Z"/>
+ <node id="902426372" lat="46.2558270" lon="20.1481279" user="pethy" uid="201021" visible="true" version="4" changeset="6832143" timestamp="2011-01-01T20:38:46Z"/>
+ <node id="1252343278" lat="46.2591516" lon="20.1449936" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:48Z"/>
+ <node id="1252343393" lat="46.2577144" lon="20.1453316" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:51Z"/>
+ <node id="1252343313" lat="46.2579072" lon="20.1446047" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:49Z"/>
+ <node id="1252343424" lat="46.2583560" lon="20.1457849" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:52Z"/>
+ <node id="410221048" lat="46.2574212" lon="20.1451088" user="pethy" uid="201021" visible="true" version="7" changeset="6966846" timestamp="2011-01-14T12:40:21Z"/>
+ <node id="1252343333" lat="46.2586101" lon="20.1446396" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:50Z"/>
+ <node id="1252343502" lat="46.2584951" lon="20.1457420" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:54Z"/>
+ <node id="410221063" lat="46.2569161" lon="20.1498007" user="pethy" uid="201021" visible="true" version="5" changeset="7224058" timestamp="2011-02-08T07:53:00Z"/>
+ <node id="1252343517" lat="46.2591609" lon="20.1452458" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:54Z"/>
+ <node id="30766287" lat="46.2604576" lon="20.1507728" user="Beroesz" uid="352715" visible="true" version="3" changeset="8010252" timestamp="2011-04-30T10:29:35Z"/>
+ <node id="1252343533" lat="46.2587047" lon="20.1442078" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:55Z"/>
+ <node id="1141825392" lat="46.2586714" lon="20.1464726" user="Beroesz" uid="352715" visible="true" version="2" changeset="8311958" timestamp="2011-06-01T17:07:36Z"/>
+ <node id="1252343316" lat="46.2580674" lon="20.1450222" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:49Z"/>
+ <node id="410221065" lat="46.2576549" lon="20.1504363" user="pethy" uid="201021" visible="true" version="7" changeset="7041126" timestamp="2011-01-21T15:05:23Z"/>
+ <node id="1252343296" lat="46.2580263" lon="20.1443785" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:49Z"/>
+ <node id="1252343441" lat="46.2577835" lon="20.1448490" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:52Z"/>
+ <node id="410221059" lat="46.2582836" lon="20.1492512" user="pethy" uid="201021" visible="true" version="3" changeset="7041126" timestamp="2011-01-21T15:05:23Z"/>
+ <node id="1250142038" lat="46.2569885" lon="20.1463934" user="Beroesz" uid="352715" visible="true" version="1" changeset="7898652" timestamp="2011-04-18T16:35:44Z"/>
+ <node id="1252343386" lat="46.2581185" lon="20.1444724" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:51Z"/>
+ <node id="1252343443" lat="46.2580051" lon="20.1450807" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:52Z"/>
+ <node id="410221060" lat="46.2589948" lon="20.1502159" user="pethy" uid="201021" visible="true" version="4" changeset="7224058" timestamp="2011-02-08T07:53:00Z"/>
+ <node id="1252343265" lat="46.2590273" lon="20.1449051" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:48Z"/>
+ <node id="1252343257" lat="46.2587065" lon="20.1444438" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:47Z"/>
+ <node id="1113053915" lat="46.2589892" lon="20.1500844" user="pethy" uid="201021" visible="true" version="2" changeset="7224058" timestamp="2011-02-08T07:53:00Z"/>
+ <node id="1252343407" lat="46.2580808" lon="20.1445444" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:51Z"/>
+ <node id="1125371510" lat="46.2573867" lon="20.1446822" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:29Z"/>
+ <node id="410221058" lat="46.2575894" lon="20.1484865" user="pethy" uid="201021" visible="true" version="3" changeset="6838809" timestamp="2011-01-02T14:16:15Z"/>
+ <node id="31034355" lat="46.2609690" lon="20.1418556" user="pethy" uid="201021" visible="true" version="3" changeset="6966846" timestamp="2011-01-14T12:40:24Z"/>
+ <node id="1252343410" lat="46.2583838" lon="20.1450231" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:52Z"/>
+ <node id="31034348" lat="46.2621768" lon="20.1418641" user="pethy" uid="201021" visible="true" version="3" changeset="6966846" timestamp="2011-01-14T12:40:16Z"/>
+ <node id="1262904778" lat="46.2583524" lon="20.1480540" user="Beroesz" uid="352715" visible="true" version="1" changeset="7990934" timestamp="2011-04-28T04:05:03Z"/>
+ <node id="1125371410" lat="46.2572299" lon="20.1438384" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:25Z"/>
+ <node id="1252343482" lat="46.2581112" lon="20.1457527" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:53Z"/>
+ <node id="1252343480" lat="46.2582893" lon="20.1452002" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:53Z"/>
+ <node id="1103186265" lat="46.2560140" lon="20.1478583" user="pethy" uid="201021" visible="true" version="1" changeset="6966846" timestamp="2011-01-14T12:40:10Z">
+  <tag k="name" v="Anna-kút"/>
+  <tag k="railway" v="tram_stop"/>
+ </node>
+ <node id="1103186236" lat="46.2562612" lon="20.1474690" user="pethy" uid="201021" visible="true" version="1" changeset="6966846" timestamp="2011-01-14T12:40:08Z">
+  <tag k="name" v="Anna-kút"/>
+  <tag k="railway" v="tram_stop"/>
+ </node>
+ <node id="929138460" lat="46.2568861" lon="20.1462515" user="pethy" uid="201021" visible="true" version="3" changeset="6838809" timestamp="2011-01-02T14:16:15Z"/>
+ <node id="1125354161" lat="46.2572159" lon="20.1449313" user="pethy" uid="201021" visible="true" version="1" changeset="7116570" timestamp="2011-01-28T20:21:23Z"/>
+ <node id="1125371312" lat="46.2574869" lon="20.1447994" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:21Z"/>
+ <node id="1252343281" lat="46.2581428" lon="20.1444972" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:48Z"/>
+ <node id="1252343516" lat="46.2585971" lon="20.1457044" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:54Z"/>
+ <node id="1252343425" lat="46.2579703" lon="20.1453021" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:52Z"/>
+ <node id="1252343283" lat="46.2585730" lon="20.1457420" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:48Z"/>
+ <node id="1252343277" lat="46.2589587" lon="20.1447844" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:48Z"/>
+ <node id="1252343246" lat="46.2587232" lon="20.1460799" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:47Z"/>
+ <node id="929138445" lat="46.2574930" lon="20.1451543" user="pethy" uid="201021" visible="true" version="4" changeset="6966846" timestamp="2011-01-14T12:40:34Z"/>
+ <node id="410221057" lat="46.2563536" lon="20.1471589" user="pethy" uid="201021" visible="true" version="4" changeset="6838809" timestamp="2011-01-02T14:16:18Z"/>
+ <node id="31275536" lat="46.2635638" lon="20.1392812" user="pethy" uid="201021" visible="true" version="6" changeset="6966846" timestamp="2011-01-14T12:40:29Z"/>
+ <node id="1125371634" lat="46.2569976" lon="20.1437430" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:33Z"/>
+ <node id="1252343356" lat="46.2584487" lon="20.1458278" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:50Z"/>
+ <node id="1252343427" lat="46.2584061" lon="20.1460504" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:52Z"/>
+ <node id="1252343408" lat="46.2589607" lon="20.1446066" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:51Z"/>
+ <node id="1252343239" lat="46.2589420" lon="20.1454147" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:47Z"/>
+ <node id="1252343358" lat="46.2585507" lon="20.1460129" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:50Z"/>
+ <node id="1250142017" lat="46.2586889" lon="20.1432416" user="Beroesz" uid="352715" visible="true" version="1" changeset="7898652" timestamp="2011-04-18T16:35:42Z"/>
+ <node id="30452229" lat="46.2600511" lon="20.1458314" user="darkadmin" uid="106553" visible="true" version="4" changeset="803766" timestamp="2009-03-13T20:49:32Z"/>
+ <node id="1125371443" lat="46.2571364" lon="20.1441003" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:26Z"/>
+ <node id="1125371619" lat="46.2573480" lon="20.1441615" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:32Z"/>
+ <node id="1262900707" lat="46.2584619" lon="20.1483730" user="Beroesz" uid="352715" visible="true" version="1" changeset="7990934" timestamp="2011-04-28T04:02:48Z"/>
+ <node id="1141825402" lat="46.2581206" lon="20.1475627" user="Beroesz" uid="352715" visible="true" version="2" changeset="8311958" timestamp="2011-06-01T17:07:36Z"/>
+ <node id="1125371501" lat="46.2573989" lon="20.1449549" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:28Z"/>
+ <node id="1252343530" lat="46.2587492" lon="20.1448193" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:55Z"/>
+ <node id="1125371660" lat="46.2571275" lon="20.1438640" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:33Z"/>
+ <node id="1252343484" lat="46.2586731" lon="20.1444036" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:53Z"/>
+ <node id="929127321" lat="46.2557745" lon="20.1482846" user="pethy" uid="201021" visible="true" version="4" changeset="6832143" timestamp="2011-01-01T20:38:44Z"/>
+ <node id="1252343466" lat="46.2586256" lon="20.1442918" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:53Z"/>
+ <node id="1271869232" lat="46.2579727" lon="20.1478608" user="Beroesz" uid="352715" visible="true" version="1" changeset="8047453" timestamp="2011-05-04T10:09:56Z"/>
+ <node id="1252343483" lat="46.2588104" lon="20.1456722" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:53Z"/>
+ <node id="1185703671" lat="46.2587974" lon="20.1472523" user="att" uid="338516" visible="true" version="1" changeset="7453429" timestamp="2011-03-04T11:08:26Z"/>
+ <node id="1252343388" lat="46.2590292" lon="20.1452136" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:51Z"/>
+ <node id="1252343338" lat="46.2586490" lon="20.1443231" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:50Z"/>
+ <node id="1252343403" lat="46.2580834" lon="20.1446423" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:51Z"/>
+ <node id="1141825394" lat="46.2593340" lon="20.1471298" user="Beroesz" uid="352715" visible="true" version="2" changeset="8311958" timestamp="2011-06-01T17:07:36Z"/>
+ <node id="1252343349" lat="46.2585767" lon="20.1460370" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:50Z"/>
+ <node id="1252343479" lat="46.2583226" lon="20.1448971" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:53Z"/>
+ <node id="1252343335" lat="46.2585081" lon="20.1460933" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:50Z"/>
+ <node id="1252343334" lat="46.2583010" lon="20.1449836" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:50Z"/>
+ <node id="1262904770" lat="46.2582819" lon="20.1481935" user="Beroesz" uid="352715" visible="true" version="1" changeset="7990934" timestamp="2011-04-28T04:05:02Z"/>
+ <node id="936229721" lat="46.2604595" lon="20.1507102" user="Beroesz" uid="352715" visible="true" version="1" changeset="5941725" timestamp="2010-10-03T08:15:29Z"/>
+ <node id="1125371460" lat="46.2570311" lon="20.1446331" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:27Z"/>
+ <node id="30452231" lat="46.2603858" lon="20.1465863" user="City-busz" uid="36129" visible="true" version="3" changeset="410281" timestamp="2008-10-18T12:19:05Z"/>
+ <node id="1252343538" lat="46.2579031" lon="20.1453173" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:55Z"/>
+ <node id="929138490" lat="46.2564105" lon="20.1471496" user="pethy" uid="201021" visible="true" version="3" changeset="6838809" timestamp="2011-01-02T14:16:18Z"/>
+ <node id="929138484" lat="46.2558507" lon="20.1481477" user="pethy" uid="201021" visible="true" version="3" changeset="6832143" timestamp="2011-01-01T20:38:49Z"/>
+ <node id="929138458" lat="46.2575161" lon="20.1451848" user="pethy" uid="201021" visible="true" version="6" changeset="6966846" timestamp="2011-01-14T12:40:23Z"/>
+ <node id="1252343515" lat="46.2583931" lon="20.1447522" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:54Z"/>
+ <node id="1252343348" lat="46.2581928" lon="20.1456079" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:50Z"/>
+ <node id="31275537" lat="46.2619013" lon="20.1400339" user="pethy" uid="201021" visible="true" version="10" changeset="6966846" timestamp="2011-01-14T12:40:22Z"/>
+ <node id="31034347" lat="46.2626792" lon="20.1409118" user="pethy" uid="201021" visible="true" version="9" changeset="6966846" timestamp="2011-01-14T12:40:18Z"/>
+ <node id="30452224" lat="46.2593103" lon="20.1443102" user="City-busz" uid="36129" visible="true" version="3" changeset="410281" timestamp="2008-10-18T12:19:05Z"/>
+ <node id="929138459" lat="46.2564000" lon="20.1472232" user="pethy" uid="201021" visible="true" version="3" changeset="6838809" timestamp="2011-01-02T14:16:15Z"/>
+ <node id="1125371300" lat="46.2572230" lon="20.1438896" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:21Z"/>
+ <node id="30766224" lat="46.2554647" lon="20.1433979" user="City-busz" uid="36129" visible="true" version="2" changeset="201378" timestamp="2008-08-12T16:41:19Z">
+  <tag k="created_by" v="JOSM"/>
+ </node>
+ <node id="410221054" lat="46.2587802" lon="20.1483452" user="Halike" uid="117930" visible="true" version="1" changeset="1296168" timestamp="2009-05-23T16:46:07Z"/>
+ <node id="1252343513" lat="46.2587023" lon="20.1454941" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:54Z"/>
+ <node id="410221056" lat="46.2600661" lon="20.1497586" user="sprok" uid="94627" visible="true" version="2" changeset="3909820" timestamp="2010-02-18T15:35:02Z"/>
+ <node id="1271869231" lat="46.2580501" lon="20.1477133" user="Beroesz" uid="352715" visible="true" version="1" changeset="8047453" timestamp="2011-05-04T10:09:56Z"/>
+ <node id="1252343440" lat="46.2580573" lon="20.1451349" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:52Z"/>
+ <node id="1252343493" lat="46.2581613" lon="20.1448381" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:53Z"/>
+ <node id="1252343264" lat="46.2579332" lon="20.1448864" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:48Z"/>
+ <node id="30452222" lat="46.2589305" lon="20.1435807" user="City-busz" uid="36129" visible="true" version="3" changeset="410281" timestamp="2008-10-18T12:19:06Z"/>
+ <node id="1252343412" lat="46.2587677" lon="20.1442855" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:52Z"/>
+ <node id="940045156" lat="46.2589377" lon="20.1499653" user="pethy" uid="201021" visible="true" version="2" changeset="7224058" timestamp="2011-02-08T07:53:00Z"/>
+ <node id="1252343426" lat="46.2582911" lon="20.1447791" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:52Z"/>
+ <node id="31034354" lat="46.2617239" lon="20.1427122" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="3" changeset="7914069" timestamp="2011-04-20T10:02:12Z"/>
+ <node id="1252343442" lat="46.2588475" lon="20.1455059" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:52Z"/>
+ <node id="1252343519" lat="46.2584413" lon="20.1455489" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:54Z"/>
+ <node id="1252343369" lat="46.2580296" lon="20.1451063" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:51Z"/>
+ <node id="1125354042" lat="46.2571818" lon="20.1455913" user="pethy" uid="201021" visible="true" version="1" changeset="7116570" timestamp="2011-01-28T20:21:18Z"/>
+ <node id="1252343499" lat="46.2578256" lon="20.1454577" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:54Z"/>
+ <node id="1252343319" lat="46.2584042" lon="20.1458305" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:49Z"/>
+ <node id="1252343498" lat="46.2582169" lon="20.1448960" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:54Z"/>
+ <node id="1252343282" lat="46.2577885" lon="20.1452055" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:48Z"/>
+ <node id="1250142025" lat="46.2594116" lon="20.1419057" user="Beroesz" uid="352715" visible="true" version="1" changeset="7898652" timestamp="2011-04-18T16:35:43Z"/>
+ <node id="1252343243" lat="46.2586880" lon="20.1443687" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:47Z"/>
+ <node id="1252343496" lat="46.2590276" lon="20.1447182" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:54Z"/>
+ <node id="1252343384" lat="46.2579796" lon="20.1448112" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:51Z"/>
+ <node id="929138528" lat="46.2586069" lon="20.1431190" user="pethy" uid="201021" visible="true" version="2" changeset="5960521" timestamp="2010-10-05T11:32:33Z"/>
+ <node id="1252343245" lat="46.2578816" lon="20.1449516" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:47Z"/>
+ <node id="410221052" lat="46.2568492" lon="20.1462616" user="pethy" uid="201021" visible="true" version="4" changeset="6838809" timestamp="2011-01-02T14:16:12Z"/>
+ <node id="30452233" lat="46.2608084" lon="20.1476375" user="att" uid="338516" visible="true" version="4" changeset="7419493" timestamp="2011-02-28T11:08:56Z"/>
+ <node id="1125371431" lat="46.2575370" lon="20.1443978" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:25Z"/>
+ <node id="1252343285" lat="46.2586843" lon="20.1447174" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:48Z"/>
+ <node id="1141825387" lat="46.2587633" lon="20.1482560" user="Beroesz" uid="352715" visible="true" version="2" changeset="8311958" timestamp="2011-06-01T17:07:36Z"/>
+ <node id="1103186273" lat="46.2560121" lon="20.1480083" user="pethy" uid="201021" visible="true" version="1" changeset="6966846" timestamp="2011-01-14T12:40:10Z"/>
+ <node id="1250142042" lat="46.2565213" lon="20.1473266" user="Beroesz" uid="352715" visible="true" version="1" changeset="7898652" timestamp="2011-04-18T16:35:44Z"/>
+ <node id="30452220" lat="46.2590967" lon="20.1438897" user="City-busz" uid="36129" visible="true" version="3" changeset="410281" timestamp="2008-10-18T12:19:06Z"/>
+ <node id="27186748" lat="46.2585070" lon="20.1429850" user="pethy" uid="201021" visible="true" version="7" changeset="7041126" timestamp="2011-01-21T15:05:24Z"/>
+ <node id="1252343299" lat="46.2583189" lon="20.1449561" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:49Z"/>
+ <node id="30766193" lat="46.2647292" lon="20.1370263" user="pethy" uid="201021" visible="true" version="4" changeset="5714884" timestamp="2010-09-08T08:21:56Z"/>
+ <node id="1125371364" lat="46.2576267" lon="20.1442530" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:23Z"/>
+ <node id="1252343497" lat="46.2583913" lon="20.1456320" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:54Z"/>
+ <node id="1252343438" lat="46.2587825" lon="20.1455623" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:52Z"/>
+ <node id="1125354127" lat="46.2571496" lon="20.1456561" user="pethy" uid="201021" visible="true" version="1" changeset="7116570" timestamp="2011-01-28T20:21:21Z"/>
+ <node id="929138521" lat="46.2564491" lon="20.1472482" user="pethy" uid="201021" visible="true" version="3" changeset="6838809" timestamp="2011-01-02T14:16:11Z"/>
+ <node id="1125371393" lat="46.2577269" lon="20.1443702" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:24Z"/>
+ <node id="1252343330" lat="46.2586119" lon="20.1459700" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:49Z"/>
+ <node id="929138503" lat="46.2574498" lon="20.1451212" user="pethy" uid="201021" visible="true" version="4" changeset="6966846" timestamp="2011-01-14T12:40:25Z"/>
+ <node id="1103186252" lat="46.2558986" lon="20.1479346" user="pethy" uid="201021" visible="true" version="1" changeset="6966846" timestamp="2011-01-14T12:40:09Z"/>
+ <node id="1262900704" lat="46.2585064" lon="20.1484911" user="Beroesz" uid="352715" visible="true" version="1" changeset="7990934" timestamp="2011-04-28T04:02:48Z"/>
+ <node id="1252343376" lat="46.2580463" lon="20.1446101" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:51Z"/>
+ <node id="1252343314" lat="46.2582633" lon="20.1459056" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:49Z"/>
+ <node id="1252343267" lat="46.2590552" lon="20.1445028" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:48Z"/>
+ <node id="1125371548" lat="46.2573930" lon="20.1447346" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:30Z"/>
+ <node id="1252343461" lat="46.2579128" lon="20.1452484" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:53Z"/>
+ <node id="1252343423" lat="46.2588159" lon="20.1452914" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:52Z"/>
+ <node id="1125354069" lat="46.2564507" lon="20.1442698" user="pethy" uid="201021" visible="true" version="1" changeset="7116570" timestamp="2011-01-28T20:21:19Z"/>
+ <node id="929138474" lat="46.2569126" lon="20.1462839" user="pethy" uid="201021" visible="true" version="3" changeset="6838809" timestamp="2011-01-02T14:16:15Z"/>
+ <node id="410221049" lat="46.2586361" lon="20.1463719" user="pethy" uid="201021" visible="true" version="2" changeset="7041126" timestamp="2011-01-21T15:05:23Z"/>
+ <node id="1252343354" lat="46.2584858" lon="20.1461363" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:50Z"/>
+ <node id="1250142031" lat="46.2599878" lon="20.1407668" user="Beroesz" uid="352715" visible="true" version="1" changeset="7898652" timestamp="2011-04-18T16:35:44Z"/>
+ <node id="929138441" lat="46.2585609" lon="20.1430651" user="pethy" uid="201021" visible="true" version="2" changeset="5960521" timestamp="2010-10-05T11:32:32Z"/>
+ <node id="1252343385" lat="46.2589550" lon="20.1453879" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:51Z"/>
+ <node id="1125371555" lat="46.2569251" lon="20.1439108" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:30Z"/>
+ <node id="1252343284" lat="46.2581594" lon="20.1452404" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:48Z"/>
+ <way id="109381476" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:58Z">
+  <nd ref="1252343320"/>
+  <nd ref="1252343246"/>
+  <nd ref="1252343330"/>
+  <nd ref="1252343349"/>
+  <nd ref="1252343358"/>
+  <nd ref="1252343335"/>
+  <nd ref="1252343354"/>
+  <nd ref="1252343320"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="111682487" user="Beroesz" uid="352715" visible="true" version="1" changeset="8047453" timestamp="2011-05-04T10:09:56Z">
+  <nd ref="1271869231"/>
+  <nd ref="1262904778"/>
+  <nd ref="1262904770"/>
+  <nd ref="1271869232"/>
+  <nd ref="1271869231"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="109381475" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:58Z">
+  <nd ref="1252343285"/>
+  <nd ref="1252343501"/>
+  <nd ref="1252343465"/>
+  <nd ref="1252343412"/>
+  <nd ref="1252343533"/>
+  <nd ref="1252343230"/>
+  <nd ref="1252343466"/>
+  <nd ref="1252343338"/>
+  <nd ref="1252343243"/>
+  <nd ref="1252343484"/>
+  <nd ref="1252343257"/>
+  <nd ref="1252343333"/>
+  <nd ref="1252343285"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="109381488" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:17:00Z">
+  <nd ref="1252343482"/>
+  <nd ref="1252343348"/>
+  <nd ref="1252343467"/>
+  <nd ref="1252343535"/>
+  <nd ref="1252343482"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="102663532" user="att" uid="338516" visible="true" version="1" changeset="7453429" timestamp="2011-03-04T11:08:27Z">
+  <nd ref="410221054"/>
+  <nd ref="410221053"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Lechner tér"/>
+  <tag k="oneway" v="yes"/>
+ </way>
+ <way id="34956631" user="Beroesz" uid="352715" visible="true" version="3" changeset="7898652" timestamp="2011-04-18T16:35:44Z">
+  <nd ref="410221053"/>
+  <nd ref="1250142038"/>
+  <nd ref="929138469"/>
+  <nd ref="410221052"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Szilágy utca"/>
+ </way>
+ <way id="102663530" user="att" uid="338516" visible="true" version="1" changeset="7453429" timestamp="2011-03-04T11:08:27Z">
+  <nd ref="410221054"/>
+  <nd ref="410221050"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Lechner tér"/>
+ </way>
+ <way id="98695772" user="att" uid="338516" visible="true" version="2" changeset="7453429" timestamp="2011-03-04T11:08:28Z">
+  <nd ref="1141825394"/>
+  <nd ref="1141825392"/>
+  <nd ref="1141825402"/>
+  <nd ref="1141825387"/>
+  <nd ref="1141825394"/>
+  <tag k="leisure" v="park"/>
+  <tag k="name" v="Lechner tér"/>
+ </way>
+ <way id="97150819" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:38Z">
+  <nd ref="1125371312"/>
+  <nd ref="1125371510"/>
+  <nd ref="1125371431"/>
+  <nd ref="1125371619"/>
+  <nd ref="1125371356"/>
+  <nd ref="1125371443"/>
+  <nd ref="1125371555"/>
+  <nd ref="1125371634"/>
+  <nd ref="1125371660"/>
+  <nd ref="1125371522"/>
+  <nd ref="1125371410"/>
+  <nd ref="1125371300"/>
+  <nd ref="1125371334"/>
+  <nd ref="1125371595"/>
+  <nd ref="1125371364"/>
+  <nd ref="1125371393"/>
+  <nd ref="1125371312"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="109381480" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:59Z">
+  <nd ref="1252343479"/>
+  <nd ref="1252343515"/>
+  <nd ref="1252343241"/>
+  <nd ref="1252343281"/>
+  <nd ref="1252343386"/>
+  <nd ref="1252343407"/>
+  <nd ref="1252343426"/>
+  <nd ref="1252343498"/>
+  <nd ref="1252343334"/>
+  <nd ref="1252343299"/>
+  <nd ref="1252343479"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="97150829" user="pethy" uid="201021" visible="true" version="1" changeset="7116754" timestamp="2011-01-28T20:36:39Z">
+  <nd ref="1125371460"/>
+  <nd ref="1125371467"/>
+  <nd ref="1125371548"/>
+  <nd ref="1125371280"/>
+  <nd ref="1125371312"/>
+  <nd ref="1125371501"/>
+  <nd ref="1125371460"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="109381490" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:17:00Z">
+  <nd ref="1252343265"/>
+  <nd ref="1252343295"/>
+  <nd ref="1252343301"/>
+  <nd ref="1252343267"/>
+  <nd ref="1252343408"/>
+  <nd ref="1252343496"/>
+  <nd ref="1252343277"/>
+  <nd ref="1252343265"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="102663534" user="att" uid="338516" visible="true" version="1" changeset="7453429" timestamp="2011-03-04T11:08:27Z">
+  <nd ref="410221050"/>
+  <nd ref="410221049"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Lechner tér"/>
+ </way>
+ <way id="80413877" user="pethy" uid="201021" visible="true" version="3" changeset="6966846" timestamp="2011-01-14T12:40:22Z">
+  <nd ref="929138442"/>
+  <nd ref="1103186273"/>
+  <nd ref="929138521"/>
+  <nd ref="929138469"/>
+  <nd ref="929138458"/>
+  <nd ref="929138482"/>
+  <tag k="highway" v="secondary"/>
+  <tag k="name" v="Kossuth Lajos sugárút"/>
+  <tag k="oneway" v="yes"/>
+ </way>
+ <way id="102663535" user="att" uid="338516" visible="true" version="1" changeset="7453429" timestamp="2011-03-04T11:08:27Z">
+  <nd ref="410221049"/>
+  <nd ref="410221053"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Lechner tér"/>
+ </way>
+ <way id="109381468" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:57Z">
+  <nd ref="1252343517"/>
+  <nd ref="1252343455"/>
+  <nd ref="1252343457"/>
+  <nd ref="1252343315"/>
+  <nd ref="1252343388"/>
+  <nd ref="1252343374"/>
+  <nd ref="1252343385"/>
+  <nd ref="1252343520"/>
+  <nd ref="1252343517"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="109381483" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:59Z">
+  <nd ref="1252343314"/>
+  <nd ref="1252343351"/>
+  <nd ref="1252343348"/>
+  <nd ref="1252343482"/>
+  <nd ref="1252343314"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="4812790" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="3" changeset="7914069" timestamp="2011-04-20T10:02:21Z">
+  <nd ref="30766192"/>
+  <nd ref="30766188"/>
+  <nd ref="31275537"/>
+  <nd ref="30766186"/>
+  <nd ref="31034349"/>
+  <nd ref="31034355"/>
+  <nd ref="31034366"/>
+  <nd ref="30452226"/>
+  <tag k="bicycle" v="yes"/>
+  <tag k="cycleway" v="no"/>
+  <tag k="highway" v="residential"/>
+  <tag k="lanes" v="2"/>
+  <tag k="maxspeed" v="30"/>
+  <tag k="name" v="Hétvezér utca"/>
+  <tag k="oneway" v="no"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="109381489" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:17:00Z">
+  <nd ref="1252343497"/>
+  <nd ref="1252343519"/>
+  <nd ref="1252343516"/>
+  <nd ref="1252343283"/>
+  <nd ref="1252343300"/>
+  <nd ref="1252343249"/>
+  <nd ref="1252343356"/>
+  <nd ref="1252343502"/>
+  <nd ref="1252343497"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="34956632" user="Beroesz" uid="352715" visible="true" version="3" changeset="7898652" timestamp="2011-04-18T16:35:45Z">
+  <nd ref="410221049"/>
+  <nd ref="1250142048"/>
+  <nd ref="929138458"/>
+  <nd ref="410221048"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Vadász utca"/>
+ </way>
+ <way id="109381465" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:56Z">
+  <nd ref="1252343511"/>
+  <nd ref="1252343301"/>
+  <nd ref="1252343295"/>
+  <nd ref="1252343453"/>
+  <nd ref="1252343353"/>
+  <nd ref="1252343278"/>
+  <nd ref="1252343455"/>
+  <nd ref="1252343517"/>
+  <nd ref="1252343511"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="109381472" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:57Z">
+  <nd ref="1252343410"/>
+  <nd ref="1252343299"/>
+  <nd ref="1252343334"/>
+  <nd ref="1252343370"/>
+  <nd ref="1252343480"/>
+  <nd ref="1252343410"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="109381462" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:55Z">
+  <nd ref="1252343499"/>
+  <nd ref="1252343538"/>
+  <nd ref="1252343248"/>
+  <nd ref="1252343461"/>
+  <nd ref="1252343317"/>
+  <nd ref="1252343282"/>
+  <nd ref="1252343393"/>
+  <nd ref="1252343499"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="34956618" user="att" uid="338516" visible="true" version="2" changeset="7453429" timestamp="2011-03-04T11:08:27Z">
+  <nd ref="410221051"/>
+  <nd ref="410221050"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Füredi utca"/>
+ </way>
+ <way id="34956635" user="pethy" uid="201021" visible="true" version="3" changeset="5976638" timestamp="2010-10-07T10:01:55Z">
+  <nd ref="410221065"/>
+  <nd ref="410221059"/>
+  <nd ref="410221054"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Imre utca"/>
+ </way>
+ <way id="79620906" user="pethy" uid="201021" visible="true" version="3" changeset="6966846" timestamp="2011-01-14T12:40:15Z">
+  <nd ref="929138528"/>
+  <nd ref="929138445"/>
+  <nd ref="929138474"/>
+  <nd ref="929138533"/>
+  <nd ref="929138459"/>
+  <nd ref="1103186236"/>
+  <nd ref="929138485"/>
+  <nd ref="929138516"/>
+  <tag k="railway" v="tram"/>
+ </way>
+ <way id="4937501" user="pethy" uid="201021" visible="true" version="9" changeset="7116570" timestamp="2011-01-28T20:21:32Z">
+  <nd ref="27186748"/>
+  <nd ref="410221048"/>
+  <nd ref="1125354042"/>
+  <nd ref="1125354127"/>
+  <nd ref="410221052"/>
+  <nd ref="410221057"/>
+  <nd ref="1103186252"/>
+  <nd ref="902426372"/>
+  <tag k="highway" v="secondary"/>
+  <tag k="name" v="Kossuth Lajos sugárút"/>
+  <tag k="oneway" v="yes"/>
+ </way>
+ <way id="109381492" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:17:00Z">
+  <nd ref="1252343440"/>
+  <nd ref="1252343443"/>
+  <nd ref="1252343461"/>
+  <nd ref="1252343248"/>
+  <nd ref="1252343425"/>
+  <nd ref="1252343440"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="109381466" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:56Z">
+  <nd ref="1252343444"/>
+  <nd ref="1252343423"/>
+  <nd ref="1252343513"/>
+  <nd ref="1252343438"/>
+  <nd ref="1252343444"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="41661792" user="Beroesz" uid="352715" visible="true" version="5" changeset="7898652" timestamp="2011-04-18T16:35:44Z">
+  <nd ref="410221057"/>
+  <nd ref="929138521"/>
+  <nd ref="1250142042"/>
+  <nd ref="410221058"/>
+  <nd ref="410221059"/>
+  <nd ref="411729234"/>
+  <nd ref="940045156"/>
+  <nd ref="1113053915"/>
+  <nd ref="410221060"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Bocskai utca"/>
+  <tag k="oneway" v="yes"/>
+ </way>
+ <way id="109381473" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:57Z">
+  <nd ref="1252343535"/>
+  <nd ref="1252343467"/>
+  <nd ref="1252343538"/>
+  <nd ref="1252343499"/>
+  <nd ref="1252343535"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="109381481" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:59Z">
+  <nd ref="1252343376"/>
+  <nd ref="1252343407"/>
+  <nd ref="1252343386"/>
+  <nd ref="1252343296"/>
+  <nd ref="1252343313"/>
+  <nd ref="1252343377"/>
+  <nd ref="1252343403"/>
+  <nd ref="1252343376"/>
+  <tag k="addr:housenumber" v="25"/>
+  <tag k="addr:postcode" v="6722"/>
+  <tag k="addr:street" v="Kossuth Lajos sugárút"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="34956623" user="att" uid="338516" visible="true" version="3" changeset="7453429" timestamp="2011-03-04T11:08:28Z">
+  <nd ref="30452226"/>
+  <nd ref="410221049"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Madách utca"/>
+ </way>
+ <way id="38576522" user="pethy" uid="201021" visible="true" version="4" changeset="7116570" timestamp="2011-01-28T20:21:32Z">
+  <nd ref="30766224"/>
+  <nd ref="512060219"/>
+  <nd ref="1125354069"/>
+  <nd ref="1125354161"/>
+  <nd ref="410221048"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Török utca"/>
+ </way>
+ <way id="34956619" user="att" uid="338516" visible="true" version="3" changeset="7453429" timestamp="2011-03-04T11:08:28Z">
+  <nd ref="30766287"/>
+  <nd ref="936229721"/>
+  <nd ref="410221056"/>
+  <nd ref="410221055"/>
+  <nd ref="410221054"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Bercsény utca"/>
+  <tag k="oneway" v="yes"/>
+ </way>
+ <way id="109115492" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="3" changeset="7915358" timestamp="2011-04-20T12:17:01Z">
+  <nd ref="1250142042"/>
+  <nd ref="1250142038"/>
+  <nd ref="1250142048"/>
+  <nd ref="1252343441"/>
+  <nd ref="1250142017"/>
+  <nd ref="1250142025"/>
+  <nd ref="1250142031"/>
+  <nd ref="968051371"/>
+  <tag k="bicycle" v="yes"/>
+  <tag k="cycleway" v="shared"/>
+  <tag k="highway" v="cycleway"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="109381471" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:57Z">
+  <nd ref="1252343334"/>
+  <nd ref="1252343498"/>
+  <nd ref="1252343493"/>
+  <nd ref="1252343231"/>
+  <nd ref="1252343421"/>
+  <nd ref="1252343366"/>
+  <nd ref="1252343316"/>
+  <nd ref="1252343369"/>
+  <nd ref="1252343440"/>
+  <nd ref="1252343284"/>
+  <nd ref="1252343370"/>
+  <nd ref="1252343334"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="109381464" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:56Z">
+  <nd ref="1252343231"/>
+  <nd ref="1252343493"/>
+  <nd ref="1252343377"/>
+  <nd ref="1252343313"/>
+  <nd ref="1252343441"/>
+  <nd ref="1252343245"/>
+  <nd ref="1252343443"/>
+  <nd ref="1252343369"/>
+  <nd ref="1252343316"/>
+  <nd ref="1252343264"/>
+  <nd ref="1252343384"/>
+  <nd ref="1252343231"/>
+  <tag k="addr:housenumber" v="23"/>
+  <tag k="addr:postcode" v="6722"/>
+  <tag k="addr:street" v="Kossuth Lajos sugárút"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="109381491" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:17:00Z">
+  <nd ref="1252343262"/>
+  <nd ref="1252343265"/>
+  <nd ref="1252343277"/>
+  <nd ref="1252343406"/>
+  <nd ref="1252343536"/>
+  <nd ref="1252343530"/>
+  <nd ref="1252343262"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="110617792" user="Beroesz" uid="352715" visible="true" version="2" changeset="7990934" timestamp="2011-04-28T04:05:03Z">
+  <nd ref="1262900707"/>
+  <nd ref="1262900702"/>
+  <nd ref="1262900704"/>
+  <nd ref="1262900705"/>
+  <nd ref="1262900711"/>
+  <nd ref="1262900709"/>
+  <nd ref="1262900707"/>
+  <tag k="addr:housename" v="Szígyártó-ház"/>
+  <tag k="addr:housenumber" v="2/B"/>
+  <tag k="addr:street" v="Lechner tér"/>
+  <tag k="building" v="yes"/>
+  <tag k="name" v="Szígyártó-ház"/>
+ </way>
+ <way id="102663533" user="att" uid="338516" visible="true" version="1" changeset="7453429" timestamp="2011-03-04T11:08:27Z">
+  <nd ref="410221053"/>
+  <nd ref="410221058"/>
+  <nd ref="936229713"/>
+  <nd ref="410221063"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Madách utca"/>
+ </way>
+ <way id="34956633" user="Halike" uid="117930" visible="true" version="1" changeset="1296168" timestamp="2009-05-23T16:46:12Z">
+  <nd ref="410221050"/>
+  <nd ref="30452229"/>
+  <tag k="created_by" v="Potlatch 0.10f"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Szappanos utca"/>
+ </way>
+ <way id="110617868" user="Beroesz" uid="352715" visible="true" version="2" changeset="7996088" timestamp="2011-04-28T16:19:45Z">
+  <nd ref="1262904770"/>
+  <nd ref="1262904772"/>
+  <nd ref="1262904776"/>
+  <nd ref="1262904778"/>
+  <nd ref="1262904770"/>
+  <tag k="addr:housename" v="Raffay-ház"/>
+  <tag k="addr:housenumber" v="2/A"/>
+  <tag k="addr:street" v="Lechner tér"/>
+  <tag k="building" v="yes"/>
+  <tag k="name" v="Raffay-ház"/>
+ </way>
+ <way id="109381484" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:59Z">
+  <nd ref="1252343354"/>
+  <nd ref="1252343335"/>
+  <nd ref="1252343331"/>
+  <nd ref="1252343249"/>
+  <nd ref="1252343356"/>
+  <nd ref="1252343404"/>
+  <nd ref="1252343319"/>
+  <nd ref="1252343424"/>
+  <nd ref="1252343336"/>
+  <nd ref="1252343427"/>
+  <nd ref="1252343354"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="79620911" user="pethy" uid="201021" visible="true" version="3" changeset="6966846" timestamp="2011-01-14T12:40:37Z">
+  <nd ref="929138441"/>
+  <nd ref="929138503"/>
+  <nd ref="929138460"/>
+  <nd ref="929138490"/>
+  <nd ref="929138443"/>
+  <nd ref="1103186265"/>
+  <nd ref="929138484"/>
+  <nd ref="929127321"/>
+  <tag k="railway" v="tram"/>
+ </way>
+ <way id="102663531" user="att" uid="338516" visible="true" version="1" changeset="7453429" timestamp="2011-03-04T11:08:27Z">
+  <nd ref="1185703670"/>
+  <nd ref="1185703669"/>
+  <nd ref="1185703668"/>
+  <nd ref="1185703671"/>
+  <nd ref="1185703670"/>
+  <tag k="amenity" v="place_of_worship"/>
+  <tag k="building" v="yes"/>
+  <tag k="denomination" v="greek_catholic"/>
+  <tag k="name" v="Szent Rozália Kápolna"/>
+  <tag k="religion" v="christian"/>
+ </way>
+ <way id="109381477" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:58Z">
+  <nd ref="1252343518"/>
+  <nd ref="1252343520"/>
+  <nd ref="1252343385"/>
+  <nd ref="1252343239"/>
+  <nd ref="1252343477"/>
+  <nd ref="1252343442"/>
+  <nd ref="1252343402"/>
+  <nd ref="1252343483"/>
+  <nd ref="1252343478"/>
+  <nd ref="1252343516"/>
+  <nd ref="1252343283"/>
+  <nd ref="1252343300"/>
+  <nd ref="1252343518"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="109381463" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="1" changeset="7915358" timestamp="2011-04-20T12:16:55Z">
+  <nd ref="1252343266"/>
+  <nd ref="1252343245"/>
+  <nd ref="1252343441"/>
+  <nd ref="1252343367"/>
+  <nd ref="1252343297"/>
+  <nd ref="1252343393"/>
+  <nd ref="1252343282"/>
+  <nd ref="1252343266"/>
+  <tag k="addr:housenumber" v="21"/>
+  <tag k="addr:postcode" v="6722"/>
+  <tag k="addr:street" v="Kossuth Lajos sugárút"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="4806577" user="Beroesz" uid="352715" visible="true" version="10" changeset="7898652" timestamp="2011-04-18T16:35:43Z">
+  <nd ref="30452233"/>
+  <nd ref="30452231"/>
+  <nd ref="30452229"/>
+  <nd ref="30452226"/>
+  <nd ref="30452224"/>
+  <nd ref="30452220"/>
+  <nd ref="30452222"/>
+  <nd ref="1250142017"/>
+  <nd ref="929138482"/>
+  <tag k="highway" v="primary"/>
+  <tag k="lanes" v="4"/>
+  <tag k="name" v="Párizsi körút"/>
+  <tag k="ref" v="43"/>
+ </way>
+ <way id="4883149" user="kilo aka Gabor Kmetyko" uid="96550" visible="true" version="4" changeset="7914069" timestamp="2011-04-20T10:02:15Z">
+  <nd ref="30766193"/>
+  <nd ref="31275536"/>
+  <nd ref="31034347"/>
+  <nd ref="31034348"/>
+  <nd ref="31034354"/>
+  <nd ref="31633381"/>
+  <nd ref="30452229"/>
+  <tag k="bicycle" v="yes"/>
+  <tag k="cycleway" v="no"/>
+  <tag k="highway" v="residential"/>
+  <tag k="lanes" v="2"/>
+  <tag k="maxspeed" v="30"/>
+  <tag k="name" v="Zákány utca"/>
+  <tag k="oneway" v="no"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <relation id="1207495" user="pethy" uid="201021" visible="true" version="2" changeset="5988369" timestamp="2010-10-08T18:49:08Z">
+  <member type="way" ref="80413877" role="to"/>
+  <member type="node" ref="929138442" role="via"/>
+  <member type="way" ref="79620907" role="from"/>
+  <tag k="restriction" v="only_straight_on"/>
+  <tag k="type" v="restriction"/>
+ </relation>
+ <relation id="1207524" user="pethy" uid="201021" visible="true" version="2" changeset="5970515" timestamp="2010-10-06T15:40:57Z">
+  <member type="way" ref="80413877" role="from"/>
+  <member type="way" ref="79620909" role="to"/>
+  <member type="node" ref="929138482" role="via"/>
+  <tag k="restriction" v="only_straight_on"/>
+  <tag k="type" v="restriction"/>
+ </relation>
+ <relation id="38260" user="alex-map" uid="30383" visible="true" version="346" changeset="8874562" timestamp="2011-07-30T18:53:55Z">
+  <member type="way" ref="74271323" role=""/>
+  <member type="way" ref="74271321" role=""/>
+  <member type="way" ref="74271325" role=""/>
+  <member type="way" ref="74271277" role=""/>
+  <member type="way" ref="74271256" role=""/>
+  <member type="way" ref="45265613" role=""/>
+  <member type="way" ref="74271276" role=""/>
+  <member type="way" ref="69712234" role=""/>
+  <member type="way" ref="69712128" role=""/>
+  <member type="way" ref="69712202" role=""/>
+  <member type="way" ref="69712353" role=""/>
+  <member type="way" ref="19381546" role=""/>
+  <member type="way" ref="19381715" role=""/>
+  <member type="way" ref="85446656" role=""/>
+  <member type="way" ref="19381561" role=""/>
+  <member type="way" ref="19121360" role=""/>
+  <member type="way" ref="19381980" role=""/>
+  <member type="way" ref="19381869" role=""/>
+  <member type="way" ref="24242684" role=""/>
+  <member type="way" ref="19121465" role=""/>
+  <member type="way" ref="25695751" role=""/>
+  <member type="way" ref="69712630" role=""/>
+  <member type="way" ref="25944072" role=""/>
+  <member type="way" ref="25944073" role=""/>
+  <member type="way" ref="23156187" role=""/>
+  <member type="way" ref="4825444" role=""/>
+  <member type="way" ref="69716053" role=""/>
+  <member type="way" ref="69716052" role=""/>
+  <member type="way" ref="4825441" role=""/>
+  <member type="way" ref="102143354" role=""/>
+  <member type="way" ref="102143372" role=""/>
+  <member type="way" ref="25966304" role=""/>
+  <member type="way" ref="4825440" role=""/>
+  <member type="way" ref="8152561" role=""/>
+  <member type="way" ref="4806572" role=""/>
+  <member type="way" ref="35415179" role=""/>
+  <member type="way" ref="4806573" role=""/>
+  <member type="way" ref="4806574" role=""/>
+  <member type="way" ref="4806577" role=""/>
+  <member type="way" ref="80414973" role=""/>
+  <member type="way" ref="79620905" role=""/>
+  <member type="way" ref="80417206" role=""/>
+  <member type="way" ref="44696554" role=""/>
+  <member type="way" ref="79929329" role=""/>
+  <member type="way" ref="4767431" role=""/>
+  <member type="way" ref="4767430" role=""/>
+  <member type="way" ref="4937546" role=""/>
+  <member type="way" ref="76565596" role=""/>
+  <member type="way" ref="79839483" role=""/>
+  <member type="way" ref="76565593" role=""/>
+  <member type="way" ref="76565591" role=""/>
+  <member type="way" ref="69712628" role=""/>
+  <member type="way" ref="19381788" role=""/>
+  <member type="way" ref="103704530" role=""/>
+  <member type="way" ref="103704523" role=""/>
+  <member type="way" ref="78431369" role=""/>
+  <member type="way" ref="74271324" role=""/>
+  <member type="way" ref="23156434" role=""/>
+  <member type="way" ref="30163874" role=""/>
+  <member type="way" ref="30163875" role=""/>
+  <member type="way" ref="30163886" role=""/>
+  <member type="way" ref="24563991" role=""/>
+  <member type="way" ref="24033084" role=""/>
+  <member type="way" ref="24590556" role=""/>
+  <member type="way" ref="24724531" role=""/>
+  <member type="way" ref="13270569" role=""/>
+  <member type="way" ref="13047815" role=""/>
+  <member type="way" ref="13969449" role=""/>
+  <member type="way" ref="121080032" role=""/>
+  <member type="way" ref="121080031" role=""/>
+  <member type="way" ref="12547101" role=""/>
+  <member type="way" ref="8514265" role=""/>
+  <member type="way" ref="79841999" role=""/>
+  <member type="way" ref="16589127" role=""/>
+  <member type="way" ref="13046027" role=""/>
+  <member type="way" ref="16589070" role=""/>
+  <member type="way" ref="4326400" role=""/>
+  <member type="way" ref="18904627" role=""/>
+  <member type="way" ref="24659209" role=""/>
+  <member type="way" ref="79507170" role=""/>
+  <member type="way" ref="79507178" role=""/>
+  <member type="way" ref="79507174" role=""/>
+  <member type="way" ref="28017746" role=""/>
+  <member type="way" ref="18903356" role=""/>
+  <member type="way" ref="28870942" role=""/>
+  <member type="way" ref="79564712" role=""/>
+  <member type="way" ref="97212244" role=""/>
+  <member type="way" ref="44472032" role=""/>
+  <member type="way" ref="44472033" role=""/>
+  <member type="way" ref="97212330" role=""/>
+  <member type="way" ref="97212365" role=""/>
+  <member type="way" ref="97212248" role=""/>
+  <member type="way" ref="97212382" role=""/>
+  <member type="way" ref="28557120" role=""/>
+  <member type="way" ref="22385987" role=""/>
+  <member type="way" ref="22385957" role=""/>
+  <member type="way" ref="97212234" role=""/>
+  <member type="way" ref="44472024" role=""/>
+  <member type="way" ref="44472023" role=""/>
+  <member type="way" ref="97212222" role=""/>
+  <member type="way" ref="97212268" role=""/>
+  <member type="way" ref="97212391" role=""/>
+  <member type="way" ref="97212251" role=""/>
+  <member type="way" ref="97212217" role=""/>
+  <member type="way" ref="97212353" role=""/>
+  <member type="way" ref="97212372" role=""/>
+  <member type="way" ref="97212318" role=""/>
+  <member type="way" ref="13705940" role=""/>
+  <member type="way" ref="97212358" role=""/>
+  <member type="way" ref="97212311" role=""/>
+  <member type="way" ref="97212255" role=""/>
+  <member type="way" ref="97212293" role=""/>
+  <member type="way" ref="97212363" role=""/>
+  <member type="way" ref="97212385" role=""/>
+  <member type="way" ref="97212376" role=""/>
+  <member type="way" ref="97212334" role=""/>
+  <member type="way" ref="97212392" role=""/>
+  <member type="way" ref="97212326" role=""/>
+  <member type="way" ref="19716511" role=""/>
+  <member type="way" ref="19717080" role=""/>
+  <member type="way" ref="97212231" role=""/>
+  <member type="way" ref="97212227" role=""/>
+  <member type="way" ref="97212348" role=""/>
+  <member type="way" ref="97212258" role=""/>
+  <member type="way" ref="97212379" role=""/>
+  <member type="way" ref="97212322" role=""/>
+  <member type="way" ref="97212272" role=""/>
+  <member type="way" ref="19717066" role=""/>
+  <member type="way" ref="97212398" role=""/>
+  <member type="way" ref="97212281" role=""/>
+  <member type="way" ref="97212305" role=""/>
+  <member type="way" ref="24642342" role=""/>
+  <member type="way" ref="24642341" role=""/>
+  <member type="way" ref="92100903" role=""/>
+  <member type="way" ref="92100899" role=""/>
+  <member type="way" ref="28557354" role=""/>
+  <member type="way" ref="28557357" role=""/>
+  <member type="way" ref="15806754" role=""/>
+  <member type="way" ref="5031566" role=""/>
+  <member type="way" ref="97212369" role=""/>
+  <member type="way" ref="97212291" role=""/>
+  <member type="way" ref="97212239" role=""/>
+  <member type="way" ref="97212263" role=""/>
+  <member type="way" ref="25674245" role=""/>
+  <member type="way" ref="25674246" role=""/>
+  <member type="way" ref="16588662" role=""/>
+  <member type="way" ref="16588675" role=""/>
+  <member type="way" ref="19384307" role=""/>
+  <member type="way" ref="89296135" role=""/>
+  <member type="way" ref="89299913" role=""/>
+  <member type="way" ref="89299910" role=""/>
+  <member type="way" ref="89299907" role=""/>
+  <member type="way" ref="89299916" role=""/>
+  <member type="way" ref="19387983" role=""/>
+  <member type="way" ref="19387983" role=""/>
+  <member type="way" ref="89299916" role=""/>
+  <member type="way" ref="89299907" role=""/>
+  <member type="way" ref="89299910" role=""/>
+  <member type="way" ref="89299913" role=""/>
+  <member type="way" ref="28556720" role=""/>
+  <member type="way" ref="46484734" role=""/>
+  <member type="way" ref="46484749" role=""/>
+  <member type="way" ref="44449732" role=""/>
+  <member type="way" ref="44449733" role=""/>
+  <member type="way" ref="19386847" role=""/>
+  <member type="way" ref="19384061" role=""/>
+  <member type="way" ref="66224181" role=""/>
+  <member type="way" ref="66224186" role=""/>
+  <member type="way" ref="66224187" role=""/>
+  <member type="way" ref="66224182" role=""/>
+  <member type="way" ref="89307280" role=""/>
+  <member type="way" ref="19713040" role=""/>
+  <member type="way" ref="19713036" role=""/>
+  <member type="way" ref="99145251" role=""/>
+  <member type="way" ref="19970388" role=""/>
+  <member type="way" ref="19970381" role=""/>
+  <member type="way" ref="48992013" role=""/>
+  <member type="way" ref="24290634" role=""/>
+  <member type="way" ref="28021212" role=""/>
+  <member type="way" ref="24290635" role=""/>
+  <member type="way" ref="44193487" role=""/>
+  <member type="way" ref="44193614" role=""/>
+  <member type="way" ref="44193148" role=""/>
+  <member type="way" ref="44193147" role=""/>
+  <member type="way" ref="44193175" role=""/>
+  <member type="way" ref="28017623" role=""/>
+  <member type="way" ref="44193149" role=""/>
+  <member type="way" ref="28017621" role=""/>
+  <member type="way" ref="44193190" role=""/>
+  <member type="way" ref="51432200" role=""/>
+  <member type="way" ref="51432224" role=""/>
+  <member type="way" ref="33733321" role=""/>
+  <member type="way" ref="89310639" role=""/>
+  <member type="way" ref="19382127" role=""/>
+  <member type="way" ref="19381937" role=""/>
+  <member type="way" ref="89310642" role=""/>
+  <member type="way" ref="88842676" role=""/>
+  <member type="way" ref="123748184" role=""/>
+  <member type="way" ref="123748187" role=""/>
+  <member type="way" ref="88842738" role=""/>
+  <member type="way" ref="88842733" role=""/>
+  <member type="way" ref="123748186" role=""/>
+  <member type="way" ref="123748185" role=""/>
+  <member type="way" ref="4832632" role=""/>
+  <member type="way" ref="88842711" role=""/>
+  <member type="way" ref="123760916" role=""/>
+  <member type="way" ref="123760915" role=""/>
+  <member type="way" ref="88842670" role=""/>
+  <member type="way" ref="88842720" role=""/>
+  <member type="way" ref="88842714" role=""/>
+  <member type="way" ref="88842725" role=""/>
+  <member type="way" ref="88842692" role=""/>
+  <member type="way" ref="88842751" role=""/>
+  <member type="way" ref="46710143" role=""/>
+  <member type="way" ref="46710139" role=""/>
+  <member type="way" ref="110308027" role=""/>
+  <member type="way" ref="110308026" role=""/>
+  <member type="way" ref="88813175" role=""/>
+  <member type="way" ref="88813189" role=""/>
+  <member type="way" ref="88813197" role=""/>
+  <member type="way" ref="88813174" role=""/>
+  <member type="way" ref="88813188" role=""/>
+  <member type="way" ref="4833233" role=""/>
+  <member type="way" ref="123761699" role=""/>
+  <member type="way" ref="123761700" role=""/>
+  <member type="way" ref="33638204" role=""/>
+  <member type="way" ref="33638205" role=""/>
+  <member type="way" ref="4833232" role=""/>
+  <member type="way" ref="123761701" role=""/>
+  <member type="way" ref="123761702" role=""/>
+  <member type="way" ref="88810348" role=""/>
+  <member type="way" ref="4833230" role=""/>
+  <member type="way" ref="4833229" role=""/>
+  <member type="way" ref="4833226" role=""/>
+  <member type="way" ref="28758600" role=""/>
+  <member type="way" ref="4833231" role=""/>
+  <member type="way" ref="4833227" role=""/>
+  <member type="way" ref="22662724" role=""/>
+  <member type="way" ref="22877125" role=""/>
+  <member type="way" ref="89008009" role=""/>
+  <member type="way" ref="89008010" role=""/>
+  <member type="way" ref="22877127" role=""/>
+  <member type="way" ref="22877126" role=""/>
+  <member type="way" ref="88922132" role=""/>
+  <member type="way" ref="88922150" role=""/>
+  <member type="way" ref="100951619" role=""/>
+  <member type="way" ref="100951622" role=""/>
+  <member type="way" ref="35425402" role=""/>
+  <member type="way" ref="37337017" role=""/>
+  <member type="way" ref="37337016" role=""/>
+  <member type="way" ref="35425401" role=""/>
+  <member type="way" ref="88966987" role=""/>
+  <member type="way" ref="100951617" role=""/>
+  <member type="way" ref="88966926" role=""/>
+  <member type="way" ref="88988937" role=""/>
+  <member type="way" ref="88988938" role=""/>
+  <member type="way" ref="88966977" role=""/>
+  <member type="way" ref="88966942" role=""/>
+  <member type="way" ref="88988918" role=""/>
+  <member type="way" ref="88988933" role=""/>
+  <member type="way" ref="88988946" role=""/>
+  <member type="way" ref="88988927" role=""/>
+  <member type="way" ref="88966894" role=""/>
+  <member type="way" ref="4833224" role=""/>
+  <member type="way" ref="123762884" role=""/>
+  <member type="way" ref="123762886" role=""/>
+  <member type="way" ref="88988917" role=""/>
+  <member type="way" ref="123342560" role=""/>
+  <member type="way" ref="123342557" role=""/>
+  <member type="way" ref="88966969" role=""/>
+  <member type="way" ref="123344013" role=""/>
+  <member type="way" ref="123343999" role=""/>
+  <member type="way" ref="88966863" role=""/>
+  <member type="way" ref="88966878" role=""/>
+  <member type="way" ref="123762885" role=""/>
+  <member type="way" ref="24013281" role=""/>
+  <member type="way" ref="48462202" role=""/>
+  <member type="way" ref="89524413" role=""/>
+  <member type="way" ref="89524447" role=""/>
+  <member type="way" ref="89524410" role=""/>
+  <member type="way" ref="89524443" role=""/>
+  <member type="way" ref="89524424" role=""/>
+  <member type="way" ref="117161129" role=""/>
+  <member type="way" ref="117161094" role=""/>
+  <member type="way" ref="89524418" role=""/>
+  <member type="way" ref="117161039" role=""/>
+  <member type="way" ref="117161115" role=""/>
+  <member type="way" ref="89524448" role=""/>
+  <member type="way" ref="89524428" role=""/>
+  <member type="way" ref="89524451" role=""/>
+  <member type="way" ref="89524437" role=""/>
+  <member type="way" ref="89524440" role=""/>
+  <member type="way" ref="89524416" role=""/>
+  <member type="way" ref="24013283" role=""/>
+  <member type="way" ref="117158452" role=""/>
+  <member type="way" ref="117158454" role=""/>
+  <member type="way" ref="117158451" role=""/>
+  <member type="way" ref="117158453" role=""/>
+  <member type="way" ref="25615900" role=""/>
+  <member type="way" ref="25956847" role=""/>
+  <member type="way" ref="25615896" role=""/>
+  <member type="way" ref="24013402" role=""/>
+  <member type="way" ref="24013388" role=""/>
+  <member type="way" ref="89526902" role=""/>
+  <member type="way" ref="37117395" role=""/>
+  <member type="way" ref="37117383" role=""/>
+  <member type="way" ref="44500587" role=""/>
+  <member type="way" ref="25957492" role=""/>
+  <member type="way" ref="25957495" role=""/>
+  <member type="way" ref="25957489" role=""/>
+  <member type="way" ref="25957491" role=""/>
+  <member type="way" ref="35425107" role=""/>
+  <member type="way" ref="35425109" role=""/>
+  <member type="way" ref="35425108" role=""/>
+  <member type="way" ref="25361438" role=""/>
+  <member type="way" ref="23379247" role=""/>
+  <member type="way" ref="27183716" role=""/>
+  <member type="way" ref="89526903" role=""/>
+  <member type="way" ref="89526904" role=""/>
+  <member type="way" ref="23379248" role=""/>
+  <member type="way" ref="24233513" role=""/>
+  <member type="way" ref="18903357" role=""/>
+  <member type="way" ref="74271322" role=""/>
+  <member type="way" ref="74271257" role=""/>
+  <member type="way" ref="74271278" role=""/>
+  <member type="way" ref="78431354" role=""/>
+  <member type="way" ref="79620909" role=""/>
+  <member type="way" ref="80417209" role=""/>
+  <member type="way" ref="79840168" role=""/>
+  <member type="way" ref="37337018" role=""/>
+  <member type="way" ref="35425400" role=""/>
+  <member type="way" ref="87755661" role=""/>
+  <member type="way" ref="87752651" role=""/>
+  <member type="way" ref="87528127" role=""/>
+  <member type="way" ref="24025569" role=""/>
+  <member type="way" ref="24025664" role=""/>
+  <member type="way" ref="87605277" role=""/>
+  <member type="way" ref="87605276" role=""/>
+  <member type="way" ref="87605278" role=""/>
+  <member type="way" ref="87528129" role=""/>
+  <member type="way" ref="24025564" role=""/>
+  <member type="way" ref="24025657" role=""/>
+  <member type="way" ref="87528135" role=""/>
+  <member type="way" ref="24025553" role=""/>
+  <member type="way" ref="87528130" role=""/>
+  <member type="way" ref="87528134" role=""/>
+  <member type="way" ref="87528118" role=""/>
+  <member type="way" ref="87528159" role=""/>
+  <member type="way" ref="87528120" role=""/>
+  <member type="way" ref="87528145" role=""/>
+  <member type="way" ref="87528149" role=""/>
+  <member type="way" ref="24025647" role=""/>
+  <member type="way" ref="87528155" role=""/>
+  <member type="way" ref="24025545" role=""/>
+  <member type="way" ref="24025643" role=""/>
+  <member type="way" ref="87437320" role=""/>
+  <member type="way" ref="24025538" role=""/>
+  <member type="way" ref="87525337" role=""/>
+  <member type="way" ref="24025532" role=""/>
+  <member type="way" ref="87525336" role=""/>
+  <member type="way" ref="24025599" role=""/>
+  <member type="way" ref="87525333" role=""/>
+  <member type="way" ref="87525346" role=""/>
+  <member type="way" ref="24025593" role=""/>
+  <member type="way" ref="24025526" role=""/>
+  <member type="way" ref="87525342" role=""/>
+  <member type="way" ref="87525334" role=""/>
+  <member type="way" ref="24025519" role=""/>
+  <member type="way" ref="24025583" role=""/>
+  <member type="way" ref="87525343" role=""/>
+  <member type="way" ref="24025572" role=""/>
+  <member type="way" ref="87525339" role=""/>
+  <member type="way" ref="87751124" role=""/>
+  <member type="way" ref="88208404" role=""/>
+  <member type="way" ref="24025419" role=""/>
+  <member type="way" ref="87525340" role=""/>
+  <member type="way" ref="87525335" role=""/>
+  <member type="way" ref="87525330" role=""/>
+  <member type="way" ref="99002060" role=""/>
+  <member type="way" ref="100115804" role=""/>
+  <member type="way" ref="100115805" role=""/>
+  <member type="way" ref="100115803" role=""/>
+  <member type="way" ref="100115800" role=""/>
+  <member type="way" ref="100115801" role=""/>
+  <member type="way" ref="100115802" role=""/>
+  <member type="way" ref="108305999" role=""/>
+  <member type="way" ref="108306001" role=""/>
+  <member type="way" ref="25695749" role=""/>
+  <member type="way" ref="4793452" role=""/>
+  <member type="way" ref="25695754" role=""/>
+  <member type="way" ref="76254675" role=""/>
+  <member type="way" ref="85446657" role=""/>
+  <member type="way" ref="76254676" role=""/>
+  <member type="way" ref="76254678" role=""/>
+  <member type="way" ref="19381708" role=""/>
+  <member type="way" ref="76254677" role=""/>
+  <member type="way" ref="80588629" role=""/>
+  <member type="way" ref="76254684" role=""/>
+  <member type="way" ref="80589171" role=""/>
+  <member type="way" ref="80588630" role=""/>
+  <member type="way" ref="80588625" role=""/>
+  <member type="way" ref="80588638" role=""/>
+  <member type="way" ref="80588635" role=""/>
+  <member type="way" ref="107536566" role=""/>
+  <member type="way" ref="80588642" role=""/>
+  <member type="way" ref="107536563" role=""/>
+  <member type="way" ref="107540274" role=""/>
+  <member type="way" ref="110372987" role=""/>
+  <member type="way" ref="110372981" role=""/>
+  <member type="way" ref="110372983" role=""/>
+  <member type="way" ref="110372991" role=""/>
+  <member type="way" ref="107540284" role=""/>
+  <member type="way" ref="107540279" role=""/>
+  <member type="way" ref="107540273" role=""/>
+  <member type="way" ref="107537826" role=""/>
+  <member type="way" ref="107537827" role=""/>
+  <member type="way" ref="107538801" role=""/>
+  <member type="way" ref="107538798" role=""/>
+  <member type="way" ref="107538799" role=""/>
+  <member type="way" ref="123715948" role=""/>
+  <member type="way" ref="123715945" role=""/>
+  <member type="way" ref="83155903" role=""/>
+  <member type="way" ref="83155904" role=""/>
+  <member type="way" ref="87752650" role=""/>
+  <member type="way" ref="87525329" role=""/>
+  <member type="way" ref="24025576" role=""/>
+  <member type="way" ref="24025482" role=""/>
+  <member type="way" ref="87525343" role=""/>
+  <member type="way" ref="87525325" role=""/>
+  <member type="way" ref="24025485" role=""/>
+  <member type="way" ref="87525345" role=""/>
+  <member type="way" ref="87437323" role=""/>
+  <member type="way" ref="87528154" role=""/>
+  <member type="way" ref="87528136" role=""/>
+  <member type="way" ref="51433753" role=""/>
+  <member type="way" ref="51433808" role=""/>
+  <member type="way" ref="59352434" role=""/>
+  <member type="way" ref="32899193" role=""/>
+  <member type="way" ref="31007615" role=""/>
+  <member type="way" ref="25615897" role=""/>
+  <member type="way" ref="23317335" role=""/>
+  <member type="way" ref="24271438" role=""/>
+  <member type="way" ref="24271454" role=""/>
+  <member type="way" ref="23317331" role=""/>
+  <member type="way" ref="23317224" role=""/>
+  <member type="way" ref="26779936" role=""/>
+  <member type="way" ref="26779984" role=""/>
+  <member type="way" ref="23317437" role=""/>
+  <member type="way" ref="25028293" role=""/>
+  <member type="way" ref="24271356" role=""/>
+  <member type="way" ref="24271362" role=""/>
+  <member type="way" ref="25115975" role=""/>
+  <member type="way" ref="27005646" role=""/>
+  <member type="way" ref="23317379" role=""/>
+  <member type="way" ref="75262055" role=""/>
+  <member type="way" ref="75262061" role=""/>
+  <tag k="network" v="e-road"/>
+  <tag k="ref" v="E 68"/>
+  <tag k="route" v="road"/>
+  <tag k="type" v="route"/>
+ </relation>
+ <relation id="1375736" user="pethy" uid="201021" visible="true" version="2" changeset="7595804" timestamp="2011-03-18T14:19:55Z">
+  <member type="way" ref="92873804" role=""/>
+  <member type="way" ref="92873809" role=""/>
+  <member type="way" ref="92873811" role=""/>
+  <member type="way" ref="79620910" role=""/>
+  <member type="way" ref="79619649" role=""/>
+  <member type="way" ref="79617561" role=""/>
+  <member type="way" ref="79620913" role=""/>
+  <member type="way" ref="79620906" role=""/>
+  <member type="way" ref="79620911" role=""/>
+  <member type="way" ref="79929335" role=""/>
+  <member type="way" ref="79617557" role=""/>
+  <member type="node" ref="1099501784" role=""/>
+  <member type="node" ref="1099501830" role=""/>
+  <member type="node" ref="1099501779" role=""/>
+  <member type="node" ref="1103186215" role=""/>
+  <member type="node" ref="1103186260" role=""/>
+  <member type="node" ref="1103186254" role=""/>
+  <member type="node" ref="1103186283" role=""/>
+  <member type="node" ref="1103186231" role=""/>
+  <member type="node" ref="1103186275" role=""/>
+  <member type="node" ref="1103186251" role=""/>
+  <member type="node" ref="1103186207" role=""/>
+  <member type="node" ref="1103186265" role=""/>
+  <member type="node" ref="1103186236" role=""/>
+  <member type="node" ref="1103186269" role=""/>
+  <member type="node" ref="929138473" role=""/>
+  <member type="node" ref="1103186226" role=""/>
+  <member type="node" ref="1103186211" role=""/>
+  <member type="node" ref="1103186257" role=""/>
+  <member type="node" ref="1103186235" role=""/>
+  <member type="node" ref="1103186262" role=""/>
+  <member type="node" ref="1103186223" role=""/>
+  <member type="node" ref="1103186277" role=""/>
+  <member type="node" ref="1103186258" role=""/>
+  <member type="node" ref="1103186245" role=""/>
+  <member type="node" ref="933075173" role=""/>
+  <tag k="name" v="1-es villamos"/>
+  <tag k="network" v="1"/>
+  <tag k="operator" v="SZKT Zrt."/>
+  <tag k="ref" v="1"/>
+  <tag k="route" v="tram"/>
+  <tag k="state" v="connection"/>
+  <tag k="type" v="route"/>
+ </relation>
+ <relation id="23585" user="h145074" uid="6728" visible="true" version="43" changeset="7849408" timestamp="2011-04-13T07:52:03Z">
+  <member type="way" ref="35415179" role=""/>
+  <member type="way" ref="4806573" role=""/>
+  <member type="way" ref="4806574" role=""/>
+  <member type="way" ref="4806577" role=""/>
+  <member type="way" ref="80414973" role=""/>
+  <member type="way" ref="4825440" role=""/>
+  <member type="way" ref="4825441" role=""/>
+  <member type="way" ref="4825444" role=""/>
+  <member type="way" ref="8152561" role=""/>
+  <member type="way" ref="23156187" role=""/>
+  <member type="way" ref="25944072" role=""/>
+  <member type="way" ref="45265613" role=""/>
+  <member type="way" ref="25944073" role=""/>
+  <member type="way" ref="25966304" role=""/>
+  <member type="way" ref="102143372" role=""/>
+  <member type="way" ref="102143354" role=""/>
+  <member type="way" ref="4806572" role=""/>
+  <member type="way" ref="45261602" role=""/>
+  <member type="way" ref="69712128" role=""/>
+  <member type="way" ref="69712202" role=""/>
+  <member type="way" ref="69712234" role=""/>
+  <member type="way" ref="69712353" role=""/>
+  <member type="way" ref="69712630" role=""/>
+  <member type="way" ref="69712628" role=""/>
+  <member type="way" ref="69716052" role=""/>
+  <member type="way" ref="69716053" role=""/>
+  <member type="way" ref="74271256" role=""/>
+  <member type="way" ref="74271257" role=""/>
+  <member type="way" ref="74271276" role=""/>
+  <member type="way" ref="74271277" role=""/>
+  <member type="way" ref="74271278" role=""/>
+  <member type="way" ref="74271326" role=""/>
+  <member type="way" ref="74271321" role=""/>
+  <member type="way" ref="74271322" role=""/>
+  <member type="way" ref="74271323" role=""/>
+  <member type="way" ref="74271324" role=""/>
+  <member type="way" ref="74271325" role=""/>
+  <member type="way" ref="78431354" role=""/>
+  <member type="way" ref="79841417" role=""/>
+  <member type="way" ref="79841526" role=""/>
+  <member type="way" ref="79841578" role=""/>
+  <member type="way" ref="79841586" role=""/>
+  <member type="way" ref="79841603" role=""/>
+  <member type="way" ref="78431369" role=""/>
+  <member type="way" ref="100115804" role=""/>
+  <member type="way" ref="100115805" role=""/>
+  <member type="way" ref="100115803" role=""/>
+  <member type="way" ref="108305999" role=""/>
+  <member type="way" ref="108306001" role=""/>
+  <tag k="ref" v="43"/>
+  <tag k="route" v="road"/>
+  <tag k="type" v="route"/>
+ </relation>
+ <relation id="1207500" user="pethy" uid="201021" visible="true" version="2" changeset="5988369" timestamp="2010-10-08T18:49:08Z">
+  <member type="way" ref="80413882" role="from"/>
+  <member type="node" ref="902426372" role="via"/>
+  <member type="way" ref="80413881" role="to"/>
+  <tag k="restriction" v="only_straight_on"/>
+  <tag k="type" v="restriction"/>
+ </relation>
+ <relation id="1207523" user="pethy" uid="201021" visible="true" version="2" changeset="5970515" timestamp="2010-10-06T15:40:58Z">
+  <member type="way" ref="80414973" role="from"/>
+  <member type="way" ref="4937502" role="to"/>
+  <member type="node" ref="27186748" role="via"/>
+  <tag k="restriction" v="only_straight_on"/>
+  <tag k="type" v="restriction"/>
+ </relation>
+ <relation id="1207521" user="pethy" uid="201021" visible="true" version="2" changeset="5970515" timestamp="2010-10-06T15:40:57Z">
+  <member type="way" ref="4937502" role="from"/>
+  <member type="way" ref="80414973" role="to"/>
+  <member type="node" ref="27186748" role="via"/>
+  <tag k="restriction" v="only_straight_on"/>
+  <tag k="type" v="restriction"/>
+ </relation>
+</osm>

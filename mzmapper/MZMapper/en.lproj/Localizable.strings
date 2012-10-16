@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  MZMapper
+
+  Created by Zalan Mergl on 9/9/12.
+
+*/
+
+/* Message of connection problem alert view. */
+"CommunicationErrorMessageKey" = "A connection error occurred. Please try again later.";
+
+/* Title of connection problem alert view. */
+"CommunicationErrorTitleKey" = "Connection error";
+
+/* "Text of the notification label which appears while user is logging in." */
+"LoggingInKey" = "Logging in...";
+
+/* Title of login error alert view. */
+"LoginErrorMessageKey" = "The username or password you entered is incorrect.";
+
+/* Title of login error alert view. */
+"LoginErrorTitleKey" = "Authentication Error";
