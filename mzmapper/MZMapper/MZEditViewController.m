@@ -71,6 +71,9 @@
             [categoryViewController.view setFrame:newFrame];
         }];
     }
+    
+    //adjust contentSize of the scrollView to the new height
+    [_mainScrollView setContentSize:CGSizeMake(_mainScrollView.contentSize.width, _mainScrollView.contentSize.height + aValue)];
 }
 
 - (void)viewDidLoad

@@ -41,6 +41,7 @@
 		131F07431587CAC40049FED4 /* MZSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 131F07401587CAC40049FED4 /* MZSearchViewController.xib */; };
 		132980CC153CAE2700979414 /* MZPullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 132980CB153CAE2700979414 /* MZPullView.m */; };
 		132980D1153CAEEB00979414 /* wood_pattern.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 132980D0153CAEEB00979414 /* wood_pattern.jpg */; };
+		132E9760162F2B2C0075AC7B /* shopping_alcohol.n.16.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E975F162F2B2C0075AC7B /* shopping_alcohol.n.16.png */; };
 		135E8B79159CD7930084B918 /* MZMapperContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 135E8B78159CD7930084B918 /* MZMapperContentManager.m */; };
 		13945E6E1540554D001B257E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13945E6D1540554D001B257E /* CoreLocation.framework */; };
 		13B1F4B6153A38AD003B4D06 /* MZMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B1F4B5153A38AD003B4D06 /* MZMessageView.m */; };
@@ -143,6 +144,7 @@
 		132980CA153CAE2700979414 /* MZPullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPullView.h; sourceTree = "<group>"; };
 		132980CB153CAE2700979414 /* MZPullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZPullView.m; sourceTree = "<group>"; };
 		132980D0153CAEEB00979414 /* wood_pattern.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wood_pattern.jpg; sourceTree = "<group>"; };
+		132E975F162F2B2C0075AC7B /* shopping_alcohol.n.16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopping_alcohol.n.16.png; sourceTree = "<group>"; };
 		135E8B77159CD7930084B918 /* MZMapperContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMapperContentManager.h; sourceTree = "<group>"; };
 		135E8B78159CD7930084B918 /* MZMapperContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMapperContentManager.m; sourceTree = "<group>"; };
 		13945E6D1540554D001B257E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -386,6 +388,7 @@
 		132980CF153CAEE000979414 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				132E975F162F2B2C0075AC7B /* shopping_alcohol.n.16.png */,
 				13C797871629F57F006C65AA /* open_close_arrow.png */,
 				13C7976516297498006C65AA /* icon_bookshop.jpeg */,
 				13F5991816236989007C44FC /* Default-Landscape~ipad.png */,
@@ -562,6 +565,7 @@
 				13BC60E51625FC53001B6DFC /* MZEditViewController.xib in Resources */,
 				13C7976616297498006C65AA /* icon_bookshop.jpeg in Resources */,
 				13C797881629F57F006C65AA /* open_close_arrow.png in Resources */,
+				132E9760162F2B2C0075AC7B /* shopping_alcohol.n.16.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -772,6 +776,7 @@
 				GCC_PREFIX_HEADER = "MZMapper/MZMapper-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MZMapper/MZMapper-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -786,6 +791,7 @@
 				GCC_PREFIX_HEADER = "MZMapper/MZMapper-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MZMapper/MZMapper-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

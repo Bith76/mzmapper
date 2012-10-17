@@ -174,8 +174,17 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier] autorelease];
         
         UILabel* aTextLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-		[aTextLabel setLineBreakMode:NSLineBreakByWordWrapping];
-        [aTextLabel setMinimumScaleFactor:15.0];
+        if (OS_IS_LOWER_THAN_6_0)
+        {
+            [aTextLabel setLineBreakMode:UILineBreakModeWordWrap];
+            [aTextLabel setMinimumFontSize:15.0];
+        }
+        else
+        {
+            [aTextLabel setLineBreakMode:NSLineBreakByWordWrapping];
+            [aTextLabel setMinimumScaleFactor:15.0];
+        }
+        
 		[aTextLabel setNumberOfLines:0];
 		[aTextLabel setFont:[UIFont boldSystemFontOfSize:15.0]];
         [aTextLabel setTextColor:[UIColor whiteColor]];
@@ -236,7 +245,7 @@
     CGFloat labelWidth = self.view.frame.size.width - 20.0;
     
     CGSize constraint = CGSizeMake(labelWidth, 20000.0f);
-    CGSize size = [placeForRow.displayName sizeWithFont:[UIFont boldSystemFontOfSize:15.0] constrainedToSize:constraint lineBreakMode:NSLineBreakByWordWrapping];
+    CGSize size = [placeForRow.displayName sizeWithFont:[UIFont boldSystemFontOfSize:15.0] constrainedToSize:constraint lineBreakMode:OS_IS_LOWER_THAN_6_0 ? UILineBreakModeWordWrap : NSLineBreakByWordWrapping];
     
     //top-bottom margins are 5-5px
     return size.height + 20.0;

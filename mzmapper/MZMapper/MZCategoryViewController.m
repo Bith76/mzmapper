@@ -65,7 +65,7 @@
         {
             MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height, self.view.bounds.size.width, 50.0)];
             [itemView setItemName:@"itemName"];
-            [itemView setItemImage:[UIImage imageNamed:@"icon_bookshop.jpeg"]];
+            [itemView setItemImage:[UIImage imageNamed:@"shopping_alcohol.n.16.png"]];
             [self.view addSubview:itemView];
             [_categoryItemViews addObject:itemView];
             [itemView release];
@@ -99,6 +99,15 @@
         default:
             break;
     }
+    
+    if ([_categoryItemViews count] > 3)
+    {
+        [_showMoreButton setHidden:NO];
+    }
+    else
+    {
+        [_showMoreButton setHidden:YES];
+    }
 }
 
 - (IBAction)showMoreButtonTouched:(id)sender
@@ -112,6 +121,8 @@
         CGFloat newFrameHeight = 200.0;
         
         growingValue = newFrameHeight - actFrameHeight;
+        
+        [(UIButton*)sender setTransform:CGAffineTransformIdentity];
     }
     else
     {
@@ -121,11 +132,13 @@
             CGFloat newFrameHeight = _titleLabel.frame.size.height + ([_categoryItemViews count] * 50.0);
             
             growingValue = newFrameHeight - actFrameHeight;
+            
+            [(UIButton*)sender setTransform:CGAffineTransformMakeRotation(degreesToRadians(180.0))];
         }
     }
     
     [self.editViewController categoryVC:self changedHeightWith:growingValue];
-    NSLog(@"sender.frame2: %@",NSStringFromCGRect(((UIButton*)sender).frame));
+    
     _isOpen = !_isOpen;
 }
 #pragma mark - View lifecycle
@@ -139,6 +152,9 @@
 - (void)dealloc
 {
     [_categoryItemViews release];
+    
+    _titleLabel     = nil;
+    _showMoreButton = nil;
     
     [super dealloc];
 }

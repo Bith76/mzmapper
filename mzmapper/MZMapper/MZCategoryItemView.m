@@ -100,12 +100,13 @@
     // Drawing code
     
     //draw item image
-    [self.itemImage drawInRect:CGRectMake(3.0, 3.0, 44.0, 44.0)];
+    //[self.itemImage drawInRect:CGRectMake(3.0, 3.0, 44.0, 44.0)];
+    [self.itemImage drawInRect:CGRectMake(17.0, 17.0, 16.0, 16.0)];
     
     //draw item name
     CGSize constraint = CGSizeMake(20000.0f, 20000.0f);
     
-    CGSize size = [self.itemName sizeWithFont:[UIFont systemFontOfSize:17.0] constrainedToSize:constraint lineBreakMode:NSLineBreakByWordWrapping];
+    CGSize size = [self.itemName sizeWithFont:[UIFont systemFontOfSize:17.0] constrainedToSize:constraint lineBreakMode:OS_IS_LOWER_THAN_6_0 ? UILineBreakModeWordWrap : NSLineBreakByWordWrapping];
     CGRect itemNameRect = CGRectMake(53.0, (self.frame.size.height - size.height) / 2.0, self.frame.size.width - 56.0, size.height);
     
     [self.itemName drawInRect:itemNameRect withFont:[UIFont systemFontOfSize:17.0]];

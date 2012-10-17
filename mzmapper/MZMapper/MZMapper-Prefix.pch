@@ -17,3 +17,5 @@
 
 #define ShowNetworkActivityIndicator() [UIApplication sharedApplication].networkActivityIndicatorVisible = YES
 #define HideNetworkActivityIndicator() [UIApplication sharedApplication].networkActivityIndicatorVisible = NO
+#define degreesToRadians(x) (M_PI * x / 180.0)
+#define OS_IS_LOWER_THAN_6_0 [[[UIDevice currentDevice] systemVersion] floatValue] < 6.0

@@ -14,6 +14,8 @@
     MZMapperPointCategory   _categoryType;
     
     IBOutlet UILabel*       _titleLabel;
+    
+    IBOutlet UIButton*      _showMoreButton;
 }
 
 @property (nonatomic, assign) MZEditViewController* editViewController;
