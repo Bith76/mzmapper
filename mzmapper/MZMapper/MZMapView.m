@@ -10,7 +10,10 @@
 #import "MZNode.h"
 #import "MZWay.h"
 
-@interface MZMapView (Private)
+@interface MZMapView ()
+{
+    NSMutableArray* _pointObjects;
+}
 - (CGPoint)realPositionForNode:(MZNode*)node;
 @end
 
@@ -59,6 +62,8 @@
         _scale = 1.0;
         
         _bezierPaths = [[NSMutableArray alloc] init];
+        
+        _pointObjects = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -160,6 +165,10 @@
             [_currentNode.tags setValue:tagValue forKey:tagKey];
             
             
+            if ([tagKey isEqualToString:@"place"] || [tagKey isEqualToString:@"highway"])
+            {
+                [_pointObjects addObject:_currentNode];
+            }
         }
         else if (_currentWay) 
         {
@@ -398,23 +407,43 @@
     
     //egyelőre csak a városnevet csapatjuk ki (még lehetne optimalizálni ezt a részt)
     [[UIColor blackColor] set];
+
     
-    for (NSString* nodeID in _nodes) 
+    for (MZNode* node in _pointObjects)
     {
-        MZNode* node = [_nodes valueForKey:nodeID];
+        NSString* place = [node.tags valueForKey:@"place"];
+        NSString* highway = [node.tags valueForKey:@"highway"];
         
-        if ([node.tags count] != 0) 
+        if (place)
         {
-            for (NSString* tagKey in node.tags) 
+            NSString* name = [node.tags valueForKey:@"name"];
+            [name drawAtPoint:[self realPositionForNode:node] withFont:[UIFont systemFontOfSize:16.0]];
+        }
+        else if (highway)
+        {
+            if ([highway isEqualToString:@"bus_stop"])
             {
-                if ([tagKey isEqualToString:@"place"]) 
-                {
-                    NSString* name = [node.tags valueForKey:@"name"];
-                    [name drawAtPoint:[self realPositionForNode:node] withFont:[UIFont systemFontOfSize:16.0]];
-                }
+                [[UIImage imageNamed:@"transport_bus_stop.png"] drawAtPoint:[self realPositionForNode:node]];
             }
         }
     }
+    
+//    for (NSString* nodeID in _nodes) 
+//    {
+//        MZNode* node = [_nodes valueForKey:nodeID];
+//        
+//        if ([node.tags count] != 0) 
+//        {
+//            for (NSString* tagKey in node.tags) 
+//            {
+//                if ([tagKey isEqualToString:@"place"]) 
+//                {
+//                    NSString* name = [node.tags valueForKey:@"name"];
+//                    [name drawAtPoint:[self realPositionForNode:node] withFont:[UIFont systemFontOfSize:16.0]];
+//                }
+//            }
+//        }
+//    }
 }
 
 #pragma mark -
@@ -452,6 +481,8 @@
     [_levels release], _levels = nil;
     
     [_bezierPaths release], _bezierPaths = nil;
+    
+    [_pointObjects release], _pointObjects = nil;
     
     [super dealloc];
 }

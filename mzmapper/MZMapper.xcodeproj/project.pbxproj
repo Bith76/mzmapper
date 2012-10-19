@@ -42,6 +42,8 @@
 		132980CC153CAE2700979414 /* MZPullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 132980CB153CAE2700979414 /* MZPullView.m */; };
 		132980D1153CAEEB00979414 /* wood_pattern.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 132980D0153CAEEB00979414 /* wood_pattern.jpg */; };
 		132E9760162F2B2C0075AC7B /* shopping_alcohol.n.16.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E975F162F2B2C0075AC7B /* shopping_alcohol.n.16.png */; };
+		132E97701630838A0075AC7B /* transport_bus_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E976E1630838A0075AC7B /* transport_bus_stop.png */; };
+		132E97711630838A0075AC7B /* transport_bus_stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E976F1630838A0075AC7B /* transport_bus_stop@2x.png */; };
 		135E8B79159CD7930084B918 /* MZMapperContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 135E8B78159CD7930084B918 /* MZMapperContentManager.m */; };
 		13945E6E1540554D001B257E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13945E6D1540554D001B257E /* CoreLocation.framework */; };
 		13B1F4B6153A38AD003B4D06 /* MZMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B1F4B5153A38AD003B4D06 /* MZMessageView.m */; };
@@ -145,6 +147,8 @@
 		132980CB153CAE2700979414 /* MZPullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZPullView.m; sourceTree = "<group>"; };
 		132980D0153CAEEB00979414 /* wood_pattern.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wood_pattern.jpg; sourceTree = "<group>"; };
 		132E975F162F2B2C0075AC7B /* shopping_alcohol.n.16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopping_alcohol.n.16.png; sourceTree = "<group>"; };
+		132E976E1630838A0075AC7B /* transport_bus_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transport_bus_stop.png; sourceTree = "<group>"; };
+		132E976F1630838A0075AC7B /* transport_bus_stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transport_bus_stop@2x.png"; sourceTree = "<group>"; };
 		135E8B77159CD7930084B918 /* MZMapperContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMapperContentManager.h; sourceTree = "<group>"; };
 		135E8B78159CD7930084B918 /* MZMapperContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMapperContentManager.m; sourceTree = "<group>"; };
 		13945E6D1540554D001B257E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -388,6 +392,8 @@
 		132980CF153CAEE000979414 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				132E976E1630838A0075AC7B /* transport_bus_stop.png */,
+				132E976F1630838A0075AC7B /* transport_bus_stop@2x.png */,
 				132E975F162F2B2C0075AC7B /* shopping_alcohol.n.16.png */,
 				13C797871629F57F006C65AA /* open_close_arrow.png */,
 				13C7976516297498006C65AA /* icon_bookshop.jpeg */,
@@ -566,6 +572,8 @@
 				13C7976616297498006C65AA /* icon_bookshop.jpeg in Resources */,
 				13C797881629F57F006C65AA /* open_close_arrow.png in Resources */,
 				132E9760162F2B2C0075AC7B /* shopping_alcohol.n.16.png in Resources */,
+				132E97701630838A0075AC7B /* transport_bus_stop.png in Resources */,
+				132E97711630838A0075AC7B /* transport_bus_stop@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
