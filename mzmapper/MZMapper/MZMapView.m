@@ -14,7 +14,6 @@
 {
     NSMutableArray* _pointObjects;
 }
-- (CGPoint)realPositionForNode:(MZNode*)node;
 @end
 
 @implementation MZMapView
@@ -165,7 +164,7 @@
             [_currentNode.tags setValue:tagValue forKey:tagKey];
             
             
-            if ([tagKey isEqualToString:@"place"] || [tagKey isEqualToString:@"highway"])
+            if ([tagKey isEqualToString:@"place"] || [tagKey isEqualToString:@"highway"] || [tagKey isEqualToString:@"shop"])
             {
                 [_pointObjects addObject:_currentNode];
             }
@@ -413,6 +412,7 @@
     {
         NSString* place = [node.tags valueForKey:@"place"];
         NSString* highway = [node.tags valueForKey:@"highway"];
+        NSString* shop = [node.tags valueForKey:@"shop"];
         
         if (place)
         {
@@ -425,6 +425,12 @@
             {
                 [[UIImage imageNamed:@"transport_bus_stop.png"] drawAtPoint:[self realPositionForNode:node]];
             }
+        }
+        else if (shop)
+        {
+            NSString* imageName = [NSString stringWithFormat:@"shop_%@.png",shop];
+            
+            [[UIImage imageNamed:imageName] drawAtPoint:[self realPositionForNode:node]];
         }
     }
     

@@ -15,6 +15,9 @@
 #import "MZSearchViewController.h"
 #import "MZEditViewController.h"
 #import "MZLoupeView.h"
+#import "MZOpenStreetBugsViewController.h"
+#import "MZOpenStreetBug.h"
+#import "MZNode.h"
 
 @implementation MZMapperViewController
 
@@ -64,20 +67,24 @@
     _currentLocButton = [[UIButton alloc] initWithFrame:CGRectMake(960.0, 20.0, 44.0, 44.0)];
     _searchButton = [[UIButton alloc] initWithFrame:CGRectMake(908.0, 20.0, 44.0, 44.0)];
     _editButton = [[UIButton alloc] initWithFrame:CGRectMake(856.0, 20.0, 44.0, 44.0)];
+    _openStreetBugButton = [[UIButton alloc] initWithFrame:CGRectMake(804.0, 20.0, 44.0, 44.0)];
     
     [_editButton setImage:[UIImage imageNamed:@"icon_edit.png"] forState:UIControlStateNormal];
     [_currentLocButton setImage:[UIImage imageNamed:@"icon_current_location.png"] forState:UIControlStateNormal];
     //[_currentLocButton setImage:[UIImage imageNamed:@"icon_current_location_reversed.png"] forState:UIControlStateHighlighted];
     [_searchButton setImage:[UIImage imageNamed:@"icon_search.png"] forState:UIControlStateNormal];
     //[_searchButton setImage:[UIImage imageNamed:@"icon_search_reversed.png"] forState:UIControlStateHighlighted];
+    [_openStreetBugButton setImage:[UIImage imageNamed:@"icon_bug.png"] forState:UIControlStateNormal];
     
     [_editButton setExclusiveTouch:YES];
     [_currentLocButton setExclusiveTouch:YES];
     [_searchButton setExclusiveTouch:YES];
+    [_openStreetBugButton setExclusiveTouch:YES];
     
     [_editButton addTarget:self action:@selector(editButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
     [_currentLocButton addTarget:self action:@selector(currentLocButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
     [_searchButton addTarget:self action:@selector(searchButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    [_openStreetBugButton addTarget:self action:@selector(openStreetBugsButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:_editButton];
     [_editButton setTag:3];
@@ -85,6 +92,8 @@
     [_currentLocButton setTag:4];
     [self.view addSubview:_searchButton];
     [_searchButton setTag:5];
+    [self.view addSubview:_openStreetBugButton];
+    [_openStreetBugButton setTag:6];
     
     
     _locationManager = [[CLLocationManager alloc] init];
@@ -110,7 +119,15 @@
     [loginButton addTarget:self action:@selector(loginButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
     
+    //OpenStreetBugs integration
+    UITapGestureRecognizer* doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+    [doubleTap setNumberOfTapsRequired:2];
+    [self.view addGestureRecognizer:doubleTap];
+    [doubleTap release];
+    
     _editingModeIsActive = NO;
+    
+    _openStreetBugs = [[NSMutableArray alloc] init];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -205,6 +222,137 @@
     [_pullView show];
 }
 
+//collects bug data from resultString and returns an array which contains MZOpenStreetBug objects
+- (NSMutableArray*)collectOpenStreetBugsFromResultString:(NSString*)resultString
+{
+    NSMutableArray* retVal = [NSMutableArray array];
+    
+    [resultString enumerateLinesUsingBlock:^(NSString *line, BOOL *stop)
+     {
+         NSRange rangeOfFirstQuote = [line rangeOfString:@"'"];
+         
+         NSString* firstHalf = [line substringToIndex:rangeOfFirstQuote.location];
+         
+         //get second half of the line without the starting quote
+         NSString* secondHalf = [line substringFromIndex:rangeOfFirstQuote.location + 1];
+         
+         //process the first half of the line------------
+         //remove "putAJAXMarker(" string from the beginning
+         firstHalf = [firstHalf stringByReplacingOccurrencesOfString:@"putAJAXMarker(" withString:@""];
+         
+         //split substring by ","
+         NSArray* components = [firstHalf componentsSeparatedByString:@","];
+         
+         //components array contains the plain data
+         NSString* bugID = [components objectAtIndex:0];
+         CGFloat longitude = [[components objectAtIndex:1] floatValue];
+         CGFloat latitude = [[components objectAtIndex:2] floatValue];
+         
+         
+         //process the second half of the line------------
+         NSRange rangeOfSecondQuote = [secondHalf rangeOfString:@"'"];
+         
+         //get description from the second half of the line (without ending quote)
+         NSString* description = [secondHalf substringToIndex:rangeOfSecondQuote.location];
+         
+         //remove description from the second half string
+         secondHalf = [secondHalf stringByReplacingOccurrencesOfString:description withString:@""];
+         
+         //remove unneeded strings from the second half string
+         secondHalf = [secondHalf stringByReplacingOccurrencesOfString:@"', " withString:@""];
+         secondHalf = [secondHalf stringByReplacingOccurrencesOfString:@");" withString:@""];
+         
+         //try convert left string to a status bool
+         BOOL status = [secondHalf boolValue];
+         
+         //description maybe contains comment(s)
+         components = [description componentsSeparatedByString:@"<hr />"];
+         
+         NSMutableArray* comments = [NSMutableArray array];
+         
+         if ([components count] > 1)
+         {
+             for (NSUInteger i = 1; i < [components count]; i++)
+             {
+                 [comments addObject:[components objectAtIndex:i]];
+             }
+         }
+         
+         
+//         NSLog(@"\tbugId: %@",bugID);
+//         NSLog(@"\tlon: %@",longitude);
+//         NSLog(@"\tlat: %@",latitude);
+//         NSLog(@"\tdesc: %@",description);
+//         NSLog(@"\tstatus: %@",status ? @"YES" : @"NO");
+//         for (NSString* comment in comments)
+//         {
+//             NSLog(@"\tcommentx: %@",comment);
+//         }
+         
+         
+         MZOpenStreetBug* bug = [[MZOpenStreetBug alloc] init];
+         [bug setBugID:bugID];
+         [bug setLongitude:longitude];
+         [bug setLatitude:latitude];
+         [bug setDescription:description];
+         [bug setStatus:status];
+         [bug setComments:components];
+         
+         [retVal addObject:bug];
+         
+         [bug release];
+     }];
+    
+    return retVal;
+}
+
+- (void)switchOnOpenStreetBugs
+{
+    [MZMapperContentManager sharedContentManager].openStreetBugModeIsActive = YES;
+    
+    [_openStreetBugButton setImage:[UIImage imageNamed:@"icon_bug_on.png"] forState:UIControlStateNormal];
+    
+    UIView* bugView = [[UIView alloc] initWithFrame:_map.frame];
+    [bugView setBackgroundColor:[UIColor clearColor]];
+    
+    for (MZOpenStreetBug* bug in _openStreetBugs)
+    {
+        MZNode* bugNode = [[MZNode alloc] init];
+        bugNode.longitude = bug.longitude;
+        bugNode.latitude = bug.latitude;
+        
+        CGPoint realPosition = [_map realPositionForNode:bugNode];
+        
+        [bugNode release];
+        
+        UIImage* statusImage = nil;
+        
+        if (bug.status)
+        {
+            statusImage = [UIImage imageNamed:@"icon_ok.png"];
+        }
+        else
+        {
+            statusImage = [UIImage imageNamed:@"icon_error.png"];
+        }
+        
+        UIImageView* bugImageView = [[UIImageView alloc] initWithImage:statusImage];
+        [bugImageView setCenter:realPosition];
+        
+        UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleBugTap:)];
+        [bugImageView addGestureRecognizer:tapGesture];
+        [tapGesture release];
+        
+        [bugView addSubview:bugImageView];
+        
+        [bugImageView release];
+        
+        NSLog(@"realpos: %@",NSStringFromCGPoint(realPosition));
+    }
+    
+    [_scrollView addSubview:bugView];
+}
+
 #pragma mark -
 #pragma mark Button touched methods
 
@@ -257,7 +405,7 @@
     NSLog(@"%s",__PRETTY_FUNCTION__);
     
 //    NSLog(@"gettinginprogress: %i",_gettingCurrentLocationIsInProgress);
-    if (!_gettingCurrentLocationIsInProgress) 
+    if (!_gettingCurrentLocationIsInProgress)
     {
         [_locationManager startUpdatingLocation];
     }
@@ -271,6 +419,48 @@
     [_loginViewController setDelegate:self];
     
     [self presentViewController:_loginViewController animated:YES completion:nil];
+}
+
+- (void)openStreetBugsButtonTouched:(id)sender
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    
+    CGFloat width = _map.maxLongitude - _map.minLongitude;
+    CGFloat left = _map.minLongitude - width;
+    CGFloat right = _map.maxLongitude + width;
+    
+    CGFloat height = _map.maxLatitude - _map.minLatitude;
+    CGFloat bottom = _map.minLatitude - height;
+    CGFloat top = _map.maxLatitude + height;
+    
+    //http://openstreetbugs.schokokeks.org/api/0.1/getBugs?b=46.2000070&t=46.2158120&l=19.3771410&r=19.4075760
+    
+    NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://openstreetbugs.schokokeks.org/api/0.1/getBugs?b=%f&t=%f&l=%f&r=%f",bottom,top,left,right]];
+    
+    MZDownloader* downloader = [[MZDownloader alloc] init];
+    
+    [downloader downloadRequestFromURL:url
+                       progressHandler:nil
+                     completionHandler:^(NSString* resultString){
+                         
+                         //NSLog(@"resultString: %@",resultString);
+                         
+                         if (![resultString isEqualToString:HTTP_STATUS_CODE_CONNECTION_FAILED])
+                         {
+                             if ([_openStreetBugs count])
+                             {
+                                 [_openStreetBugs removeAllObjects];
+                             }
+                             
+                             [_openStreetBugs addObjectsFromArray:[self collectOpenStreetBugsFromResultString:resultString]];
+                             
+                             [self switchOnOpenStreetBugs];
+                         }
+                     }];
+    
+    [downloader release];
+    [url release];
+    
 }
 
 #pragma mark -
@@ -398,6 +588,54 @@
     
 }
 
+- (void)handleDoubleTap:(UITapGestureRecognizer*)gesture
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    CGPoint gestureRecognizedAtPoint = [gesture locationInView:[gesture view]];
+    
+    MZOpenStreetBugsViewController* bugController = [[MZOpenStreetBugsViewController alloc] initWithNibName:@"MZOpenStreetBugsViewController" bundle:nil];
+    
+    //[bugController setDelegate:self];
+    [bugController setContentSizeForViewInPopover:CGSizeMake(400.0, 200.0)];
+    
+    UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:bugController];
+    
+    [bugController.navigationItem setTitle:@"OpenStreetBugs"];
+    
+    UIPopoverController* popoverController = [[UIPopoverController alloc] initWithContentViewController:navController];
+    bugController.aPopoverController = popoverController;
+    [popoverController presentPopoverFromRect:CGRectMake(gestureRecognizedAtPoint.x, gestureRecognizedAtPoint.y, 1.0, 1.0) inView:[gesture view] permittedArrowDirections:UIPopoverArrowDirectionDown | UIPopoverArrowDirectionLeft | UIPopoverArrowDirectionRight animated:YES];
+    
+    [navController release];
+    [bugController release];
+    
+//    popOverMenu.delegate = self;
+//    popOverMenu.noResultsLabelText = noResultsLabelText;
+//    popOverMenu.contentSizeForViewInPopover = CGSizeMake(300.0, 44.0 * 10.0);
+//    
+//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+//    {
+//        UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:popOverMenu];
+//        
+//        popOverMenu.navigationItem.title = title;
+//        
+//        UIPopoverController* popoverController = [[UIPopoverController alloc] initWithContentViewController:navController];
+//        popoverController.delegate = popOverMenu;
+//        popOverMenu.aPopoverController = popoverController;
+//        
+//        UITableViewCell* selectedCell = [self.tableView cellForRowAtIndexPath:indexPath];
+//        
+//        [popoverController presentPopoverFromRect:selectedCell.bounds inView:selectedCell permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+//        
+//        [navController release];
+//        [popOverMenu release];
+}
+
+- (void)handleBugTap:(UITapGestureRecognizer*)gesture
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+}
+
 #pragma mark - View lifecycle
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -433,10 +671,13 @@
     [_currentLocButton release];
     [_searchButton release];
     [_editButton release];
+    [_openStreetBugButton release];
     [_loupeView release];
     
     [_locationManager stopUpdatingLocation];
 	[_locationManager release];
+    
+    [_openStreetBugs release];
     
     [super dealloc];
 }

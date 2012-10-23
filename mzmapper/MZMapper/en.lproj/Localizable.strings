@@ -20,3 +20,132 @@
 
 /* Title of login error alert view. */
 "LoginErrorTitleKey" = "Authentication Error";
+
+/* Name of the Accomodation-type point category */
+"PointCategoryNameAccomodationKey" = "Accomodation";
+
+/* Name of the Amenity-type point category */
+"PointCategoryNameAmenityKey" = "Amenity";
+
+/* Name of the Barrier-type point category */
+"PointCategoryNameBarrierKey" = "Barrier";
+
+/* Name of the Education-type point category */
+"PointCategoryNameEducationKey" = "Education";
+
+/* Name of the Entertainment-type point category */
+"PointCategoryNameEntertainmentKey" = "Entertainment";
+
+/* Name of the FoodAndDrink-type point category */
+"PointCategoryNameFoodAndDrinkKey" = "Food and Drink";
+
+/* Name of the Healthcare-type point category */
+"PointCategoryNameHealthcareKey" = "Healthcare";
+
+/* Name of the Landuse-type point category */
+"PointCategoryNameLanduseKey" = "Landuse";
+
+/* Name of the ManMade-type point category */
+"PointCategoryNameManMadeKey" = "Man-made";
+
+/* Name of the Places-type point category */
+"PointCategoryNamePlacesKey" = "Places";
+
+/* Name of the Power-type point category */
+"PointCategoryNamePowerKey" = "Power";
+
+/* Name of the Shopping-type point category */
+"PointCategoryNameShoppingKey" = "Shopping";
+
+/* Name of the SportAndLeisure-type point category */
+"PointCategoryNameSportAndLeisureKey" = "Sport and Leisure";
+
+/* Name of the Tourism-type point category */
+"PointCategoryNameTourismKey" = "Tourism";
+
+/* Name of the Transport-type point category */
+"PointCategoryNameTransportKey" = "Transport";
+
+/* Name of the AlcoholShop point category element */
+"PointCategoryShoppingElementNameAlcoholShopKey" = "Alcohol shop";
+
+/* Name of the Bakery point category element */
+"PointCategoryShoppingElementNameBakeryKey" = "Bakery";
+
+/* Name of the BikeShop point category element */
+"PointCategoryShoppingElementNameBikeShopKey" = "Bike shop";
+
+/* Name of the BookShop point category element */
+"PointCategoryShoppingElementNameBookShopKey" = "Bookshop";
+
+/* Name of the Butcher point category element */
+"PointCategoryShoppingElementNameButcherKey" = "Butcher";
+
+/* Name of the CarRepair point category element */
+"PointCategoryShoppingElementNameCarRepairKey" = "Car repair";
+
+/* Name of the CarSales point category element */
+"PointCategoryShoppingElementNameCarSalesKey" = "Car sales";
+
+/* Name of the ClothesShop point category element */
+"PointCategoryShoppingElementNameClothesShopKey" = "Clothes shop";
+
+/* Name of the Confectionery point category element */
+"PointCategoryShoppingElementNameConfectioneryKey" = "Confectionery";
+
+/* Name of the DIY point category element */
+"PointCategoryShoppingElementNameDIYKey" = "DIY";
+
+/* Name of the Fishmonger point category element */
+"PointCategoryShoppingElementNameFishmongerKey" = "Fishmonger";
+
+/* Name of the Florist point category element */
+"PointCategoryShoppingElementNameFloristKey" = "Florist";
+
+/* Name of the GardenCentre point category element */
+"PointCategoryShoppingElementNameGardenCentreKey" = "Garden centre";
+
+/* Name of the GiftShop point category element */
+"PointCategoryShoppingElementNameGiftShopKey" = "Gift shop";
+
+/* Name of the Greengrocer point category element */
+"PointCategoryShoppingElementNameGreengrocerKey" = "Greengrocer";
+
+/* Name of the Hairdresser point category element */
+"PointCategoryShoppingElementNameHairdresserKey" = "Hairdresser";
+
+/* Name of the HifiShop point category element */
+"PointCategoryShoppingElementNameHifiShopKey" = "Hifi shop";
+
+/* Name of the Jewellery point category element */
+"PointCategoryShoppingElementNameJewelleryKey" = "Jewellery";
+
+/* Name of the Kiosk point category element */
+"PointCategoryShoppingElementNameKioskKey" = "Kiosk";
+
+/* Name of the Laundrette point category element */
+"PointCategoryShoppingElementNameLaundretteKey" = "Laundrette";
+
+/* Name of the MarketPlace point category element */
+"PointCategoryShoppingElementNameMarketPlaceKey" = "Marketplace";
+
+/* Name of the MotorbikeShop point category element */
+"PointCategoryShoppingElementNameMotorbikeShopKey" = "Motorbike shop";
+
+/* Name of the MusicShop point category element */
+"PointCategoryShoppingElementNameMusicShopKey" = "Music shop";
+
+/* Name of the SmallConvenienceStore point category element */
+"PointCategoryShoppingElementNameSmallConvenienceStoreKey" = "Small convenience store";
+
+/* Name of the Supermarket point category element */
+"PointCategoryShoppingElementNameSupermarketKey" = "Supermarket";
+
+/* Name of the ToyShop point category element */
+"PointCategoryShoppingElementNameToyShopKey" = "Toy shop";
+
+/* Name of a point category which hasn't got predefined name */
+"UnnamedPointCategoryNameKey" = "Unknown category";
+
+/* Name of a point category which is shopping point and hasn't got predefined name */
+"UnnamedPointCategoryElementNameKey" = "Unknown element";

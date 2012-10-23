@@ -15,13 +15,14 @@ enum
     MZMapperPointCategoryTourism,
     MZMapperPointCategoryAccomodation,
     MZMapperPointCategoryTransport,
-    MZMapperPointCategoryWater,
     MZMapperPointCategoryBarrier,
     MZMapperPointCategoryPower,
-    MZMapperPointCategoryBuildings,
     MZMapperPointCategoryLanduse,
     MZMapperPointCategoryPlaces,
     MZMapperPointCategorySportAndLeisure,
+    MZMapperPointCategoryHealthCare,
+    MZMapperPointCategoryEntertainment,
+    MZMapperPointCategoryEducation,
     MZMapperPointCategoryManMade,
     MZMapperPointCategoryCountOfCategories
 };
@@ -54,12 +55,24 @@ enum
     MZMapperPointCategoryShoppingElementLaundrette,
     MZMapperPointCategoryShoppingElementMotorbikeShop,
     MZMapperPointCategoryShoppingElementMusicShop,
-    MZMapperPointCategoryShoppingElementPharmacy,
     MZMapperPointCategoryShoppingElementToyShop,
     MZMapperPointCategoryShoppingElementMarketPlace,
     MZMapperPointCategoryShoppingElementCountOfElements
 };
 typedef NSUInteger MZMapperPointCategoryShoppingElement;
+
+enum
+{
+    MZMapperPointCategoryFoodAndDrinkElementWaterFountain = 0,
+    MZMapperPointCategoryFoodAndDrinkElementVendingMachine,
+    MZMapperPointCategoryFoodAndDrinkElementPub,
+    MZMapperPointCategoryFoodAndDrinkElementBar,
+    MZMapperPointCategoryFoodAndDrinkElementRestaurant,
+    MZMapperPointCategoryFoodAndDrinkElementCafe,
+    MZMapperPointCategoryFoodAndDrinkElementFastFood,
+    MZMapperPointCategoryFoodAndDrinkElementCountOfElements
+};
+typedef NSUInteger MZMapperPointCategoryFoodAndDrinkElement;
 
 @interface MZMapperContentManager : NSObject
 {
@@ -72,6 +85,7 @@ typedef NSUInteger MZMapperPointCategoryShoppingElement;
 @property (nonatomic, retain) NSString* userName;
 @property (nonatomic, retain) NSString* password;
 @property (nonatomic, assign) BOOL      loggedIn;
+@property (nonatomic, assign) BOOL      openStreetBugModeIsActive;
 
 //singleton
 + (MZMapperContentManager*)sharedContentManager;

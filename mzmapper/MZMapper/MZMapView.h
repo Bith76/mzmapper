@@ -47,4 +47,6 @@
 
 - (void)setupWithXML:(NSString*)xml;
 
+- (CGPoint)realPositionForNode:(MZNode*)node;
+
 @end

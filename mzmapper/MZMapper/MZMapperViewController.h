@@ -31,8 +31,10 @@
     UIButton*               _currentLocButton;
     UIButton*               _searchButton;
     UIButton*               _editButton;
+    UIButton*               _openStreetBugButton;
     MZLoupeView*            _loupeView;
     MZLoginViewController*  _loginViewController;
+    NSMutableArray*         _openStreetBugs;
 }
 
 @property (nonatomic, assign)   BOOL gettingCurrentLocationIsInProgress;
@@ -40,5 +42,6 @@
 - (void)showMessageViewWithMessage:(NSString*)message;
 - (void)hideMessageView;
 - (void)jumpToCoordinateLongitude:(CGFloat)lon latitude:(CGFloat)lat;
+- (void)handleBugTap:(UITapGestureRecognizer*)gesture;
 
 @end

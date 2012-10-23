@@ -20,3 +20,132 @@
 
 /* Title of login error alert view. */
 "LoginErrorTitleKey" = "Bejelentkezés";
+
+/* Name of the Accomodation-type point category */
+"PointCategoryNameAccomodationKey" = "Szállás";
+
+/* Name of the Amenity-type point category */
+"PointCategoryNameAmenityKey" = "Egyéb";
+
+/* Name of the Barrier-type point category */
+"PointCategoryNameBarrierKey" = "Átjárók";
+
+/* Name of the Education-type point category */
+"PointCategoryNameEducationKey" = "Oktatás";
+
+/* Name of the Entertainment-type point category */
+"PointCategoryNameEntertainmentKey" = "Szórakozás";
+
+/* Name of the FoodAndDrink-type point category */
+"PointCategoryNameFoodAndDrinkKey" = "Étel-ital";
+
+/* Name of the Healthcare-type point category */
+"PointCategoryNameHealthcareKey" = "Egészség";
+
+/* Name of the Landuse-type point category */
+"PointCategoryNameLanduseKey" = "Közterület";
+
+/* Name of the ManMade-type point category */
+"PointCategoryNameManMadeKey" = "Létesítmények";
+
+/* Name of the Places-type point category */
+"PointCategoryNamePlacesKey" = "Települések";
+
+/* Name of the Power-type point category */
+"PointCategoryNamePowerKey" = "Áramellátás";
+
+/* Name of the Shopping-type point category */
+"PointCategoryNameShoppingKey" = "Vásárlás";
+
+/* Name of the SportAndLeisure-type point category */
+"PointCategoryNameSportAndLeisureKey" = "Sport és szabadidő";
+
+/* Name of the Tourism-type point category */
+"PointCategoryNameTourismKey" = "Turizmus";
+
+/* Name of the Transport-type point category */
+"PointCategoryNameTransportKey" = "Közlekedés";
+
+/* Name of the AlcoholShop point category element */
+"PointCategoryShoppingElementNameAlcoholShopKey" = "Italbolt";
+
+/* Name of the Bakery point category element */
+"PointCategoryShoppingElementNameBakeryKey" = "Pékség";
+
+/* Name of the BikeShop point category element */
+"PointCategoryShoppingElementNameBikeShopKey" = "Kerékpárüzlet";
+
+/* Name of the BookShop point category element */
+"PointCategoryShoppingElementNameBookShopKey" = "Könyvesbolt";
+
+/* Name of the Butcher point category element */
+"PointCategoryShoppingElementNameButcherKey" = "Hentes";
+
+/* Name of the CarRepair point category element */
+"PointCategoryShoppingElementNameCarRepairKey" = "Autószerelő";
+
+/* Name of the CarSales point category element */
+"PointCategoryShoppingElementNameCarSalesKey" = "Autókereskedés";
+
+/* Name of the ClothesShop point category element */
+"PointCategoryShoppingElementNameClothesShopKey" = "Ruhaüzlet";
+
+/* Name of the Confectionery point category element */
+"PointCategoryShoppingElementNameConfectioneryKey" = "Cukrászda";
+
+/* Name of the DIY point category element */
+"PointCategoryShoppingElementNameDIYKey" = "Barkácsbolt";
+
+/* Name of the Fishmonger point category element */
+"PointCategoryShoppingElementNameFishmongerKey" = "Halkereskedő";
+
+/* Name of the Florist point category element */
+"PointCategoryShoppingElementNameFloristKey" = "Virágbolt";
+
+/* Name of the GardenCentre point category element */
+"PointCategoryShoppingElementNameGardenCentreKey" = "Kertészet";
+
+/* Name of the GiftShop point category element */
+"PointCategoryShoppingElementNameGiftShopKey" = "Ajándékbolt";
+
+/* Name of the Greengrocer point category element */
+"PointCategoryShoppingElementNameGreengrocerKey" = "Zöldséges";
+
+/* Name of the Hairdresser point category element */
+"PointCategoryShoppingElementNameHairdresserKey" = "Fodrász";
+
+/* Name of the HifiShop point category element */
+"PointCategoryShoppingElementNameHifiShopKey" = "Hifi üzlet";
+
+/* Name of the Jewellery point category element */
+"PointCategoryShoppingElementNameJewelleryKey" = "Ékszerész";
+
+/* Name of the Kiosk point category element */
+"PointCategoryShoppingElementNameKioskKey" = "Trafik";
+
+/* Name of the Laundrette point category element */
+"PointCategoryShoppingElementNameLaundretteKey" = "Mosoda";
+
+/* Name of the MarketPlace point category element */
+"PointCategoryShoppingElementNameMarketPlaceKey" = "Piac";
+
+/* Name of the MotorbikeShop point category element */
+"PointCategoryShoppingElementNameMotorbikeShopKey" = "Motorkerékpár-üzlet";
+
+/* Name of the MusicShop point category element */
+"PointCategoryShoppingElementNameMusicShopKey" = "Hangszerbolt";
+
+/* Name of the SmallConvenienceStore point category element */
+"PointCategoryShoppingElementNameSmallConvenienceStoreKey" = "Kisbolt";
+
+/* Name of the Supermarket point category element */
+"PointCategoryShoppingElementNameSupermarketKey" = "Szupermarket";
+
+/* Name of the ToyShop point category element */
+"PointCategoryShoppingElementNameToyShopKey" = "Játékbolt";
+
+/* Name of a point category which hasn't got predefined name */
+"UnnamedPointCategoryNameKey" = "Ismeretlen kategória";
+
+/* Name of a point category which is shopping point and hasn't got predefined name */
+"UnnamedPointCategoryElementNameKey" = "Ismeretlen elem";

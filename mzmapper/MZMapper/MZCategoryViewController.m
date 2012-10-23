@@ -59,6 +59,8 @@
 
 - (void)setupForType:(MZMapperPointCategory)type
 {
+    [_titleLabel setText:[NSString nameOfPointCategory:type]];
+    
     switch (type)
     {
         case MZMapperPointCategoryAccomodation:
@@ -88,8 +90,8 @@
             for (NSUInteger i = 0; i < MZMapperPointCategoryShoppingElementCountOfElements; i++)
             {
                 MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (i * 50.0), self.view.bounds.size.width, 50.0)];
-                [itemView setItemName:@"itemName"];
-                [itemView setItemImage:[UIImage imageNamed:@"icon_bookshop.jpeg"]];
+                [itemView setItemName:[NSString nameOfPointCategoryShoppingElement:i]];
+                [itemView setItemImage:[UIImage imageForPointCategoryShoppingElement:i]];
                 [self.view addSubview:itemView];
                 [_categoryItemViews addObject:itemView];
                 [itemView release];

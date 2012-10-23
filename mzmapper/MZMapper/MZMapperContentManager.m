@@ -12,9 +12,10 @@ static MZMapperContentManager* sharedContentManager = nil;
 
 @implementation MZMapperContentManager
 
-@synthesize userName = _userName;
-@synthesize password = _password;
-@synthesize loggedIn = _loggedIn;
+@synthesize userName                    = _userName;
+@synthesize password                    = _password;
+@synthesize loggedIn                    = _loggedIn;
+@synthesize openStreetBugModeIsActive;
 
 #pragma mark -
 #pragma mark singleton pattern
