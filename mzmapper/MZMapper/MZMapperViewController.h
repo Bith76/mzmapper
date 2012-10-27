@@ -10,6 +10,7 @@
 #import "MZMapView.h"
 #import "MZTiledScrollView.h"
 #import "MZLoginViewController.h"
+#import "MZBlockView.h"
 
 @class MZMessageView;
 @class MZPullView;
@@ -27,6 +28,7 @@
     
     @private
     MZMessageView*          _messageView;
+    MZBlockView*            _blockView;
     CLLocationManager*      _locationManager;
     UIButton*               _currentLocButton;
     UIButton*               _searchButton;
@@ -35,12 +37,15 @@
     MZLoupeView*            _loupeView;
     MZLoginViewController*  _loginViewController;
     NSMutableArray*         _openStreetBugs;
+    UIView*                 _openStreetBugView;
 }
 
 @property (nonatomic, assign)   BOOL gettingCurrentLocationIsInProgress;
 
 - (void)showMessageViewWithMessage:(NSString*)message;
 - (void)hideMessageView;
+- (void)showBlockView;
+- (void)hideBlockView;
 - (void)jumpToCoordinateLongitude:(CGFloat)lon latitude:(CGFloat)lat;
 - (void)handleBugTap:(UITapGestureRecognizer*)gesture;
 

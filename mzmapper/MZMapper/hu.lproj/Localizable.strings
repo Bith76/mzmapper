@@ -45,9 +45,6 @@
 /* Name of the Landuse-type point category */
 "PointCategoryNameLanduseKey" = "Közterület";
 
-/* Name of the ManMade-type point category */
-"PointCategoryNameManMadeKey" = "Létesítmények";
-
 /* Name of the Places-type point category */
 "PointCategoryNamePlacesKey" = "Települések";
 

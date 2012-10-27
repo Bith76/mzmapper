@@ -37,6 +37,7 @@
 {
     UILabel* titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(50.0, 10.0, self.bounds.size.width - 60.0, 30.0)];
     //[titleLabel setBackgroundColor:[UIColor purpleColor]];
+    [titleLabel setFont:[UIFont systemFontOfSize:15.0]];
     [titleLabel setText:self.itemName];
     
     [self addSubview:titleLabel];

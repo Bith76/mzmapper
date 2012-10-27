@@ -10,5 +10,6 @@
 @interface UIImage (MZMapperUtilities)
 
 + (UIImage*)imageForPointCategoryShoppingElement:(MZMapperPointCategoryShoppingElement)element;
++ (UIImage*)imageForPointCategoryFoodAndDrinkElement:(MZMapperPointCategoryFoodAndDrinkElement)element;
 
 @end

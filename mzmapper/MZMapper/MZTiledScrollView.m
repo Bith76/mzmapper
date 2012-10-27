@@ -48,7 +48,7 @@
     self.scrollsToTop = NO;
     
     UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
-    [self addGestureRecognizer:tap];
+    //[self addGestureRecognizer:tap];
     [tap release];
     
     return self;
@@ -56,9 +56,19 @@
 
 - (void)handleTap:(UITapGestureRecognizer*)gesture
 {
-    CGPoint tappedPoint = [gesture locationInView:self];
+    NSLog(@"%s",__PRETTY_FUNCTION__);
     
-    [self selectPoint:tappedPoint];
+    if ([MZMapperContentManager sharedContentManager].openStreetBugModeIsActive)
+    {
+        [_controller handleBugTap:gesture];
+    }
+    else
+    {
+        
+        CGPoint tappedPoint = [gesture locationInView:self];
+        
+        //    [self selectPoint:tappedPoint];
+    }
 }
 
 - (void)selectPoint:(CGPoint)point
@@ -171,6 +181,7 @@
     NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://api.openstreetmap.org/api/0.6/map?bbox=%f,%f,%f,%f",left,bottom,right,top]];
     
     [_controller showMessageViewWithMessage:@"Downloading map..."];
+    [_controller showBlockView];
     
     [downloader downloadRequestFromURL:url
                        progressHandler:^(long long totalBytes, long long currentBytes){
@@ -193,6 +204,7 @@
                              
                              
                              [_controller hideMessageView];
+                             [_controller hideBlockView];
                              
                              [self recenterByX];
                              [self recenterByY];
@@ -492,6 +504,7 @@
         NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://api.openstreetmap.org/api/0.6/map?bbox=%f,%f,%f,%f",left,bottom,right,top]];
         
         [_controller showMessageViewWithMessage:@"Downloading map..."];
+        [_controller showBlockView];
         
         [downloader downloadRequestFromURL:url
                            progressHandler:^(long long totalBytes, long long currentBytes){
@@ -512,6 +525,7 @@
                              
                              
                              [_controller hideMessageView];
+                             [_controller hideBlockView];
                              
                              [self recenterByX];
                              [self recenterByY];

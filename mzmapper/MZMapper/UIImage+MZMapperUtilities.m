@@ -152,36 +152,53 @@
     
     return retVal;
 }
-//enum
-//{
-//    MZMapperPointCategoryShoppingElementSupermarket = 0,
-//    MZMapperPointCategoryShoppingElementSmallConvenienceStore,
-//    MZMapperPointCategoryShoppingElementBakery,
-//    MZMapperPointCategoryShoppingElementAlcoholShop,
-//    MZMapperPointCategoryShoppingElementBikeShop,
-//    MZMapperPointCategoryShoppingElementBookShop,
-//    MZMapperPointCategoryShoppingElementButcher,
-//    MZMapperPointCategoryShoppingElementCarSales,
-//    MZMapperPointCategoryShoppingElementCarRepair,
-//    MZMapperPointCategoryShoppingElementClothesShop,
-//    MZMapperPointCategoryShoppingElementConfectionery,
-//    MZMapperPointCategoryShoppingElementDIY,
-//    MZMapperPointCategoryShoppingElementFishmonger,
-//    MZMapperPointCategoryShoppingElementFlorist,
-//    MZMapperPointCategoryShoppingElementGardenCentre,
-//    MZMapperPointCategoryShoppingElementGiftShop,
-//    MZMapperPointCategoryShoppingElementGreengrocer,
-//    MZMapperPointCategoryShoppingElementHairdresser,
-//    MZMapperPointCategoryShoppingElementHifiShop,
-//    MZMapperPointCategoryShoppingElementJewellery,
-//    MZMapperPointCategoryShoppingElementKiosk,
-//    MZMapperPointCategoryShoppingElementLaundrette,
-//    MZMapperPointCategoryShoppingElementMotorbikeShop,
-//    MZMapperPointCategoryShoppingElementMusicShop,
-//    MZMapperPointCategoryShoppingElementPharmacy,
-//    MZMapperPointCategoryShoppingElementToyShop,
-//    MZMapperPointCategoryShoppingElementMarketPlace,
-//    MZMapperPointCategoryShoppingElementCountOfElements
-//};
+
++ (UIImage*)imageForPointCategoryFoodAndDrinkElement:(MZMapperPointCategoryFoodAndDrinkElement)element
+{
+    UIImage* retVal = nil;
+    
+    switch (element)
+    {
+        case MZMapperPointCategoryFoodAndDrinkElementWaterFountain:
+        {
+            retVal = [UIImage imageNamed:@"amenity_drinking_water.png"];
+        }
+            break;
+        case MZMapperPointCategoryFoodAndDrinkElementVendingMachine:
+        {
+            retVal = [UIImage imageNamed:@"amenity_vending_machine.png"];
+        }
+            break;
+        case MZMapperPointCategoryFoodAndDrinkElementPub:
+        {
+            retVal = [UIImage imageNamed:@"amenity_pub.png"];
+        }
+            break;
+        case MZMapperPointCategoryFoodAndDrinkElementBar:
+        {
+            retVal = [UIImage imageNamed:@"amenity_bar.png"];
+        }
+            break;
+        case MZMapperPointCategoryFoodAndDrinkElementRestaurant:
+        {
+            retVal = [UIImage imageNamed:@"amenity_restaurant.png"];
+        }
+            break;
+        case MZMapperPointCategoryFoodAndDrinkElementCafe:
+        {
+            retVal = [UIImage imageNamed:@"amenity_cafe.png"];
+        }
+            break;
+        case MZMapperPointCategoryFoodAndDrinkElementFastFood:
+        {
+            retVal = [UIImage imageNamed:@"amenity_fastfood.png"];
+        }
+            break;
+        default:
+            break;
+    }
+    
+    return retVal;
+}
 
 @end

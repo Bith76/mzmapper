@@ -33,6 +33,8 @@
 		130B65C5159B117D000AAE0F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130B65C3159B1170000AAE0F /* SenTestingKit.framework */; };
 		130B65CB159B4E60000AAE0F /* MZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130B65C9159B4E60000AAE0F /* MZLoginViewController.m */; };
 		130B65CC159B4E60000AAE0F /* MZLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 130B65CA159B4E60000AAE0F /* MZLoginViewController.xib */; };
+		130E8E831639BA4B0006BAAB /* MZBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 130E8E821639BA4B0006BAAB /* MZBlockView.m */; };
+		130E8E84163B39EB0006BAAB /* MZOpenStreetBugsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 130E8E86163B39EB0006BAAB /* MZOpenStreetBugsViewController.xib */; };
 		1310F69E15FCF05A00FB7FAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1310F6A215FCF05A00FB7FAA /* Localizable.strings */; };
 		1310F69F15FCF05A00FB7FAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1310F6A215FCF05A00FB7FAA /* Localizable.strings */; };
 		1310F6A015FCF05A00FB7FAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1310F6A215FCF05A00FB7FAA /* Localizable.strings */; };
@@ -41,6 +43,186 @@
 		131F07431587CAC40049FED4 /* MZSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 131F07401587CAC40049FED4 /* MZSearchViewController.xib */; };
 		132980CC153CAE2700979414 /* MZPullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 132980CB153CAE2700979414 /* MZPullView.m */; };
 		132980D1153CAEEB00979414 /* wood_pattern.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 132980D0153CAEEB00979414 /* wood_pattern.jpg */; };
+		132B3F8C163854AE0063C60F /* amenity_drinking_water.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3F8A163854AE0063C60F /* amenity_drinking_water.png */; };
+		132B3F8D163854AE0063C60F /* amenity_drinking_water@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3F8B163854AE0063C60F /* amenity_drinking_water@2x.png */; };
+		132B3F90163855030063C60F /* amenity_vending_machine.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3F8E163855030063C60F /* amenity_vending_machine.png */; };
+		132B3F91163855030063C60F /* amenity_vending_machine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3F8F163855030063C60F /* amenity_vending_machine@2x.png */; };
+		132B3F94163855470063C60F /* amenity_pub.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3F92163855470063C60F /* amenity_pub.png */; };
+		132B3F95163855470063C60F /* amenity_pub@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3F93163855470063C60F /* amenity_pub@2x.png */; };
+		132B3F98163855890063C60F /* amenity_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3F96163855890063C60F /* amenity_bar.png */; };
+		132B3F99163855890063C60F /* amenity_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3F97163855890063C60F /* amenity_bar@2x.png */; };
+		132B3F9C163855B90063C60F /* amenity_restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3F9A163855B90063C60F /* amenity_restaurant.png */; };
+		132B3F9D163855B90063C60F /* amenity_restaurant@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3F9B163855B90063C60F /* amenity_restaurant@2x.png */; };
+		132B3FA0163855F10063C60F /* amenity_cafe.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3F9E163855F10063C60F /* amenity_cafe.png */; };
+		132B3FA1163855F10063C60F /* amenity_cafe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3F9F163855F10063C60F /* amenity_cafe@2x.png */; };
+		132B3FA4163856250063C60F /* amenity_fastfood.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FA2163856250063C60F /* amenity_fastfood.png */; };
+		132B3FA5163856250063C60F /* amenity_fastfood@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FA3163856250063C60F /* amenity_fastfood@2x.png */; };
+		132B3FA9163857B40063C60F /* amenity_firestation.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FA7163857B40063C60F /* amenity_firestation.png */; };
+		132B3FAA163857B40063C60F /* amenity_firestation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FA8163857B40063C60F /* amenity_firestation@2x.png */; };
+		132B3FC916385B6D0063C60F /* amenity_police.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FAB16385B6D0063C60F /* amenity_police.png */; };
+		132B3FCA16385B6D0063C60F /* amenity_police@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FAC16385B6D0063C60F /* amenity_police@2x.png */; };
+		132B3FCB16385B6D0063C60F /* amenity_town_hall.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FAD16385B6D0063C60F /* amenity_town_hall.png */; };
+		132B3FCC16385B6D0063C60F /* amenity_town_hall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FAE16385B6D0063C60F /* amenity_town_hall@2x.png */; };
+		132B3FCD16385B6D0063C60F /* amenity_atm.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FAF16385B6D0063C60F /* amenity_atm.png */; };
+		132B3FCE16385B6D0063C60F /* amenity_atm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FB016385B6D0063C60F /* amenity_atm@2x.png */; };
+		132B3FCF16385B6D0063C60F /* amenity_bank.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FB116385B6D0063C60F /* amenity_bank.png */; };
+		132B3FD016385B6D0063C60F /* amenity_bank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FB216385B6D0063C60F /* amenity_bank@2x.png */; };
+		132B3FD116385B6D0063C60F /* amenity_place_of_worship.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FB316385B6D0063C60F /* amenity_place_of_worship.png */; };
+		132B3FD216385B6D0063C60F /* amenity_recycling.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FB416385B6D0063C60F /* amenity_recycling.png */; };
+		132B3FD316385B6D0063C60F /* amenity_place_of_worship@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FB516385B6D0063C60F /* amenity_place_of_worship@2x.png */; };
+		132B3FD416385B6D0063C60F /* amenity_recycling@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FB616385B6D0063C60F /* amenity_recycling@2x.png */; };
+		132B3FD516385B6D0063C60F /* amenity_toilet.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FB716385B6D0063C60F /* amenity_toilet.png */; };
+		132B3FD616385B6D0063C60F /* amenity_shelter.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FB816385B6D0063C60F /* amenity_shelter.png */; };
+		132B3FD716385B6D0063C60F /* amenity_post_office.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FB916385B6D0063C60F /* amenity_post_office.png */; };
+		132B3FD816385B6D0063C60F /* amenity_waste_basket.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FBA16385B6D0063C60F /* amenity_waste_basket.png */; };
+		132B3FD916385B6D0063C60F /* amenity_post_office@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FBB16385B6D0063C60F /* amenity_post_office@2x.png */; };
+		132B3FDA16385B6D0063C60F /* amenity_waste_basket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FBC16385B6D0063C60F /* amenity_waste_basket@2x.png */; };
+		132B3FDB16385B6D0063C60F /* amenity_toilet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FBD16385B6D0063C60F /* amenity_toilet@2x.png */; };
+		132B3FDC16385B6D0063C60F /* amenity_shelter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FBE16385B6D0063C60F /* amenity_shelter@2x.png */; };
+		132B3FDD16385B6D0063C60F /* amenity_hunting_stand.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FBF16385B6D0063C60F /* amenity_hunting_stand.png */; };
+		132B3FDE16385B6D0063C60F /* amenity_bench.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FC016385B6D0063C60F /* amenity_bench.png */; };
+		132B3FDF16385B6D0063C60F /* amenity_hunting_stand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FC116385B6D0063C60F /* amenity_hunting_stand@2x.png */; };
+		132B3FE016385B6D0063C60F /* amenity_bench@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FC216385B6D0063C60F /* amenity_bench@2x.png */; };
+		132B3FE116385B6D0063C60F /* amenity_post_box.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FC316385B6D0063C60F /* amenity_post_box.png */; };
+		132B3FE216385B6D0063C60F /* amenity_telephone.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FC416385B6D0063C60F /* amenity_telephone.png */; };
+		132B3FE316385B6D0063C60F /* amenity_post_box@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FC516385B6D0063C60F /* amenity_post_box@2x.png */; };
+		132B3FE416385B6D0063C60F /* amenity_telephone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FC616385B6D0063C60F /* amenity_telephone@2x.png */; };
+		132B3FE516385B6D0063C60F /* emergency_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FC716385B6D0063C60F /* emergency_phone.png */; };
+		132B3FE616385B6D0063C60F /* emergency_phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FC816385B6D0063C60F /* emergency_phone@2x.png */; };
+		132B4004163867090063C60F /* aeroway_aerodrome.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FE8163867090063C60F /* aeroway_aerodrome.png */; };
+		132B4005163867090063C60F /* aeroway_aerodrome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FE9163867090063C60F /* aeroway_aerodrome@2x.png */; };
+		132B4006163867090063C60F /* aeroway_terminal.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FEA163867090063C60F /* aeroway_terminal.png */; };
+		132B4007163867090063C60F /* aeroway_terminal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FEB163867090063C60F /* aeroway_terminal@2x.png */; };
+		132B4008163867090063C60F /* amenity_bus_station.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FEC163867090063C60F /* amenity_bus_station.png */; };
+		132B4009163867090063C60F /* amenity_bus_station@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FED163867090063C60F /* amenity_bus_station@2x.png */; };
+		132B400A163867090063C60F /* highway_bus_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FEE163867090063C60F /* highway_bus_stop.png */; };
+		132B400B163867090063C60F /* aeroway_gate.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FEF163867090063C60F /* aeroway_gate.png */; };
+		132B400C163867090063C60F /* highway_bus_stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FF0163867090063C60F /* highway_bus_stop@2x.png */; };
+		132B400D163867090063C60F /* aeroway_gate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FF1163867090063C60F /* aeroway_gate@2x.png */; };
+		132B400E163867090063C60F /* aeroway_helipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FF2163867090063C60F /* aeroway_helipad.png */; };
+		132B400F163867090063C60F /* amenity_car_rental.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FF3163867090063C60F /* amenity_car_rental.png */; };
+		132B4010163867090063C60F /* amenity_bicycle_rental.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FF4163867090063C60F /* amenity_bicycle_rental.png */; };
+		132B4011163867090063C60F /* amenity_car_rental@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FF5163867090063C60F /* amenity_car_rental@2x.png */; };
+		132B4012163867090063C60F /* aeroway_helipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FF6163867090063C60F /* aeroway_helipad@2x.png */; };
+		132B4013163867090063C60F /* amenity_parking.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FF7163867090063C60F /* amenity_parking.png */; };
+		132B4014163867090063C60F /* amenity_bicycle_rental@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FF8163867090063C60F /* amenity_bicycle_rental@2x.png */; };
+		132B4015163867090063C60F /* amenity_parking@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FF9163867090063C60F /* amenity_parking@2x.png */; };
+		132B4016163867090063C60F /* amenity_fuel.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FFA163867090063C60F /* amenity_fuel.png */; };
+		132B4017163867090063C60F /* railway_station.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FFB163867090063C60F /* railway_station.png */; };
+		132B4018163867090063C60F /* amenity_taxi.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FFC163867090063C60F /* amenity_taxi.png */; };
+		132B4019163867090063C60F /* railway_station@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FFD163867090063C60F /* railway_station@2x.png */; };
+		132B401A163867090063C60F /* amenity_taxi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FFE163867090063C60F /* amenity_taxi@2x.png */; };
+		132B401B163867090063C60F /* amenity_fuel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3FFF163867090063C60F /* amenity_fuel@2x.png */; };
+		132B401C163867090063C60F /* railway_tram_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4000163867090063C60F /* railway_tram_stop.png */; };
+		132B401D163867090063C60F /* amenity_bicycle_parking.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4001163867090063C60F /* amenity_bicycle_parking.png */; };
+		132B401E163867090063C60F /* railway_tram_stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4002163867090063C60F /* railway_tram_stop@2x.png */; };
+		132B401F163867090063C60F /* amenity_bicycle_parking@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4003163867090063C60F /* amenity_bicycle_parking@2x.png */; };
+		132B403B16386F8E0063C60F /* tourism_museum.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B402116386F8E0063C60F /* tourism_museum.png */; };
+		132B403C16386F8E0063C60F /* tourism_museum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B402216386F8E0063C60F /* tourism_museum@2x.png */; };
+		132B403D16386F8E0063C60F /* historic_archaeological_site.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B402316386F8E0063C60F /* historic_archaeological_site.png */; };
+		132B403E16386F8E0063C60F /* historic_archaeological_site@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B402416386F8E0063C60F /* historic_archaeological_site@2x.png */; };
+		132B403F16386F8E0063C60F /* historic_battlefield.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B402516386F8E0063C60F /* historic_battlefield.png */; };
+		132B404016386F8E0063C60F /* historic_battlefield@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B402616386F8E0063C60F /* historic_battlefield@2x.png */; };
+		132B404116386F8E0063C60F /* historic_castle.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B402716386F8E0063C60F /* historic_castle.png */; };
+		132B404216386F8E0063C60F /* historic_castle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B402816386F8E0063C60F /* historic_castle@2x.png */; };
+		132B404316386F8E0063C60F /* historic_memorial.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B402916386F8E0063C60F /* historic_memorial.png */; };
+		132B404416386F8E0063C60F /* historic_monument.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B402A16386F8E0063C60F /* historic_monument.png */; };
+		132B404516386F8E0063C60F /* historic_monument@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B402B16386F8E0063C60F /* historic_monument@2x.png */; };
+		132B404616386F8E0063C60F /* historic_ruins.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B402C16386F8E0063C60F /* historic_ruins.png */; };
+		132B404716386F8E0063C60F /* historic_ruins@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B402D16386F8E0063C60F /* historic_ruins@2x.png */; };
+		132B404816386F8E0063C60F /* tourism_picnic_site.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B402E16386F8E0063C60F /* tourism_picnic_site.png */; };
+		132B404916386F8E0063C60F /* tourism_picnic_site@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B402F16386F8E0063C60F /* tourism_picnic_site@2x.png */; };
+		132B404A16386F8E0063C60F /* tourism_viewpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B403016386F8E0063C60F /* tourism_viewpoint.png */; };
+		132B404B16386F8E0063C60F /* tourism_viewpoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B403116386F8E0063C60F /* tourism_viewpoint@2x.png */; };
+		132B404C16386F8E0063C60F /* tourism_zoo.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B403216386F8E0063C60F /* tourism_zoo.png */; };
+		132B404D16386F8E0063C60F /* historic_memorial@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B403316386F8E0063C60F /* historic_memorial@2x.png */; };
+		132B404E16386F8E0063C60F /* tourism_zoo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B403416386F8E0063C60F /* tourism_zoo@2x.png */; };
+		132B404F16386F8E0063C60F /* tourism_information.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B403516386F8E0063C60F /* tourism_information.png */; };
+		132B405016386F8E0063C60F /* tourism_information@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B403616386F8E0063C60F /* tourism_information@2x.png */; };
+		132B405116386F8E0063C60F /* tourism_artwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B403716386F8E0063C60F /* tourism_artwork.png */; };
+		132B405216386F8E0063C60F /* tourism_artwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B403816386F8E0063C60F /* tourism_artwork@2x.png */; };
+		132B405316386F8E0063C60F /* tourism_theme_park.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B403916386F8E0063C60F /* tourism_theme_park.png */; };
+		132B405416386F8E0063C60F /* tourism_theme_park@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B403A16386F8E0063C60F /* tourism_theme_park@2x.png */; };
+		132B40621638718A0063C60F /* barrier_bollard.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40561638718A0063C60F /* barrier_bollard.png */; };
+		132B40631638718A0063C60F /* barrier_bollard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40571638718A0063C60F /* barrier_bollard@2x.png */; };
+		132B40641638718A0063C60F /* barrier_gate.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40581638718A0063C60F /* barrier_gate.png */; };
+		132B40651638718A0063C60F /* barrier_gate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40591638718A0063C60F /* barrier_gate@2x.png */; };
+		132B40661638718A0063C60F /* barrier_lift_gate.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B405A1638718A0063C60F /* barrier_lift_gate.png */; };
+		132B40671638718A0063C60F /* barrier_lift_gate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B405B1638718A0063C60F /* barrier_lift_gate@2x.png */; };
+		132B40681638718A0063C60F /* barrier_cycle_barrier.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B405C1638718A0063C60F /* barrier_cycle_barrier.png */; };
+		132B40691638718A0063C60F /* barrier_cycle_barrier@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B405D1638718A0063C60F /* barrier_cycle_barrier@2x.png */; };
+		132B406A1638718A0063C60F /* barrier_block.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B405E1638718A0063C60F /* barrier_block.png */; };
+		132B406B1638718A0063C60F /* barrier_block@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B405F1638718A0063C60F /* barrier_block@2x.png */; };
+		132B406C1638718A0063C60F /* barrier_toll_booth.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40601638718A0063C60F /* barrier_toll_booth.png */; };
+		132B406D1638718A0063C60F /* barrier_toll_booth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40611638718A0063C60F /* barrier_toll_booth@2x.png */; };
+		132B407D163873450063C60F /* tourism_hotel.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B406F163873450063C60F /* tourism_hotel.png */; };
+		132B407E163873450063C60F /* tourism_hotel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4070163873450063C60F /* tourism_hotel@2x.png */; };
+		132B407F163873450063C60F /* tourism_motel.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4071163873450063C60F /* tourism_motel.png */; };
+		132B4080163873450063C60F /* tourism_motel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4072163873450063C60F /* tourism_motel@2x.png */; };
+		132B4081163873450063C60F /* tourism_hostel.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4073163873450063C60F /* tourism_hostel.png */; };
+		132B4082163873450063C60F /* tourism_hostel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4074163873450063C60F /* tourism_hostel@2x.png */; };
+		132B4083163873450063C60F /* tourism_guest_house.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4075163873450063C60F /* tourism_guest_house.png */; };
+		132B4084163873450063C60F /* tourism_guest_house@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4076163873450063C60F /* tourism_guest_house@2x.png */; };
+		132B4085163873450063C60F /* tourism_camp_site.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4077163873450063C60F /* tourism_camp_site.png */; };
+		132B4086163873450063C60F /* tourism_camp_site@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4078163873450063C60F /* tourism_camp_site@2x.png */; };
+		132B4087163873450063C60F /* tourism_caravan_site.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4079163873450063C60F /* tourism_caravan_site.png */; };
+		132B4088163873450063C60F /* tourism_caravan_site@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B407A163873450063C60F /* tourism_caravan_site@2x.png */; };
+		132B4089163873450063C60F /* tourism_alpine_hut.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B407B163873450063C60F /* tourism_alpine_hut.png */; };
+		132B408A163873450063C60F /* tourism_alpine_hut@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B407C163873450063C60F /* tourism_alpine_hut@2x.png */; };
+		132B4096163876030063C60F /* power_tower.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B408C163876030063C60F /* power_tower.png */; };
+		132B4097163876030063C60F /* power_tower@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B408D163876030063C60F /* power_tower@2x.png */; };
+		132B4098163876030063C60F /* power_pole.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B408E163876030063C60F /* power_pole.png */; };
+		132B4099163876030063C60F /* power_pole@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B408F163876030063C60F /* power_pole@2x.png */; };
+		132B409A163876030063C60F /* power_generator.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4090163876030063C60F /* power_generator.png */; };
+		132B409B163876030063C60F /* power_generator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4091163876030063C60F /* power_generator@2x.png */; };
+		132B409C163876030063C60F /* power_station.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4092163876030063C60F /* power_station.png */; };
+		132B409D163876030063C60F /* power_station@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4093163876030063C60F /* power_station@2x.png */; };
+		132B409E163876030063C60F /* power_sub_station.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4094163876030063C60F /* power_sub_station.png */; };
+		132B409F163876030063C60F /* power_sub_station@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4095163876030063C60F /* power_sub_station@2x.png */; };
+		132B40A2163879570063C60F /* man_made_tower.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40A0163879520063C60F /* man_made_tower.png */; };
+		132B40A3163879570063C60F /* man_made_tower@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40A1163879550063C60F /* man_made_tower@2x.png */; };
+		132B40A916387AC60063C60F /* landuse_cemetery.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40A516387AC60063C60F /* landuse_cemetery.png */; };
+		132B40AA16387AC60063C60F /* landuse_cemetery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40A616387AC60063C60F /* landuse_cemetery@2x.png */; };
+		132B40AB16387AC60063C60F /* amenity_grave_yard.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40A716387AC60063C60F /* amenity_grave_yard.png */; };
+		132B40AC16387AC60063C60F /* amenity_grave_yard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40A816387AC60063C60F /* amenity_grave_yard@2x.png */; };
+		132B40B816387BF50063C60F /* place_hamlet.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40AE16387BF50063C60F /* place_hamlet.png */; };
+		132B40B916387BF50063C60F /* place_hamlet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40AF16387BF50063C60F /* place_hamlet@2x.png */; };
+		132B40BA16387BF50063C60F /* place_village.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40B016387BF50063C60F /* place_village.png */; };
+		132B40BB16387BF50063C60F /* place_village@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40B116387BF50063C60F /* place_village@2x.png */; };
+		132B40BC16387BF50063C60F /* place_suburb.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40B216387BF50063C60F /* place_suburb.png */; };
+		132B40BD16387BF50063C60F /* place_city.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40B316387BF50063C60F /* place_city.png */; };
+		132B40BE16387BF50063C60F /* place_town.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40B416387BF50063C60F /* place_town.png */; };
+		132B40BF16387BF50063C60F /* place_suburb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40B516387BF50063C60F /* place_suburb@2x.png */; };
+		132B40C016387BF50063C60F /* place_city@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40B616387BF50063C60F /* place_city@2x.png */; };
+		132B40C116387BF50063C60F /* place_town@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40B716387BF50063C60F /* place_town@2x.png */; };
+		132B40CC1638811C0063C60F /* amenity_cinema.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40C61638811C0063C60F /* amenity_cinema.png */; };
+		132B40CD1638811C0063C60F /* amenity_cinema@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40C71638811C0063C60F /* amenity_cinema@2x.png */; };
+		132B40D01638811C0063C60F /* amenity_fountain.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40CA1638811C0063C60F /* amenity_fountain.png */; };
+		132B40D11638811C0063C60F /* amenity_fountain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40CB1638811C0063C60F /* amenity_fountain@2x.png */; };
+		132B40D41638813F0063C60F /* amenity_theatre.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40D21638813F0063C60F /* amenity_theatre.png */; };
+		132B40D51638813F0063C60F /* amenity_theatre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40D31638813F0063C60F /* amenity_theatre@2x.png */; };
+		132B40E01638814E0063C60F /* leisure_swimming.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40D61638814E0063C60F /* leisure_swimming.png */; };
+		132B40E11638814E0063C60F /* leisure_swimming@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40D71638814E0063C60F /* leisure_swimming@2x.png */; };
+		132B40E21638814E0063C60F /* amenity_playground.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40D81638814E0063C60F /* amenity_playground.png */; };
+		132B40E31638814E0063C60F /* amenity_playground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40D91638814E0063C60F /* amenity_playground@2x.png */; };
+		132B40E41638814E0063C60F /* leisure_sports_centre.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40DA1638814E0063C60F /* leisure_sports_centre.png */; };
+		132B40E51638814E0063C60F /* leisure_sports_centre@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40DB1638814E0063C60F /* leisure_sports_centre@2x.png */; };
+		132B40E61638814E0063C60F /* leisure_marina.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40DC1638814E0063C60F /* leisure_marina.png */; };
+		132B40E71638814E0063C60F /* leisure_marina@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40DD1638814E0063C60F /* leisure_marina@2x.png */; };
+		132B40E81638814E0063C60F /* leisure_slipway.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40DE1638814E0063C60F /* leisure_slipway.png */; };
+		132B40E91638814E0063C60F /* leisure_slipway@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40DF1638814E0063C60F /* leisure_slipway@2x.png */; };
+		132B40F01638817B0063C60F /* amenity_library.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40EA1638817B0063C60F /* amenity_library.png */; };
+		132B40F11638817B0063C60F /* amenity_library@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40EB1638817B0063C60F /* amenity_library@2x.png */; };
+		132B40F21638817B0063C60F /* amenity_school.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40EC1638817B0063C60F /* amenity_school.png */; };
+		132B40F31638817B0063C60F /* amenity_school@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40ED1638817B0063C60F /* amenity_school@2x.png */; };
+		132B40F41638817B0063C60F /* amenity_kindergarten.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40EE1638817B0063C60F /* amenity_kindergarten.png */; };
+		132B40F51638817B0063C60F /* amenity_kindergarten@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40EF1638817B0063C60F /* amenity_kindergarten@2x.png */; };
+		132B40FC1638818E0063C60F /* amenity_pharmacy.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40F61638818E0063C60F /* amenity_pharmacy.png */; };
+		132B40FD1638818E0063C60F /* amenity_pharmacy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40F71638818E0063C60F /* amenity_pharmacy@2x.png */; };
+		132B40FE1638818E0063C60F /* amenity_hospital.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40F81638818E0063C60F /* amenity_hospital.png */; };
+		132B40FF1638818E0063C60F /* amenity_hospital@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40F91638818E0063C60F /* amenity_hospital@2x.png */; };
+		132B4104163881B00063C60F /* amenity_veterinary.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4102163881B00063C60F /* amenity_veterinary.png */; };
+		132B4105163881B00063C60F /* amenity_veterinary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4103163881B00063C60F /* amenity_veterinary@2x.png */; };
 		132E9760162F2B2C0075AC7B /* shopping_alcohol.n.16.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E975F162F2B2C0075AC7B /* shopping_alcohol.n.16.png */; };
 		132E97701630838A0075AC7B /* transport_bus_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E976E1630838A0075AC7B /* transport_bus_stop.png */; };
 		132E97711630838A0075AC7B /* transport_bus_stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E976F1630838A0075AC7B /* transport_bus_stop@2x.png */; };
@@ -122,7 +304,6 @@
 		13C797881629F57F006C65AA /* open_close_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C797871629F57F006C65AA /* open_close_arrow.png */; };
 		13D4814B1633FBCD00874395 /* NSString+MZMapperUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D4814A1633FBCD00874395 /* NSString+MZMapperUtilities.m */; };
 		13D48151163436DB00874395 /* MZOpenStreetBugsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D4814F163436DB00874395 /* MZOpenStreetBugsViewController.m */; };
-		13D48152163436DB00874395 /* MZOpenStreetBugsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13D48150163436DB00874395 /* MZOpenStreetBugsViewController.xib */; };
 		13D481571634439400874395 /* greyButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 13D481531634439400874395 /* greyButton.png */; };
 		13D481581634439400874395 /* greyButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13D481541634439400874395 /* greyButton@2x.png */; };
 		13D4815A1634439400874395 /* greyButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13D481561634439400874395 /* greyButtonHighlight@2x.png */; };
@@ -197,6 +378,10 @@
 		130B65C8159B4E60000AAE0F /* MZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZLoginViewController.h; sourceTree = "<group>"; };
 		130B65C9159B4E60000AAE0F /* MZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZLoginViewController.m; sourceTree = "<group>"; };
 		130B65CA159B4E60000AAE0F /* MZLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZLoginViewController.xib; sourceTree = "<group>"; };
+		130E8E811639BA4B0006BAAB /* MZBlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZBlockView.h; sourceTree = "<group>"; };
+		130E8E821639BA4B0006BAAB /* MZBlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZBlockView.m; sourceTree = "<group>"; };
+		130E8E85163B39EB0006BAAB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MZOpenStreetBugsViewController.xib; sourceTree = "<group>"; };
+		130E8E87163B3AD10006BAAB /* hu */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = hu; path = hu.lproj/MZOpenStreetBugsViewController.xib; sourceTree = "<group>"; };
 		1310F6A115FCF05A00FB7FAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1310F6A315FCF17500FB7FAA /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1310F6A415FCF17900FB7FAA /* hu */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = hu; path = hu.lproj/MainWindow.xib; sourceTree = "<group>"; };
@@ -211,6 +396,186 @@
 		132980CA153CAE2700979414 /* MZPullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPullView.h; sourceTree = "<group>"; };
 		132980CB153CAE2700979414 /* MZPullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZPullView.m; sourceTree = "<group>"; };
 		132980D0153CAEEB00979414 /* wood_pattern.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wood_pattern.jpg; sourceTree = "<group>"; };
+		132B3F8A163854AE0063C60F /* amenity_drinking_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_drinking_water.png; sourceTree = "<group>"; };
+		132B3F8B163854AE0063C60F /* amenity_drinking_water@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_drinking_water@2x.png"; sourceTree = "<group>"; };
+		132B3F8E163855030063C60F /* amenity_vending_machine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_vending_machine.png; sourceTree = "<group>"; };
+		132B3F8F163855030063C60F /* amenity_vending_machine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_vending_machine@2x.png"; sourceTree = "<group>"; };
+		132B3F92163855470063C60F /* amenity_pub.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_pub.png; sourceTree = "<group>"; };
+		132B3F93163855470063C60F /* amenity_pub@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_pub@2x.png"; sourceTree = "<group>"; };
+		132B3F96163855890063C60F /* amenity_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_bar.png; sourceTree = "<group>"; };
+		132B3F97163855890063C60F /* amenity_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_bar@2x.png"; sourceTree = "<group>"; };
+		132B3F9A163855B90063C60F /* amenity_restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_restaurant.png; sourceTree = "<group>"; };
+		132B3F9B163855B90063C60F /* amenity_restaurant@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_restaurant@2x.png"; sourceTree = "<group>"; };
+		132B3F9E163855F10063C60F /* amenity_cafe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_cafe.png; sourceTree = "<group>"; };
+		132B3F9F163855F10063C60F /* amenity_cafe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_cafe@2x.png"; sourceTree = "<group>"; };
+		132B3FA2163856250063C60F /* amenity_fastfood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_fastfood.png; sourceTree = "<group>"; };
+		132B3FA3163856250063C60F /* amenity_fastfood@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_fastfood@2x.png"; sourceTree = "<group>"; };
+		132B3FA7163857B40063C60F /* amenity_firestation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_firestation.png; sourceTree = "<group>"; };
+		132B3FA8163857B40063C60F /* amenity_firestation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_firestation@2x.png"; sourceTree = "<group>"; };
+		132B3FAB16385B6D0063C60F /* amenity_police.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_police.png; sourceTree = "<group>"; };
+		132B3FAC16385B6D0063C60F /* amenity_police@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_police@2x.png"; sourceTree = "<group>"; };
+		132B3FAD16385B6D0063C60F /* amenity_town_hall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_town_hall.png; sourceTree = "<group>"; };
+		132B3FAE16385B6D0063C60F /* amenity_town_hall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_town_hall@2x.png"; sourceTree = "<group>"; };
+		132B3FAF16385B6D0063C60F /* amenity_atm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_atm.png; sourceTree = "<group>"; };
+		132B3FB016385B6D0063C60F /* amenity_atm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_atm@2x.png"; sourceTree = "<group>"; };
+		132B3FB116385B6D0063C60F /* amenity_bank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_bank.png; sourceTree = "<group>"; };
+		132B3FB216385B6D0063C60F /* amenity_bank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_bank@2x.png"; sourceTree = "<group>"; };
+		132B3FB316385B6D0063C60F /* amenity_place_of_worship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_place_of_worship.png; sourceTree = "<group>"; };
+		132B3FB416385B6D0063C60F /* amenity_recycling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_recycling.png; sourceTree = "<group>"; };
+		132B3FB516385B6D0063C60F /* amenity_place_of_worship@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_place_of_worship@2x.png"; sourceTree = "<group>"; };
+		132B3FB616385B6D0063C60F /* amenity_recycling@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_recycling@2x.png"; sourceTree = "<group>"; };
+		132B3FB716385B6D0063C60F /* amenity_toilet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_toilet.png; sourceTree = "<group>"; };
+		132B3FB816385B6D0063C60F /* amenity_shelter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_shelter.png; sourceTree = "<group>"; };
+		132B3FB916385B6D0063C60F /* amenity_post_office.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_post_office.png; sourceTree = "<group>"; };
+		132B3FBA16385B6D0063C60F /* amenity_waste_basket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_waste_basket.png; sourceTree = "<group>"; };
+		132B3FBB16385B6D0063C60F /* amenity_post_office@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_post_office@2x.png"; sourceTree = "<group>"; };
+		132B3FBC16385B6D0063C60F /* amenity_waste_basket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_waste_basket@2x.png"; sourceTree = "<group>"; };
+		132B3FBD16385B6D0063C60F /* amenity_toilet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_toilet@2x.png"; sourceTree = "<group>"; };
+		132B3FBE16385B6D0063C60F /* amenity_shelter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_shelter@2x.png"; sourceTree = "<group>"; };
+		132B3FBF16385B6D0063C60F /* amenity_hunting_stand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_hunting_stand.png; sourceTree = "<group>"; };
+		132B3FC016385B6D0063C60F /* amenity_bench.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_bench.png; sourceTree = "<group>"; };
+		132B3FC116385B6D0063C60F /* amenity_hunting_stand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_hunting_stand@2x.png"; sourceTree = "<group>"; };
+		132B3FC216385B6D0063C60F /* amenity_bench@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_bench@2x.png"; sourceTree = "<group>"; };
+		132B3FC316385B6D0063C60F /* amenity_post_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_post_box.png; sourceTree = "<group>"; };
+		132B3FC416385B6D0063C60F /* amenity_telephone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_telephone.png; sourceTree = "<group>"; };
+		132B3FC516385B6D0063C60F /* amenity_post_box@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_post_box@2x.png"; sourceTree = "<group>"; };
+		132B3FC616385B6D0063C60F /* amenity_telephone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_telephone@2x.png"; sourceTree = "<group>"; };
+		132B3FC716385B6D0063C60F /* emergency_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emergency_phone.png; sourceTree = "<group>"; };
+		132B3FC816385B6D0063C60F /* emergency_phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emergency_phone@2x.png"; sourceTree = "<group>"; };
+		132B3FE8163867090063C60F /* aeroway_aerodrome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aeroway_aerodrome.png; sourceTree = "<group>"; };
+		132B3FE9163867090063C60F /* aeroway_aerodrome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aeroway_aerodrome@2x.png"; sourceTree = "<group>"; };
+		132B3FEA163867090063C60F /* aeroway_terminal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aeroway_terminal.png; sourceTree = "<group>"; };
+		132B3FEB163867090063C60F /* aeroway_terminal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aeroway_terminal@2x.png"; sourceTree = "<group>"; };
+		132B3FEC163867090063C60F /* amenity_bus_station.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_bus_station.png; sourceTree = "<group>"; };
+		132B3FED163867090063C60F /* amenity_bus_station@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_bus_station@2x.png"; sourceTree = "<group>"; };
+		132B3FEE163867090063C60F /* highway_bus_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = highway_bus_stop.png; sourceTree = "<group>"; };
+		132B3FEF163867090063C60F /* aeroway_gate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aeroway_gate.png; sourceTree = "<group>"; };
+		132B3FF0163867090063C60F /* highway_bus_stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "highway_bus_stop@2x.png"; sourceTree = "<group>"; };
+		132B3FF1163867090063C60F /* aeroway_gate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aeroway_gate@2x.png"; sourceTree = "<group>"; };
+		132B3FF2163867090063C60F /* aeroway_helipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aeroway_helipad.png; sourceTree = "<group>"; };
+		132B3FF3163867090063C60F /* amenity_car_rental.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_car_rental.png; sourceTree = "<group>"; };
+		132B3FF4163867090063C60F /* amenity_bicycle_rental.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_bicycle_rental.png; sourceTree = "<group>"; };
+		132B3FF5163867090063C60F /* amenity_car_rental@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_car_rental@2x.png"; sourceTree = "<group>"; };
+		132B3FF6163867090063C60F /* aeroway_helipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aeroway_helipad@2x.png"; sourceTree = "<group>"; };
+		132B3FF7163867090063C60F /* amenity_parking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_parking.png; sourceTree = "<group>"; };
+		132B3FF8163867090063C60F /* amenity_bicycle_rental@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_bicycle_rental@2x.png"; sourceTree = "<group>"; };
+		132B3FF9163867090063C60F /* amenity_parking@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_parking@2x.png"; sourceTree = "<group>"; };
+		132B3FFA163867090063C60F /* amenity_fuel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_fuel.png; sourceTree = "<group>"; };
+		132B3FFB163867090063C60F /* railway_station.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = railway_station.png; sourceTree = "<group>"; };
+		132B3FFC163867090063C60F /* amenity_taxi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_taxi.png; sourceTree = "<group>"; };
+		132B3FFD163867090063C60F /* railway_station@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "railway_station@2x.png"; sourceTree = "<group>"; };
+		132B3FFE163867090063C60F /* amenity_taxi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_taxi@2x.png"; sourceTree = "<group>"; };
+		132B3FFF163867090063C60F /* amenity_fuel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_fuel@2x.png"; sourceTree = "<group>"; };
+		132B4000163867090063C60F /* railway_tram_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = railway_tram_stop.png; sourceTree = "<group>"; };
+		132B4001163867090063C60F /* amenity_bicycle_parking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_bicycle_parking.png; sourceTree = "<group>"; };
+		132B4002163867090063C60F /* railway_tram_stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "railway_tram_stop@2x.png"; sourceTree = "<group>"; };
+		132B4003163867090063C60F /* amenity_bicycle_parking@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_bicycle_parking@2x.png"; sourceTree = "<group>"; };
+		132B402116386F8E0063C60F /* tourism_museum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tourism_museum.png; sourceTree = "<group>"; };
+		132B402216386F8E0063C60F /* tourism_museum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tourism_museum@2x.png"; sourceTree = "<group>"; };
+		132B402316386F8E0063C60F /* historic_archaeological_site.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = historic_archaeological_site.png; sourceTree = "<group>"; };
+		132B402416386F8E0063C60F /* historic_archaeological_site@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "historic_archaeological_site@2x.png"; sourceTree = "<group>"; };
+		132B402516386F8E0063C60F /* historic_battlefield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = historic_battlefield.png; sourceTree = "<group>"; };
+		132B402616386F8E0063C60F /* historic_battlefield@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "historic_battlefield@2x.png"; sourceTree = "<group>"; };
+		132B402716386F8E0063C60F /* historic_castle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = historic_castle.png; sourceTree = "<group>"; };
+		132B402816386F8E0063C60F /* historic_castle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "historic_castle@2x.png"; sourceTree = "<group>"; };
+		132B402916386F8E0063C60F /* historic_memorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = historic_memorial.png; sourceTree = "<group>"; };
+		132B402A16386F8E0063C60F /* historic_monument.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = historic_monument.png; sourceTree = "<group>"; };
+		132B402B16386F8E0063C60F /* historic_monument@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "historic_monument@2x.png"; sourceTree = "<group>"; };
+		132B402C16386F8E0063C60F /* historic_ruins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = historic_ruins.png; sourceTree = "<group>"; };
+		132B402D16386F8E0063C60F /* historic_ruins@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "historic_ruins@2x.png"; sourceTree = "<group>"; };
+		132B402E16386F8E0063C60F /* tourism_picnic_site.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tourism_picnic_site.png; sourceTree = "<group>"; };
+		132B402F16386F8E0063C60F /* tourism_picnic_site@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tourism_picnic_site@2x.png"; sourceTree = "<group>"; };
+		132B403016386F8E0063C60F /* tourism_viewpoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tourism_viewpoint.png; sourceTree = "<group>"; };
+		132B403116386F8E0063C60F /* tourism_viewpoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tourism_viewpoint@2x.png"; sourceTree = "<group>"; };
+		132B403216386F8E0063C60F /* tourism_zoo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tourism_zoo.png; sourceTree = "<group>"; };
+		132B403316386F8E0063C60F /* historic_memorial@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "historic_memorial@2x.png"; sourceTree = "<group>"; };
+		132B403416386F8E0063C60F /* tourism_zoo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tourism_zoo@2x.png"; sourceTree = "<group>"; };
+		132B403516386F8E0063C60F /* tourism_information.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tourism_information.png; sourceTree = "<group>"; };
+		132B403616386F8E0063C60F /* tourism_information@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tourism_information@2x.png"; sourceTree = "<group>"; };
+		132B403716386F8E0063C60F /* tourism_artwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tourism_artwork.png; sourceTree = "<group>"; };
+		132B403816386F8E0063C60F /* tourism_artwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tourism_artwork@2x.png"; sourceTree = "<group>"; };
+		132B403916386F8E0063C60F /* tourism_theme_park.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tourism_theme_park.png; sourceTree = "<group>"; };
+		132B403A16386F8E0063C60F /* tourism_theme_park@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tourism_theme_park@2x.png"; sourceTree = "<group>"; };
+		132B40561638718A0063C60F /* barrier_bollard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barrier_bollard.png; sourceTree = "<group>"; };
+		132B40571638718A0063C60F /* barrier_bollard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barrier_bollard@2x.png"; sourceTree = "<group>"; };
+		132B40581638718A0063C60F /* barrier_gate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barrier_gate.png; sourceTree = "<group>"; };
+		132B40591638718A0063C60F /* barrier_gate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barrier_gate@2x.png"; sourceTree = "<group>"; };
+		132B405A1638718A0063C60F /* barrier_lift_gate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barrier_lift_gate.png; sourceTree = "<group>"; };
+		132B405B1638718A0063C60F /* barrier_lift_gate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barrier_lift_gate@2x.png"; sourceTree = "<group>"; };
+		132B405C1638718A0063C60F /* barrier_cycle_barrier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barrier_cycle_barrier.png; sourceTree = "<group>"; };
+		132B405D1638718A0063C60F /* barrier_cycle_barrier@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barrier_cycle_barrier@2x.png"; sourceTree = "<group>"; };
+		132B405E1638718A0063C60F /* barrier_block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barrier_block.png; sourceTree = "<group>"; };
+		132B405F1638718A0063C60F /* barrier_block@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barrier_block@2x.png"; sourceTree = "<group>"; };
+		132B40601638718A0063C60F /* barrier_toll_booth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barrier_toll_booth.png; sourceTree = "<group>"; };
+		132B40611638718A0063C60F /* barrier_toll_booth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barrier_toll_booth@2x.png"; sourceTree = "<group>"; };
+		132B406F163873450063C60F /* tourism_hotel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tourism_hotel.png; sourceTree = "<group>"; };
+		132B4070163873450063C60F /* tourism_hotel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tourism_hotel@2x.png"; sourceTree = "<group>"; };
+		132B4071163873450063C60F /* tourism_motel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tourism_motel.png; sourceTree = "<group>"; };
+		132B4072163873450063C60F /* tourism_motel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tourism_motel@2x.png"; sourceTree = "<group>"; };
+		132B4073163873450063C60F /* tourism_hostel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tourism_hostel.png; sourceTree = "<group>"; };
+		132B4074163873450063C60F /* tourism_hostel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tourism_hostel@2x.png"; sourceTree = "<group>"; };
+		132B4075163873450063C60F /* tourism_guest_house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tourism_guest_house.png; sourceTree = "<group>"; };
+		132B4076163873450063C60F /* tourism_guest_house@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tourism_guest_house@2x.png"; sourceTree = "<group>"; };
+		132B4077163873450063C60F /* tourism_camp_site.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tourism_camp_site.png; sourceTree = "<group>"; };
+		132B4078163873450063C60F /* tourism_camp_site@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tourism_camp_site@2x.png"; sourceTree = "<group>"; };
+		132B4079163873450063C60F /* tourism_caravan_site.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tourism_caravan_site.png; sourceTree = "<group>"; };
+		132B407A163873450063C60F /* tourism_caravan_site@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tourism_caravan_site@2x.png"; sourceTree = "<group>"; };
+		132B407B163873450063C60F /* tourism_alpine_hut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tourism_alpine_hut.png; sourceTree = "<group>"; };
+		132B407C163873450063C60F /* tourism_alpine_hut@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tourism_alpine_hut@2x.png"; sourceTree = "<group>"; };
+		132B408C163876030063C60F /* power_tower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = power_tower.png; sourceTree = "<group>"; };
+		132B408D163876030063C60F /* power_tower@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power_tower@2x.png"; sourceTree = "<group>"; };
+		132B408E163876030063C60F /* power_pole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = power_pole.png; sourceTree = "<group>"; };
+		132B408F163876030063C60F /* power_pole@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power_pole@2x.png"; sourceTree = "<group>"; };
+		132B4090163876030063C60F /* power_generator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = power_generator.png; sourceTree = "<group>"; };
+		132B4091163876030063C60F /* power_generator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power_generator@2x.png"; sourceTree = "<group>"; };
+		132B4092163876030063C60F /* power_station.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = power_station.png; sourceTree = "<group>"; };
+		132B4093163876030063C60F /* power_station@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power_station@2x.png"; sourceTree = "<group>"; };
+		132B4094163876030063C60F /* power_sub_station.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = power_sub_station.png; sourceTree = "<group>"; };
+		132B4095163876030063C60F /* power_sub_station@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power_sub_station@2x.png"; sourceTree = "<group>"; };
+		132B40A0163879520063C60F /* man_made_tower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man_made_tower.png; sourceTree = "<group>"; };
+		132B40A1163879550063C60F /* man_made_tower@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "man_made_tower@2x.png"; sourceTree = "<group>"; };
+		132B40A516387AC60063C60F /* landuse_cemetery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = landuse_cemetery.png; sourceTree = "<group>"; };
+		132B40A616387AC60063C60F /* landuse_cemetery@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "landuse_cemetery@2x.png"; sourceTree = "<group>"; };
+		132B40A716387AC60063C60F /* amenity_grave_yard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_grave_yard.png; sourceTree = "<group>"; };
+		132B40A816387AC60063C60F /* amenity_grave_yard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_grave_yard@2x.png"; sourceTree = "<group>"; };
+		132B40AE16387BF50063C60F /* place_hamlet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = place_hamlet.png; sourceTree = "<group>"; };
+		132B40AF16387BF50063C60F /* place_hamlet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "place_hamlet@2x.png"; sourceTree = "<group>"; };
+		132B40B016387BF50063C60F /* place_village.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = place_village.png; sourceTree = "<group>"; };
+		132B40B116387BF50063C60F /* place_village@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "place_village@2x.png"; sourceTree = "<group>"; };
+		132B40B216387BF50063C60F /* place_suburb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = place_suburb.png; sourceTree = "<group>"; };
+		132B40B316387BF50063C60F /* place_city.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = place_city.png; sourceTree = "<group>"; };
+		132B40B416387BF50063C60F /* place_town.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = place_town.png; sourceTree = "<group>"; };
+		132B40B516387BF50063C60F /* place_suburb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "place_suburb@2x.png"; sourceTree = "<group>"; };
+		132B40B616387BF50063C60F /* place_city@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "place_city@2x.png"; sourceTree = "<group>"; };
+		132B40B716387BF50063C60F /* place_town@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "place_town@2x.png"; sourceTree = "<group>"; };
+		132B40C61638811C0063C60F /* amenity_cinema.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_cinema.png; sourceTree = "<group>"; };
+		132B40C71638811C0063C60F /* amenity_cinema@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_cinema@2x.png"; sourceTree = "<group>"; };
+		132B40CA1638811C0063C60F /* amenity_fountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_fountain.png; sourceTree = "<group>"; };
+		132B40CB1638811C0063C60F /* amenity_fountain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_fountain@2x.png"; sourceTree = "<group>"; };
+		132B40D21638813F0063C60F /* amenity_theatre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_theatre.png; sourceTree = "<group>"; };
+		132B40D31638813F0063C60F /* amenity_theatre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_theatre@2x.png"; sourceTree = "<group>"; };
+		132B40D61638814E0063C60F /* leisure_swimming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leisure_swimming.png; sourceTree = "<group>"; };
+		132B40D71638814E0063C60F /* leisure_swimming@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leisure_swimming@2x.png"; sourceTree = "<group>"; };
+		132B40D81638814E0063C60F /* amenity_playground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_playground.png; sourceTree = "<group>"; };
+		132B40D91638814E0063C60F /* amenity_playground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_playground@2x.png"; sourceTree = "<group>"; };
+		132B40DA1638814E0063C60F /* leisure_sports_centre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leisure_sports_centre.png; sourceTree = "<group>"; };
+		132B40DB1638814E0063C60F /* leisure_sports_centre@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leisure_sports_centre@2x.png"; sourceTree = "<group>"; };
+		132B40DC1638814E0063C60F /* leisure_marina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leisure_marina.png; sourceTree = "<group>"; };
+		132B40DD1638814E0063C60F /* leisure_marina@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leisure_marina@2x.png"; sourceTree = "<group>"; };
+		132B40DE1638814E0063C60F /* leisure_slipway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leisure_slipway.png; sourceTree = "<group>"; };
+		132B40DF1638814E0063C60F /* leisure_slipway@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leisure_slipway@2x.png"; sourceTree = "<group>"; };
+		132B40EA1638817B0063C60F /* amenity_library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_library.png; sourceTree = "<group>"; };
+		132B40EB1638817B0063C60F /* amenity_library@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_library@2x.png"; sourceTree = "<group>"; };
+		132B40EC1638817B0063C60F /* amenity_school.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_school.png; sourceTree = "<group>"; };
+		132B40ED1638817B0063C60F /* amenity_school@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_school@2x.png"; sourceTree = "<group>"; };
+		132B40EE1638817B0063C60F /* amenity_kindergarten.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_kindergarten.png; sourceTree = "<group>"; };
+		132B40EF1638817B0063C60F /* amenity_kindergarten@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_kindergarten@2x.png"; sourceTree = "<group>"; };
+		132B40F61638818E0063C60F /* amenity_pharmacy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_pharmacy.png; sourceTree = "<group>"; };
+		132B40F71638818E0063C60F /* amenity_pharmacy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_pharmacy@2x.png"; sourceTree = "<group>"; };
+		132B40F81638818E0063C60F /* amenity_hospital.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_hospital.png; sourceTree = "<group>"; };
+		132B40F91638818E0063C60F /* amenity_hospital@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_hospital@2x.png"; sourceTree = "<group>"; };
+		132B4102163881B00063C60F /* amenity_veterinary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_veterinary.png; sourceTree = "<group>"; };
+		132B4103163881B00063C60F /* amenity_veterinary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_veterinary@2x.png"; sourceTree = "<group>"; };
 		132E975F162F2B2C0075AC7B /* shopping_alcohol.n.16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopping_alcohol.n.16.png; sourceTree = "<group>"; };
 		132E976E1630838A0075AC7B /* transport_bus_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transport_bus_stop.png; sourceTree = "<group>"; };
 		132E976F1630838A0075AC7B /* transport_bus_stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transport_bus_stop@2x.png"; sourceTree = "<group>"; };
@@ -299,7 +664,6 @@
 		13D4814A1633FBCD00874395 /* NSString+MZMapperUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MZMapperUtilities.m"; sourceTree = "<group>"; };
 		13D4814E163436DB00874395 /* MZOpenStreetBugsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZOpenStreetBugsViewController.h; sourceTree = "<group>"; };
 		13D4814F163436DB00874395 /* MZOpenStreetBugsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZOpenStreetBugsViewController.m; sourceTree = "<group>"; };
-		13D48150163436DB00874395 /* MZOpenStreetBugsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZOpenStreetBugsViewController.xib; sourceTree = "<group>"; };
 		13D481531634439400874395 /* greyButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greyButton.png; sourceTree = "<group>"; };
 		13D481541634439400874395 /* greyButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greyButton@2x.png"; sourceTree = "<group>"; };
 		13D481561634439400874395 /* greyButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greyButtonHighlight@2x.png"; sourceTree = "<group>"; };
@@ -513,7 +877,7 @@
 				13C797801629E027006C65AA /* MZCategoryViewController.xib */,
 				13D4814E163436DB00874395 /* MZOpenStreetBugsViewController.h */,
 				13D4814F163436DB00874395 /* MZOpenStreetBugsViewController.m */,
-				13D48150163436DB00874395 /* MZOpenStreetBugsViewController.xib */,
+				130E8E86163B39EB0006BAAB /* MZOpenStreetBugsViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -549,6 +913,277 @@
 				13A69A5C16369316009CFB60 /* Rendering point objects */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		132B3F88163854800063C60F /* Food and Drink */ = {
+			isa = PBXGroup;
+			children = (
+				132B3F96163855890063C60F /* amenity_bar.png */,
+				132B3F97163855890063C60F /* amenity_bar@2x.png */,
+				132B3F9E163855F10063C60F /* amenity_cafe.png */,
+				132B3F9F163855F10063C60F /* amenity_cafe@2x.png */,
+				132B3F8A163854AE0063C60F /* amenity_drinking_water.png */,
+				132B3F8B163854AE0063C60F /* amenity_drinking_water@2x.png */,
+				132B3FA2163856250063C60F /* amenity_fastfood.png */,
+				132B3FA3163856250063C60F /* amenity_fastfood@2x.png */,
+				132B3F92163855470063C60F /* amenity_pub.png */,
+				132B3F93163855470063C60F /* amenity_pub@2x.png */,
+				132B3F9A163855B90063C60F /* amenity_restaurant.png */,
+				132B3F9B163855B90063C60F /* amenity_restaurant@2x.png */,
+				132B3F8E163855030063C60F /* amenity_vending_machine.png */,
+				132B3F8F163855030063C60F /* amenity_vending_machine@2x.png */,
+			);
+			name = "Food and Drink";
+			sourceTree = "<group>";
+		};
+		132B3FA6163857990063C60F /* Amenity */ = {
+			isa = PBXGroup;
+			children = (
+				132B3FAF16385B6D0063C60F /* amenity_atm.png */,
+				132B3FB016385B6D0063C60F /* amenity_atm@2x.png */,
+				132B3FB116385B6D0063C60F /* amenity_bank.png */,
+				132B3FB216385B6D0063C60F /* amenity_bank@2x.png */,
+				132B3FC016385B6D0063C60F /* amenity_bench.png */,
+				132B3FC216385B6D0063C60F /* amenity_bench@2x.png */,
+				132B3FA7163857B40063C60F /* amenity_firestation.png */,
+				132B3FA8163857B40063C60F /* amenity_firestation@2x.png */,
+				132B3FBF16385B6D0063C60F /* amenity_hunting_stand.png */,
+				132B3FC116385B6D0063C60F /* amenity_hunting_stand@2x.png */,
+				132B3FB316385B6D0063C60F /* amenity_place_of_worship.png */,
+				132B3FB516385B6D0063C60F /* amenity_place_of_worship@2x.png */,
+				132B3FAB16385B6D0063C60F /* amenity_police.png */,
+				132B3FAC16385B6D0063C60F /* amenity_police@2x.png */,
+				132B3FC316385B6D0063C60F /* amenity_post_box.png */,
+				132B3FC516385B6D0063C60F /* amenity_post_box@2x.png */,
+				132B3FB916385B6D0063C60F /* amenity_post_office.png */,
+				132B3FBB16385B6D0063C60F /* amenity_post_office@2x.png */,
+				132B3FB416385B6D0063C60F /* amenity_recycling.png */,
+				132B3FB616385B6D0063C60F /* amenity_recycling@2x.png */,
+				132B3FB816385B6D0063C60F /* amenity_shelter.png */,
+				132B3FBE16385B6D0063C60F /* amenity_shelter@2x.png */,
+				132B3FC416385B6D0063C60F /* amenity_telephone.png */,
+				132B3FC616385B6D0063C60F /* amenity_telephone@2x.png */,
+				132B3FB716385B6D0063C60F /* amenity_toilet.png */,
+				132B3FBD16385B6D0063C60F /* amenity_toilet@2x.png */,
+				132B3FAD16385B6D0063C60F /* amenity_town_hall.png */,
+				132B3FAE16385B6D0063C60F /* amenity_town_hall@2x.png */,
+				132B3FBA16385B6D0063C60F /* amenity_waste_basket.png */,
+				132B3FBC16385B6D0063C60F /* amenity_waste_basket@2x.png */,
+				132B3FC716385B6D0063C60F /* emergency_phone.png */,
+				132B3FC816385B6D0063C60F /* emergency_phone@2x.png */,
+				132B40A0163879520063C60F /* man_made_tower.png */,
+				132B40A1163879550063C60F /* man_made_tower@2x.png */,
+			);
+			name = Amenity;
+			sourceTree = "<group>";
+		};
+		132B3FE7163866EE0063C60F /* Transport */ = {
+			isa = PBXGroup;
+			children = (
+				132B3FE8163867090063C60F /* aeroway_aerodrome.png */,
+				132B3FE9163867090063C60F /* aeroway_aerodrome@2x.png */,
+				132B3FEF163867090063C60F /* aeroway_gate.png */,
+				132B3FF1163867090063C60F /* aeroway_gate@2x.png */,
+				132B3FF2163867090063C60F /* aeroway_helipad.png */,
+				132B3FF6163867090063C60F /* aeroway_helipad@2x.png */,
+				132B3FEA163867090063C60F /* aeroway_terminal.png */,
+				132B3FEB163867090063C60F /* aeroway_terminal@2x.png */,
+				132B4001163867090063C60F /* amenity_bicycle_parking.png */,
+				132B4003163867090063C60F /* amenity_bicycle_parking@2x.png */,
+				132B3FF4163867090063C60F /* amenity_bicycle_rental.png */,
+				132B3FF8163867090063C60F /* amenity_bicycle_rental@2x.png */,
+				132B3FEC163867090063C60F /* amenity_bus_station.png */,
+				132B3FED163867090063C60F /* amenity_bus_station@2x.png */,
+				132B3FF3163867090063C60F /* amenity_car_rental.png */,
+				132B3FF5163867090063C60F /* amenity_car_rental@2x.png */,
+				132B3FFA163867090063C60F /* amenity_fuel.png */,
+				132B3FFF163867090063C60F /* amenity_fuel@2x.png */,
+				132B3FF7163867090063C60F /* amenity_parking.png */,
+				132B3FF9163867090063C60F /* amenity_parking@2x.png */,
+				132B3FFC163867090063C60F /* amenity_taxi.png */,
+				132B3FFE163867090063C60F /* amenity_taxi@2x.png */,
+				132B3FEE163867090063C60F /* highway_bus_stop.png */,
+				132B3FF0163867090063C60F /* highway_bus_stop@2x.png */,
+				132B3FFB163867090063C60F /* railway_station.png */,
+				132B3FFD163867090063C60F /* railway_station@2x.png */,
+				132B4000163867090063C60F /* railway_tram_stop.png */,
+				132B4002163867090063C60F /* railway_tram_stop@2x.png */,
+			);
+			name = Transport;
+			sourceTree = "<group>";
+		};
+		132B402016386F5B0063C60F /* Tourism */ = {
+			isa = PBXGroup;
+			children = (
+				132B402316386F8E0063C60F /* historic_archaeological_site.png */,
+				132B402416386F8E0063C60F /* historic_archaeological_site@2x.png */,
+				132B402516386F8E0063C60F /* historic_battlefield.png */,
+				132B402616386F8E0063C60F /* historic_battlefield@2x.png */,
+				132B402716386F8E0063C60F /* historic_castle.png */,
+				132B402816386F8E0063C60F /* historic_castle@2x.png */,
+				132B402916386F8E0063C60F /* historic_memorial.png */,
+				132B403316386F8E0063C60F /* historic_memorial@2x.png */,
+				132B402A16386F8E0063C60F /* historic_monument.png */,
+				132B402B16386F8E0063C60F /* historic_monument@2x.png */,
+				132B402C16386F8E0063C60F /* historic_ruins.png */,
+				132B402D16386F8E0063C60F /* historic_ruins@2x.png */,
+				132B403716386F8E0063C60F /* tourism_artwork.png */,
+				132B403816386F8E0063C60F /* tourism_artwork@2x.png */,
+				132B403516386F8E0063C60F /* tourism_information.png */,
+				132B403616386F8E0063C60F /* tourism_information@2x.png */,
+				132B402116386F8E0063C60F /* tourism_museum.png */,
+				132B402216386F8E0063C60F /* tourism_museum@2x.png */,
+				132B402E16386F8E0063C60F /* tourism_picnic_site.png */,
+				132B402F16386F8E0063C60F /* tourism_picnic_site@2x.png */,
+				132B403916386F8E0063C60F /* tourism_theme_park.png */,
+				132B403A16386F8E0063C60F /* tourism_theme_park@2x.png */,
+				132B403016386F8E0063C60F /* tourism_viewpoint.png */,
+				132B403116386F8E0063C60F /* tourism_viewpoint@2x.png */,
+				132B403216386F8E0063C60F /* tourism_zoo.png */,
+				132B403416386F8E0063C60F /* tourism_zoo@2x.png */,
+			);
+			name = Tourism;
+			sourceTree = "<group>";
+		};
+		132B4055163871700063C60F /* Barrier */ = {
+			isa = PBXGroup;
+			children = (
+				132B405E1638718A0063C60F /* barrier_block.png */,
+				132B405F1638718A0063C60F /* barrier_block@2x.png */,
+				132B40561638718A0063C60F /* barrier_bollard.png */,
+				132B40571638718A0063C60F /* barrier_bollard@2x.png */,
+				132B405C1638718A0063C60F /* barrier_cycle_barrier.png */,
+				132B405D1638718A0063C60F /* barrier_cycle_barrier@2x.png */,
+				132B40581638718A0063C60F /* barrier_gate.png */,
+				132B40591638718A0063C60F /* barrier_gate@2x.png */,
+				132B405A1638718A0063C60F /* barrier_lift_gate.png */,
+				132B405B1638718A0063C60F /* barrier_lift_gate@2x.png */,
+				132B40601638718A0063C60F /* barrier_toll_booth.png */,
+				132B40611638718A0063C60F /* barrier_toll_booth@2x.png */,
+			);
+			name = Barrier;
+			sourceTree = "<group>";
+		};
+		132B406E163873090063C60F /* Accomodation */ = {
+			isa = PBXGroup;
+			children = (
+				132B407B163873450063C60F /* tourism_alpine_hut.png */,
+				132B407C163873450063C60F /* tourism_alpine_hut@2x.png */,
+				132B4077163873450063C60F /* tourism_camp_site.png */,
+				132B4078163873450063C60F /* tourism_camp_site@2x.png */,
+				132B4079163873450063C60F /* tourism_caravan_site.png */,
+				132B407A163873450063C60F /* tourism_caravan_site@2x.png */,
+				132B4075163873450063C60F /* tourism_guest_house.png */,
+				132B4076163873450063C60F /* tourism_guest_house@2x.png */,
+				132B4073163873450063C60F /* tourism_hostel.png */,
+				132B4074163873450063C60F /* tourism_hostel@2x.png */,
+				132B406F163873450063C60F /* tourism_hotel.png */,
+				132B4070163873450063C60F /* tourism_hotel@2x.png */,
+				132B4071163873450063C60F /* tourism_motel.png */,
+				132B4072163873450063C60F /* tourism_motel@2x.png */,
+			);
+			name = Accomodation;
+			sourceTree = "<group>";
+		};
+		132B408B163875EB0063C60F /* Power */ = {
+			isa = PBXGroup;
+			children = (
+				132B4090163876030063C60F /* power_generator.png */,
+				132B4091163876030063C60F /* power_generator@2x.png */,
+				132B408E163876030063C60F /* power_pole.png */,
+				132B408F163876030063C60F /* power_pole@2x.png */,
+				132B4092163876030063C60F /* power_station.png */,
+				132B4093163876030063C60F /* power_station@2x.png */,
+				132B4094163876030063C60F /* power_sub_station.png */,
+				132B4095163876030063C60F /* power_sub_station@2x.png */,
+				132B408C163876030063C60F /* power_tower.png */,
+				132B408D163876030063C60F /* power_tower@2x.png */,
+			);
+			name = Power;
+			sourceTree = "<group>";
+		};
+		132B40A416387AAF0063C60F /* Landuse */ = {
+			isa = PBXGroup;
+			children = (
+				132B40A516387AC60063C60F /* landuse_cemetery.png */,
+				132B40A616387AC60063C60F /* landuse_cemetery@2x.png */,
+				132B40A716387AC60063C60F /* amenity_grave_yard.png */,
+				132B40A816387AC60063C60F /* amenity_grave_yard@2x.png */,
+			);
+			name = Landuse;
+			sourceTree = "<group>";
+		};
+		132B40AD16387BDF0063C60F /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				132B40B316387BF50063C60F /* place_city.png */,
+				132B40B616387BF50063C60F /* place_city@2x.png */,
+				132B40AE16387BF50063C60F /* place_hamlet.png */,
+				132B40AF16387BF50063C60F /* place_hamlet@2x.png */,
+				132B40B216387BF50063C60F /* place_suburb.png */,
+				132B40B516387BF50063C60F /* place_suburb@2x.png */,
+				132B40B416387BF50063C60F /* place_town.png */,
+				132B40B716387BF50063C60F /* place_town@2x.png */,
+				132B40B016387BF50063C60F /* place_village.png */,
+				132B40B116387BF50063C60F /* place_village@2x.png */,
+			);
+			name = Places;
+			sourceTree = "<group>";
+		};
+		132B40C21638807B0063C60F /* Healthcare */ = {
+			isa = PBXGroup;
+			children = (
+				132B40F81638818E0063C60F /* amenity_hospital.png */,
+				132B40F91638818E0063C60F /* amenity_hospital@2x.png */,
+				132B40F61638818E0063C60F /* amenity_pharmacy.png */,
+				132B40F71638818E0063C60F /* amenity_pharmacy@2x.png */,
+				132B4102163881B00063C60F /* amenity_veterinary.png */,
+				132B4103163881B00063C60F /* amenity_veterinary@2x.png */,
+			);
+			name = Healthcare;
+			sourceTree = "<group>";
+		};
+		132B40C3163880850063C60F /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				132B40EE1638817B0063C60F /* amenity_kindergarten.png */,
+				132B40EF1638817B0063C60F /* amenity_kindergarten@2x.png */,
+				132B40EA1638817B0063C60F /* amenity_library.png */,
+				132B40EB1638817B0063C60F /* amenity_library@2x.png */,
+				132B40EC1638817B0063C60F /* amenity_school.png */,
+				132B40ED1638817B0063C60F /* amenity_school@2x.png */,
+			);
+			name = Education;
+			sourceTree = "<group>";
+		};
+		132B40C41638808E0063C60F /* Sport and Leisure */ = {
+			isa = PBXGroup;
+			children = (
+				132B40D81638814E0063C60F /* amenity_playground.png */,
+				132B40D91638814E0063C60F /* amenity_playground@2x.png */,
+				132B40DC1638814E0063C60F /* leisure_marina.png */,
+				132B40DD1638814E0063C60F /* leisure_marina@2x.png */,
+				132B40DE1638814E0063C60F /* leisure_slipway.png */,
+				132B40DF1638814E0063C60F /* leisure_slipway@2x.png */,
+				132B40DA1638814E0063C60F /* leisure_sports_centre.png */,
+				132B40DB1638814E0063C60F /* leisure_sports_centre@2x.png */,
+				132B40D61638814E0063C60F /* leisure_swimming.png */,
+				132B40D71638814E0063C60F /* leisure_swimming@2x.png */,
+			);
+			name = "Sport and Leisure";
+			sourceTree = "<group>";
+		};
+		132B40C5163880C60063C60F /* Entertainment, Arts and Culture */ = {
+			isa = PBXGroup;
+			children = (
+				132B40C61638811C0063C60F /* amenity_cinema.png */,
+				132B40C71638811C0063C60F /* amenity_cinema@2x.png */,
+				132B40CA1638811C0063C60F /* amenity_fountain.png */,
+				132B40CB1638811C0063C60F /* amenity_fountain@2x.png */,
+				132B40D21638813F0063C60F /* amenity_theatre.png */,
+				132B40D31638813F0063C60F /* amenity_theatre@2x.png */,
+			);
+			name = "Entertainment, Arts and Culture";
 			sourceTree = "<group>";
 		};
 		136005EE1636A3C300616E9A /* Shopping */ = {
@@ -613,7 +1248,20 @@
 		13A69A5C16369316009CFB60 /* Rendering point objects */ = {
 			isa = PBXGroup;
 			children = (
+				132B406E163873090063C60F /* Accomodation */,
+				132B3FA6163857990063C60F /* Amenity */,
+				132B4055163871700063C60F /* Barrier */,
+				132B40C3163880850063C60F /* Education */,
+				132B40C5163880C60063C60F /* Entertainment, Arts and Culture */,
+				132B3F88163854800063C60F /* Food and Drink */,
+				132B40C21638807B0063C60F /* Healthcare */,
+				132B40A416387AAF0063C60F /* Landuse */,
+				132B40AD16387BDF0063C60F /* Places */,
+				132B408B163875EB0063C60F /* Power */,
 				136005EE1636A3C300616E9A /* Shopping */,
+				132B40C41638808E0063C60F /* Sport and Leisure */,
+				132B402016386F5B0063C60F /* Tourism */,
+				132B3FE7163866EE0063C60F /* Transport */,
 			);
 			name = "Rendering point objects";
 			sourceTree = "<group>";
@@ -646,6 +1294,8 @@
 			children = (
 				13B1F4B4153A38AD003B4D06 /* MZMessageView.h */,
 				13B1F4B5153A38AD003B4D06 /* MZMessageView.m */,
+				130E8E811639BA4B0006BAAB /* MZBlockView.h */,
+				130E8E821639BA4B0006BAAB /* MZBlockView.m */,
 				132980CA153CAE2700979414 /* MZPullView.h */,
 				132980CB153CAE2700979414 /* MZPullView.m */,
 				13F591E01591CD5000929D74 /* MZLoupeView.h */,
@@ -753,6 +1403,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				hu,
 			);
 			mainGroup = 0543852A13F9239900C123A1;
 			productRefGroup = 0543853613F9239900C123A1 /* Products */;
@@ -805,7 +1456,7 @@
 				132E9760162F2B2C0075AC7B /* shopping_alcohol.n.16.png in Resources */,
 				132E97701630838A0075AC7B /* transport_bus_stop.png in Resources */,
 				132E97711630838A0075AC7B /* transport_bus_stop@2x.png in Resources */,
-				13D48152163436DB00874395 /* MZOpenStreetBugsViewController.xib in Resources */,
+				130E8E84163B39EB0006BAAB /* MZOpenStreetBugsViewController.xib in Resources */,
 				13D481571634439400874395 /* greyButton.png in Resources */,
 				13D481581634439400874395 /* greyButton@2x.png in Resources */,
 				13D4815A1634439400874395 /* greyButtonHighlight@2x.png in Resources */,
@@ -870,6 +1521,186 @@
 				136005E91636A38700616E9A /* shop_toys@2x.png in Resources */,
 				136005EC1636A3AF00616E9A /* shop_marketplace.png in Resources */,
 				136005ED1636A3AF00616E9A /* shop_marketplace@2x.png in Resources */,
+				132B3F8C163854AE0063C60F /* amenity_drinking_water.png in Resources */,
+				132B3F8D163854AE0063C60F /* amenity_drinking_water@2x.png in Resources */,
+				132B3F90163855030063C60F /* amenity_vending_machine.png in Resources */,
+				132B3F91163855030063C60F /* amenity_vending_machine@2x.png in Resources */,
+				132B3F94163855470063C60F /* amenity_pub.png in Resources */,
+				132B3F95163855470063C60F /* amenity_pub@2x.png in Resources */,
+				132B3F98163855890063C60F /* amenity_bar.png in Resources */,
+				132B3F99163855890063C60F /* amenity_bar@2x.png in Resources */,
+				132B3F9C163855B90063C60F /* amenity_restaurant.png in Resources */,
+				132B3F9D163855B90063C60F /* amenity_restaurant@2x.png in Resources */,
+				132B3FA0163855F10063C60F /* amenity_cafe.png in Resources */,
+				132B3FA1163855F10063C60F /* amenity_cafe@2x.png in Resources */,
+				132B3FA4163856250063C60F /* amenity_fastfood.png in Resources */,
+				132B3FA5163856250063C60F /* amenity_fastfood@2x.png in Resources */,
+				132B3FA9163857B40063C60F /* amenity_firestation.png in Resources */,
+				132B3FAA163857B40063C60F /* amenity_firestation@2x.png in Resources */,
+				132B3FC916385B6D0063C60F /* amenity_police.png in Resources */,
+				132B3FCA16385B6D0063C60F /* amenity_police@2x.png in Resources */,
+				132B3FCB16385B6D0063C60F /* amenity_town_hall.png in Resources */,
+				132B3FCC16385B6D0063C60F /* amenity_town_hall@2x.png in Resources */,
+				132B3FCD16385B6D0063C60F /* amenity_atm.png in Resources */,
+				132B3FCE16385B6D0063C60F /* amenity_atm@2x.png in Resources */,
+				132B3FCF16385B6D0063C60F /* amenity_bank.png in Resources */,
+				132B3FD016385B6D0063C60F /* amenity_bank@2x.png in Resources */,
+				132B3FD116385B6D0063C60F /* amenity_place_of_worship.png in Resources */,
+				132B3FD216385B6D0063C60F /* amenity_recycling.png in Resources */,
+				132B3FD316385B6D0063C60F /* amenity_place_of_worship@2x.png in Resources */,
+				132B3FD416385B6D0063C60F /* amenity_recycling@2x.png in Resources */,
+				132B3FD516385B6D0063C60F /* amenity_toilet.png in Resources */,
+				132B3FD616385B6D0063C60F /* amenity_shelter.png in Resources */,
+				132B3FD716385B6D0063C60F /* amenity_post_office.png in Resources */,
+				132B3FD816385B6D0063C60F /* amenity_waste_basket.png in Resources */,
+				132B3FD916385B6D0063C60F /* amenity_post_office@2x.png in Resources */,
+				132B3FDA16385B6D0063C60F /* amenity_waste_basket@2x.png in Resources */,
+				132B3FDB16385B6D0063C60F /* amenity_toilet@2x.png in Resources */,
+				132B3FDC16385B6D0063C60F /* amenity_shelter@2x.png in Resources */,
+				132B3FDD16385B6D0063C60F /* amenity_hunting_stand.png in Resources */,
+				132B3FDE16385B6D0063C60F /* amenity_bench.png in Resources */,
+				132B3FDF16385B6D0063C60F /* amenity_hunting_stand@2x.png in Resources */,
+				132B3FE016385B6D0063C60F /* amenity_bench@2x.png in Resources */,
+				132B3FE116385B6D0063C60F /* amenity_post_box.png in Resources */,
+				132B3FE216385B6D0063C60F /* amenity_telephone.png in Resources */,
+				132B3FE316385B6D0063C60F /* amenity_post_box@2x.png in Resources */,
+				132B3FE416385B6D0063C60F /* amenity_telephone@2x.png in Resources */,
+				132B3FE516385B6D0063C60F /* emergency_phone.png in Resources */,
+				132B3FE616385B6D0063C60F /* emergency_phone@2x.png in Resources */,
+				132B4004163867090063C60F /* aeroway_aerodrome.png in Resources */,
+				132B4005163867090063C60F /* aeroway_aerodrome@2x.png in Resources */,
+				132B4006163867090063C60F /* aeroway_terminal.png in Resources */,
+				132B4007163867090063C60F /* aeroway_terminal@2x.png in Resources */,
+				132B4008163867090063C60F /* amenity_bus_station.png in Resources */,
+				132B4009163867090063C60F /* amenity_bus_station@2x.png in Resources */,
+				132B400A163867090063C60F /* highway_bus_stop.png in Resources */,
+				132B400B163867090063C60F /* aeroway_gate.png in Resources */,
+				132B400C163867090063C60F /* highway_bus_stop@2x.png in Resources */,
+				132B400D163867090063C60F /* aeroway_gate@2x.png in Resources */,
+				132B400E163867090063C60F /* aeroway_helipad.png in Resources */,
+				132B400F163867090063C60F /* amenity_car_rental.png in Resources */,
+				132B4010163867090063C60F /* amenity_bicycle_rental.png in Resources */,
+				132B4011163867090063C60F /* amenity_car_rental@2x.png in Resources */,
+				132B4012163867090063C60F /* aeroway_helipad@2x.png in Resources */,
+				132B4013163867090063C60F /* amenity_parking.png in Resources */,
+				132B4014163867090063C60F /* amenity_bicycle_rental@2x.png in Resources */,
+				132B4015163867090063C60F /* amenity_parking@2x.png in Resources */,
+				132B4016163867090063C60F /* amenity_fuel.png in Resources */,
+				132B4017163867090063C60F /* railway_station.png in Resources */,
+				132B4018163867090063C60F /* amenity_taxi.png in Resources */,
+				132B4019163867090063C60F /* railway_station@2x.png in Resources */,
+				132B401A163867090063C60F /* amenity_taxi@2x.png in Resources */,
+				132B401B163867090063C60F /* amenity_fuel@2x.png in Resources */,
+				132B401C163867090063C60F /* railway_tram_stop.png in Resources */,
+				132B401D163867090063C60F /* amenity_bicycle_parking.png in Resources */,
+				132B401E163867090063C60F /* railway_tram_stop@2x.png in Resources */,
+				132B401F163867090063C60F /* amenity_bicycle_parking@2x.png in Resources */,
+				132B403B16386F8E0063C60F /* tourism_museum.png in Resources */,
+				132B403C16386F8E0063C60F /* tourism_museum@2x.png in Resources */,
+				132B403D16386F8E0063C60F /* historic_archaeological_site.png in Resources */,
+				132B403E16386F8E0063C60F /* historic_archaeological_site@2x.png in Resources */,
+				132B403F16386F8E0063C60F /* historic_battlefield.png in Resources */,
+				132B404016386F8E0063C60F /* historic_battlefield@2x.png in Resources */,
+				132B404116386F8E0063C60F /* historic_castle.png in Resources */,
+				132B404216386F8E0063C60F /* historic_castle@2x.png in Resources */,
+				132B404316386F8E0063C60F /* historic_memorial.png in Resources */,
+				132B404416386F8E0063C60F /* historic_monument.png in Resources */,
+				132B404516386F8E0063C60F /* historic_monument@2x.png in Resources */,
+				132B404616386F8E0063C60F /* historic_ruins.png in Resources */,
+				132B404716386F8E0063C60F /* historic_ruins@2x.png in Resources */,
+				132B404816386F8E0063C60F /* tourism_picnic_site.png in Resources */,
+				132B404916386F8E0063C60F /* tourism_picnic_site@2x.png in Resources */,
+				132B404A16386F8E0063C60F /* tourism_viewpoint.png in Resources */,
+				132B404B16386F8E0063C60F /* tourism_viewpoint@2x.png in Resources */,
+				132B404C16386F8E0063C60F /* tourism_zoo.png in Resources */,
+				132B404D16386F8E0063C60F /* historic_memorial@2x.png in Resources */,
+				132B404E16386F8E0063C60F /* tourism_zoo@2x.png in Resources */,
+				132B404F16386F8E0063C60F /* tourism_information.png in Resources */,
+				132B405016386F8E0063C60F /* tourism_information@2x.png in Resources */,
+				132B405116386F8E0063C60F /* tourism_artwork.png in Resources */,
+				132B405216386F8E0063C60F /* tourism_artwork@2x.png in Resources */,
+				132B405316386F8E0063C60F /* tourism_theme_park.png in Resources */,
+				132B405416386F8E0063C60F /* tourism_theme_park@2x.png in Resources */,
+				132B40621638718A0063C60F /* barrier_bollard.png in Resources */,
+				132B40631638718A0063C60F /* barrier_bollard@2x.png in Resources */,
+				132B40641638718A0063C60F /* barrier_gate.png in Resources */,
+				132B40651638718A0063C60F /* barrier_gate@2x.png in Resources */,
+				132B40661638718A0063C60F /* barrier_lift_gate.png in Resources */,
+				132B40671638718A0063C60F /* barrier_lift_gate@2x.png in Resources */,
+				132B40681638718A0063C60F /* barrier_cycle_barrier.png in Resources */,
+				132B40691638718A0063C60F /* barrier_cycle_barrier@2x.png in Resources */,
+				132B406A1638718A0063C60F /* barrier_block.png in Resources */,
+				132B406B1638718A0063C60F /* barrier_block@2x.png in Resources */,
+				132B406C1638718A0063C60F /* barrier_toll_booth.png in Resources */,
+				132B406D1638718A0063C60F /* barrier_toll_booth@2x.png in Resources */,
+				132B407D163873450063C60F /* tourism_hotel.png in Resources */,
+				132B407E163873450063C60F /* tourism_hotel@2x.png in Resources */,
+				132B407F163873450063C60F /* tourism_motel.png in Resources */,
+				132B4080163873450063C60F /* tourism_motel@2x.png in Resources */,
+				132B4081163873450063C60F /* tourism_hostel.png in Resources */,
+				132B4082163873450063C60F /* tourism_hostel@2x.png in Resources */,
+				132B4083163873450063C60F /* tourism_guest_house.png in Resources */,
+				132B4084163873450063C60F /* tourism_guest_house@2x.png in Resources */,
+				132B4085163873450063C60F /* tourism_camp_site.png in Resources */,
+				132B4086163873450063C60F /* tourism_camp_site@2x.png in Resources */,
+				132B4087163873450063C60F /* tourism_caravan_site.png in Resources */,
+				132B4088163873450063C60F /* tourism_caravan_site@2x.png in Resources */,
+				132B4089163873450063C60F /* tourism_alpine_hut.png in Resources */,
+				132B408A163873450063C60F /* tourism_alpine_hut@2x.png in Resources */,
+				132B4096163876030063C60F /* power_tower.png in Resources */,
+				132B4097163876030063C60F /* power_tower@2x.png in Resources */,
+				132B4098163876030063C60F /* power_pole.png in Resources */,
+				132B4099163876030063C60F /* power_pole@2x.png in Resources */,
+				132B409A163876030063C60F /* power_generator.png in Resources */,
+				132B409B163876030063C60F /* power_generator@2x.png in Resources */,
+				132B409C163876030063C60F /* power_station.png in Resources */,
+				132B409D163876030063C60F /* power_station@2x.png in Resources */,
+				132B409E163876030063C60F /* power_sub_station.png in Resources */,
+				132B409F163876030063C60F /* power_sub_station@2x.png in Resources */,
+				132B40A2163879570063C60F /* man_made_tower.png in Resources */,
+				132B40A3163879570063C60F /* man_made_tower@2x.png in Resources */,
+				132B40A916387AC60063C60F /* landuse_cemetery.png in Resources */,
+				132B40AA16387AC60063C60F /* landuse_cemetery@2x.png in Resources */,
+				132B40AB16387AC60063C60F /* amenity_grave_yard.png in Resources */,
+				132B40AC16387AC60063C60F /* amenity_grave_yard@2x.png in Resources */,
+				132B40B816387BF50063C60F /* place_hamlet.png in Resources */,
+				132B40B916387BF50063C60F /* place_hamlet@2x.png in Resources */,
+				132B40BA16387BF50063C60F /* place_village.png in Resources */,
+				132B40BB16387BF50063C60F /* place_village@2x.png in Resources */,
+				132B40BC16387BF50063C60F /* place_suburb.png in Resources */,
+				132B40BD16387BF50063C60F /* place_city.png in Resources */,
+				132B40BE16387BF50063C60F /* place_town.png in Resources */,
+				132B40BF16387BF50063C60F /* place_suburb@2x.png in Resources */,
+				132B40C016387BF50063C60F /* place_city@2x.png in Resources */,
+				132B40C116387BF50063C60F /* place_town@2x.png in Resources */,
+				132B40CC1638811C0063C60F /* amenity_cinema.png in Resources */,
+				132B40CD1638811C0063C60F /* amenity_cinema@2x.png in Resources */,
+				132B40D01638811C0063C60F /* amenity_fountain.png in Resources */,
+				132B40D11638811C0063C60F /* amenity_fountain@2x.png in Resources */,
+				132B40D41638813F0063C60F /* amenity_theatre.png in Resources */,
+				132B40D51638813F0063C60F /* amenity_theatre@2x.png in Resources */,
+				132B40E01638814E0063C60F /* leisure_swimming.png in Resources */,
+				132B40E11638814E0063C60F /* leisure_swimming@2x.png in Resources */,
+				132B40E21638814E0063C60F /* amenity_playground.png in Resources */,
+				132B40E31638814E0063C60F /* amenity_playground@2x.png in Resources */,
+				132B40E41638814E0063C60F /* leisure_sports_centre.png in Resources */,
+				132B40E51638814E0063C60F /* leisure_sports_centre@2x.png in Resources */,
+				132B40E61638814E0063C60F /* leisure_marina.png in Resources */,
+				132B40E71638814E0063C60F /* leisure_marina@2x.png in Resources */,
+				132B40E81638814E0063C60F /* leisure_slipway.png in Resources */,
+				132B40E91638814E0063C60F /* leisure_slipway@2x.png in Resources */,
+				132B40F01638817B0063C60F /* amenity_library.png in Resources */,
+				132B40F11638817B0063C60F /* amenity_library@2x.png in Resources */,
+				132B40F21638817B0063C60F /* amenity_school.png in Resources */,
+				132B40F31638817B0063C60F /* amenity_school@2x.png in Resources */,
+				132B40F41638817B0063C60F /* amenity_kindergarten.png in Resources */,
+				132B40F51638817B0063C60F /* amenity_kindergarten@2x.png in Resources */,
+				132B40FC1638818E0063C60F /* amenity_pharmacy.png in Resources */,
+				132B40FD1638818E0063C60F /* amenity_pharmacy@2x.png in Resources */,
+				132B40FE1638818E0063C60F /* amenity_hospital.png in Resources */,
+				132B40FF1638818E0063C60F /* amenity_hospital@2x.png in Resources */,
+				132B4104163881B00063C60F /* amenity_veterinary.png in Resources */,
+				132B4105163881B00063C60F /* amenity_veterinary@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -952,6 +1783,7 @@
 				13D48151163436DB00874395 /* MZOpenStreetBugsViewController.m in Sources */,
 				13D4816B163536C400874395 /* MZOpenStreetBug.m in Sources */,
 				136005F11636C8A100616E9A /* UIImage+MZMapperUtilities.m in Sources */,
+				130E8E831639BA4B0006BAAB /* MZBlockView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1026,6 +1858,15 @@
 				1310F6A815FCF17900FB7FAA /* hu */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		130E8E86163B39EB0006BAAB /* MZOpenStreetBugsViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				130E8E85163B39EB0006BAAB /* en */,
+				130E8E87163B3AD10006BAAB /* hu */,
+			);
+			name = MZOpenStreetBugsViewController.xib;
 			sourceTree = "<group>";
 		};
 		1310F6A215FCF05A00FB7FAA /* Localizable.strings */ = {

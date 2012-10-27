@@ -45,9 +45,6 @@
 /* Name of the Landuse-type point category */
 "PointCategoryNameLanduseKey" = "Landuse";
 
-/* Name of the ManMade-type point category */
-"PointCategoryNameManMadeKey" = "Man-made";
-
 /* Name of the Places-type point category */
 "PointCategoryNamePlacesKey" = "Places";
 

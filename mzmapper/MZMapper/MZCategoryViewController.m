@@ -10,6 +10,8 @@
 #import "MZCategoryItemView.h"
 #import "MZEditViewController.h"
 
+#define ITEM_HEIGHT 40.0
+
 @interface MZCategoryViewController ()
 {
     NSMutableArray* _categoryItemViews;
@@ -65,7 +67,7 @@
     {
         case MZMapperPointCategoryAccomodation:
         {
-            MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height, self.view.bounds.size.width, 50.0)];
+            MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height, self.view.bounds.size.width, ITEM_HEIGHT)];
             [itemView setItemName:@"itemName"];
             [itemView setItemImage:[UIImage imageNamed:@"shopping_alcohol.n.16.png"]];
             [self.view addSubview:itemView];
@@ -85,11 +87,24 @@
             break;
             //to-do continue----------------
         
+        case MZMapperPointCategoryFoodAndDrink:
+        {
+            for (NSUInteger i = 0; i < MZMapperPointCategoryFoodAndDrinkElementCountOfElements; i++)
+            {
+                MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (i * ITEM_HEIGHT), self.view.bounds.size.width, ITEM_HEIGHT)];
+                [itemView setItemName:[NSString nameOfPointCategoryFoodAndDrinkElement:i]];
+                [itemView setItemImage:[UIImage imageForPointCategoryFoodAndDrinkElement:i]];
+                [self.view addSubview:itemView];
+                [_categoryItemViews addObject:itemView];
+                [itemView release];
+            }
+        }
+            break;
         case MZMapperPointCategoryShopping:
         {
             for (NSUInteger i = 0; i < MZMapperPointCategoryShoppingElementCountOfElements; i++)
             {
-                MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (i * 50.0), self.view.bounds.size.width, 50.0)];
+                MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (i * ITEM_HEIGHT), self.view.bounds.size.width, ITEM_HEIGHT)];
                 [itemView setItemName:[NSString nameOfPointCategoryShoppingElement:i]];
                 [itemView setItemImage:[UIImage imageForPointCategoryShoppingElement:i]];
                 [self.view addSubview:itemView];
@@ -102,7 +117,7 @@
             break;
     }
     
-    if ([_categoryItemViews count] > 3)
+    if ([_categoryItemViews count] > 4)
     {
         [_showMoreButton setHidden:NO];
     }
@@ -131,7 +146,7 @@
         if ([_categoryItemViews count] > 3)
         {
             CGFloat actFrameHeight = self.view.frame.size.height;
-            CGFloat newFrameHeight = _titleLabel.frame.size.height + ([_categoryItemViews count] * 50.0);
+            CGFloat newFrameHeight = _titleLabel.frame.size.height + ([_categoryItemViews count] * ITEM_HEIGHT);
             
             growingValue = newFrameHeight - actFrameHeight;
             

@@ -12,5 +12,6 @@
 + (NSString*)nameOfPointCategory:(MZMapperPointCategory)category;
 
 + (NSString*)nameOfPointCategoryShoppingElement:(MZMapperPointCategoryShoppingElement)element;
++ (NSString*)nameOfPointCategoryFoodAndDrinkElement:(MZMapperPointCategoryFoodAndDrinkElement)element;
 
 @end

@@ -119,15 +119,11 @@
     [loginButton addTarget:self action:@selector(loginButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
     
-    //OpenStreetBugs integration
-    UITapGestureRecognizer* doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
-    [doubleTap setNumberOfTapsRequired:2];
-    [self.view addGestureRecognizer:doubleTap];
-    [doubleTap release];
-    
     _editingModeIsActive = NO;
     
     _openStreetBugs = [[NSMutableArray alloc] init];
+    
+    _blockView = [[MZBlockView alloc] initWithView:self.view];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -195,6 +191,16 @@
 - (void)hideMessageView
 {
     [_messageView hide];
+}
+
+- (void)showBlockView
+{
+    [_blockView show];
+}
+
+- (void)hideBlockView
+{
+    [_blockView hide];
 }
 
 - (void)jumpToCoordinateLongitude:(CGFloat)lon latitude:(CGFloat)lat
@@ -272,6 +278,8 @@
          
          if ([components count] > 1)
          {
+             description = [components objectAtIndex:0];
+             
              for (NSUInteger i = 1; i < [components count]; i++)
              {
                  [comments addObject:[components objectAtIndex:i]];
@@ -280,8 +288,8 @@
          
          
 //         NSLog(@"\tbugId: %@",bugID);
-//         NSLog(@"\tlon: %@",longitude);
-//         NSLog(@"\tlat: %@",latitude);
+//         NSLog(@"\tlon: %f",longitude);
+//         NSLog(@"\tlat: %f",latitude);
 //         NSLog(@"\tdesc: %@",description);
 //         NSLog(@"\tstatus: %@",status ? @"YES" : @"NO");
 //         for (NSString* comment in comments)
@@ -296,7 +304,7 @@
          [bug setLatitude:latitude];
          [bug setDescription:description];
          [bug setStatus:status];
-         [bug setComments:components];
+         [bug setComments:comments];
          
          [retVal addObject:bug];
          
@@ -308,49 +316,100 @@
 
 - (void)switchOnOpenStreetBugs
 {
-    [MZMapperContentManager sharedContentManager].openStreetBugModeIsActive = YES;
+    CGFloat width = _map.maxLongitude - _map.minLongitude;
+    CGFloat left = _map.minLongitude - width;
+    CGFloat right = _map.maxLongitude + width;
     
-    [_openStreetBugButton setImage:[UIImage imageNamed:@"icon_bug_on.png"] forState:UIControlStateNormal];
+    CGFloat height = _map.maxLatitude - _map.minLatitude;
+    CGFloat bottom = _map.minLatitude - height;
+    CGFloat top = _map.maxLatitude + height;
     
-    UIView* bugView = [[UIView alloc] initWithFrame:_map.frame];
-    [bugView setBackgroundColor:[UIColor clearColor]];
+    //http://openstreetbugs.schokokeks.org/api/0.1/getBugs?b=46.2000070&t=46.2158120&l=19.3771410&r=19.4075760
     
-    for (MZOpenStreetBug* bug in _openStreetBugs)
-    {
-        MZNode* bugNode = [[MZNode alloc] init];
-        bugNode.longitude = bug.longitude;
-        bugNode.latitude = bug.latitude;
-        
-        CGPoint realPosition = [_map realPositionForNode:bugNode];
-        
-        [bugNode release];
-        
-        UIImage* statusImage = nil;
-        
-        if (bug.status)
-        {
-            statusImage = [UIImage imageNamed:@"icon_ok.png"];
-        }
-        else
-        {
-            statusImage = [UIImage imageNamed:@"icon_error.png"];
-        }
-        
-        UIImageView* bugImageView = [[UIImageView alloc] initWithImage:statusImage];
-        [bugImageView setCenter:realPosition];
-        
-        UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleBugTap:)];
-        [bugImageView addGestureRecognizer:tapGesture];
-        [tapGesture release];
-        
-        [bugView addSubview:bugImageView];
-        
-        [bugImageView release];
-        
-        NSLog(@"realpos: %@",NSStringFromCGPoint(realPosition));
-    }
+    NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://openstreetbugs.schokokeks.org/api/0.1/getBugs?b=%f&t=%f&l=%f&r=%f",bottom,top,left,right]];
     
-    [_scrollView addSubview:bugView];
+    MZDownloader* downloader = [[MZDownloader alloc] init];
+    
+    [_blockView show];
+    
+    [downloader downloadRequestFromURL:url
+                       progressHandler:nil
+                     completionHandler:^(NSString* resultString){
+                         
+                         if (![resultString isEqualToString:HTTP_STATUS_CODE_CONNECTION_FAILED])
+                         {
+                             //empty _openStreetBugs array
+                             if ([_openStreetBugs count])
+                             {
+                                 [_openStreetBugs removeAllObjects];
+                             }
+                             
+                             //fill _openStreetBugs array
+                             [_openStreetBugs addObjectsFromArray:[self collectOpenStreetBugsFromResultString:resultString]];
+                             
+                             [_openStreetBugButton setImage:[UIImage imageNamed:@"icon_bug_on.png"] forState:UIControlStateNormal];
+                             
+                             //_openStreetBugView is a container view for open street bugs
+                             _openStreetBugView = [[UIView alloc] initWithFrame:_map.frame];
+                             
+                             for (MZOpenStreetBug* bug in _openStreetBugs)
+                             {
+                                 //convert MZOpenStreetBug to a MZNode, so we can use realPositionForNode: method of the MZMapView
+                                 MZNode* bugNode = [[MZNode alloc] init];
+                                 bugNode.longitude = bug.longitude;
+                                 bugNode.latitude = bug.latitude;
+                                 
+                                 CGPoint realPosition = [_map realPositionForNode:bugNode];
+                                 
+                                 [bugNode release];
+                                 
+                                 UIImage* statusImage = nil;
+                                 
+                                 if (bug.status)
+                                 {
+                                     statusImage = [UIImage imageNamed:@"icon_ok.png"];
+                                 }
+                                 else
+                                 {
+                                     statusImage = [UIImage imageNamed:@"icon_error.png"];
+                                 }
+                                 
+                                 UIImageView* bugImageView = [[UIImageView alloc] initWithImage:statusImage];
+                                 [bugImageView setCenter:realPosition];
+                                 [bugImageView setUserInteractionEnabled:YES];
+                                 
+                                 UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleBugTap:)];
+                                 [bugImageView addGestureRecognizer:tapGesture];
+                                 [tapGesture release];
+                                 
+                                 [_openStreetBugView addSubview:bugImageView];
+                                 
+                                 [bugImageView release];
+                             }
+                             
+                             [_scrollView insertSubview:_openStreetBugView belowSubview:_blockView];
+                             
+                             //OpenStreetBugs integration
+                             UITapGestureRecognizer* doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleBugViewTap:)];
+                             [doubleTap setNumberOfTapsRequired:1];
+                             [_openStreetBugView addGestureRecognizer:doubleTap];
+                             [doubleTap release];
+                             
+                             [_blockView hide];
+                         }
+                     }];
+    
+    [downloader release];
+    [url release];
+}
+
+- (void)switchOffOpenStreetBugs
+{
+    [_openStreetBugButton setImage:[UIImage imageNamed:@"icon_bug.png"] forState:UIControlStateNormal];
+    
+    [_openStreetBugView removeFromSuperview];
+    
+    [_openStreetBugView release];
 }
 
 #pragma mark -
@@ -425,42 +484,18 @@
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
     
-    CGFloat width = _map.maxLongitude - _map.minLongitude;
-    CGFloat left = _map.minLongitude - width;
-    CGFloat right = _map.maxLongitude + width;
-    
-    CGFloat height = _map.maxLatitude - _map.minLatitude;
-    CGFloat bottom = _map.minLatitude - height;
-    CGFloat top = _map.maxLatitude + height;
-    
-    //http://openstreetbugs.schokokeks.org/api/0.1/getBugs?b=46.2000070&t=46.2158120&l=19.3771410&r=19.4075760
-    
-    NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://openstreetbugs.schokokeks.org/api/0.1/getBugs?b=%f&t=%f&l=%f&r=%f",bottom,top,left,right]];
-    
-    MZDownloader* downloader = [[MZDownloader alloc] init];
-    
-    [downloader downloadRequestFromURL:url
-                       progressHandler:nil
-                     completionHandler:^(NSString* resultString){
-                         
-                         //NSLog(@"resultString: %@",resultString);
-                         
-                         if (![resultString isEqualToString:HTTP_STATUS_CODE_CONNECTION_FAILED])
-                         {
-                             if ([_openStreetBugs count])
-                             {
-                                 [_openStreetBugs removeAllObjects];
-                             }
-                             
-                             [_openStreetBugs addObjectsFromArray:[self collectOpenStreetBugsFromResultString:resultString]];
-                             
-                             [self switchOnOpenStreetBugs];
-                         }
-                     }];
-    
-    [downloader release];
-    [url release];
-    
+    if ([MZMapperContentManager sharedContentManager].openStreetBugModeIsActive)
+    {
+        [MZMapperContentManager sharedContentManager].openStreetBugModeIsActive = NO;
+        
+        [self switchOffOpenStreetBugs];
+    }
+    else
+    {
+        [MZMapperContentManager sharedContentManager].openStreetBugModeIsActive = YES;
+        
+        [self switchOnOpenStreetBugs];
+    }
 }
 
 #pragma mark -
@@ -588,12 +623,13 @@
     
 }
 
-- (void)handleDoubleTap:(UITapGestureRecognizer*)gesture
+//when user taps on an empty area on the _openStreetBugView
+- (void)handleBugViewTap:(UITapGestureRecognizer*)gesture
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
     CGPoint gestureRecognizedAtPoint = [gesture locationInView:[gesture view]];
     
-    MZOpenStreetBugsViewController* bugController = [[MZOpenStreetBugsViewController alloc] initWithNibName:@"MZOpenStreetBugsViewController" bundle:nil];
+    MZOpenStreetBugsViewController* bugController = [[MZOpenStreetBugsViewController alloc] initWithControllerType:MZOpenStreetBugsViewControllerTypeCreateBug andWithBug:nil];
     
     //[bugController setDelegate:self];
     [bugController setContentSizeForViewInPopover:CGSizeMake(400.0, 200.0)];
@@ -631,9 +667,54 @@
 //        [popOverMenu release];
 }
 
+//when user taps on an existing bug
 - (void)handleBugTap:(UITapGestureRecognizer*)gesture
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
+    
+    UIImageView* bugImageView = (UIImageView*)gesture.view;
+    
+    for (MZOpenStreetBug* bug in _openStreetBugs)
+    {
+        //convert MZOpenStreetBug to a MZNode, so we can use realPositionForNode: method of the MZMapView
+        MZNode* bugNode = [[MZNode alloc] init];
+        bugNode.longitude = bug.longitude;
+        bugNode.latitude = bug.latitude;
+        
+        CGPoint realPosition = [_map realPositionForNode:bugNode];
+        
+        [bugNode release];
+        
+        if (CGPointEqualToPoint(bugImageView.center, realPosition))
+        {
+            MZOpenStreetBugsViewController* bugController = nil;
+            
+            if (bug.status)
+            {
+                bugController = [[MZOpenStreetBugsViewController alloc] initWithControllerType:MZOpenStreetBugsViewControllerTypeFixedBug andWithBug:bug];
+            }
+            else
+            {
+                bugController = [[MZOpenStreetBugsViewController alloc] initWithControllerType:MZOpenStreetBugsViewControllerTypeUnresolvedBug andWithBug:bug];
+            }
+            
+            //[bugController setDelegate:self];
+            [bugController setContentSizeForViewInPopover:CGSizeMake(400.0, 200.0)];
+            
+            UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:bugController];
+            
+            [bugController.navigationItem setTitle:@"OpenStreetBugs"];
+            
+            UIPopoverController* popoverController = [[UIPopoverController alloc] initWithContentViewController:navController];
+            bugController.aPopoverController = popoverController;
+            [popoverController presentPopoverFromRect:gesture.view.bounds inView:[gesture view] permittedArrowDirections:UIPopoverArrowDirectionDown | UIPopoverArrowDirectionLeft | UIPopoverArrowDirectionRight animated:YES];
+            
+            [navController release];
+            [bugController release];
+            
+            break;
+        }
+    }
 }
 
 #pragma mark - View lifecycle
@@ -673,6 +754,7 @@
     [_editButton release];
     [_openStreetBugButton release];
     [_loupeView release];
+    [_blockView release];
     
     [_locationManager stopUpdatingLocation];
 	[_locationManager release];

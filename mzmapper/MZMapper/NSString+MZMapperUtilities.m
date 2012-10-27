@@ -86,11 +86,6 @@
             retVal = NSLocalizedString(@"PointCategoryNameEducationKey", @"Name of the Education-type point category");
         }
             break;
-        case MZMapperPointCategoryManMade:
-        {
-            retVal = NSLocalizedString(@"PointCategoryNameManMadeKey", @"Name of the ManMade-type point category");
-        }
-            break;
         default:
             break;
     }
@@ -232,6 +227,54 @@
         case MZMapperPointCategoryShoppingElementMarketPlace:
         {
             retVal = NSLocalizedString(@"PointCategoryShoppingElementNameMarketPlaceKey", @"Name of the MarketPlace point category element");
+        }
+            break;
+        default:
+            break;
+    }
+    
+    return retVal;
+}
+
++ (NSString*)nameOfPointCategoryFoodAndDrinkElement:(MZMapperPointCategoryFoodAndDrinkElement)element
+{
+    NSString* retVal = NSLocalizedString(@"UnnamedPointCategoryElementNameKey", @"Name of a point category element which hasn't got predefined name");
+    
+    switch (element)
+    {
+        case MZMapperPointCategoryFoodAndDrinkElementWaterFountain:
+        {
+            retVal = NSLocalizedString(@"PointCategoryFoodAndDrinkElementNameWaterFountainKey", @"Name of the WaterFountain point category element");
+        }
+            break;
+        case MZMapperPointCategoryFoodAndDrinkElementVendingMachine:
+        {
+            retVal = NSLocalizedString(@"PointCategoryFoodAndDrinkElementNameVendingMachineKey", @"Name of the VendingMachine point category element");
+        }
+            break;
+        case MZMapperPointCategoryFoodAndDrinkElementPub:
+        {
+            retVal = NSLocalizedString(@"PointCategoryFoodAndDrinkElementNamePubKey", @"Name of the Pub point category element");
+        }
+            break;
+        case MZMapperPointCategoryFoodAndDrinkElementBar:
+        {
+            retVal = NSLocalizedString(@"PointCategoryFoodAndDrinkElementNameBarKey", @"Name of the Bar point category element");
+        }
+            break;
+        case MZMapperPointCategoryFoodAndDrinkElementRestaurant:
+        {
+            retVal = NSLocalizedString(@"PointCategoryFoodAndDrinkElementNameRestaurantKey", @"Name of the Restaurant point category element");
+        }
+            break;
+        case MZMapperPointCategoryFoodAndDrinkElementCafe:
+        {
+            retVal = NSLocalizedString(@"PointCategoryFoodAndDrinkElementNameCafeKey", @"Name of the Cafe point category element");
+        }
+            break;
+        case MZMapperPointCategoryFoodAndDrinkElementFastFood:
+        {
+            retVal = NSLocalizedString(@"PointCategoryFoodAndDrinkElementNameFastFoodKey", @"Name of the FastFood point category element");
         }
             break;
         default:
