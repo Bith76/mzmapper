@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Node" representedClassName="Node" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="nodeid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="way" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Way" inverseName="nodes" inverseEntity="Way" syncable="YES"/>
+    </entity>
+    <entity name="Way" representedClassName="Way" syncable="YES">
+        <attribute name="wayid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Node" inverseName="way" inverseEntity="Node" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Node" positionX="-126" positionY="-972" width="128" height="103"/>
+        <element name="Way" positionX="-378" positionY="-1081" width="128" height="73"/>
+    </elements>
+</model>

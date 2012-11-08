@@ -331,6 +331,10 @@
 		13F5991716236916007C44FC /* openstreetmap-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F5991516236916007C44FC /* openstreetmap-logo@2x.png */; };
 		13F5991A1623698A007C44FC /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F5991816236989007C44FC /* Default-Landscape~ipad.png */; };
 		13F5991B1623698A007C44FC /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F599191623698A007C44FC /* Default-Landscape@2x~ipad.png */; };
+		13FF31D1164C4BA100A4CFD5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13FF31CF164C4BA100A4CFD5 /* Model.xcdatamodeld */; };
+		13FF31D9164C4D9E00A4CFD5 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FF31D8164C4D9E00A4CFD5 /* Node.m */; };
+		13FF31DC164C553000A4CFD5 /* Way.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FF31DB164C553000A4CFD5 /* Way.m */; };
+		13FF31DE164C5D8700A4CFD5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13FF31DD164C5D8700A4CFD5 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -701,6 +705,12 @@
 		13F5991516236916007C44FC /* openstreetmap-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openstreetmap-logo@2x.png"; sourceTree = "<group>"; };
 		13F5991816236989007C44FC /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		13F599191623698A007C44FC /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		13FF31D0164C4BA100A4CFD5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		13FF31D7164C4D9E00A4CFD5 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		13FF31D8164C4D9E00A4CFD5 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		13FF31DA164C553000A4CFD5 /* Way.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Way.h; sourceTree = "<group>"; };
+		13FF31DB164C553000A4CFD5 /* Way.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Way.m; sourceTree = "<group>"; };
+		13FF31DD164C5D8700A4CFD5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -708,6 +718,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13FF31DE164C5D8700A4CFD5 /* CoreData.framework in Frameworks */,
 				13945E6E1540554D001B257E /* CoreLocation.framework in Frameworks */,
 				0543857B13F9253400C123A1 /* QuartzCore.framework in Frameworks */,
 				0543853A13F9239900C123A1 /* UIKit.framework in Frameworks */,
@@ -763,6 +774,7 @@
 		0543853813F9239900C123A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				13FF31DD164C5D8700A4CFD5 /* CoreData.framework */,
 				0543853913F9239900C123A1 /* UIKit.framework */,
 				0543853B13F9239900C123A1 /* Foundation.framework */,
 				0543853D13F9239900C123A1 /* CoreGraphics.framework */,
@@ -1332,6 +1344,11 @@
 				13B515C1158A8C9600A258CD /* MZPlace.m */,
 				13D48169163536C400874395 /* MZOpenStreetBug.h */,
 				13D4816A163536C400874395 /* MZOpenStreetBug.m */,
+				13FF31D7164C4D9E00A4CFD5 /* Node.h */,
+				13FF31D8164C4D9E00A4CFD5 /* Node.m */,
+				13FF31DA164C553000A4CFD5 /* Way.h */,
+				13FF31DB164C553000A4CFD5 /* Way.m */,
+				13FF31CF164C4BA100A4CFD5 /* Model.xcdatamodeld */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -1789,6 +1806,9 @@
 				136005F11636C8A100616E9A /* UIImage+MZMapperUtilities.m in Sources */,
 				130E8E831639BA4B0006BAAB /* MZBlockView.m in Sources */,
 				13172E9B1644354C00D6CAA9 /* MZDraggedCategoryItemView.m in Sources */,
+				13FF31D1164C4BA100A4CFD5 /* Model.xcdatamodeld in Sources */,
+				13FF31D9164C4D9E00A4CFD5 /* Node.m in Sources */,
+				13FF31DC164C553000A4CFD5 /* Way.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2087,6 +2107,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		13FF31CF164C4BA100A4CFD5 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				13FF31D0164C4BA100A4CFD5 /* Model.xcdatamodel */,
+			);
+			currentVersion = 13FF31D0164C4BA100A4CFD5 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0543852C13F9239900C123A1 /* Project object */;
 }
