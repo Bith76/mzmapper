@@ -8,6 +8,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "MZCategoryItemView.h"
+#import "MZDraggedCategoryItemView.h"
 
 @interface MZCategoryItemView ()
 {
@@ -51,24 +52,23 @@
     
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan)
     {
-        _movedImageView = [[UIImageView alloc] initWithImage:self.itemImage];
-        [_movedImageView setFrame:CGRectMake(3.0, 3.0, 44.0, 44.0)];
-        [_movedImageView setAlpha:0.7];
+        _draggedView = [[MZDraggedCategoryItemView alloc] initWithFrame:CGRectMake(9.0, 9.0, 32.0, 32.0) withImage:self.itemImage];
+        [_draggedView setAlpha:0.7];
         
-        CGPoint convertedCenterPoint = [self convertPoint:_movedImageView.center toView:self.window.rootViewController.view];
-        [_movedImageView setCenter:convertedCenterPoint];
-        [self.window.rootViewController.view addSubview:_movedImageView];
+        CGPoint convertedCenterPoint = [self convertPoint:_draggedView.center toView:self.window.rootViewController.view];
+        [_draggedView setCenter:convertedCenterPoint];
+        [self.window.rootViewController.view addSubview:_draggedView];
         
-        _delta = CGPointMake(recognizedAtPoint.x - _movedImageView.center.x, recognizedAtPoint.y - _movedImageView.center.y);
+        _delta = CGPointMake(recognizedAtPoint.x - _draggedView.center.x, recognizedAtPoint.y - _draggedView.center.y);
     }
     else if (gestureRecognizer.state == UIGestureRecognizerStateChanged)
     {
-        [_movedImageView setCenter:CGPointMake(recognizedAtPoint.x - _delta.x, recognizedAtPoint.y - _delta.y)];
+        [_draggedView setCenter:CGPointMake(recognizedAtPoint.x - _delta.x, recognizedAtPoint.y - _delta.y)];
     }
     else if (gestureRecognizer.state == UIGestureRecognizerStateEnded)
     {
-        [_movedImageView setAlpha:1.0];
-        [_movedImageView release], _movedImageView = nil;
+        [_draggedView setAlpha:1.0];
+        [_draggedView release], _draggedView = nil;
     }
 }
 

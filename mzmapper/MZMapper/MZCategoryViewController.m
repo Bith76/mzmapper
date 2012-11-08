@@ -77,7 +77,15 @@
             break;
         case MZMapperPointCategoryAmenity:
         {
-            
+            for (NSUInteger i = 0; i < MZMapperPointCategoryAmenityElementCountOfElements; i++)
+            {
+                MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (i * ITEM_HEIGHT), self.view.bounds.size.width, ITEM_HEIGHT)];
+                [itemView setItemName:[NSString nameOfPointCategoryAmenityElement:i]];
+                [itemView setItemImage:[UIImage imageForPointCategoryAmenityElement:i]];
+                [self.view addSubview:itemView];
+                [_categoryItemViews addObject:itemView];
+                [itemView release];
+            }
         }
             break;
         case MZMapperPointCategoryBarrier:
@@ -116,6 +124,11 @@
         default:
             break;
     }
+    
+    
+    
+    
+    
     
     if ([_categoryItemViews count] > 4)
     {

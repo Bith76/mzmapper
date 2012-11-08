@@ -21,6 +21,78 @@
 /* Title of login error alert view. */
 "LoginErrorTitleKey" = "Authentication Error";
 
+/* Name of the Atm point category element */
+"PointCategoryAmenityElementNameAtmKey" = "ATM";
+
+/* Name of the Bank point category element */
+"PointCategoryAmenityElementNameBankKey" = "Bank";
+
+/* Name of the Bench point category element */
+"PointCategoryAmenityElementNameBenchKey" = "Bench";
+
+/* Name of the FireStation point category element */
+"PointCategoryAmenityElementNameFireStationKey" = "Fire station";
+
+/* Name of the HuntingStand point category element */
+"PointCategoryAmenityElementNameHuntingStandKey" = "Hunting stand";
+
+/* Name of the Phone point category element */
+"PointCategoryAmenityElementNamePhoneKey" = "Phone";
+
+/* Name of the PlaceOfWorship point category element */
+"PointCategoryAmenityElementNamePlaceOfWorshipKey" = "Place of worship";
+
+/* Name of the Police point category element */
+"PointCategoryAmenityElementNamePoliceKey" = "Police";
+
+/* Name of the PostBox point category element */
+"PointCategoryAmenityElementNamePostBoxKey" = "Post box";
+
+/* Name of the PostOffice point category element */
+"PointCategoryAmenityElementNamePostOfficeKey" = "Post office";
+
+/* Name of the Recycling point category element */
+"PointCategoryAmenityElementNameRecyclingKey" = "Recycling";
+
+/* Name of the Shelter point category element */
+"PointCategoryAmenityElementNameShelterKey" = "Shelter";
+
+/* Name of the Telephone point category element */
+"PointCategoryAmenityElementNameTelephoneKey" = "Emergency phone";
+
+/* Name of the Toilet point category element */
+"PointCategoryAmenityElementNameToiletKey" = "Toilet";
+
+/* Name of the Tower point category element */
+"PointCategoryAmenityElementNameTowerKey" = "Tower";
+
+/* Name of the Townhall point category element */
+"PointCategoryAmenityElementNameTownhallKey" = "Townhall";
+
+/* Name of the WasteBasket point category element */
+"PointCategoryAmenityElementNameWasteBasketKey" = "Waste basket";
+
+/* Name of the Bar point category element */
+"PointCategoryFoodAndDrinkElementNameBarKey" = "Bar";
+
+/* Name of the Cafe point category element */
+"PointCategoryFoodAndDrinkElementNameCafeKey" = "Cafe";
+
+/* Name of the FastFood point category element */
+"PointCategoryFoodAndDrinkElementNameFastFoodKey" = "Fast food";
+
+/* Name of the Pub point category element */
+"PointCategoryFoodAndDrinkElementNamePubKey" = "Pub";
+
+/* Name of the Restaurant point category element */
+"PointCategoryFoodAndDrinkElementNameRestaurantKey" = "Restaurant";
+
+/* Name of the VendingMachine point category element */
+"PointCategoryFoodAndDrinkElementNameVendingMachineKey" = "Vending machine";
+
+/* Name of the WaterFountain point category element */
+"PointCategoryFoodAndDrinkElementNameWaterFountainKey" = "Water fountain";
+
 /* Name of the Accomodation-type point category */
 "PointCategoryNameAccomodationKey" = "Accomodation";
 

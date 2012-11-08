@@ -7,9 +7,11 @@
 //
 
 
+@class MZDraggedCategoryItemView;
+
 @interface MZCategoryItemView : UIView
 {
-    UIImageView* _movedImageView;
+    MZDraggedCategoryItemView* _draggedView;
 }
 
 @property (nonatomic, retain)   UIImage*    itemImage;

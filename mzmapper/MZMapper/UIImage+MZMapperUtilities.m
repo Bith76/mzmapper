@@ -201,4 +201,102 @@
     return retVal;
 }
 
++ (UIImage*)imageForPointCategoryAmenityElement:(MZMapperPointCategoryAmenityElement)element
+{
+    UIImage* retVal = nil;
+    
+    switch (element)
+    {
+        case MZMapperPointCategoryAmenityElementFireStation:
+        {
+            retVal = [UIImage imageNamed:@"amenity_firestation.png"];
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementPolice:
+        {
+            retVal = [UIImage imageNamed:@"amenity_police.png"];
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementTownhall:
+        {
+            retVal = [UIImage imageNamed:@"amenity_town_hall.png"];
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementPlaceOfWorship:
+        {
+            retVal = [UIImage imageNamed:@"amenity_place_of_worship.png"];
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementPostOffice:
+        {
+            retVal = [UIImage imageNamed:@"amenity_post_office.png"];
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementPostBox:
+        {
+            retVal = [UIImage imageNamed:@"amenity_post_box.png"];
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementAtm:
+        {
+            retVal = [UIImage imageNamed:@"amenity_atm.png"];
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementBank:
+        {
+            retVal = [UIImage imageNamed:@"amenity_bank.png"];
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementRecycling:
+        {
+            retVal = [UIImage imageNamed:@"amenity_recycling.png"];
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementWasteBasket:
+        {
+            retVal = [UIImage imageNamed:@"amenity_waste_basket.png"];
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementToilet:
+        {
+            retVal = [UIImage imageNamed:@"amenity_toilet.png"];
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementShelter:
+        {
+            retVal = [UIImage imageNamed:@"amenity_shelter.png"];
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementHuntingStand:
+        {
+            retVal = [UIImage imageNamed:@"amenity_hunting_stand.png"];
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementBench:
+        {
+            retVal = [UIImage imageNamed:@"amenity_bench.png"];
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementTelephone:
+        {
+            retVal = [UIImage imageNamed:@"amenity_telephone.png"];
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementPhone:
+        {
+            retVal = [UIImage imageNamed:@"emergency_phone.png"];
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementTower:
+        {
+            retVal = [UIImage imageNamed:@"man_made_tower.png"];
+        }
+            break;
+        default:
+            break;
+    }
+    
+    return retVal;
+}
+
 @end

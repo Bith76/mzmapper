@@ -21,6 +21,78 @@
 /* Title of login error alert view. */
 "LoginErrorTitleKey" = "Bejelentkezés";
 
+/* Name of the Atm point category element */
+"PointCategoryAmenityElementNameAtmKey" = "ATM";
+
+/* Name of the Bank point category element */
+"PointCategoryAmenityElementNameBankKey" = "Bank";
+
+/* Name of the Bench point category element */
+"PointCategoryAmenityElementNameBenchKey" = "Pad";
+
+/* Name of the FireStation point category element */
+"PointCategoryAmenityElementNameFireStationKey" = "Tűzoltóság";
+
+/* Name of the HuntingStand point category element */
+"PointCategoryAmenityElementNameHuntingStandKey" = "Vadászles";
+
+/* Name of the Phone point category element */
+"PointCategoryAmenityElementNamePhoneKey" = "Telefon";
+
+/* Name of the PlaceOfWorship point category element */
+"PointCategoryAmenityElementNamePlaceOfWorshipKey" = "Kegyhely";
+
+/* Name of the Police point category element */
+"PointCategoryAmenityElementNamePoliceKey" = "Rendőrség";
+
+/* Name of the PostBox point category element */
+"PointCategoryAmenityElementNamePostBoxKey" = "Postaláda";
+
+/* Name of the PostOffice point category element */
+"PointCategoryAmenityElementNamePostOfficeKey" = "Posta";
+
+/* Name of the Recycling point category element */
+"PointCategoryAmenityElementNameRecyclingKey" = "Újrahasznosító";
+
+/* Name of the Shelter point category element */
+"PointCategoryAmenityElementNameShelterKey" = "Menedékház";
+
+/* Name of the Telephone point category element */
+"PointCategoryAmenityElementNameTelephoneKey" = "Segélyhívó";
+
+/* Name of the Toilet point category element */
+"PointCategoryAmenityElementNameToiletKey" = "WC";
+
+/* Name of the Tower point category element */
+"PointCategoryAmenityElementNameTowerKey" = "Torony";
+
+/* Name of the Townhall point category element */
+"PointCategoryAmenityElementNameTownhallKey" = "Városháza";
+
+/* Name of the WasteBasket point category element */
+"PointCategoryAmenityElementNameWasteBasketKey" = "Szemetes";
+
+/* Name of the Bar point category element */
+"PointCategoryFoodAndDrinkElementNameBarKey" = "Bár";
+
+/* Name of the Cafe point category element */
+"PointCategoryFoodAndDrinkElementNameCafeKey" = "Kávézó";
+
+/* Name of the FastFood point category element */
+"PointCategoryFoodAndDrinkElementNameFastFoodKey" = "Gyorsétterem";
+
+/* Name of the Pub point category element */
+"PointCategoryFoodAndDrinkElementNamePubKey" = "Söröző";
+
+/* Name of the Restaurant point category element */
+"PointCategoryFoodAndDrinkElementNameRestaurantKey" = "Étterem";
+
+/* Name of the VendingMachine point category element */
+"PointCategoryFoodAndDrinkElementNameVendingMachineKey" = "Étel-ital automata";
+
+/* Name of the WaterFountain point category element */
+"PointCategoryFoodAndDrinkElementNameWaterFountainKey" = "Ivókút";
+
 /* Name of the Accomodation-type point category */
 "PointCategoryNameAccomodationKey" = "Szállás";
 

@@ -350,7 +350,21 @@
                              [_openStreetBugButton setImage:[UIImage imageNamed:@"icon_bug_on.png"] forState:UIControlStateNormal];
                              
                              //_openStreetBugView is a container view for open street bugs
-                             _openStreetBugView = [[UIView alloc] initWithFrame:_map.frame];
+                             if (_openStreetBugView)
+                             {
+                                 NSLog(@"subviews: %@",_openStreetBugView.subviews);
+                                 for (id subview in [_openStreetBugView subviews])
+                                 {
+//                                     if ([subview isKindOfClass:[UIImageView class]])
+//                                     {
+                                         [subview removeFromSuperview];
+//                                     }
+                                 }
+                             }
+                             else
+                             {
+                                 _openStreetBugView = [[UIView alloc] initWithFrame:_map.frame];
+                             }
                              
                              for (MZOpenStreetBug* bug in _openStreetBugs)
                              {
@@ -409,7 +423,14 @@
     
     [_openStreetBugView removeFromSuperview];
     
-    [_openStreetBugView release];
+    [_openStreetBugView release], _openStreetBugView = nil;
+}
+
+- (void)refreshOpenStreetBugs
+{
+    
+    
+    [self switchOnOpenStreetBugs];
 }
 
 #pragma mark -
@@ -558,7 +579,7 @@
     {
         [_loupeView setHidden:YES];
         
-        [_scrollView selectPoint:_loupeView.touchPointInViewToMagnify];
+        //[_scrollView selectPoint:_loupeView.touchPointInViewToMagnify];
     }
     else
     {
@@ -631,6 +652,11 @@
     
     MZOpenStreetBugsViewController* bugController = [[MZOpenStreetBugsViewController alloc] initWithControllerType:MZOpenStreetBugsViewControllerTypeCreateBug andWithBug:nil];
     
+    MZNode* touchedNode = [_map nodeForRealPosition:gestureRecognizedAtPoint];
+    bugController.node = touchedNode;
+    
+    bugController.controller = self;
+    
     //[bugController setDelegate:self];
     [bugController setContentSizeForViewInPopover:CGSizeMake(400.0, 200.0)];
     
@@ -640,7 +666,14 @@
     
     UIPopoverController* popoverController = [[UIPopoverController alloc] initWithContentViewController:navController];
     bugController.aPopoverController = popoverController;
-    [popoverController presentPopoverFromRect:CGRectMake(gestureRecognizedAtPoint.x, gestureRecognizedAtPoint.y, 1.0, 1.0) inView:[gesture view] permittedArrowDirections:UIPopoverArrowDirectionDown | UIPopoverArrowDirectionLeft | UIPopoverArrowDirectionRight animated:YES];
+    
+    UIImageView* newBugImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_error.png"]];
+    [newBugImageView setCenter:gestureRecognizedAtPoint];
+    [gesture.view addSubview:newBugImageView];
+    bugController.imageViewForBug = newBugImageView;
+    [newBugImageView release];
+    
+    [popoverController presentPopoverFromRect:newBugImageView.frame/*CGRectMake(gestureRecognizedAtPoint.x, gestureRecognizedAtPoint.y, 1.0, 1.0)*/ inView:[gesture view] permittedArrowDirections:UIPopoverArrowDirectionDown | UIPopoverArrowDirectionLeft | UIPopoverArrowDirectionRight animated:YES];
     
     [navController release];
     [bugController release];
@@ -700,6 +733,7 @@
             
             //[bugController setDelegate:self];
             [bugController setContentSizeForViewInPopover:CGSizeMake(400.0, 200.0)];
+            [bugController setController:self];
             
             UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:bugController];
             

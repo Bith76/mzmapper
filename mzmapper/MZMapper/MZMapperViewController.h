@@ -48,5 +48,6 @@
 - (void)hideBlockView;
 - (void)jumpToCoordinateLongitude:(CGFloat)lon latitude:(CGFloat)lat;
 - (void)handleBugTap:(UITapGestureRecognizer*)gesture;
+- (void)refreshOpenStreetBugs;
 
 @end

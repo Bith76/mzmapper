@@ -8,11 +8,15 @@
 
 #import "NSString+MZMapperUtilities.h"
 
+
+#define UNNAMED_POINT_CATEGORY_ELEMENT_NAME NSLocalizedString(@"UnnamedPointCategoryNameKey", @"Name of a point category which hasn't got predefined name")
+
+
 @implementation NSString (MZMapperUtilities)
 
 + (NSString*)nameOfPointCategory:(MZMapperPointCategory)category
 {
-    NSString* retVal = NSLocalizedString(@"UnnamedPointCategoryNameKey", @"Name of a point category which hasn't got predefined name");
+    NSString* retVal = UNNAMED_POINT_CATEGORY_ELEMENT_NAME;
     
     switch (category)
     {
@@ -95,7 +99,7 @@
 
 + (NSString*)nameOfPointCategoryShoppingElement:(MZMapperPointCategoryShoppingElement)element
 {
-    NSString* retVal = NSLocalizedString(@"UnnamedPointCategoryElementNameKey", @"Name of a point category element which hasn't got predefined name");
+    NSString* retVal = UNNAMED_POINT_CATEGORY_ELEMENT_NAME;
     
     switch (element)
     {
@@ -238,7 +242,7 @@
 
 + (NSString*)nameOfPointCategoryFoodAndDrinkElement:(MZMapperPointCategoryFoodAndDrinkElement)element
 {
-    NSString* retVal = NSLocalizedString(@"UnnamedPointCategoryElementNameKey", @"Name of a point category element which hasn't got predefined name");
+    NSString* retVal = UNNAMED_POINT_CATEGORY_ELEMENT_NAME;
     
     switch (element)
     {
@@ -275,6 +279,104 @@
         case MZMapperPointCategoryFoodAndDrinkElementFastFood:
         {
             retVal = NSLocalizedString(@"PointCategoryFoodAndDrinkElementNameFastFoodKey", @"Name of the FastFood point category element");
+        }
+            break;
+        default:
+            break;
+    }
+    
+    return retVal;
+}
+
++ (NSString*)nameOfPointCategoryAmenityElement:(MZMapperPointCategoryAmenityElement)element
+{
+    NSString* retVal = UNNAMED_POINT_CATEGORY_ELEMENT_NAME;
+    
+    switch (element)
+    {
+        case MZMapperPointCategoryAmenityElementFireStation:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNameFireStationKey", @"Name of the FireStation point category element");
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementPolice:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNamePoliceKey", @"Name of the Police point category element");
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementTownhall:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNameTownhallKey", @"Name of the Townhall point category element");
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementPlaceOfWorship:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNamePlaceOfWorshipKey", @"Name of the PlaceOfWorship point category element");
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementPostOffice:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNamePostOfficeKey", @"Name of the PostOffice point category element");
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementPostBox:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNamePostBoxKey", @"Name of the PostBox point category element");
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementAtm:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNameAtmKey", @"Name of the Atm point category element");
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementBank:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNameBankKey", @"Name of the Bank point category element");
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementRecycling:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNameRecyclingKey", @"Name of the Recycling point category element");
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementWasteBasket:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNameWasteBasketKey", @"Name of the WasteBasket point category element");
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementToilet:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNameToiletKey", @"Name of the Toilet point category element");
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementShelter:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNameShelterKey", @"Name of the Shelter point category element");
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementHuntingStand:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNameHuntingStandKey", @"Name of the HuntingStand point category element");
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementBench:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNameBenchKey", @"Name of the Bench point category element");
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementTelephone:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNameTelephoneKey", @"Name of the Telephone point category element");
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementPhone:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNamePhoneKey", @"Name of the Phone point category element");
+        }
+            break;
+        case MZMapperPointCategoryAmenityElementTower:
+        {
+            retVal = NSLocalizedString(@"PointCategoryAmenityElementNameTowerKey", @"Name of the Tower point category element");
         }
             break;
         default:

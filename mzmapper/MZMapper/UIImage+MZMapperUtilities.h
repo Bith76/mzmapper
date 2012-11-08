@@ -11,5 +11,6 @@
 
 + (UIImage*)imageForPointCategoryShoppingElement:(MZMapperPointCategoryShoppingElement)element;
 + (UIImage*)imageForPointCategoryFoodAndDrinkElement:(MZMapperPointCategoryFoodAndDrinkElement)element;
++ (UIImage*)imageForPointCategoryAmenityElement:(MZMapperPointCategoryAmenityElement)element;
 
 @end

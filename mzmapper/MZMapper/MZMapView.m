@@ -459,23 +459,24 @@
 {
     CGPoint retVal = CGPointZero;
     
-    CGFloat xPos = 0.0;
-    CGFloat yPos = 0.0;
-//    NSLog(@"-------------------");
-//    NSLog(@"node.long: %f",node.longitude);
-//    NSLog(@"_minlongitude: %f",_minLongitude);
-//    NSLog(@"s.b.s.w: %f",self.bounds.size.width);
-//    NSLog(@"_maxlongitude: %f",_maxLongitude);
+    CGFloat xPos = (CGFloat)((node.longitude - _minLongitude) * self.bounds.size.width / (_maxLongitude - _minLongitude));
     
-    //egyenes arányosság alapján
-    xPos = (CGFloat)((node.longitude - _minLongitude) * self.bounds.size.width / (_maxLongitude - _minLongitude));
-    
-    yPos = (_maxLatitude - _minLatitude - (node.latitude - _minLatitude)) * self.bounds.size.height / (_maxLatitude - _minLatitude);
+    CGFloat yPos = (_maxLatitude - node.latitude) * self.bounds.size.height / (_maxLatitude - _minLatitude);
     
     retVal = CGPointMake(xPos, yPos);
-//    NSLog(@"retVal: %@",NSStringFromCGPoint(retVal));
     
     return retVal;
+}
+
+- (MZNode*)nodeForRealPosition:(CGPoint)point
+{
+    MZNode* retVal = [[MZNode alloc] init];
+    
+    retVal.longitude = point.x * (_maxLongitude - _minLongitude) / self.bounds.size.width + _minLongitude;
+    
+    retVal.latitude = _maxLatitude - point.y * (_maxLatitude - _minLatitude) / self.bounds.size.height;
+    
+    return [retVal autorelease];
 }
 
 - (void)dealloc

@@ -73,6 +73,28 @@ enum
 };
 typedef NSUInteger MZMapperPointCategoryFoodAndDrinkElement;
 
+enum
+{
+    MZMapperPointCategoryAmenityElementFireStation = 0,
+    MZMapperPointCategoryAmenityElementPolice,
+    MZMapperPointCategoryAmenityElementTownhall,
+    MZMapperPointCategoryAmenityElementPlaceOfWorship,
+    MZMapperPointCategoryAmenityElementPostOffice,
+    MZMapperPointCategoryAmenityElementPostBox,
+    MZMapperPointCategoryAmenityElementAtm,
+    MZMapperPointCategoryAmenityElementBank,
+    MZMapperPointCategoryAmenityElementRecycling,
+    MZMapperPointCategoryAmenityElementWasteBasket,
+    MZMapperPointCategoryAmenityElementToilet,
+    MZMapperPointCategoryAmenityElementShelter,
+    MZMapperPointCategoryAmenityElementHuntingStand,
+    MZMapperPointCategoryAmenityElementBench,
+    MZMapperPointCategoryAmenityElementTelephone,
+    MZMapperPointCategoryAmenityElementPhone,
+    MZMapperPointCategoryAmenityElementTower,
+    MZMapperPointCategoryAmenityElementCountOfElements
+};
+typedef NSUInteger MZMapperPointCategoryAmenityElement;
 
 
 
@@ -80,14 +102,6 @@ typedef NSUInteger MZMapperPointCategoryFoodAndDrinkElement;
 
 
 //innen van meló
-enum
-{
-    MZMapperPointCategoryAmenityElementFireStation = 0,
-    //...
-    MZMapperPointCategoryAmenityElementCountOfElements
-};
-typedef NSUInteger MZMapperPointCategoryAmenityElement;
-
 enum
 {
     MZMapperPointCategoryTourismElementMuseum = 0,

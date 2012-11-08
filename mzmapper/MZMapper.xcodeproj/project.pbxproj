@@ -38,6 +38,7 @@
 		1310F69E15FCF05A00FB7FAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1310F6A215FCF05A00FB7FAA /* Localizable.strings */; };
 		1310F69F15FCF05A00FB7FAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1310F6A215FCF05A00FB7FAA /* Localizable.strings */; };
 		1310F6A015FCF05A00FB7FAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1310F6A215FCF05A00FB7FAA /* Localizable.strings */; };
+		13172E9B1644354C00D6CAA9 /* MZDraggedCategoryItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13172E9A1644354C00D6CAA9 /* MZDraggedCategoryItemView.m */; };
 		1319278E154ACE5900998A1B /* mapbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 1319278D154ACE5900998A1B /* mapbackground.png */; };
 		131F07411587CAC40049FED4 /* MZSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131F073F1587CAC40049FED4 /* MZSearchViewController.m */; };
 		131F07431587CAC40049FED4 /* MZSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 131F07401587CAC40049FED4 /* MZSearchViewController.xib */; };
@@ -381,7 +382,6 @@
 		130E8E811639BA4B0006BAAB /* MZBlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZBlockView.h; sourceTree = "<group>"; };
 		130E8E821639BA4B0006BAAB /* MZBlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZBlockView.m; sourceTree = "<group>"; };
 		130E8E85163B39EB0006BAAB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MZOpenStreetBugsViewController.xib; sourceTree = "<group>"; };
-		130E8E87163B3AD10006BAAB /* hu */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = hu; path = hu.lproj/MZOpenStreetBugsViewController.xib; sourceTree = "<group>"; };
 		1310F6A115FCF05A00FB7FAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1310F6A315FCF17500FB7FAA /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1310F6A415FCF17900FB7FAA /* hu */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = hu; path = hu.lproj/MainWindow.xib; sourceTree = "<group>"; };
@@ -389,6 +389,8 @@
 		1310F6A615FCF17900FB7FAA /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1310F6A715FCF17900FB7FAA /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1310F6A815FCF17900FB7FAA /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		13172E991644354C00D6CAA9 /* MZDraggedCategoryItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZDraggedCategoryItemView.h; sourceTree = "<group>"; };
+		13172E9A1644354C00D6CAA9 /* MZDraggedCategoryItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZDraggedCategoryItemView.m; sourceTree = "<group>"; };
 		1319278D154ACE5900998A1B /* mapbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapbackground.png; sourceTree = "<group>"; };
 		131F073E1587CAC40049FED4 /* MZSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZSearchViewController.h; sourceTree = "<group>"; };
 		131F073F1587CAC40049FED4 /* MZSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSearchViewController.m; sourceTree = "<group>"; };
@@ -1302,6 +1304,8 @@
 				13F591E11591CD5000929D74 /* MZLoupeView.m */,
 				13BC60EC16260F22001B6DFC /* MZCategoryItemView.h */,
 				13BC60ED16260F22001B6DFC /* MZCategoryItemView.m */,
+				13172E991644354C00D6CAA9 /* MZDraggedCategoryItemView.h */,
+				13172E9A1644354C00D6CAA9 /* MZDraggedCategoryItemView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1784,6 +1788,7 @@
 				13D4816B163536C400874395 /* MZOpenStreetBug.m in Sources */,
 				136005F11636C8A100616E9A /* UIImage+MZMapperUtilities.m in Sources */,
 				130E8E831639BA4B0006BAAB /* MZBlockView.m in Sources */,
+				13172E9B1644354C00D6CAA9 /* MZDraggedCategoryItemView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1864,7 +1869,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				130E8E85163B39EB0006BAAB /* en */,
-				130E8E87163B3AD10006BAAB /* hu */,
 			);
 			name = MZOpenStreetBugsViewController.xib;
 			sourceTree = "<group>";
