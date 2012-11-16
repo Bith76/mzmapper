@@ -63,7 +63,7 @@
 
 - (void)setContentViewController:(UIViewController *)contentViewController
 {
-    if (![[contentViewController class] isEqual:[_contentViewController class]] && contentViewController != _contentViewController)
+    if (![[contentViewController class] isEqual:[_contentViewController class]] || ![contentViewController isEqual:_contentViewController])
     {
         if (_contentViewController.view.superview)
         {

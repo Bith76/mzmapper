@@ -227,6 +227,17 @@
 		132E9760162F2B2C0075AC7B /* shopping_alcohol.n.16.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E975F162F2B2C0075AC7B /* shopping_alcohol.n.16.png */; };
 		132E97701630838A0075AC7B /* transport_bus_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E976E1630838A0075AC7B /* transport_bus_stop.png */; };
 		132E97711630838A0075AC7B /* transport_bus_stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E976F1630838A0075AC7B /* transport_bus_stop@2x.png */; };
+		134D52011651B3F0003D49D1 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52001651B3F0003D49D1 /* Node.m */; };
+		134D52051651B410003D49D1 /* Way.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52041651B410003D49D1 /* Way.m */; };
+		134D52091652D8C5003D49D1 /* MZPointObjectEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52071652D8C5003D49D1 /* MZPointObjectEditorViewController.m */; };
+		134D520A1652D8C5003D49D1 /* MZPointObjectEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 134D52081652D8C5003D49D1 /* MZPointObjectEditorViewController.xib */; };
+		134D520F1652FEBC003D49D1 /* blackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D520B1652FEBC003D49D1 /* blackButton.png */; };
+		134D52101652FEBC003D49D1 /* blackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D520C1652FEBC003D49D1 /* blackButton@2x.png */; };
+		134D52111652FEBC003D49D1 /* blackButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D520D1652FEBC003D49D1 /* blackButtonHighlight.png */; };
+		134D52121652FEBC003D49D1 /* blackButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D520E1652FEBC003D49D1 /* blackButtonHighlight@2x.png */; };
+		134D52191654277E003D49D1 /* rubbish@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D52171654277E003D49D1 /* rubbish@2x.png */; };
+		134D521A1654277E003D49D1 /* rubbish.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D52181654277E003D49D1 /* rubbish.png */; };
+		134D521C165430CB003D49D1 /* PointObjectSchemas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 134D521B165430CB003D49D1 /* PointObjectSchemas.plist */; };
 		135E8B79159CD7930084B918 /* MZMapperContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 135E8B78159CD7930084B918 /* MZMapperContentManager.m */; };
 		136005A7163699F700616E9A /* shop_confectionery.png in Resources */ = {isa = PBXBuildFile; fileRef = 136005A5163699F700616E9A /* shop_confectionery.png */; };
 		136005A8163699F700616E9A /* shop_confectionery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136005A6163699F700616E9A /* shop_confectionery@2x.png */; };
@@ -320,6 +331,16 @@
 		13E26817148D5A790016A47B /* MZWay.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E26816148D5A790016A47B /* MZWay.m */; };
 		13E26824148EA76F0016A47B /* MZTiledScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E26823148EA76F0016A47B /* MZTiledScrollView.m */; };
 		13E26827148EA7B10016A47B /* MZTiledLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E26826148EA7B10016A47B /* MZTiledLayerView.m */; };
+		13E40E121655781000678C07 /* MZPointObjectEditorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E40E101655781000678C07 /* MZPointObjectEditorTableViewController.m */; };
+		13E40E131655781000678C07 /* MZPointObjectEditorTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E40E111655781000678C07 /* MZPointObjectEditorTableViewController.xib */; };
+		13E40E1716557A8B00678C07 /* MZPointObjectHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E40E1616557A8B00678C07 /* MZPointObjectHeaderCell.xib */; };
+		13E40E191655825D00678C07 /* MZPointObjectHeaderTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E40E181655825D00678C07 /* MZPointObjectHeaderTypeCell.xib */; };
+		13E40E1D1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E40E1B1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.m */; };
+		13E40E1E1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E40E1C1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.xib */; };
+		13E40E2316559AED00678C07 /* orangeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E40E1F16559AED00678C07 /* orangeButton.png */; };
+		13E40E2416559AED00678C07 /* orangeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E40E2016559AED00678C07 /* orangeButton@2x.png */; };
+		13E40E2516559AED00678C07 /* orangeButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E40E2116559AED00678C07 /* orangeButtonHighlight.png */; };
+		13E40E2616559AED00678C07 /* orangeButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E40E2216559AED00678C07 /* orangeButtonHighlight@2x.png */; };
 		13F591E21591CD5000929D74 /* MZLoupeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F591E11591CD5000929D74 /* MZLoupeView.m */; };
 		13F598F8161E185F007C44FC /* icon_edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F598F4161E185F007C44FC /* icon_edit.png */; };
 		13F598F9161E185F007C44FC /* icon_edit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F598F5161E185F007C44FC /* icon_edit@2x.png */; };
@@ -332,8 +353,6 @@
 		13F5991A1623698A007C44FC /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F5991816236989007C44FC /* Default-Landscape~ipad.png */; };
 		13F5991B1623698A007C44FC /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F599191623698A007C44FC /* Default-Landscape@2x~ipad.png */; };
 		13FF31D1164C4BA100A4CFD5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13FF31CF164C4BA100A4CFD5 /* Model.xcdatamodeld */; };
-		13FF31D9164C4D9E00A4CFD5 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FF31D8164C4D9E00A4CFD5 /* Node.m */; };
-		13FF31DC164C553000A4CFD5 /* Way.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FF31DB164C553000A4CFD5 /* Way.m */; };
 		13FF31DE164C5D8700A4CFD5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13FF31DD164C5D8700A4CFD5 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
@@ -585,6 +604,20 @@
 		132E975F162F2B2C0075AC7B /* shopping_alcohol.n.16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopping_alcohol.n.16.png; sourceTree = "<group>"; };
 		132E976E1630838A0075AC7B /* transport_bus_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transport_bus_stop.png; sourceTree = "<group>"; };
 		132E976F1630838A0075AC7B /* transport_bus_stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transport_bus_stop@2x.png"; sourceTree = "<group>"; };
+		134D51FF1651B3F0003D49D1 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		134D52001651B3F0003D49D1 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		134D52031651B410003D49D1 /* Way.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Way.h; sourceTree = "<group>"; };
+		134D52041651B410003D49D1 /* Way.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Way.m; sourceTree = "<group>"; };
+		134D52061652D8C5003D49D1 /* MZPointObjectEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPointObjectEditorViewController.h; sourceTree = "<group>"; };
+		134D52071652D8C5003D49D1 /* MZPointObjectEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZPointObjectEditorViewController.m; sourceTree = "<group>"; };
+		134D52081652D8C5003D49D1 /* MZPointObjectEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZPointObjectEditorViewController.xib; sourceTree = "<group>"; };
+		134D520B1652FEBC003D49D1 /* blackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackButton.png; sourceTree = "<group>"; };
+		134D520C1652FEBC003D49D1 /* blackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackButton@2x.png"; sourceTree = "<group>"; };
+		134D520D1652FEBC003D49D1 /* blackButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackButtonHighlight.png; sourceTree = "<group>"; };
+		134D520E1652FEBC003D49D1 /* blackButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackButtonHighlight@2x.png"; sourceTree = "<group>"; };
+		134D52171654277E003D49D1 /* rubbish@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rubbish@2x.png"; sourceTree = "<group>"; };
+		134D52181654277E003D49D1 /* rubbish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rubbish.png; sourceTree = "<group>"; };
+		134D521B165430CB003D49D1 /* PointObjectSchemas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PointObjectSchemas.plist; sourceTree = "<group>"; };
 		135E8B77159CD7930084B918 /* MZMapperContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMapperContentManager.h; sourceTree = "<group>"; };
 		135E8B78159CD7930084B918 /* MZMapperContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMapperContentManager.m; sourceTree = "<group>"; };
 		136005A5163699F700616E9A /* shop_confectionery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_confectionery.png; sourceTree = "<group>"; };
@@ -692,6 +725,18 @@
 		13E26823148EA76F0016A47B /* MZTiledScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTiledScrollView.m; sourceTree = "<group>"; };
 		13E26825148EA7B10016A47B /* MZTiledLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTiledLayerView.h; sourceTree = "<group>"; };
 		13E26826148EA7B10016A47B /* MZTiledLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTiledLayerView.m; sourceTree = "<group>"; };
+		13E40E0F1655781000678C07 /* MZPointObjectEditorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPointObjectEditorTableViewController.h; sourceTree = "<group>"; };
+		13E40E101655781000678C07 /* MZPointObjectEditorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZPointObjectEditorTableViewController.m; sourceTree = "<group>"; };
+		13E40E111655781000678C07 /* MZPointObjectEditorTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZPointObjectEditorTableViewController.xib; sourceTree = "<group>"; };
+		13E40E1616557A8B00678C07 /* MZPointObjectHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZPointObjectHeaderCell.xib; sourceTree = "<group>"; };
+		13E40E181655825D00678C07 /* MZPointObjectHeaderTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZPointObjectHeaderTypeCell.xib; sourceTree = "<group>"; };
+		13E40E1A1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPointObjectTypeSelectorTableViewController.h; sourceTree = "<group>"; };
+		13E40E1B1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZPointObjectTypeSelectorTableViewController.m; sourceTree = "<group>"; };
+		13E40E1C1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZPointObjectTypeSelectorTableViewController.xib; sourceTree = "<group>"; };
+		13E40E1F16559AED00678C07 /* orangeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButton.png; sourceTree = "<group>"; };
+		13E40E2016559AED00678C07 /* orangeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangeButton@2x.png"; sourceTree = "<group>"; };
+		13E40E2116559AED00678C07 /* orangeButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButtonHighlight.png; sourceTree = "<group>"; };
+		13E40E2216559AED00678C07 /* orangeButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangeButtonHighlight@2x.png"; sourceTree = "<group>"; };
 		13F591E01591CD5000929D74 /* MZLoupeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZLoupeView.h; sourceTree = "<group>"; };
 		13F591E11591CD5000929D74 /* MZLoupeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZLoupeView.m; sourceTree = "<group>"; };
 		13F598F4161E185F007C44FC /* icon_edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_edit.png; sourceTree = "<group>"; };
@@ -706,10 +751,6 @@
 		13F5991816236989007C44FC /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		13F599191623698A007C44FC /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		13FF31D0164C4BA100A4CFD5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		13FF31D7164C4D9E00A4CFD5 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
-		13FF31D8164C4D9E00A4CFD5 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
-		13FF31DA164C553000A4CFD5 /* Way.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Way.h; sourceTree = "<group>"; };
-		13FF31DB164C553000A4CFD5 /* Way.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Way.m; sourceTree = "<group>"; };
 		13FF31DD164C5D8700A4CFD5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -802,6 +843,7 @@
 				13E2680F148D59960016A47B /* MZMapView.m */,
 				13E246D314B383760087C1AF /* Entities */,
 				131F07341587C9C60049FED4 /* Controllers */,
+				13E40E1516557A0400678C07 /* Custom cells */,
 				13B515C5158AA00E00A258CD /* Views */,
 				131F07361587C9F70049FED4 /* Other classes */,
 				13D4814D1633FBDD00874395 /* Categories */,
@@ -816,6 +858,7 @@
 			isa = PBXGroup;
 			children = (
 				0543854113F9239900C123A1 /* MZMapper-Info.plist */,
+				134D521B165430CB003D49D1 /* PointObjectSchemas.plist */,
 				05D79FD2140BB959008E5960 /* melykut_01.xml */,
 				05D79FD0140BB88C008E5960 /* melykut_01.png */,
 				13C4F0AA1481624900557F7A /* melykut_02.osm */,
@@ -892,6 +935,15 @@
 				13D4814E163436DB00874395 /* MZOpenStreetBugsViewController.h */,
 				13D4814F163436DB00874395 /* MZOpenStreetBugsViewController.m */,
 				130E8E86163B39EB0006BAAB /* MZOpenStreetBugsViewController.xib */,
+				134D52061652D8C5003D49D1 /* MZPointObjectEditorViewController.h */,
+				134D52071652D8C5003D49D1 /* MZPointObjectEditorViewController.m */,
+				134D52081652D8C5003D49D1 /* MZPointObjectEditorViewController.xib */,
+				13E40E0F1655781000678C07 /* MZPointObjectEditorTableViewController.h */,
+				13E40E101655781000678C07 /* MZPointObjectEditorTableViewController.m */,
+				13E40E111655781000678C07 /* MZPointObjectEditorTableViewController.xib */,
+				13E40E1A1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.h */,
+				13E40E1B1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.m */,
+				13E40E1C1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -908,6 +960,16 @@
 		132980CF153CAEE000979414 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				134D52181654277E003D49D1 /* rubbish.png */,
+				134D52171654277E003D49D1 /* rubbish@2x.png */,
+				13E40E1F16559AED00678C07 /* orangeButton.png */,
+				13E40E2016559AED00678C07 /* orangeButton@2x.png */,
+				13E40E2116559AED00678C07 /* orangeButtonHighlight.png */,
+				13E40E2216559AED00678C07 /* orangeButtonHighlight@2x.png */,
+				134D520B1652FEBC003D49D1 /* blackButton.png */,
+				134D520C1652FEBC003D49D1 /* blackButton@2x.png */,
+				134D520D1652FEBC003D49D1 /* blackButtonHighlight.png */,
+				134D520E1652FEBC003D49D1 /* blackButtonHighlight@2x.png */,
 				13D481531634439400874395 /* greyButton.png */,
 				13D481541634439400874395 /* greyButton@2x.png */,
 				13D4815B1634472D00874395 /* greyButtonHighlight.png */,
@@ -1344,13 +1406,22 @@
 				13B515C1158A8C9600A258CD /* MZPlace.m */,
 				13D48169163536C400874395 /* MZOpenStreetBug.h */,
 				13D4816A163536C400874395 /* MZOpenStreetBug.m */,
-				13FF31D7164C4D9E00A4CFD5 /* Node.h */,
-				13FF31D8164C4D9E00A4CFD5 /* Node.m */,
-				13FF31DA164C553000A4CFD5 /* Way.h */,
-				13FF31DB164C553000A4CFD5 /* Way.m */,
 				13FF31CF164C4BA100A4CFD5 /* Model.xcdatamodeld */,
+				134D52031651B410003D49D1 /* Way.h */,
+				134D52041651B410003D49D1 /* Way.m */,
+				134D51FF1651B3F0003D49D1 /* Node.h */,
+				134D52001651B3F0003D49D1 /* Node.m */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		13E40E1516557A0400678C07 /* Custom cells */ = {
+			isa = PBXGroup;
+			children = (
+				13E40E1616557A8B00678C07 /* MZPointObjectHeaderCell.xib */,
+				13E40E181655825D00678C07 /* MZPointObjectHeaderTypeCell.xib */,
+			);
+			name = "Custom cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1722,6 +1793,22 @@
 				132B40FF1638818E0063C60F /* amenity_hospital@2x.png in Resources */,
 				132B4104163881B00063C60F /* amenity_veterinary.png in Resources */,
 				132B4105163881B00063C60F /* amenity_veterinary@2x.png in Resources */,
+				134D520A1652D8C5003D49D1 /* MZPointObjectEditorViewController.xib in Resources */,
+				134D520F1652FEBC003D49D1 /* blackButton.png in Resources */,
+				134D52101652FEBC003D49D1 /* blackButton@2x.png in Resources */,
+				134D52111652FEBC003D49D1 /* blackButtonHighlight.png in Resources */,
+				134D52121652FEBC003D49D1 /* blackButtonHighlight@2x.png in Resources */,
+				134D52191654277E003D49D1 /* rubbish@2x.png in Resources */,
+				134D521A1654277E003D49D1 /* rubbish.png in Resources */,
+				134D521C165430CB003D49D1 /* PointObjectSchemas.plist in Resources */,
+				13E40E131655781000678C07 /* MZPointObjectEditorTableViewController.xib in Resources */,
+				13E40E1716557A8B00678C07 /* MZPointObjectHeaderCell.xib in Resources */,
+				13E40E191655825D00678C07 /* MZPointObjectHeaderTypeCell.xib in Resources */,
+				13E40E1E1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.xib in Resources */,
+				13E40E2316559AED00678C07 /* orangeButton.png in Resources */,
+				13E40E2416559AED00678C07 /* orangeButton@2x.png in Resources */,
+				13E40E2516559AED00678C07 /* orangeButtonHighlight.png in Resources */,
+				13E40E2616559AED00678C07 /* orangeButtonHighlight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1807,8 +1894,11 @@
 				130E8E831639BA4B0006BAAB /* MZBlockView.m in Sources */,
 				13172E9B1644354C00D6CAA9 /* MZDraggedCategoryItemView.m in Sources */,
 				13FF31D1164C4BA100A4CFD5 /* Model.xcdatamodeld in Sources */,
-				13FF31D9164C4D9E00A4CFD5 /* Node.m in Sources */,
-				13FF31DC164C553000A4CFD5 /* Way.m in Sources */,
+				134D52011651B3F0003D49D1 /* Node.m in Sources */,
+				134D52051651B410003D49D1 /* Way.m in Sources */,
+				134D52091652D8C5003D49D1 /* MZPointObjectEditorViewController.m in Sources */,
+				13E40E121655781000678C07 /* MZPointObjectEditorTableViewController.m in Sources */,
+				13E40E1D1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

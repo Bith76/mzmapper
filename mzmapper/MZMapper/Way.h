@@ -2,23 +2,27 @@
 //  Way.h
 //  MZMapper
 //
-//  Created by Zalan Mergl on 11/8/12.
+//  Created by Zalan Mergl on 11/12/12.
 //
 //
 
+#import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+
+@class Node;
 
 @interface Way : NSManagedObject
 
-@property (nonatomic, retain)   NSString*               wayid;
-@property (nonatomic, retain)   NSMutableArray*         nodes;
-@property (nonatomic, retain)   NSMutableDictionary*    tags;
-
+@property (nonatomic, retain) NSString * wayid;
+@property (nonatomic, retain) id tags;
+@property (nonatomic, retain) NSSet *nodes;
 @end
 
 @interface Way (CoreDataGeneratedAccessors)
-- (void)addNodeObject:(NSManagedObject *)value;
-- (void)removeNodeObject:(NSManagedObject *)value;
-- (void)addNodes:(NSMutableArray *)value;
-- (void)removeNodes:(NSMutableArray *)value;
+
+- (void)addNodesObject:(Node *)value;
+- (void)removeNodesObject:(Node *)value;
+- (void)addNodes:(NSSet *)values;
+- (void)removeNodes:(NSSet *)values;
+
 @end

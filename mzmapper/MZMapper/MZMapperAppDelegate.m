@@ -40,7 +40,7 @@
 	[node1 setLongitude:23.345];
 	[node1 setLatitude:34.567];
 	[node1 setNodeid:@"nodeid"];
-    [node1 setWay:way];
+    [node1 setTags:[NSMutableDictionary dictionary]];
 //	[way addNodeObject:node1];
     
     
@@ -48,7 +48,7 @@
 	[node2 setLongitude:12.345];
 	[node2 setLatitude:11.567];
 	[node2 setNodeid:@"nodeid"];
-    [node2 setWay:way];
+    [node2 setTags:[NSMutableDictionary dictionary]];
 //	[way addNodeObject:node2];
     
     

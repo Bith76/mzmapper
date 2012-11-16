@@ -6,8 +6,6 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <QuartzCore/QuartzCore.h>
-
 #import "MZMapperViewController.h"
 #import "MZDownloader.h"
 #import "MZMessageView.h"
@@ -18,10 +16,13 @@
 #import "MZOpenStreetBugsViewController.h"
 #import "MZOpenStreetBug.h"
 #import "MZNode.h"
+#import "MZPointObjectEditorViewController.h"
+#import "MZPointObjectEditorTableViewController.h"
 
 @implementation MZMapperViewController
 
 @synthesize gettingCurrentLocationIsInProgress = _gettingCurrentLocationIsInProgress;
+@synthesize selectedPointObject = _selectedPointObject;
 
 #pragma mark - View lifecycle
 
@@ -124,6 +125,8 @@
     _openStreetBugs = [[NSMutableArray alloc] init];
     
     _blockView = [[MZBlockView alloc] initWithView:self.view];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mapViewDidEndParsingDocument) name:@"ParserDidEndDocumentNotification" object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -428,9 +431,136 @@
 
 - (void)refreshOpenStreetBugs
 {
-    
-    
     [self switchOnOpenStreetBugs];
+}
+
+#pragma mark -
+#pragma mark NSNotification methods
+
+- (void)mapViewDidEndParsingDocument
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    
+    UIView* pointObjectsLayerView = [[UIView alloc] initWithFrame:_map.bounds];
+
+    [_scrollView addSubview:pointObjectsLayerView];
+    
+    
+    
+    for (MZNode* node in [MZMapperContentManager sharedContentManager].pointObjects)
+    {
+        NSString* imageName = nil;
+        
+        for (NSString* pointObjectType in [MZMapperContentManager sharedContentManager].pointObjectTypes)
+        {
+            NSString* subType = [node.tags valueForKey:pointObjectType];
+            
+            if (subType)
+            {
+                imageName = [NSString stringWithFormat:@"%@_%@.png", pointObjectType ,subType];
+            }
+        }
+        
+//        NSString* tourism = [node.tags valueForKey:@"tourism"];
+//        NSString* emergency = [node.tags valueForKey:@"emergency"];
+//        NSString* manMade = [node.tags valueForKey:@"man_made"];
+//        NSString* barrier = [node.tags valueForKey:@"barrier"];
+//        NSString* landuse = [node.tags valueForKey:@"landuse"];
+//        NSString* place = [node.tags valueForKey:@"place"];
+//        NSString* power = [node.tags valueForKey:@"power"];
+//        NSString* highway = [node.tags valueForKey:@"highway"];
+//        NSString* railway = [node.tags valueForKey:@"railway"];
+//        NSString* shop = [node.tags valueForKey:@"shop"];
+//        NSString* leisure = [node.tags valueForKey:@"leisure"];
+//        NSString* historic = [node.tags valueForKey:@"historic"];
+//        NSString* aeroway = [node.tags valueForKey:@"aeroway"];
+//        NSString* amenity = [node.tags valueForKey:@"amenity"];
+//
+//
+//        NSString* imageName = nil;
+//
+//        if (tourism)
+//        {
+//            imageName = [NSString stringWithFormat:@"tourism_%@.png",tourism];
+//        }
+//        else if (emergency)
+//        {
+//            imageName = [NSString stringWithFormat:@"emergency_%@.png",emergency];
+//        }
+//        else if (manMade)
+//        {
+//            imageName = [NSString stringWithFormat:@"man_made_%@.png",manMade];
+//        }
+//        else if (barrier)
+//        {
+//            imageName = [NSString stringWithFormat:@"barrier_%@.png",barrier];
+//        }
+//        else if (landuse)
+//        {
+//            imageName = [NSString stringWithFormat:@"landuse_%@.png",landuse];
+//        }
+//        else if (place)
+//        {
+//            //ez kiírja a település nevét
+//            //            NSString* name = [node.tags valueForKey:@"name"];
+//            //            [name drawAtPoint:[self realPositionForNode:node] withFont:[UIFont systemFontOfSize:16.0]];
+//
+//            imageName = [NSString stringWithFormat:@"place_%@.png",place];
+//        }
+//        else if (power)
+//        {
+//            imageName = [NSString stringWithFormat:@"power_%@.png",power];
+//        }
+//        else if (highway)
+//        {
+//            imageName = [NSString stringWithFormat:@"highway_%@.png",highway];
+//        }
+//        else if (railway)
+//        {
+//            imageName = [NSString stringWithFormat:@"railway_%@.png",railway];
+//        }
+//        else if (shop)
+//        {
+//            imageName = [NSString stringWithFormat:@"shop_%@.png",shop];
+//        }
+//        else if (leisure)
+//        {
+//            imageName = [NSString stringWithFormat:@"leisure_%@.png",leisure];
+//        }
+//        else if (historic)
+//        {
+//            imageName = [NSString stringWithFormat:@"historic_%@.png",historic];
+//        }
+//        else if (aeroway)
+//        {
+//            imageName = [NSString stringWithFormat:@"aeroway_%@.png",aeroway];
+//        }
+//        else if (amenity)
+//        {
+//            imageName = [NSString stringWithFormat:@"amenity_%@.png",amenity];
+//        }
+
+
+        if (imageName)
+        {
+            UIImageView* imageViewForPointObject = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
+            [imageViewForPointObject setCenter:[_map realPositionForNode:node]];
+            [imageViewForPointObject setUserInteractionEnabled:YES];
+            [imageViewForPointObject setTag:[node.nodeid integerValue]];
+
+            [pointObjectsLayerView addSubview:imageViewForPointObject];
+
+            UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handlePointObjectTap:)];
+            [imageViewForPointObject addGestureRecognizer:tap];
+
+            [tap release];
+            
+            [imageViewForPointObject release];
+        }
+    }
+    
+    
+    [pointObjectsLayerView release];
 }
 
 #pragma mark -
@@ -517,6 +647,13 @@
         
         [self switchOnOpenStreetBugs];
     }
+}
+
+- (void)editorVCDoneButtonTouched:(id)sender
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    
+    [self enterEditingMode];
 }
 
 #pragma mark -
@@ -751,6 +888,73 @@
     }
 }
 
+- (void)handlePointObjectTap:(UITapGestureRecognizer*)gesture
+{
+    if (_selectedPointObject)
+    {
+        //deselect selected point object
+        [_selectedPointObjectBackgroundView removeFromSuperview];
+        
+        [_selectedPointObjectBackgroundView release];
+    }
+    
+    
+    
+    //select point object
+    CGFloat highlightBorderWidth = 4.0;
+    
+    _selectedPointObjectBackgroundView = [[UIView alloc] initWithFrame:gesture.view.frame];
+    CGRect backgroundViewFrame = _selectedPointObjectBackgroundView.frame;
+    backgroundViewFrame.size.width += highlightBorderWidth * 2.0;
+    backgroundViewFrame.size.height += highlightBorderWidth * 2.0;
+    [_selectedPointObjectBackgroundView setFrame:backgroundViewFrame];
+    [_selectedPointObjectBackgroundView setCenter:gesture.view.center];
+    [_selectedPointObjectBackgroundView.layer setCornerRadius:3.0];
+    [_selectedPointObjectBackgroundView setBackgroundColor:[UIColor colorWithRed:255.0/255.0 green:215.0/255.0 blue:0.0/255.0 alpha:1.0]];
+    
+    [gesture.view.superview insertSubview:_selectedPointObjectBackgroundView belowSubview:gesture.view];
+    
+    for (MZNode* node in [MZMapperContentManager sharedContentManager].pointObjects)
+    {
+        if ([node.nodeid integerValue] == gesture.view.tag)
+        {
+            _selectedPointObject = node;
+        }
+    }
+    
+    NSLog(@"selected point object: %@",_selectedPointObject.tags);
+    
+    MZPointObjectEditorTableViewController* editorTableViewController = [[MZPointObjectEditorTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    editorTableViewController.view.layer.cornerRadius = 5.0;
+    [editorTableViewController setTitle:@"Edit"];
+    [editorTableViewController setImage:((UIImageView*)gesture.view).image];
+    [editorTableViewController setController:self];
+    [editorTableViewController setPointObjectName:[_selectedPointObject.tags valueForKey:@"name"]];
+    
+    //MZPointObjectEditorViewController* editVC = [[MZPointObjectEditorViewController alloc] initWithNibName:@"MZPointObjectEditorViewController" bundle:nil];
+    //editVC.controller = self;
+    //editVC.image = ((UIImageView*)gesture.view).image;
+    //editVC.view.layer.cornerRadius = 5.0;
+    //[editVC.nameLabel setText:[_selectedPointObject.tags valueForKey:@"name"]];
+    
+    
+    UINavigationController* navCont = [[UINavigationController alloc] initWithRootViewController:editorTableViewController];
+    [navCont.navigationBar setBarStyle:UIBarStyleBlack];
+    
+    
+    
+    
+    UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(editorVCDoneButtonTouched:)];
+    [editorTableViewController.navigationItem setRightBarButtonItem:doneButton];
+    [doneButton release];
+    
+    [_pullView setContentViewController:navCont];
+    
+    //[editVC release], editVC = nil;
+    
+    [_pullView show];
+}
+
 #pragma mark - View lifecycle
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -779,6 +983,8 @@
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
     [_map release];
     [_scrollView release];
     [_messageView release];

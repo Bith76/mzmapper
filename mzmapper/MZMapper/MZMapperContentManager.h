@@ -195,21 +195,21 @@ typedef NSUInteger MZMapperPointCategoryEducationElement;
 
 
 //idáig van meló
+@class MZNode;
 
 @interface MZMapperContentManager : NSObject
-{
-    NSString*   _userName;
-    NSString*   _password;
-    
-    BOOL        _loggedIn;
-}
 
-@property (nonatomic, retain) NSString* userName;
-@property (nonatomic, retain) NSString* password;
-@property (nonatomic, assign) BOOL      loggedIn;
-@property (nonatomic, assign) BOOL      openStreetBugModeIsActive;
+@property (nonatomic, retain) NSString*         userName;
+@property (nonatomic, retain) NSString*         password;
+@property (nonatomic, assign) BOOL              loggedIn;
+@property (nonatomic, assign) BOOL              openStreetBugModeIsActive;
+@property (nonatomic, retain) NSArray*          pointObjectTypes;
+@property (nonatomic, retain) NSMutableArray*   pointObjects; //stores actual point objects from map-slice
 
 //singleton
 + (MZMapperContentManager*)sharedContentManager;
+
+- (NSString*)typeForNode:(MZNode*)aNode;
+- (NSString*)subTypeForNode:(MZNode*)aNode;
 
 @end

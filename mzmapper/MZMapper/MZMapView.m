@@ -22,7 +22,7 @@
 @synthesize scale = _scale;
 @synthesize bezierPaths = _bezierPaths;
 @synthesize selectedPath = _selectedPath;
-
+ 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -107,9 +107,130 @@
 {
     if(_logging) NSLog(@"---%s",__PRETTY_FUNCTION__);
     
+    NSLog(@"parsing finished in %.2f seconds", [[NSDate date] timeIntervalSinceDate:_startTime]);
+    
+    
+    
     [self setNeedsDisplay];
     
-    NSLog(@"parsing finished in %.2f seconds", [[NSDate date] timeIntervalSinceDate:_startTime]);
+    [MZMapperContentManager sharedContentManager].pointObjects = _pointObjects;
+    
+    UIView* pointObjectsLayerView = [[UIView alloc] initWithFrame:self.bounds];
+    
+    [self addSubview:pointObjectsLayerView];
+    
+    
+    
+    for (MZNode* node in [MZMapperContentManager sharedContentManager].pointObjects)
+    {
+        NSString* imageName = nil;
+        
+        for (NSString* pointObjectType in [MZMapperContentManager sharedContentManager].pointObjectTypes)
+        {
+            NSString* subType = [node.tags valueForKey:pointObjectType];
+            
+            if (subType)
+            {
+                imageName = [NSString stringWithFormat:@"%@_%@.png", pointObjectType ,subType];
+            }
+        }
+        
+//        NSString* tourism = [node.tags valueForKey:@"tourism"];
+//        NSString* emergency = [node.tags valueForKey:@"emergency"];
+//        NSString* manMade = [node.tags valueForKey:@"man_made"];
+//        NSString* barrier = [node.tags valueForKey:@"barrier"];
+//        NSString* landuse = [node.tags valueForKey:@"landuse"];
+//        NSString* place = [node.tags valueForKey:@"place"];
+//        NSString* power = [node.tags valueForKey:@"power"];
+//        NSString* highway = [node.tags valueForKey:@"highway"];
+//        NSString* railway = [node.tags valueForKey:@"railway"];
+//        NSString* shop = [node.tags valueForKey:@"shop"];
+//        NSString* leisure = [node.tags valueForKey:@"leisure"];
+//        NSString* historic = [node.tags valueForKey:@"historic"];
+//        NSString* aeroway = [node.tags valueForKey:@"aeroway"];
+//        NSString* amenity = [node.tags valueForKey:@"amenity"];
+//        
+//        
+//        NSString* imageName = nil;
+//        
+//        if (tourism)
+//        {
+//            imageName = [NSString stringWithFormat:@"tourism_%@.png",tourism];
+//        }
+//        else if (emergency)
+//        {
+//            imageName = [NSString stringWithFormat:@"emergency_%@.png",emergency];
+//        }
+//        else if (manMade)
+//        {
+//            imageName = [NSString stringWithFormat:@"man_made_%@.png",manMade];
+//        }
+//        else if (barrier)
+//        {
+//            imageName = [NSString stringWithFormat:@"barrier_%@.png",barrier];
+//        }
+//        else if (landuse)
+//        {
+//            imageName = [NSString stringWithFormat:@"landuse_%@.png",landuse];
+//        }
+//        else if (place)
+//        {
+//            //ez kiírja a település nevét
+//            //            NSString* name = [node.tags valueForKey:@"name"];
+//            //            [name drawAtPoint:[self realPositionForNode:node] withFont:[UIFont systemFontOfSize:16.0]];
+//            
+//            imageName = [NSString stringWithFormat:@"place_%@.png",place];
+//        }
+//        else if (power)
+//        {
+//            imageName = [NSString stringWithFormat:@"power_%@.png",power];
+//        }
+//        else if (highway)
+//        {
+//            imageName = [NSString stringWithFormat:@"highway_%@.png",highway];
+//        }
+//        else if (railway)
+//        {
+//            imageName = [NSString stringWithFormat:@"railway_%@.png",railway];
+//        }
+//        else if (shop)
+//        {
+//            imageName = [NSString stringWithFormat:@"shop_%@.png",shop];
+//        }
+//        else if (leisure)
+//        {
+//            imageName = [NSString stringWithFormat:@"leisure_%@.png",leisure];
+//        }
+//        else if (historic)
+//        {
+//            imageName = [NSString stringWithFormat:@"historic_%@.png",historic];
+//        }
+//        else if (aeroway)
+//        {
+//            imageName = [NSString stringWithFormat:@"aeroway_%@.png",aeroway];
+//        }
+//        else if (amenity)
+//        {
+//            imageName = [NSString stringWithFormat:@"amenity_%@.png",amenity];
+//        }
+        
+        
+        if (imageName)
+        {
+            UIImageView* imageViewForPointObject = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
+            [imageViewForPointObject setCenter:[self realPositionForNode:node]];
+            [imageViewForPointObject setUserInteractionEnabled:YES];
+            
+            [pointObjectsLayerView addSubview:imageViewForPointObject];
+            
+            [imageViewForPointObject release];
+        }
+    }
+    
+    [pointObjectsLayerView release];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ParserDidEndDocumentNotification" object:nil userInfo:nil];
+    
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
@@ -163,8 +284,20 @@
             
             [_currentNode.tags setValue:tagValue forKey:tagKey];
             
-            
-            if ([tagKey isEqualToString:@"place"] || [tagKey isEqualToString:@"highway"] || [tagKey isEqualToString:@"shop"])
+            if ([tagKey isEqualToString:@"tourism"]
+                || [tagKey isEqualToString:@"emergency"]
+                || [tagKey isEqualToString:@"man_made"]
+                || [tagKey isEqualToString:@"barrier"]
+                || [tagKey isEqualToString:@"landuse"]
+                || [tagKey isEqualToString:@"place"]
+                || [tagKey isEqualToString:@"power"]
+                || [tagKey isEqualToString:@"highway"]
+                || [tagKey isEqualToString:@"railway"]
+                || [tagKey isEqualToString:@"shop"]
+                || [tagKey isEqualToString:@"leisure"]
+                || [tagKey isEqualToString:@"historic"]
+                || [tagKey isEqualToString:@"aeroway"]
+                || [tagKey isEqualToString:@"amenity"])
             {
                 [_pointObjects addObject:_currentNode];
             }
@@ -408,31 +541,93 @@
     [[UIColor blackColor] set];
 
     
-    for (MZNode* node in _pointObjects)
-    {
-        NSString* place = [node.tags valueForKey:@"place"];
-        NSString* highway = [node.tags valueForKey:@"highway"];
-        NSString* shop = [node.tags valueForKey:@"shop"];
-        
-        if (place)
-        {
-            NSString* name = [node.tags valueForKey:@"name"];
-            [name drawAtPoint:[self realPositionForNode:node] withFont:[UIFont systemFontOfSize:16.0]];
-        }
-        else if (highway)
-        {
-            if ([highway isEqualToString:@"bus_stop"])
-            {
-                [[UIImage imageNamed:@"transport_bus_stop.png"] drawAtPoint:[self realPositionForNode:node]];
-            }
-        }
-        else if (shop)
-        {
-            NSString* imageName = [NSString stringWithFormat:@"shop_%@.png",shop];
-            
-            [[UIImage imageNamed:imageName] drawAtPoint:[self realPositionForNode:node]];
-        }
-    }
+//    for (MZNode* node in _pointObjects)
+//    {
+//        NSString* tourism = [node.tags valueForKey:@"tourism"];
+//        NSString* emergency = [node.tags valueForKey:@"emergency"];
+//        NSString* manMade = [node.tags valueForKey:@"man_made"];
+//        NSString* barrier = [node.tags valueForKey:@"barrier"];
+//        NSString* landuse = [node.tags valueForKey:@"landuse"];
+//        NSString* place = [node.tags valueForKey:@"place"];
+//        NSString* power = [node.tags valueForKey:@"power"];
+//        NSString* highway = [node.tags valueForKey:@"highway"];
+//        NSString* railway = [node.tags valueForKey:@"railway"];
+//        NSString* shop = [node.tags valueForKey:@"shop"];
+//        NSString* leisure = [node.tags valueForKey:@"leisure"];
+//        NSString* historic = [node.tags valueForKey:@"historic"];
+//        NSString* aeroway = [node.tags valueForKey:@"aeroway"];
+//        NSString* amenity = [node.tags valueForKey:@"amenity"];
+//        
+//        
+//        NSString* imageName = nil;
+//        
+//        if (tourism)
+//        {
+//            imageName = [NSString stringWithFormat:@"tourism_%@.png",tourism];
+//        }
+//        else if (emergency)
+//        {
+//            imageName = [NSString stringWithFormat:@"emergency_%@.png",emergency];
+//        }
+//        else if (manMade)
+//        {
+//            imageName = [NSString stringWithFormat:@"man_made_%@.png",manMade];
+//        }
+//        else if (barrier)
+//        {
+//            imageName = [NSString stringWithFormat:@"barrier_%@.png",barrier];
+//        }
+//        else if (landuse)
+//        {
+//            imageName = [NSString stringWithFormat:@"landuse_%@.png",landuse];
+//        }
+//        else if (place)
+//        {
+//            //ez kiírja a település nevét
+//            //            NSString* name = [node.tags valueForKey:@"name"];
+//            //            [name drawAtPoint:[self realPositionForNode:node] withFont:[UIFont systemFontOfSize:16.0]];
+//            
+//            imageName = [NSString stringWithFormat:@"place_%@.png",place];
+//        }
+//        else if (power)
+//        {
+//            imageName = [NSString stringWithFormat:@"power_%@.png",power];
+//        }
+//        else if (highway)
+//        {
+//            imageName = [NSString stringWithFormat:@"highway_%@.png",highway];
+//        }
+//        else if (railway)
+//        {
+//            imageName = [NSString stringWithFormat:@"railway_%@.png",railway];
+//        }
+//        else if (shop)
+//        {
+//            imageName = [NSString stringWithFormat:@"shop_%@.png",shop];
+//        }
+//        else if (leisure)
+//        {
+//            imageName = [NSString stringWithFormat:@"leisure_%@.png",leisure];
+//        }
+//        else if (historic)
+//        {
+//            imageName = [NSString stringWithFormat:@"historic_%@.png",historic];
+//        }
+//        else if (aeroway)
+//        {
+//            imageName = [NSString stringWithFormat:@"aeroway_%@.png",aeroway];
+//        }
+//        else if (amenity)
+//        {
+//            imageName = [NSString stringWithFormat:@"amenity_%@.png",amenity];
+//        }
+//        
+//        
+//        if (imageName)
+//        {
+//            [[UIImage imageNamed:imageName] drawAtPoint:[self realPositionForNode:node]];
+//        }
+//    }
     
 //    for (NSString* nodeID in _nodes) 
 //    {

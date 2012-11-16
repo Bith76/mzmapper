@@ -16,6 +16,7 @@
 @class MZPullView;
 @class MZLoupeView;
 @class MZLoginViewController;
+@class MZNode;
 
 @interface MZMapperViewController : UIViewController <CLLocationManagerDelegate, MZLoginViewControllerDelegate>
 {
@@ -25,6 +26,7 @@
     BOOL                    _gettingCurrentLocationIsInProgress;
     BOOL                    _editingModeIsActive;
     BOOL                    _waitingForLogInToSwitchToEditingMode;
+    MZNode*                 _selectedPointObject;
     
     @private
     MZMessageView*          _messageView;
@@ -38,9 +40,11 @@
     MZLoginViewController*  _loginViewController;
     NSMutableArray*         _openStreetBugs;
     UIView*                 _openStreetBugView;
+    UIView*                 _selectedPointObjectBackgroundView;
 }
 
 @property (nonatomic, assign)   BOOL gettingCurrentLocationIsInProgress;
+@property (nonatomic, retain)   MZNode* selectedPointObject;
 
 - (void)showMessageViewWithMessage:(NSString*)message;
 - (void)hideMessageView;

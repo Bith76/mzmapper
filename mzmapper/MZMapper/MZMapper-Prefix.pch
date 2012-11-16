@@ -11,6 +11,7 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <QuartzCore/QuartzCore.h>
     #import "MZMapperAppDelegate.h"
     #import "MZMapperContentManager.h"
     #import "NSString+MZMapperUtilities.h"
