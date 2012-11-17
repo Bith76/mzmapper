@@ -77,11 +77,12 @@
             break;
         case MZMapperPointCategoryAmenity:
         {
-            for (NSUInteger i = 0; i < MZMapperPointCategoryAmenityElementCountOfElements; i++)
+            NSUInteger j = 0;
+            for (NSUInteger i = MZMapperPointCategoryAmenityElementUnknown + 1; i < MZMapperPointCategoryAmenityElementCountOfElements - 1; i++, j++)
             {
-                MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (i * ITEM_HEIGHT), self.view.bounds.size.width, ITEM_HEIGHT)];
-                [itemView setItemName:[NSString nameOfPointCategoryAmenityElement:i]];
-                [itemView setItemImage:[UIImage imageForPointCategoryAmenityElement:i]];
+                MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (j * ITEM_HEIGHT), self.view.bounds.size.width, ITEM_HEIGHT)];
+                [itemView setItemName:[NSString nameOfPointCategoryElement:i]];
+                [itemView setItemImage:[UIImage imageForPointCategoryElement:i]];
                 [self.view addSubview:itemView];
                 [_categoryItemViews addObject:itemView];
                 [itemView release];
@@ -97,11 +98,12 @@
         
         case MZMapperPointCategoryFoodAndDrink:
         {
-            for (NSUInteger i = 0; i < MZMapperPointCategoryFoodAndDrinkElementCountOfElements; i++)
+            NSUInteger j = 0;
+            for (NSUInteger i = MZMapperPointCategoryFoodAndDrinkElementUnknown + 1; i < MZMapperPointCategoryFoodAndDrinkElementCountOfElements - 1; i++, j++)
             {
-                MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (i * ITEM_HEIGHT), self.view.bounds.size.width, ITEM_HEIGHT)];
-                [itemView setItemName:[NSString nameOfPointCategoryFoodAndDrinkElement:i]];
-                [itemView setItemImage:[UIImage imageForPointCategoryFoodAndDrinkElement:i]];
+                MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (j * ITEM_HEIGHT), self.view.bounds.size.width, ITEM_HEIGHT)];
+                [itemView setItemName:[NSString nameOfPointCategoryElement:i]];
+                [itemView setItemImage:[UIImage imageForPointCategoryElement:i]];
                 [self.view addSubview:itemView];
                 [_categoryItemViews addObject:itemView];
                 [itemView release];
@@ -110,11 +112,12 @@
             break;
         case MZMapperPointCategoryShopping:
         {
-            for (NSUInteger i = 0; i < MZMapperPointCategoryShoppingElementCountOfElements; i++)
+            NSUInteger j = 0;
+            for (NSUInteger i = MZMapperPointCategoryShoppingElementUnknown + 1; i < MZMapperPointCategoryShoppingElementCountOfElements - 1; i++, j++)
             {
-                MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (i * ITEM_HEIGHT), self.view.bounds.size.width, ITEM_HEIGHT)];
-                [itemView setItemName:[NSString nameOfPointCategoryShoppingElement:i]];
-                [itemView setItemImage:[UIImage imageForPointCategoryShoppingElement:i]];
+                MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (j * ITEM_HEIGHT), self.view.bounds.size.width, ITEM_HEIGHT)];
+                [itemView setItemName:[NSString nameOfPointCategoryElement:i]];
+                [itemView setItemImage:[UIImage imageForPointCategoryElement:i]];
                 [self.view addSubview:itemView];
                 [_categoryItemViews addObject:itemView];
                 [itemView release];

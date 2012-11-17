@@ -49,8 +49,8 @@
 {
     MZNode* selectedPointObject = self.controller.selectedPointObject;
     
-    NSString* type = [[MZMapperContentManager sharedContentManager] typeForNode:selectedPointObject];
-    NSString* subType = [[MZMapperContentManager sharedContentManager] subTypeForNode:selectedPointObject];
+    NSString* type = [[MZMapperContentManager sharedContentManager] typeNameInServerRepresentationForNode:selectedPointObject];
+    NSString* subType = [[MZMapperContentManager sharedContentManager] subTypeNameInServerRepresentationForNode:selectedPointObject];
     
     NSURL* infoUrl = [NSURL URLWithString:[[NSString stringWithFormat:@"http://wiki.openstreetmap.org/wiki/Tag:%@=%@",type,subType] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSURLRequest* request = [NSURLRequest requestWithURL:infoUrl];

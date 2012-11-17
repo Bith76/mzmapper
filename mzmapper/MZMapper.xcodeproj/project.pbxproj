@@ -261,8 +261,8 @@
 		136005D516369C5800616E9A /* shop_jewelry@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136005D316369C5800616E9A /* shop_jewelry@2x.png */; };
 		136005D816369C8400616E9A /* shop_kiosk.png in Resources */ = {isa = PBXBuildFile; fileRef = 136005D616369C8300616E9A /* shop_kiosk.png */; };
 		136005D916369C8400616E9A /* shop_kiosk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136005D716369C8300616E9A /* shop_kiosk@2x.png */; };
-		136005DC16369CA900616E9A /* shop_laundrette.png in Resources */ = {isa = PBXBuildFile; fileRef = 136005DA16369CA800616E9A /* shop_laundrette.png */; };
-		136005DD16369CA900616E9A /* shop_laundrette@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136005DB16369CA800616E9A /* shop_laundrette@2x.png */; };
+		136005DC16369CA900616E9A /* shop_laundry.png in Resources */ = {isa = PBXBuildFile; fileRef = 136005DA16369CA800616E9A /* shop_laundry.png */; };
+		136005DD16369CA900616E9A /* shop_laundry@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136005DB16369CA800616E9A /* shop_laundry@2x.png */; };
 		136005E016369CD800616E9A /* shop_motorcycle.png in Resources */ = {isa = PBXBuildFile; fileRef = 136005DE16369CD700616E9A /* shop_motorcycle.png */; };
 		136005E116369CD800616E9A /* shop_motorcycle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 136005DF16369CD700616E9A /* shop_motorcycle@2x.png */; };
 		136005E416369D0900616E9A /* shop_music.png in Resources */ = {isa = PBXBuildFile; fileRef = 136005E216369D0800616E9A /* shop_music.png */; };
@@ -291,8 +291,8 @@
 		13A69A7116369684009CFB60 /* shop_alcohol@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A69A6F16369684009CFB60 /* shop_alcohol@2x.png */; };
 		13A69A74163696D5009CFB60 /* shop_bicycle.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A69A72163696D4009CFB60 /* shop_bicycle.png */; };
 		13A69A75163696D5009CFB60 /* shop_bicycle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A69A73163696D5009CFB60 /* shop_bicycle@2x.png */; };
-		13A69A7816369713009CFB60 /* shop_book.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A69A7616369712009CFB60 /* shop_book.png */; };
-		13A69A7916369713009CFB60 /* shop_book@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A69A7716369712009CFB60 /* shop_book@2x.png */; };
+		13A69A7816369713009CFB60 /* shop_books.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A69A7616369712009CFB60 /* shop_books.png */; };
+		13A69A7916369713009CFB60 /* shop_books@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A69A7716369712009CFB60 /* shop_books@2x.png */; };
 		13A69A7C16369763009CFB60 /* shop_butcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A69A7A16369762009CFB60 /* shop_butcher.png */; };
 		13A69A7D16369763009CFB60 /* shop_butcher@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A69A7B16369762009CFB60 /* shop_butcher@2x.png */; };
 		13A69A801636980A009CFB60 /* shop_car.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A69A7E16369808009CFB60 /* shop_car.png */; };
@@ -642,8 +642,8 @@
 		136005D316369C5800616E9A /* shop_jewelry@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_jewelry@2x.png"; sourceTree = "<group>"; };
 		136005D616369C8300616E9A /* shop_kiosk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_kiosk.png; sourceTree = "<group>"; };
 		136005D716369C8300616E9A /* shop_kiosk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_kiosk@2x.png"; sourceTree = "<group>"; };
-		136005DA16369CA800616E9A /* shop_laundrette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_laundrette.png; sourceTree = "<group>"; };
-		136005DB16369CA800616E9A /* shop_laundrette@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_laundrette@2x.png"; sourceTree = "<group>"; };
+		136005DA16369CA800616E9A /* shop_laundry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_laundry.png; sourceTree = "<group>"; };
+		136005DB16369CA800616E9A /* shop_laundry@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_laundry@2x.png"; sourceTree = "<group>"; };
 		136005DE16369CD700616E9A /* shop_motorcycle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_motorcycle.png; sourceTree = "<group>"; };
 		136005DF16369CD700616E9A /* shop_motorcycle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_motorcycle@2x.png"; sourceTree = "<group>"; };
 		136005E216369D0800616E9A /* shop_music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_music.png; sourceTree = "<group>"; };
@@ -673,8 +673,8 @@
 		13A69A6F16369684009CFB60 /* shop_alcohol@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_alcohol@2x.png"; sourceTree = "<group>"; };
 		13A69A72163696D4009CFB60 /* shop_bicycle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_bicycle.png; sourceTree = "<group>"; };
 		13A69A73163696D5009CFB60 /* shop_bicycle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_bicycle@2x.png"; sourceTree = "<group>"; };
-		13A69A7616369712009CFB60 /* shop_book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_book.png; sourceTree = "<group>"; };
-		13A69A7716369712009CFB60 /* shop_book@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_book@2x.png"; sourceTree = "<group>"; };
+		13A69A7616369712009CFB60 /* shop_books.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_books.png; sourceTree = "<group>"; };
+		13A69A7716369712009CFB60 /* shop_books@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_books@2x.png"; sourceTree = "<group>"; };
 		13A69A7A16369762009CFB60 /* shop_butcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_butcher.png; sourceTree = "<group>"; };
 		13A69A7B16369762009CFB60 /* shop_butcher@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_butcher@2x.png"; sourceTree = "<group>"; };
 		13A69A7E16369808009CFB60 /* shop_car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_car.png; sourceTree = "<group>"; };
@@ -1271,8 +1271,8 @@
 				13A69A6B1636962A009CFB60 /* shop_bakery@2x.png */,
 				13A69A72163696D4009CFB60 /* shop_bicycle.png */,
 				13A69A73163696D5009CFB60 /* shop_bicycle@2x.png */,
-				13A69A7616369712009CFB60 /* shop_book.png */,
-				13A69A7716369712009CFB60 /* shop_book@2x.png */,
+				13A69A7616369712009CFB60 /* shop_books.png */,
+				13A69A7716369712009CFB60 /* shop_books@2x.png */,
 				13A69A7A16369762009CFB60 /* shop_butcher.png */,
 				13A69A7B16369762009CFB60 /* shop_butcher@2x.png */,
 				13A69A7E16369808009CFB60 /* shop_car.png */,
@@ -1305,8 +1305,8 @@
 				136005D316369C5800616E9A /* shop_jewelry@2x.png */,
 				136005D616369C8300616E9A /* shop_kiosk.png */,
 				136005D716369C8300616E9A /* shop_kiosk@2x.png */,
-				136005DA16369CA800616E9A /* shop_laundrette.png */,
-				136005DB16369CA800616E9A /* shop_laundrette@2x.png */,
+				136005DA16369CA800616E9A /* shop_laundry.png */,
+				136005DB16369CA800616E9A /* shop_laundry@2x.png */,
 				136005EA1636A3AD00616E9A /* shop_marketplace.png */,
 				136005EB1636A3AE00616E9A /* shop_marketplace@2x.png */,
 				136005DE16369CD700616E9A /* shop_motorcycle.png */,
@@ -1571,8 +1571,8 @@
 				13A69A7116369684009CFB60 /* shop_alcohol@2x.png in Resources */,
 				13A69A74163696D5009CFB60 /* shop_bicycle.png in Resources */,
 				13A69A75163696D5009CFB60 /* shop_bicycle@2x.png in Resources */,
-				13A69A7816369713009CFB60 /* shop_book.png in Resources */,
-				13A69A7916369713009CFB60 /* shop_book@2x.png in Resources */,
+				13A69A7816369713009CFB60 /* shop_books.png in Resources */,
+				13A69A7916369713009CFB60 /* shop_books@2x.png in Resources */,
 				13A69A7C16369763009CFB60 /* shop_butcher.png in Resources */,
 				13A69A7D16369763009CFB60 /* shop_butcher@2x.png in Resources */,
 				13A69A801636980A009CFB60 /* shop_car.png in Resources */,
@@ -1603,8 +1603,8 @@
 				136005D516369C5800616E9A /* shop_jewelry@2x.png in Resources */,
 				136005D816369C8400616E9A /* shop_kiosk.png in Resources */,
 				136005D916369C8400616E9A /* shop_kiosk@2x.png in Resources */,
-				136005DC16369CA900616E9A /* shop_laundrette.png in Resources */,
-				136005DD16369CA900616E9A /* shop_laundrette@2x.png in Resources */,
+				136005DC16369CA900616E9A /* shop_laundry.png in Resources */,
+				136005DD16369CA900616E9A /* shop_laundry@2x.png in Resources */,
 				136005E016369CD800616E9A /* shop_motorcycle.png in Resources */,
 				136005E116369CD800616E9A /* shop_motorcycle@2x.png in Resources */,
 				136005E416369D0900616E9A /* shop_music.png in Resources */,

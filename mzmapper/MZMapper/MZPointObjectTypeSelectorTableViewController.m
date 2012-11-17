@@ -15,6 +15,8 @@
 
 @implementation MZPointObjectTypeSelectorTableViewController
 
+@synthesize editedPointObject;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -27,37 +29,42 @@
         for (NSInteger i = 1; i < MZMapperPointCategoryCountOfCategories; i++)
         {
             
-            
+            NSMutableArray* categoryItems = [NSMutableArray array];
             NSMutableArray* categoryItemNames = [NSMutableArray array];
             NSMutableArray* categoryItemImages = [NSMutableArray array];
             
+            
             if (i == MZMapperPointCategoryShopping)
             {
-                for (NSInteger j = 0; j < MZMapperPointCategoryShoppingElementCountOfElements; j++)
+                for (NSUInteger j = MZMapperPointCategoryShoppingElementUnknown + 1; j < MZMapperPointCategoryShoppingElementCountOfElements - 1; j++)
                 {
-                    [categoryItemNames addObject:[NSString nameOfPointCategoryShoppingElement:j]];
-                    [categoryItemImages addObject:[UIImage imageForPointCategoryShoppingElement:j]];
+                    [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
+                    [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
+                    [categoryItemImages addObject:[UIImage imageForPointCategoryElement:j]];
                 }
             }
             else if (i == MZMapperPointCategoryFoodAndDrink)
             {
-                for (NSInteger j = 0; j < MZMapperPointCategoryFoodAndDrinkElementCountOfElements; j++)
+                for (NSUInteger j = MZMapperPointCategoryFoodAndDrinkElementUnknown + 1; j < MZMapperPointCategoryFoodAndDrinkElementCountOfElements - 1; j++)
                 {
-                    [categoryItemNames addObject:[NSString nameOfPointCategoryFoodAndDrinkElement:j]];
-                    [categoryItemImages addObject:[UIImage imageForPointCategoryFoodAndDrinkElement:j]];
+                    [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
+                    [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
+                    [categoryItemImages addObject:[UIImage imageForPointCategoryElement:j]];
                 }
             }
             else if (i == MZMapperPointCategoryAmenity)
             {
-                for (NSInteger j = 0; j < MZMapperPointCategoryAmenityElementCountOfElements; j++)
+                for (NSUInteger j = MZMapperPointCategoryAmenityElementUnknown + 1; j < MZMapperPointCategoryAmenityElementCountOfElements - 1; j++)
                 {
-                    [categoryItemNames addObject:[NSString nameOfPointCategoryAmenityElement:j]];
-                    [categoryItemImages addObject:[UIImage imageForPointCategoryAmenityElement:j]];
+                    [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
+                    [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
+                    [categoryItemImages addObject:[UIImage imageForPointCategoryElement:j]];
                 }
             }
             
             NSMutableDictionary* sectionData = [NSMutableDictionary dictionary];
             [sectionData setValue:[NSString nameOfPointCategory:i] forKey:@"categoryName"];
+            [sectionData setValue:categoryItems forKey:@"items"];
             [sectionData setValue:categoryItemNames forKey:@"itemNames"];
             [sectionData setValue:categoryItemImages forKey:@"itemImages"];
             
@@ -92,6 +99,42 @@
     [self.tableView setTableHeaderView:headerLabel];
     
     [headerLabel release];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    //scroll selected row to the middle of the screen
+    MZMapperContentManager* contentManager = [MZMapperContentManager sharedContentManager];
+    NSUInteger logicalTypeOfEditedPointObject = [contentManager logicalTypeForServerTypeName:[contentManager fullTypeNameInServerRepresentationForNode:self.editedPointObject]];
+    
+    NSIndexPath* indexPath = nil;
+    
+    NSInteger sectionIndex = 0;
+    for (NSMutableDictionary* sectionData in _content)
+    {
+        NSInteger rowIndex = 0;
+        for (NSNumber* type in [sectionData valueForKey:@"items"])
+        {
+            if ([type unsignedIntegerValue] == logicalTypeOfEditedPointObject)
+            {
+                indexPath = [NSIndexPath indexPathForRow:rowIndex inSection:sectionIndex];
+                break;
+            }
+            
+            rowIndex++;
+        }
+        
+        if (indexPath)
+        {
+            break;
+        }
+        
+        sectionIndex++;
+    }
+    
+    [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionMiddle];
 }
 
 - (void)didReceiveMemoryWarning
@@ -132,11 +175,37 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        
+        //info button
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeInfoDark];
+        [button addTarget:self action:@selector(infoButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [cell setAccessoryView:button];
     }
     
+    // Configure the cell...
     [cell.imageView setImage:[[[_content objectAtIndex:indexPath.section] valueForKey:@"itemImages"] objectAtIndex:indexPath.row]];
     [cell.textLabel setText:[[[_content objectAtIndex:indexPath.section] valueForKey:@"itemNames"] objectAtIndex:indexPath.row]];
-    // Configure the cell...
+    
+    
+    //set tag of info button to get indexPath in the infoButtonTouched method
+    [cell.accessoryView setTag:indexPath.section * 100 + indexPath.row];
+    
+    
+    MZMapperContentManager* contentManager = [MZMapperContentManager sharedContentManager];
+    NSUInteger logicalTypeOfEditedPointObject = [contentManager logicalTypeForServerTypeName:[contentManager fullTypeNameInServerRepresentationForNode:self.editedPointObject]];
+    
+    NSUInteger logicalTypeForRow = [[[[_content objectAtIndex:indexPath.section] objectForKey:@"items"] objectAtIndex:indexPath.row] unsignedIntegerValue];
+    
+    if (logicalTypeOfEditedPointObject == logicalTypeForRow)
+    {
+        [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+    }
+    else
+    {
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    }
+    
     
     return cell;
 }
@@ -192,6 +261,60 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
      */
+    
+    if (self.delegate && [self.delegate conformsToProtocol:@protocol(MZPointObjectTypeSelectorTableViewControllerDelegate)] && [self.delegate respondsToSelector:@selector(typeSelectorTableView:didSelectObject:)])
+    {
+        [self.delegate typeSelectorTableView:self didSelectObject:[[[[_content objectAtIndex:indexPath.section] valueForKey:@"items"] objectAtIndex:indexPath.row] unsignedIntegerValue]];
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark -
+#pragma mark helper methods
+
+- (void)infoButtonTouched:(UIButton*)sender
+{    
+    NSIndexPath* indexPath = [[NSIndexPath indexPathWithIndex:((NSInteger)sender.tag / 100)] indexPathByAddingIndex:((NSInteger)sender.tag % 100)];
+        
+    NSUInteger logicalTypeForRow = [[[[_content objectAtIndex:indexPath.section] objectForKey:@"items"] objectAtIndex:indexPath.row] unsignedIntegerValue];
+    
+    NSString* type = [[MZMapperContentManager sharedContentManager] serverTypeNameForLogicalType:logicalTypeForRow];
+    NSString* subType = @"";
+    
+    for (NSString* pointObjectType in [MZMapperContentManager sharedContentManager].pointObjectTypes)
+    {
+        if ([type rangeOfString:pointObjectType].location != NSNotFound)
+        {
+            subType = [type stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@:",pointObjectType] withString:@""];
+            type = pointObjectType;
+        }
+    }
+    
+    NSURL* infoUrl = [NSURL URLWithString:[[NSString stringWithFormat:@"http://wiki.openstreetmap.org/wiki/Tag:%@=%@",type,subType] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSURLRequest* request = [NSURLRequest requestWithURL:infoUrl];
+    
+    
+    UIViewController* infoViewController = [[UIViewController alloc] init];
+    [infoViewController setContentSizeForViewInPopover:CGSizeMake(800.0, 500.0)];
+    UIWebView* infoWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0.0, 0.0, 735.0, 500.0)];
+    [infoViewController.view addSubview:infoWebView];
+    [infoWebView loadRequest:request];
+    [infoWebView release];
+    
+    UIPopoverController* popoverController = [[UIPopoverController alloc] initWithContentViewController:infoViewController];
+    [popoverController setDelegate:self];
+    [popoverController presentPopoverFromRect:((UIButton*)sender).frame inView:[self.tableView cellForRowAtIndexPath:indexPath].contentView permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+    
+    [infoViewController release];
+}
+
+#pragma mark -
+#pragma mark UIPopoverControllerDelegate methods
+
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+{
+    [popoverController release];
 }
 
 @end

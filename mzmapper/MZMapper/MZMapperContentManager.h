@@ -30,7 +30,8 @@ typedef NSUInteger MZMapperPointCategory;
 
 enum
 {
-    MZMapperPointCategoryShoppingElementSupermarket = 0,
+    MZMapperPointCategoryShoppingElementUnknown = 1000,
+    MZMapperPointCategoryShoppingElementSupermarket,
     MZMapperPointCategoryShoppingElementSmallConvenienceStore,
     MZMapperPointCategoryShoppingElementBakery,
     MZMapperPointCategoryShoppingElementAlcoholShop,
@@ -62,7 +63,8 @@ typedef NSUInteger MZMapperPointCategoryShoppingElement;
 
 enum
 {
-    MZMapperPointCategoryFoodAndDrinkElementWaterFountain = 0,
+    MZMapperPointCategoryFoodAndDrinkElementUnknown = 2000,
+    MZMapperPointCategoryFoodAndDrinkElementWaterFountain,
     MZMapperPointCategoryFoodAndDrinkElementVendingMachine,
     MZMapperPointCategoryFoodAndDrinkElementPub,
     MZMapperPointCategoryFoodAndDrinkElementBar,
@@ -75,7 +77,8 @@ typedef NSUInteger MZMapperPointCategoryFoodAndDrinkElement;
 
 enum
 {
-    MZMapperPointCategoryAmenityElementFireStation = 0,
+    MZMapperPointCategoryAmenityElementUnknown = 3000,
+    MZMapperPointCategoryAmenityElementFireStation,
     MZMapperPointCategoryAmenityElementPolice,
     MZMapperPointCategoryAmenityElementTownhall,
     MZMapperPointCategoryAmenityElementPlaceOfWorship,
@@ -104,7 +107,8 @@ typedef NSUInteger MZMapperPointCategoryAmenityElement;
 //innen van meló
 enum
 {
-    MZMapperPointCategoryTourismElementMuseum = 0,
+    MZMapperPointCategoryTourismElementUnknown = 4000,
+    MZMapperPointCategoryTourismElementMuseum,
     //...
     MZMapperPointCategoryTourismElementCountOfElements
 };
@@ -112,7 +116,8 @@ typedef NSUInteger MZMapperPointCategoryTourismElement;
 
 enum
 {
-    MZMapperPointCategoryAccomodationElementHotel = 0,
+    MZMapperPointCategoryAccomodationElementUnknown = 5000,
+    MZMapperPointCategoryAccomodationElementHotel,
     //...
     MZMapperPointCategoryAccomodationElementCountOfElements
 };
@@ -120,7 +125,8 @@ typedef NSUInteger MZMapperPointCategoryAccomodationElement;
 
 enum
 {
-    MZMapperPointCategoryTransportElementAirport = 0,
+    MZMapperPointCategoryTransportElementUnknown = 6000,
+    MZMapperPointCategoryTransportElementAirport,
     //...
     MZMapperPointCategoryTransportElementCountOfElements
 };
@@ -128,7 +134,8 @@ typedef NSUInteger MZMapperPointCategoryTransportElement;
 
 enum
 {
-    MZMapperPointCategoryBarrierElementBollard = 0,
+    MZMapperPointCategoryBarrierElementUnknown = 7000,
+    MZMapperPointCategoryBarrierElementBollard,
     //...
     MZMapperPointCategoryBarrierElementCountOfElements
 };
@@ -136,7 +143,8 @@ typedef NSUInteger MZMapperPointCategoryBarrierElement;
 
 enum
 {
-    MZMapperPointCategoryPowerElementHighVoltage = 0,
+    MZMapperPointCategoryPowerElementUnknown = 8000,
+    MZMapperPointCategoryPowerElementHighVoltage,
     //...
     MZMapperPointCategoryPowerElementCountOfElements
 };
@@ -144,7 +152,8 @@ typedef NSUInteger MZMapperPointCategoryPowerElement;
 
 enum
 {
-    MZMapperPointCategoryLanduseElementCemetery = 0,
+    MZMapperPointCategoryLanduseElementUnknown = 9000,
+    MZMapperPointCategoryLanduseElementCemetery,
     MZMapperPointCategoryLanduseElementGraveYard,
     MZMapperPointCategoryLanduseElementCountOfElements
 };
@@ -152,7 +161,8 @@ typedef NSUInteger MZMapperPointCategoryLanduseElement;
 
 enum
 {
-    MZMapperPointCategoryPlacesElementHamlet = 0,
+    MZMapperPointCategoryPlacesElementUnknown = 10000,
+    MZMapperPointCategoryPlacesElementHamlet,
     //...
     MZMapperPointCategoryPlacesElementCountOfElements
 };
@@ -160,7 +170,8 @@ typedef NSUInteger MZMapperPointCategoryPlacesElement;
 
 enum
 {
-    MZMapperPointCategorySportAndLeisureElementSwimmingPool = 0,
+    MZMapperPointCategorySportAndLeisureElementUnknown = 11000,
+    MZMapperPointCategorySportAndLeisureElementSwimmingPool,
     //...
     MZMapperPointCategorySportAndLeisureElementCountOfElements
 };
@@ -168,7 +179,8 @@ typedef NSUInteger MZMapperPointCategorySportAndLeisureElement;
 
 enum
 {
-    MZMapperPointCategoryHealthcareElementPharmacy = 0,
+    MZMapperPointCategoryHealthcareElementUnknown = 12000,
+    MZMapperPointCategoryHealthcareElementPharmacy,
     //...
     MZMapperPointCategoryHealthcareElementCountOfElements
 };
@@ -176,7 +188,8 @@ typedef NSUInteger MZMapperPointCategoryHealthcareElement;
 
 enum
 {
-    MZMapperPointCategoryEntertainmentArtsCultureElementCinema = 0,
+    MZMapperPointCategoryEntertainmentArtsCultureElementUnknown = 13000,
+    MZMapperPointCategoryEntertainmentArtsCultureElementCinema,
     //...
     MZMapperPointCategoryEntertainmentArtsCultureElementCountOfElements
 };
@@ -184,7 +197,8 @@ typedef NSUInteger MZMapperPointCategoryEntertainmentArtsCultureElement;
 
 enum
 {
-    MZMapperPointCategoryEducationElementKindergarten = 0,
+    MZMapperPointCategoryEducationElementUnknown = 14000,
+    MZMapperPointCategoryEducationElementKindergarten,
     //...
     MZMapperPointCategoryEducationElementCountOfElements
 };
@@ -204,12 +218,21 @@ typedef NSUInteger MZMapperPointCategoryEducationElement;
 @property (nonatomic, assign) BOOL              loggedIn;
 @property (nonatomic, assign) BOOL              openStreetBugModeIsActive;
 @property (nonatomic, retain) NSArray*          pointObjectTypes;
-@property (nonatomic, retain) NSMutableArray*   pointObjects; //stores actual point objects from map-slice
+@property (nonatomic, retain) NSDictionary*     pointObjects; //stores point objects which the app should handle; key: logical number representation of the point object type; value: string representation of the point object type
+@property (nonatomic, retain) NSMutableArray*   actualPointObjects; //stores actual point objects from map-slice
 
 //singleton
 + (MZMapperContentManager*)sharedContentManager;
 
-- (NSString*)typeForNode:(MZNode*)aNode;
-- (NSString*)subTypeForNode:(MZNode*)aNode;
+- (NSString*)typeNameInServerRepresentationForNode:(MZNode*)aNode;
+- (NSString*)subTypeNameInServerRepresentationForNode:(MZNode*)aNode;
+- (NSString*)fullTypeNameInServerRepresentationForNode:(MZNode*)aNode;
+
+- (NSString*)typeNameInServerRepresentationForLogicalType:(NSUInteger)logicalType;
+- (NSString*)subTypeNameInServerRepresentationForLogicalType:(NSUInteger)logicalType;
+- (NSString*)fullTypeNameInServerRepresentationForLogicalType:(NSUInteger)logicalType;
+
+- (NSUInteger)logicalTypeForServerTypeName:(NSString*)serverType;
+- (NSString*)serverTypeNameForLogicalType:(NSUInteger)logicalType;
 
 @end

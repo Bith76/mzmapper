@@ -447,7 +447,7 @@
     
     
     
-    for (MZNode* node in [MZMapperContentManager sharedContentManager].pointObjects)
+    for (MZNode* node in [MZMapperContentManager sharedContentManager].actualPointObjects)
     {
         NSString* imageName = nil;
         
@@ -650,6 +650,13 @@
 }
 
 - (void)editorVCDoneButtonTouched:(id)sender
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    
+    [self enterEditingMode];
+}
+
+- (void)editorVCCancelButtonTouched:(id)sender
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
     
@@ -914,7 +921,9 @@
     
     [gesture.view.superview insertSubview:_selectedPointObjectBackgroundView belowSubview:gesture.view];
     
-    for (MZNode* node in [MZMapperContentManager sharedContentManager].pointObjects)
+    [_selectedPointObjectBackgroundView release];
+    
+    for (MZNode* node in [MZMapperContentManager sharedContentManager].actualPointObjects)
     {
         if ([node.nodeid integerValue] == gesture.view.tag)
         {
@@ -927,9 +936,12 @@
     MZPointObjectEditorTableViewController* editorTableViewController = [[MZPointObjectEditorTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     editorTableViewController.view.layer.cornerRadius = 5.0;
     [editorTableViewController setTitle:@"Edit"];
-    [editorTableViewController setImage:((UIImageView*)gesture.view).image];
+    
+    //[editorTableViewController setImage:((UIImageView*)gesture.view).image];
     [editorTableViewController setController:self];
-    [editorTableViewController setPointObjectName:[_selectedPointObject.tags valueForKey:@"name"]];
+    //[editorTableViewController setPointObjectName:[_selectedPointObject.tags valueForKey:@"name"]];
+    //[editorTableViewController setPointObjectTypeName:[NSString nameOfPointCategoryElement:[]]];
+    [editorTableViewController setEditedPointObject:_selectedPointObject];
     
     //MZPointObjectEditorViewController* editVC = [[MZPointObjectEditorViewController alloc] initWithNibName:@"MZPointObjectEditorViewController" bundle:nil];
     //editVC.controller = self;
@@ -941,6 +953,8 @@
     UINavigationController* navCont = [[UINavigationController alloc] initWithRootViewController:editorTableViewController];
     [navCont.navigationBar setBarStyle:UIBarStyleBlack];
     
+    [editorTableViewController release];
+    
     
     
     
@@ -948,9 +962,13 @@
     [editorTableViewController.navigationItem setRightBarButtonItem:doneButton];
     [doneButton release];
     
+    UIBarButtonItem* cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(editorVCCancelButtonTouched:)];
+    [editorTableViewController.navigationItem setLeftBarButtonItem:cancelButton];
+    [cancelButton release];
+    
     [_pullView setContentViewController:navCont];
     
-    //[editVC release], editVC = nil;
+    [navCont release];
     
     [_pullView show];
 }

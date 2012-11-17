@@ -113,7 +113,7 @@
     
     [self setNeedsDisplay];
     
-    [MZMapperContentManager sharedContentManager].pointObjects = _pointObjects;
+    [MZMapperContentManager sharedContentManager].actualPointObjects = _pointObjects;
     
     UIView* pointObjectsLayerView = [[UIView alloc] initWithFrame:self.bounds];
     
@@ -121,7 +121,7 @@
     
     
     
-    for (MZNode* node in [MZMapperContentManager sharedContentManager].pointObjects)
+    for (MZNode* node in [MZMapperContentManager sharedContentManager].actualPointObjects)
     {
         NSString* imageName = nil;
         

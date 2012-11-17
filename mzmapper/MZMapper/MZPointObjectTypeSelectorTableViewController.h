@@ -8,9 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MZPointObjectTypeSelectorTableViewController : UITableViewController
+@class MZPointObjectTypeSelectorTableViewController;
+
+@protocol MZPointObjectTypeSelectorTableViewControllerDelegate <NSObject>
+
+- (void)typeSelectorTableView:(MZPointObjectTypeSelectorTableViewController*)tableView didSelectObject:(NSUInteger)selectedObject;
+
+@end
+
+
+
+@interface MZPointObjectTypeSelectorTableViewController : UITableViewController <UIPopoverControllerDelegate>
 {
+@private
     NSMutableArray* _content;
 }
 
+@property (nonatomic, retain) MZNode*   editedPointObject;
+@property (nonatomic, assign) id<MZPointObjectTypeSelectorTableViewControllerDelegate> delegate;
+
 @end
+
+
+

@@ -7,7 +7,7 @@
 //
 
 #import "MZPointObjectEditorTableViewController.h"
-#import "MZPointObjectTypeSelectorTableViewController.h"
+#import "MZNode.h"
 
 @interface MZPointObjectEditorTableViewController ()
 
@@ -15,7 +15,7 @@
 
 @implementation MZPointObjectEditorTableViewController
 
-@synthesize controller, image, pointObjectName;
+@synthesize controller, editedPointObject;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -53,14 +53,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 2;
 }
@@ -75,20 +73,24 @@
     
     // Configure the cell...
     
+    MZMapperContentManager* contentManager = [MZMapperContentManager sharedContentManager];
+    
+    NSUInteger logicalTypeOfEditedPointObject = [contentManager logicalTypeForServerTypeName:[contentManager fullTypeNameInServerRepresentationForNode:self.editedPointObject]];
+    
     if (indexPath.section == 0 && indexPath.row == 0)
     {
         cell = [tableView dequeueReusableCellWithIdentifier:_headerCellIdentifier];
         UIImageView* imageView = (UIImageView*)[cell viewWithTag:1];
-        [imageView setImage:self.image];
+        [imageView setImage:[UIImage imageForPointCategoryElement:logicalTypeOfEditedPointObject]];
         
         UILabel* nameLabel = (UILabel*)[cell viewWithTag:2];
-        [nameLabel setText:self.pointObjectName];
+        [nameLabel setText:[self.editedPointObject.tags valueForKey:@"name"]];
     }
     else if (indexPath.section == 0 && indexPath.row == 1)
     {
         cell = [tableView dequeueReusableCellWithIdentifier:_typeChooserCellIdentifier];
         UILabel* typeLabel = (UILabel*)[cell viewWithTag:1];
-        [typeLabel setText:@"fajta"];
+        [typeLabel setText:[NSString nameOfPointCategoryElement:logicalTypeOfEditedPointObject]];
         
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     }
@@ -145,12 +147,19 @@
     {
         MZPointObjectTypeSelectorTableViewController *detailViewController = [[MZPointObjectTypeSelectorTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
         [detailViewController setTitle:@"Types"];
+        [detailViewController setDelegate:self];
+        [detailViewController setEditedPointObject:self.editedPointObject];
         detailViewController.view.layer.cornerRadius = 5.0;
         
         // Pass the selected object to the new view controller.
         [self.navigationController pushViewController:detailViewController animated:YES];
         [detailViewController release];
     }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 70.0f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -163,24 +172,25 @@
         UIView* footerView  = [[UIView alloc] init];
         
         //we would like to show a gloosy red button, so get the image first
-        UIImage *image = [[UIImage imageNamed:@"orangeButton.png"]
-                          stretchableImageWithLeftCapWidth:8 topCapHeight:8];
+        UIEdgeInsets insets = UIEdgeInsetsMake(18.0, 18.0, 17.0, 17.0);
+        UIImage *buttonBackgroundImage = [[UIImage imageNamed:@"orangeButton.png"] resizableImageWithCapInsets:insets];
+        UIImage* highlightedButtonBGImage = [[UIImage imageNamed:@"orangeButtonHighlight.png"] resizableImageWithCapInsets:insets];
         
         //create the button
         UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [button setBackgroundImage:image forState:UIControlStateNormal];
+        [button setBackgroundImage:buttonBackgroundImage forState:UIControlStateNormal];
+        [button setBackgroundImage:highlightedButtonBGImage forState:UIControlStateHighlighted];
         
         //the button should be as big as a table view cell
-        [button setFrame:CGRectMake(10, 3, 300, 44)];
+        [button setFrame:CGRectMake(10.0, 13.0, 240.0, 44.0)];
         
         //set title, font size and font color
-        [button setTitle:@"Remove" forState:UIControlStateNormal];
-        [button.titleLabel setFont:[UIFont boldSystemFontOfSize:20]];
+        [button setTitle:@"Delete" forState:UIControlStateNormal];
+        [button.titleLabel setFont:[UIFont boldSystemFontOfSize:20.0]];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
         //set action of the button
-        [button addTarget:self action:@selector(removeAction:)
-         forControlEvents:UIControlEventTouchUpInside];
+        [button addTarget:self action:@selector(deleteButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
         
         //add the button to the view
         [footerView addSubview:button];
@@ -190,6 +200,35 @@
     }
     
     return retVal;
+}
+
+#pragma mark -
+#pragma mark typeSelectorTableView delegate methods
+
+- (void)typeSelectorTableView:(MZPointObjectTypeSelectorTableViewController*)tableView didSelectObject:(NSUInteger)selectedObject
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    
+    NSLog(@"selectedObject: %d",selectedObject);
+    
+    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
+    
+    NSString* actualTypeName = [cm typeNameInServerRepresentationForNode:self.editedPointObject];
+    NSString* newTypeName = [cm typeNameInServerRepresentationForLogicalType:selectedObject];
+    NSString* newSubTypeName = [cm subTypeNameInServerRepresentationForLogicalType:selectedObject];
+    
+    [self.editedPointObject.tags removeObjectForKey:actualTypeName];
+    [self.editedPointObject.tags setObject:newSubTypeName forKey:newTypeName];
+    
+    [self.tableView reloadData];
+}
+
+#pragma mark -
+#pragma mark helper methods
+
+- (void)deleteButtonTouched:(UIButton*)sender
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
 }
 
 @end
