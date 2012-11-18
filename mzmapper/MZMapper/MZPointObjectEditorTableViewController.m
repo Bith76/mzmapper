@@ -7,6 +7,7 @@
 //
 
 #import "MZPointObjectEditorTableViewController.h"
+#import "MZMapperViewController.h"
 #import "MZNode.h"
 
 @interface MZPointObjectEditorTableViewController ()
@@ -228,7 +229,20 @@
 
 - (void)deleteButtonTouched:(UIButton*)sender
 {
-    NSLog(@"%s",__PRETTY_FUNCTION__);
+    UIAlertView* av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"DeletePointObjectAlertViewTitleKey", @"Title of the alert view, which appears when user want to delete a point object.") message:NSLocalizedString(@"DeletePointObjectAlertViewMessageKey", @"Message of the alert view, which appears when user want to delete a point object.") delegate:self cancelButtonTitle:NSLocalizedString(@"CancelKey", @"Title of the cancel button.") otherButtonTitles:NSLocalizedString(@"OkKey", @"Title of the ok button."), nil];
+    
+    [av show];
+    
+    [av release];
+}
+
+// Called when a button is clicked. The view will be automatically dismissed after this call returns
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) //Ok button was pressed
+    {
+        [self.controller deleteEditedPointObject];
+    }
 }
 
 @end

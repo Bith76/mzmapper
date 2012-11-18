@@ -35,6 +35,8 @@
     NSDate* _startTime;
     
     BOOL _logging;
+    
+    UIView*                 _pointObjectsLayerView;
 }
 
 @property (nonatomic, assign) CGFloat           minLatitude;

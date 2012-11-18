@@ -67,12 +67,14 @@
     {
         case MZMapperPointCategoryAccomodation:
         {
-            MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height, self.view.bounds.size.width, ITEM_HEIGHT)];
-            [itemView setItemName:@"itemName"];
-            [itemView setItemImage:[UIImage imageNamed:@"shopping_alcohol.n.16.png"]];
-            [self.view addSubview:itemView];
-            [_categoryItemViews addObject:itemView];
-            [itemView release];
+//            MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height, self.view.bounds.size.width, ITEM_HEIGHT)];
+//            [itemView setCategoryViewController:self];
+//            //[itemView setItemName:@"itemName"];
+//            //[itemView setItemImage:[UIImage imageNamed:@"shopping_alcohol.n.16.png"]];
+//            [itemView setItemType:i];
+//            [self.view addSubview:itemView];
+//            [_categoryItemViews addObject:itemView];
+//            [itemView release];
         }
             break;
         case MZMapperPointCategoryAmenity:
@@ -81,8 +83,10 @@
             for (NSUInteger i = MZMapperPointCategoryAmenityElementUnknown + 1; i < MZMapperPointCategoryAmenityElementCountOfElements - 1; i++, j++)
             {
                 MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (j * ITEM_HEIGHT), self.view.bounds.size.width, ITEM_HEIGHT)];
-                [itemView setItemName:[NSString nameOfPointCategoryElement:i]];
-                [itemView setItemImage:[UIImage imageForPointCategoryElement:i]];
+                [itemView setCategoryViewController:self];
+                //[itemView setItemName:[NSString nameOfPointCategoryElement:i]];
+                //[itemView setItemImage:[UIImage imageForPointCategoryElement:i]];
+                [itemView setItemType:i];
                 [self.view addSubview:itemView];
                 [_categoryItemViews addObject:itemView];
                 [itemView release];
@@ -102,8 +106,10 @@
             for (NSUInteger i = MZMapperPointCategoryFoodAndDrinkElementUnknown + 1; i < MZMapperPointCategoryFoodAndDrinkElementCountOfElements - 1; i++, j++)
             {
                 MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (j * ITEM_HEIGHT), self.view.bounds.size.width, ITEM_HEIGHT)];
-                [itemView setItemName:[NSString nameOfPointCategoryElement:i]];
-                [itemView setItemImage:[UIImage imageForPointCategoryElement:i]];
+                [itemView setCategoryViewController:self];
+                //[itemView setItemName:[NSString nameOfPointCategoryElement:i]];
+                //[itemView setItemImage:[UIImage imageForPointCategoryElement:i]];
+                [itemView setItemType:i];
                 [self.view addSubview:itemView];
                 [_categoryItemViews addObject:itemView];
                 [itemView release];
@@ -116,8 +122,10 @@
             for (NSUInteger i = MZMapperPointCategoryShoppingElementUnknown + 1; i < MZMapperPointCategoryShoppingElementCountOfElements - 1; i++, j++)
             {
                 MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (j * ITEM_HEIGHT), self.view.bounds.size.width, ITEM_HEIGHT)];
-                [itemView setItemName:[NSString nameOfPointCategoryElement:i]];
-                [itemView setItemImage:[UIImage imageForPointCategoryElement:i]];
+                [itemView setCategoryViewController:self];
+                //[itemView setItemName:[NSString nameOfPointCategoryElement:i]];
+                //[itemView setItemImage:[UIImage imageForPointCategoryElement:i]];
+                [itemView setItemType:i];
                 [self.view addSubview:itemView];
                 [_categoryItemViews addObject:itemView];
                 [itemView release];
@@ -174,6 +182,17 @@
     
     _isOpen = !_isOpen;
 }
+
+#pragma mark -
+#pragma mark helper methods
+
+- (void)addCategoryItemType:(NSUInteger)type toPoint:(CGPoint)toPoint
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    NSLog(@"topoint: %@",NSStringFromCGPoint(toPoint));
+    [self.editViewController categoryVC:self addedItemWithType:type toPoint:toPoint];
+}
+
 #pragma mark - View lifecycle
 
 - (void)didReceiveMemoryWarning

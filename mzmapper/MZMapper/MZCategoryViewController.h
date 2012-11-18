@@ -25,4 +25,6 @@
 
 - (IBAction)showMoreButtonTouched:(id)sender;
 
+- (void)addCategoryItemType:(NSUInteger)type toPoint:(CGPoint)toPoint;
+
 @end

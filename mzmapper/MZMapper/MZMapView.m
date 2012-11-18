@@ -63,6 +63,10 @@
         _bezierPaths = [[NSMutableArray alloc] init];
         
         _pointObjects = [[NSMutableArray alloc] init];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deleteNodeFromMap:) name:@"NodeDeletedNotification" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addNodeToTheMap:) name:@"NodeAddedNotification" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateNodeOnTheMap:) name:@"NodeUpdatedNotification" object:nil];
     }
     
     return self;
@@ -113,124 +117,38 @@
     
     [self setNeedsDisplay];
     
-    [MZMapperContentManager sharedContentManager].actualPointObjects = _pointObjects;
     
-    UIView* pointObjectsLayerView = [[UIView alloc] initWithFrame:self.bounds];
+    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
     
-    [self addSubview:pointObjectsLayerView];
+    cm.actualPointObjects = _pointObjects;
     
-    
-    
-    for (MZNode* node in [MZMapperContentManager sharedContentManager].actualPointObjects)
+    if (_pointObjectsLayerView)
     {
-        NSString* imageName = nil;
-        
-        for (NSString* pointObjectType in [MZMapperContentManager sharedContentManager].pointObjectTypes)
-        {
-            NSString* subType = [node.tags valueForKey:pointObjectType];
-            
-            if (subType)
-            {
-                imageName = [NSString stringWithFormat:@"%@_%@.png", pointObjectType ,subType];
-            }
-        }
-        
-//        NSString* tourism = [node.tags valueForKey:@"tourism"];
-//        NSString* emergency = [node.tags valueForKey:@"emergency"];
-//        NSString* manMade = [node.tags valueForKey:@"man_made"];
-//        NSString* barrier = [node.tags valueForKey:@"barrier"];
-//        NSString* landuse = [node.tags valueForKey:@"landuse"];
-//        NSString* place = [node.tags valueForKey:@"place"];
-//        NSString* power = [node.tags valueForKey:@"power"];
-//        NSString* highway = [node.tags valueForKey:@"highway"];
-//        NSString* railway = [node.tags valueForKey:@"railway"];
-//        NSString* shop = [node.tags valueForKey:@"shop"];
-//        NSString* leisure = [node.tags valueForKey:@"leisure"];
-//        NSString* historic = [node.tags valueForKey:@"historic"];
-//        NSString* aeroway = [node.tags valueForKey:@"aeroway"];
-//        NSString* amenity = [node.tags valueForKey:@"amenity"];
-//        
-//        
-//        NSString* imageName = nil;
-//        
-//        if (tourism)
-//        {
-//            imageName = [NSString stringWithFormat:@"tourism_%@.png",tourism];
-//        }
-//        else if (emergency)
-//        {
-//            imageName = [NSString stringWithFormat:@"emergency_%@.png",emergency];
-//        }
-//        else if (manMade)
-//        {
-//            imageName = [NSString stringWithFormat:@"man_made_%@.png",manMade];
-//        }
-//        else if (barrier)
-//        {
-//            imageName = [NSString stringWithFormat:@"barrier_%@.png",barrier];
-//        }
-//        else if (landuse)
-//        {
-//            imageName = [NSString stringWithFormat:@"landuse_%@.png",landuse];
-//        }
-//        else if (place)
-//        {
-//            //ez kiírja a település nevét
-//            //            NSString* name = [node.tags valueForKey:@"name"];
-//            //            [name drawAtPoint:[self realPositionForNode:node] withFont:[UIFont systemFontOfSize:16.0]];
-//            
-//            imageName = [NSString stringWithFormat:@"place_%@.png",place];
-//        }
-//        else if (power)
-//        {
-//            imageName = [NSString stringWithFormat:@"power_%@.png",power];
-//        }
-//        else if (highway)
-//        {
-//            imageName = [NSString stringWithFormat:@"highway_%@.png",highway];
-//        }
-//        else if (railway)
-//        {
-//            imageName = [NSString stringWithFormat:@"railway_%@.png",railway];
-//        }
-//        else if (shop)
-//        {
-//            imageName = [NSString stringWithFormat:@"shop_%@.png",shop];
-//        }
-//        else if (leisure)
-//        {
-//            imageName = [NSString stringWithFormat:@"leisure_%@.png",leisure];
-//        }
-//        else if (historic)
-//        {
-//            imageName = [NSString stringWithFormat:@"historic_%@.png",historic];
-//        }
-//        else if (aeroway)
-//        {
-//            imageName = [NSString stringWithFormat:@"aeroway_%@.png",aeroway];
-//        }
-//        else if (amenity)
-//        {
-//            imageName = [NSString stringWithFormat:@"amenity_%@.png",amenity];
-//        }
-        
-        
-        if (imageName)
-        {
-            UIImageView* imageViewForPointObject = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
-            [imageViewForPointObject setCenter:[self realPositionForNode:node]];
-            [imageViewForPointObject setUserInteractionEnabled:YES];
-            
-            [pointObjectsLayerView addSubview:imageViewForPointObject];
-            
-            [imageViewForPointObject release];
-        }
+        [_pointObjectsLayerView release];
     }
     
-    [pointObjectsLayerView release];
+    _pointObjectsLayerView = [[UIView alloc] initWithFrame:self.bounds];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"ParserDidEndDocumentNotification" object:nil userInfo:nil];
+    [self addSubview:_pointObjectsLayerView];
     
+    for (MZNode* node in cm.actualPointObjects)
+    {
+        //get the image name of the point object
+        NSString* type = [cm typeNameInServerRepresentationForNode:node];
+        NSString* subType = [cm subTypeNameInServerRepresentationForNode:node];
+        
+        NSString* imageName = [NSString stringWithFormat:@"%@_%@.png", type ,subType];
+        
+        UIImageView* imageViewForPointObject = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
+        
+        [imageViewForPointObject setCenter:[self realPositionForNode:node]];
+        [imageViewForPointObject setUserInteractionEnabled:YES];
+        [imageViewForPointObject setTag:[node.nodeid integerValue]];
+        
+        [_pointObjectsLayerView addSubview:imageViewForPointObject];
+        
+        [imageViewForPointObject release];
+    }
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
@@ -539,95 +457,6 @@
     
     //egyelőre csak a városnevet csapatjuk ki (még lehetne optimalizálni ezt a részt)
     [[UIColor blackColor] set];
-
-    
-//    for (MZNode* node in _pointObjects)
-//    {
-//        NSString* tourism = [node.tags valueForKey:@"tourism"];
-//        NSString* emergency = [node.tags valueForKey:@"emergency"];
-//        NSString* manMade = [node.tags valueForKey:@"man_made"];
-//        NSString* barrier = [node.tags valueForKey:@"barrier"];
-//        NSString* landuse = [node.tags valueForKey:@"landuse"];
-//        NSString* place = [node.tags valueForKey:@"place"];
-//        NSString* power = [node.tags valueForKey:@"power"];
-//        NSString* highway = [node.tags valueForKey:@"highway"];
-//        NSString* railway = [node.tags valueForKey:@"railway"];
-//        NSString* shop = [node.tags valueForKey:@"shop"];
-//        NSString* leisure = [node.tags valueForKey:@"leisure"];
-//        NSString* historic = [node.tags valueForKey:@"historic"];
-//        NSString* aeroway = [node.tags valueForKey:@"aeroway"];
-//        NSString* amenity = [node.tags valueForKey:@"amenity"];
-//        
-//        
-//        NSString* imageName = nil;
-//        
-//        if (tourism)
-//        {
-//            imageName = [NSString stringWithFormat:@"tourism_%@.png",tourism];
-//        }
-//        else if (emergency)
-//        {
-//            imageName = [NSString stringWithFormat:@"emergency_%@.png",emergency];
-//        }
-//        else if (manMade)
-//        {
-//            imageName = [NSString stringWithFormat:@"man_made_%@.png",manMade];
-//        }
-//        else if (barrier)
-//        {
-//            imageName = [NSString stringWithFormat:@"barrier_%@.png",barrier];
-//        }
-//        else if (landuse)
-//        {
-//            imageName = [NSString stringWithFormat:@"landuse_%@.png",landuse];
-//        }
-//        else if (place)
-//        {
-//            //ez kiírja a település nevét
-//            //            NSString* name = [node.tags valueForKey:@"name"];
-//            //            [name drawAtPoint:[self realPositionForNode:node] withFont:[UIFont systemFontOfSize:16.0]];
-//            
-//            imageName = [NSString stringWithFormat:@"place_%@.png",place];
-//        }
-//        else if (power)
-//        {
-//            imageName = [NSString stringWithFormat:@"power_%@.png",power];
-//        }
-//        else if (highway)
-//        {
-//            imageName = [NSString stringWithFormat:@"highway_%@.png",highway];
-//        }
-//        else if (railway)
-//        {
-//            imageName = [NSString stringWithFormat:@"railway_%@.png",railway];
-//        }
-//        else if (shop)
-//        {
-//            imageName = [NSString stringWithFormat:@"shop_%@.png",shop];
-//        }
-//        else if (leisure)
-//        {
-//            imageName = [NSString stringWithFormat:@"leisure_%@.png",leisure];
-//        }
-//        else if (historic)
-//        {
-//            imageName = [NSString stringWithFormat:@"historic_%@.png",historic];
-//        }
-//        else if (aeroway)
-//        {
-//            imageName = [NSString stringWithFormat:@"aeroway_%@.png",aeroway];
-//        }
-//        else if (amenity)
-//        {
-//            imageName = [NSString stringWithFormat:@"amenity_%@.png",amenity];
-//        }
-//        
-//        
-//        if (imageName)
-//        {
-//            [[UIImage imageNamed:imageName] drawAtPoint:[self realPositionForNode:node]];
-//        }
-//    }
     
 //    for (NSString* nodeID in _nodes) 
 //    {
@@ -674,8 +503,44 @@
     return [retVal autorelease];
 }
 
+- (void)deleteNodeFromMap:(NSNotification*)aNotif
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    NSLog(@"kapott node: %@",((MZNode*)[aNotif object]).tags);
+    
+    MZNode* deletedNode = (MZNode*)[aNotif object];
+    
+    for (UIView* v in _pointObjectsLayerView.subviews)
+    {
+        if (v.tag == [deletedNode.nodeid integerValue])
+        {
+            [v removeFromSuperview];
+            break;
+        }
+    }
+    
+    [self setNeedsDisplay];
+}
+
+- (void)addNodeToTheMap:(NSNotification*)aNotif
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+}
+
+- (void)updateNodeOnTheMap:(NSNotification*)aNotif
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+}
+
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    if (_pointObjectsLayerView)
+    {
+        [_pointObjectsLayerView release];
+    }
+    
     [_nodes release], _nodes = nil;
     
     [_ways release], _ways = nil;

@@ -17,9 +17,12 @@ static MZMapperContentManager* sharedContentManager = nil;
 @synthesize password;
 @synthesize loggedIn;
 @synthesize openStreetBugModeIsActive;
-@synthesize pointObjects;
-@synthesize pointObjectTypes;
+@synthesize handledPointObjects;
+@synthesize handledPointObjectTypes;
 @synthesize actualPointObjects;
+@synthesize deletedPointObjects;
+@synthesize addedPointObjects;
+@synthesize updatedPointObjects;
 
 #pragma mark -
 #pragma mark singleton pattern
@@ -30,7 +33,7 @@ static MZMapperContentManager* sharedContentManager = nil;
     {
         sharedContentManager = [[super allocWithZone:NULL] init];
         
-        sharedContentManager.pointObjectTypes = [NSArray arrayWithObjects:
+        sharedContentManager.handledPointObjectTypes = [NSArray arrayWithObjects:
                                                  @"amenity",
                                                  @"shop",
                                                  @"tourism",
@@ -46,7 +49,7 @@ static MZMapperContentManager* sharedContentManager = nil;
                                                  @"historic",
                                                  @"aeroway", nil];
         
-        sharedContentManager.pointObjects = [NSDictionary dictionaryWithObjectsAndKeys:
+        sharedContentManager.handledPointObjects = [NSDictionary dictionaryWithObjectsAndKeys:
                                              @"shop:supermarket",       [NSNumber numberWithUnsignedInteger:MZMapperPointCategoryShoppingElementSupermarket],
                                              @"shop:convenience",       [NSNumber numberWithUnsignedInteger:MZMapperPointCategoryShoppingElementSmallConvenienceStore],
                                              @"shop:bakery",            [NSNumber numberWithUnsignedInteger:MZMapperPointCategoryShoppingElementBakery],
@@ -113,7 +116,7 @@ static MZMapperContentManager* sharedContentManager = nil;
 {
     NSString* retVal = nil;
     
-    for (NSString* pointObjectType in [MZMapperContentManager sharedContentManager].pointObjectTypes)
+    for (NSString* pointObjectType in [MZMapperContentManager sharedContentManager].handledPointObjectTypes)
     {
         NSString* subType = [aNode.tags valueForKey:pointObjectType];
         
@@ -131,7 +134,7 @@ static MZMapperContentManager* sharedContentManager = nil;
 {
     NSString* retVal = nil;
     
-    for (NSString* pointObjectType in [MZMapperContentManager sharedContentManager].pointObjectTypes)
+    for (NSString* pointObjectType in [MZMapperContentManager sharedContentManager].handledPointObjectTypes)
     {
         NSString* subType = [aNode.tags valueForKey:pointObjectType];
         
@@ -166,9 +169,14 @@ static MZMapperContentManager* sharedContentManager = nil;
     return [[[self serverTypeNameForLogicalType:logicalType] componentsSeparatedByString:@":"] objectAtIndex:1];
 }
 
+- (NSString*)fullTypeNameInServerRepresentationForLogicalType:(NSUInteger)logicalType
+{
+    return [self.handledPointObjects objectForKey:[NSNumber numberWithUnsignedInteger:logicalType]];
+}
+
 - (NSUInteger)logicalTypeForServerTypeName:(NSString*)serverType
 {
-    NSSet *keys = [self.pointObjects keysOfEntriesPassingTest:^(id key, id obj, BOOL *stop) {
+    NSSet *keys = [self.handledPointObjects keysOfEntriesPassingTest:^(id key, id obj, BOOL *stop) {
         return (*stop = [serverType isEqual:obj]);
     }];
     
@@ -177,7 +185,7 @@ static MZMapperContentManager* sharedContentManager = nil;
 
 - (NSString*)serverTypeNameForLogicalType:(NSUInteger)logicalType
 {
-    return [self.pointObjects objectForKey:[NSNumber numberWithUnsignedInteger:logicalType]];
+    return [self.handledPointObjects objectForKey:[NSNumber numberWithUnsignedInteger:logicalType]];
 }
 
 @end

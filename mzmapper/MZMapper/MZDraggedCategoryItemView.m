@@ -12,6 +12,9 @@
 
 @implementation MZDraggedCategoryItemView
 
+@synthesize arrowIsVisible = _arrowIsVisible;
+@synthesize arrowHeight = _arrowHeight;
+
 //designated initializer
 - (id)initWithFrame:(CGRect)frame withImage:(UIImage*)anImage
 {
@@ -23,9 +26,11 @@
         
         _originalSize = frame.size;
         
-        [self setBounds:CGRectMake(0.0, 0.0, frame.size.width, frame.size.height + ARROW_HEIGHT)];
+        _arrowHeight = ARROW_HEIGHT;
         
-        [self setCenter:CGPointMake(self.center.x, self.center.y + ARROW_HEIGHT / 2.0)];
+        //[self setBounds:CGRectMake(0.0, 0.0, frame.size.width, frame.size.height + ARROW_HEIGHT)];
+        
+        //[self setCenter:CGPointMake(self.center.x, self.center.y + ARROW_HEIGHT / 2.0)];
         
         [self setBackgroundColor:[UIColor clearColor]];
     }
@@ -37,6 +42,33 @@
     return [self initWithFrame:frame withImage:nil];
 }
 
+- (void)setArrowIsVisible:(BOOL)arrowIsVisible
+{
+    if (_arrowIsVisible != arrowIsVisible)
+	{
+		_arrowIsVisible = arrowIsVisible;
+        
+        if (_arrowIsVisible)
+        {
+            [self setBounds:CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height + ARROW_HEIGHT)];
+            
+            [self setCenter:CGPointMake(self.center.x, self.center.y + ARROW_HEIGHT / 2.0)];
+        }
+        else
+        {
+            [self setBounds:CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height - ARROW_HEIGHT)];
+            
+            [self setCenter:CGPointMake(self.center.x, self.center.y - ARROW_HEIGHT / 2.0)];
+        }
+		
+		[self setNeedsDisplay];
+	}
+}
+
+- (CGFloat)arrowHeight
+{
+    return _arrowHeight;
+}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -44,19 +76,29 @@
 {
     CGFloat arrowWidth = 16.0;
     
-    //draw image
-    [_image drawInRect:CGRectMake(0.0, 0.0, _originalSize.width, _originalSize.height)];
     
-    //draw little arrow
-    UIBezierPath* bp = [UIBezierPath bezierPath];
-    [bp moveToPoint:CGPointMake((rect.size.width / 2.0) - (arrowWidth / 2.0), _originalSize.height)];
-    [bp addLineToPoint:CGPointMake((rect.size.width / 2.0) + (arrowWidth / 2.0), _originalSize.height)];
-    [bp addLineToPoint:CGPointMake(rect.size.width / 2.0, rect.size.height)];
-    [bp closePath];
     
-    [[UIColor blackColor] set];
-    
-    [bp fill];
+    if (_arrowIsVisible)
+    {
+        //draw image
+        [_image drawInRect:CGRectMake(0.0, 0.0, _originalSize.width, _originalSize.height)];
+        
+        //draw little arrow
+        UIBezierPath* bp = [UIBezierPath bezierPath];
+        [bp moveToPoint:CGPointMake((rect.size.width / 2.0) - (arrowWidth / 2.0), _originalSize.height)];
+        [bp addLineToPoint:CGPointMake((rect.size.width / 2.0) + (arrowWidth / 2.0), _originalSize.height)];
+        [bp addLineToPoint:CGPointMake(rect.size.width / 2.0, rect.size.height)];
+        [bp closePath];
+        
+        [[UIColor blackColor] set];
+        
+        [bp fill];
+    }
+    else
+    {
+        //draw image
+        [_image drawInRect:self.bounds];
+    }
 }
 
 

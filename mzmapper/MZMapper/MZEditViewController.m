@@ -76,6 +76,12 @@
     [_mainScrollView setContentSize:CGSizeMake(_mainScrollView.contentSize.width, _mainScrollView.contentSize.height + aValue)];
 }
 
+- (void)categoryVC:(MZCategoryViewController*)categoryVC addedItemWithType:(NSUInteger)aType toPoint:(CGPoint)aPoint
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    [self.controller addedPointObjectWithType:aType toPoint:aPoint];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

@@ -20,5 +20,6 @@
 @property (nonatomic, assign) MZMapperViewController*   controller;
 
 - (void)categoryVC:(MZCategoryViewController*)categoryVC changedHeightWith:(CGFloat)aValue;
+- (void)categoryVC:(MZCategoryViewController*)categoryVC addedItemWithType:(NSUInteger)aType toPoint:(CGPoint)aPoint;
 
 @end

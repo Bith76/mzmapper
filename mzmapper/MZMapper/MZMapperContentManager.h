@@ -217,9 +217,14 @@ typedef NSUInteger MZMapperPointCategoryEducationElement;
 @property (nonatomic, retain) NSString*         password;
 @property (nonatomic, assign) BOOL              loggedIn;
 @property (nonatomic, assign) BOOL              openStreetBugModeIsActive;
-@property (nonatomic, retain) NSArray*          pointObjectTypes;
-@property (nonatomic, retain) NSDictionary*     pointObjects; //stores point objects which the app should handle; key: logical number representation of the point object type; value: string representation of the point object type
+@property (nonatomic, retain) NSArray*          handledPointObjectTypes;
+
+@property (nonatomic, retain) NSDictionary*     handledPointObjects; //stores point objects which the app should handle; key: logical number representation of the point object type; value: string representation of the point object type
 @property (nonatomic, retain) NSMutableArray*   actualPointObjects; //stores actual point objects from map-slice
+
+@property (nonatomic, retain) NSMutableArray*   deletedPointObjects; //stores deleted point objects; actualPointObjects does not contains these objects
+@property (nonatomic, retain) NSMutableArray*   addedPointObjects; //stores newly added point objects; actualPointObjects contains these objects too
+@property (nonatomic, retain) NSMutableArray*   updatedPointObjects; //stores updated point objects; actualPointObjects contains these objects too
 
 //singleton
 + (MZMapperContentManager*)sharedContentManager;

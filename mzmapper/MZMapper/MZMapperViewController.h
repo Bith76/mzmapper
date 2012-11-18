@@ -40,6 +40,7 @@
     MZLoginViewController*  _loginViewController;
     NSMutableArray*         _openStreetBugs;
     UIView*                 _openStreetBugView;
+    UIView*                 _pointObjectsLayerView;
     UIView*                 _selectedPointObjectBackgroundView;
 }
 
@@ -53,5 +54,10 @@
 - (void)jumpToCoordinateLongitude:(CGFloat)lon latitude:(CGFloat)lat;
 - (void)handleBugTap:(UITapGestureRecognizer*)gesture;
 - (void)refreshOpenStreetBugs;
+
+- (void)addedPointObjectWithType:(NSUInteger)aType toPoint:(CGPoint)aPoint;
+
+- (void)deleteEditedPointObject;
+
 
 @end

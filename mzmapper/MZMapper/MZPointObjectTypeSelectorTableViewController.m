@@ -282,7 +282,7 @@
     NSString* type = [[MZMapperContentManager sharedContentManager] serverTypeNameForLogicalType:logicalTypeForRow];
     NSString* subType = @"";
     
-    for (NSString* pointObjectType in [MZMapperContentManager sharedContentManager].pointObjectTypes)
+    for (NSString* pointObjectType in [MZMapperContentManager sharedContentManager].handledPointObjectTypes)
     {
         if ([type rangeOfString:pointObjectType].location != NSNotFound)
         {

@@ -229,8 +229,6 @@
 		132E97711630838A0075AC7B /* transport_bus_stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E976F1630838A0075AC7B /* transport_bus_stop@2x.png */; };
 		134D52011651B3F0003D49D1 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52001651B3F0003D49D1 /* Node.m */; };
 		134D52051651B410003D49D1 /* Way.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52041651B410003D49D1 /* Way.m */; };
-		134D52091652D8C5003D49D1 /* MZPointObjectEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52071652D8C5003D49D1 /* MZPointObjectEditorViewController.m */; };
-		134D520A1652D8C5003D49D1 /* MZPointObjectEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 134D52081652D8C5003D49D1 /* MZPointObjectEditorViewController.xib */; };
 		134D520F1652FEBC003D49D1 /* blackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D520B1652FEBC003D49D1 /* blackButton.png */; };
 		134D52101652FEBC003D49D1 /* blackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D520C1652FEBC003D49D1 /* blackButton@2x.png */; };
 		134D52111652FEBC003D49D1 /* blackButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D520D1652FEBC003D49D1 /* blackButtonHighlight.png */; };
@@ -341,6 +339,7 @@
 		13E40E2416559AED00678C07 /* orangeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E40E2016559AED00678C07 /* orangeButton@2x.png */; };
 		13E40E2516559AED00678C07 /* orangeButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E40E2116559AED00678C07 /* orangeButtonHighlight.png */; };
 		13E40E2616559AED00678C07 /* orangeButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E40E2216559AED00678C07 /* orangeButtonHighlight@2x.png */; };
+		13E40E3516592E8400678C07 /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E40E3416592E8400678C07 /* XMLWriter.m */; };
 		13F591E21591CD5000929D74 /* MZLoupeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F591E11591CD5000929D74 /* MZLoupeView.m */; };
 		13F598F8161E185F007C44FC /* icon_edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F598F4161E185F007C44FC /* icon_edit.png */; };
 		13F598F9161E185F007C44FC /* icon_edit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F598F5161E185F007C44FC /* icon_edit@2x.png */; };
@@ -608,9 +607,6 @@
 		134D52001651B3F0003D49D1 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
 		134D52031651B410003D49D1 /* Way.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Way.h; sourceTree = "<group>"; };
 		134D52041651B410003D49D1 /* Way.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Way.m; sourceTree = "<group>"; };
-		134D52061652D8C5003D49D1 /* MZPointObjectEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPointObjectEditorViewController.h; sourceTree = "<group>"; };
-		134D52071652D8C5003D49D1 /* MZPointObjectEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZPointObjectEditorViewController.m; sourceTree = "<group>"; };
-		134D52081652D8C5003D49D1 /* MZPointObjectEditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZPointObjectEditorViewController.xib; sourceTree = "<group>"; };
 		134D520B1652FEBC003D49D1 /* blackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackButton.png; sourceTree = "<group>"; };
 		134D520C1652FEBC003D49D1 /* blackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackButton@2x.png"; sourceTree = "<group>"; };
 		134D520D1652FEBC003D49D1 /* blackButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackButtonHighlight.png; sourceTree = "<group>"; };
@@ -737,6 +733,8 @@
 		13E40E2016559AED00678C07 /* orangeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangeButton@2x.png"; sourceTree = "<group>"; };
 		13E40E2116559AED00678C07 /* orangeButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeButtonHighlight.png; sourceTree = "<group>"; };
 		13E40E2216559AED00678C07 /* orangeButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orangeButtonHighlight@2x.png"; sourceTree = "<group>"; };
+		13E40E3316592E8400678C07 /* XMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLWriter.h; sourceTree = "<group>"; };
+		13E40E3416592E8400678C07 /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLWriter.m; sourceTree = "<group>"; };
 		13F591E01591CD5000929D74 /* MZLoupeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZLoupeView.h; sourceTree = "<group>"; };
 		13F591E11591CD5000929D74 /* MZLoupeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZLoupeView.m; sourceTree = "<group>"; };
 		13F598F4161E185F007C44FC /* icon_edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_edit.png; sourceTree = "<group>"; };
@@ -935,9 +933,6 @@
 				13D4814E163436DB00874395 /* MZOpenStreetBugsViewController.h */,
 				13D4814F163436DB00874395 /* MZOpenStreetBugsViewController.m */,
 				130E8E86163B39EB0006BAAB /* MZOpenStreetBugsViewController.xib */,
-				134D52061652D8C5003D49D1 /* MZPointObjectEditorViewController.h */,
-				134D52071652D8C5003D49D1 /* MZPointObjectEditorViewController.m */,
-				134D52081652D8C5003D49D1 /* MZPointObjectEditorViewController.xib */,
 				13E40E0F1655781000678C07 /* MZPointObjectEditorTableViewController.h */,
 				13E40E101655781000678C07 /* MZPointObjectEditorTableViewController.m */,
 				13E40E111655781000678C07 /* MZPointObjectEditorTableViewController.xib */,
@@ -953,6 +948,8 @@
 			children = (
 				13E246D514B383A50087C1AF /* MZDownloader.h */,
 				13E246D614B383A50087C1AF /* MZDownloader.m */,
+				13E40E3316592E8400678C07 /* XMLWriter.h */,
+				13E40E3416592E8400678C07 /* XMLWriter.m */,
 			);
 			name = "Other classes";
 			sourceTree = "<group>";
@@ -1793,7 +1790,6 @@
 				132B40FF1638818E0063C60F /* amenity_hospital@2x.png in Resources */,
 				132B4104163881B00063C60F /* amenity_veterinary.png in Resources */,
 				132B4105163881B00063C60F /* amenity_veterinary@2x.png in Resources */,
-				134D520A1652D8C5003D49D1 /* MZPointObjectEditorViewController.xib in Resources */,
 				134D520F1652FEBC003D49D1 /* blackButton.png in Resources */,
 				134D52101652FEBC003D49D1 /* blackButton@2x.png in Resources */,
 				134D52111652FEBC003D49D1 /* blackButtonHighlight.png in Resources */,
@@ -1896,9 +1892,9 @@
 				13FF31D1164C4BA100A4CFD5 /* Model.xcdatamodeld in Sources */,
 				134D52011651B3F0003D49D1 /* Node.m in Sources */,
 				134D52051651B410003D49D1 /* Way.m in Sources */,
-				134D52091652D8C5003D49D1 /* MZPointObjectEditorViewController.m in Sources */,
 				13E40E121655781000678C07 /* MZPointObjectEditorTableViewController.m in Sources */,
 				13E40E1D1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.m in Sources */,
+				13E40E3516592E8400678C07 /* XMLWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
