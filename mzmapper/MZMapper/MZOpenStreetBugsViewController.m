@@ -10,7 +10,7 @@
 #import "MZMapperViewController.h"
 #import "MZOpenStreetBug.h"
 #import "MZNode.h"
-#import "MZDownloader.h"
+#import "MZRESTRequestManager.h"
 
 @interface MZOpenStreetBugsViewController ()
 
@@ -360,7 +360,7 @@
         
         NSLog(@"url: %@",url);
         
-        MZDownloader* downloader = [[MZDownloader alloc] init];
+        MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
         
         [downloader downloadRequestFromURL:url
                            progressHandler:nil
@@ -425,7 +425,7 @@
         
         NSLog(@"url: %@",url);
         
-        MZDownloader* downloader = [[MZDownloader alloc] init];
+        MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
         
         [downloader downloadRequestFromURL:url
                            progressHandler:nil
@@ -505,7 +505,7 @@
         
         NSLog(@"url: %@",url);
         
-        MZDownloader* downloader = [[MZDownloader alloc] init];
+        MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
         
         [downloader downloadRequestFromURL:url
                            progressHandler:nil
@@ -519,7 +519,7 @@
                                  
                                  NSLog(@"url: %@",url);
                                  
-                                 MZDownloader* downloader = [[MZDownloader alloc] init];
+                                 MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
                                  
                                  [downloader downloadRequestFromURL:url
                                                     progressHandler:nil
@@ -561,7 +561,7 @@
         
         NSLog(@"url: %@",url);
         
-        MZDownloader* downloader = [[MZDownloader alloc] init];
+        MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
         
         [downloader downloadRequestFromURL:url
                            progressHandler:nil

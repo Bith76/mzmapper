@@ -7,7 +7,7 @@
 //
 
 #import "MZLoginViewController.h"
-#import "MZDownloader.h"
+#import "MZRESTRequestManager.h"
 
 @interface MZLoginViewController ()
 
@@ -23,7 +23,7 @@
     if (self) {
         // Custom initialization
         
-        _downloader = [[MZDownloader alloc] init];
+        _downloader = [[MZRESTRequestManager alloc] init];
     }
     return self;
 }

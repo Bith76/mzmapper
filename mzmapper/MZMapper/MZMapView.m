@@ -174,6 +174,7 @@
         _currentNode.latitude = [[attributeDict valueForKey:@"lat"] floatValue];
         _currentNode.longitude = [[attributeDict valueForKey:@"lon"] floatValue];
         _currentNode.nodeid = [attributeDict valueForKey:@"id"];
+        _currentNode.version = [[attributeDict valueForKey:@"version"] intValue];
     }
     else if ([elementName isEqual:@"way"])
     {

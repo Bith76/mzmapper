@@ -14,6 +14,9 @@
 {
     NSString* _headerCellIdentifier;
     NSString* _typeChooserCellIdentifier;
+    NSString* _generalCellIdentifier;
+    
+    NSMutableArray* _content; //contains editable attributes for the given point object from schema
 }
 
 @property (nonatomic, assign) MZMapperViewController*   controller;

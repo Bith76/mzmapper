@@ -16,4 +16,6 @@
 //+ (NSString*)nameOfPointCategoryFoodAndDrinkElement:(MZMapperPointCategoryFoodAndDrinkElement)element;
 //+ (NSString*)nameOfPointCategoryAmenityElement:(MZMapperPointCategoryAmenityElement)element;
 
++ (NSString*)loginPath;
+
 @end

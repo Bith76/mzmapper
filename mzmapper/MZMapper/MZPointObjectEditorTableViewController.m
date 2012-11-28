@@ -37,11 +37,27 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    //register custom cells
     _headerCellIdentifier = @"HeaderCell";
     _typeChooserCellIdentifier = @"TypeChooserCell";
+    _generalCellIdentifier = @"GeneralCell";
     
     [self.tableView registerNib:[UINib nibWithNibName:@"MZPointObjectHeaderCell" bundle:nil] forCellReuseIdentifier:_headerCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:@"MZPointObjectHeaderTypeCell" bundle:nil] forCellReuseIdentifier:_typeChooserCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:@"MZPointObjectGeneralCell" bundle:nil] forCellReuseIdentifier:_generalCellIdentifier];
+    
+    //prepare content
+    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
+    
+    NSDictionary* schemaDictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PointObjectSchemas" ofType:@"plist"]];
+    
+    NSString* typeOfEditedPointObject = [cm typeNameInServerRepresentationForNode:self.editedPointObject];
+    NSString* subTypeOfEditedPointObject = [cm subTypeNameInServerRepresentationForNode:self.editedPointObject];
+    
+    _content = [[NSMutableArray arrayWithArray:[[[schemaDictionary valueForKey:typeOfEditedPointObject] valueForKey:subTypeOfEditedPointObject] valueForKey:@"tags"]] retain];
+    
+    NSLog(@"_content: %@",_content);
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,13 +71,36 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return 1 + [_content count]; //fix header + count of editable attributes
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 2;
+    NSInteger retVal = 1;
+    
+    if (section == 0)
+    {
+        retVal = 2;
+    }
+    else
+    {
+        retVal = 1;
+    }
+    
+    return retVal;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString* retVal = @"";
+    
+    if (section != 0)
+    {
+        retVal = [[_content objectAtIndex:section-1] valueForKey:@"sectionTitle_en"];
+    }
+    
+    return retVal;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -94,6 +133,11 @@
         [typeLabel setText:[NSString nameOfPointCategoryElement:logicalTypeOfEditedPointObject]];
         
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    }
+    else
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:_generalCellIdentifier];
+        UITextView* textView = (UITextView*)[cell viewWithTag:1];
     }
     
     return cell;
@@ -140,6 +184,18 @@
 
 #pragma mark - Table view delegate
 
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSIndexPath* retVal = nil;
+    
+    if (indexPath.section == 0 && indexPath.row == 1)
+    {
+        retVal = indexPath;
+    }
+    
+    return retVal;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
@@ -160,14 +216,21 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 70.0f;
+    CGFloat retVal = 0.0;
+    
+    if (section == [_content count])
+    {
+        retVal = 100.0;
+    }
+    
+    return retVal;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
     UIView* retVal = nil;
     
-    if (section == 0)
+    if (section == [_content count])
     {
         //allocate the view if it doesn't exist yet
         UIView* footerView  = [[UIView alloc] init];
@@ -183,7 +246,7 @@
         [button setBackgroundImage:highlightedButtonBGImage forState:UIControlStateHighlighted];
         
         //the button should be as big as a table view cell
-        [button setFrame:CGRectMake(10.0, 13.0, 240.0, 44.0)];
+        [button setFrame:CGRectMake(10.0, 28.0, 240.0, 44.0)];
         
         //set title, font size and font color
         [button setTitle:@"Delete" forState:UIControlStateNormal];
@@ -243,6 +306,13 @@
     {
         [self.controller deleteEditedPointObject];
     }
+}
+
+- (void)dealloc
+{
+    [_content release], _content = nil;
+    
+    [super dealloc];
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "MZMapperViewController.h"
-#import "MZDownloader.h"
+#import "MZRESTRequestManager.h"
 #import "MZMessageView.h"
 #import "MZPullView.h"
 #import "MZSearchViewController.h"
@@ -17,6 +17,9 @@
 #import "MZOpenStreetBug.h"
 #import "MZNode.h"
 #import "MZPointObjectEditorTableViewController.h"
+#import "MZDraggedCategoryItemView.h"
+#import "MZUploadManager.h"
+#import "MZSavingPanelViewController.h"
 
 @implementation MZMapperViewController
 
@@ -144,12 +147,13 @@
     //
     //    NSLog(@"downloader is called");
     
-    MZDownloader* downloader = [[MZDownloader alloc] init];
+    MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
     
     //GET /api/0.6/map?bbox=left,bottom,right,top
     //ezt ideiglenesen kikapcsolom, ne töltögessen feleslegesen...
 //    [_scrollView updateBackgroundImage];
 //    [[((MZMapperAppDelegate*)[[UIApplication sharedApplication] delegate]) startController] hide];
+    //NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://api.openstreetmap.org/api/0.6/map?bbox=%f,%f,%f,%f",left,bottom,right,top]];
     NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://api06.dev.openstreetmap.org/api/0.6/map?bbox=%f,%f,%f,%f",left,bottom,right,top]];
     
     [downloader downloadRequestFromURL:url
@@ -206,11 +210,16 @@
     
     [_editButton setImage:[UIImage imageNamed:@"icon_save.png"] forState:UIControlStateNormal];
     
+      
+    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
+    
+    cm.deletedPointObjects = [NSMutableArray array];
+    cm.addedPointObjects = [NSMutableArray array];
+    cm.updatedPointObjects = [NSMutableArray array];
+    
     
     //set point objects into editing mode
     _pointObjectsLayerView = [[UIView alloc] initWithFrame:_map.bounds];
-    
-    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
     
     //iterate through the actual point objects
     for (MZNode* node in cm.actualPointObjects)
@@ -239,7 +248,11 @@
     
     [_scrollView addSubview:_pointObjectsLayerView];
     
-    
+    [self showEditVC];
+}
+
+- (void)showEditVC
+{
     //create and pull in the edit view controller
     MZEditViewController* editVC = [[MZEditViewController alloc] initWithNibName:@"MZEditViewController" bundle:nil];
     editVC.controller = self;
@@ -351,7 +364,7 @@
     
     NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://openstreetbugs.schokokeks.org/api/0.1/getBugs?b=%f&t=%f&l=%f&r=%f",bottom,top,left,right]];
     
-    MZDownloader* downloader = [[MZDownloader alloc] init];
+    MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
     
     [_blockView show];
     
@@ -457,14 +470,117 @@
 - (void)addedPointObjectWithType:(NSUInteger)aType toPoint:(CGPoint)aPoint
 {
     NSLog(@"addedpointwittype: %d topoint: %@",aType, NSStringFromCGPoint(aPoint));
+        
+    CGPoint convertedCenterPoint = [self.view.window.rootViewController.view convertPoint:aPoint toView:_pointObjectsLayerView];
+    
+    _imageViewForNewlyAddedPointObject = [[UIImageView alloc] initWithImage:[UIImage imageForPointCategoryElement:aType]];
+    [_imageViewForNewlyAddedPointObject setCenter:convertedCenterPoint];
+    
+    [_pointObjectsLayerView addSubview:_imageViewForNewlyAddedPointObject];
+    
+    //remove dragged view from window
+    for (UIView* subview in self.view.window.rootViewController.view.subviews)
+    {
+        if ([subview isKindOfClass:[MZDraggedCategoryItemView class]])
+        {
+            [subview removeFromSuperview];
+        }
+    }
+    
+    if (_selectedPointObject)
+    {
+        //deselect selected point object
+        [_selectedPointObjectBackgroundView removeFromSuperview];
+        
+        [_selectedPointObjectBackgroundView release];
+    }
+    
+    //select point object
+    CGFloat highlightBorderWidth = 4.0;
+    
+    _selectedPointObjectBackgroundView = [[UIView alloc] initWithFrame:_imageViewForNewlyAddedPointObject.frame];
+    CGRect backgroundViewFrame = _selectedPointObjectBackgroundView.frame;
+    backgroundViewFrame.size.width += highlightBorderWidth * 2.0;
+    backgroundViewFrame.size.height += highlightBorderWidth * 2.0;
+    [_selectedPointObjectBackgroundView setFrame:backgroundViewFrame];
+    [_selectedPointObjectBackgroundView setCenter:_imageViewForNewlyAddedPointObject.center];
+    [_selectedPointObjectBackgroundView.layer setCornerRadius:3.0];
+    [_selectedPointObjectBackgroundView setBackgroundColor:[UIColor colorWithRed:255.0/255.0 green:215.0/255.0 blue:0.0/255.0 alpha:1.0]];
+    
+    [_imageViewForNewlyAddedPointObject.superview insertSubview:_selectedPointObjectBackgroundView belowSubview:_imageViewForNewlyAddedPointObject];
+    
+    
+    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
+    
+    MZNode* addedNode = [_map nodeForRealPosition:convertedCenterPoint];
+    [addedNode setNodeid:[NSString stringWithFormat:@"%d",_indexOfNewlyAddedNode++]];
+    [addedNode.tags setValue:[cm subTypeNameInServerRepresentationForLogicalType:aType] forKey:[cm typeNameInServerRepresentationForLogicalType:aType]];
     
     
     
-//    CGPoint convertedCenterPoint = [self.window.rootViewController.view convertPoint:aPoint toView:_pointObjectsLayerView];
-//
-//    UIImage* ima
-//    [_draggedView setCenter:convertedCenterPoint];
-//    [self.window.rootViewController.view addSubview:_draggedView];
+    
+    [cm.actualPointObjects addObject:addedNode];
+    //[cm.addedPointObjects addObject:addedNode];
+    
+    _selectedPointObject = [addedNode retain];
+    _newlyAddedPointObject = [addedNode retain];
+    
+    MZPointObjectEditorTableViewController* editorTableViewController = [[MZPointObjectEditorTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    [editorTableViewController setEditedPointObject:_selectedPointObject];
+    editorTableViewController.view.layer.cornerRadius = 5.0;
+    [editorTableViewController setTitle:@"Edit"];
+    [editorTableViewController setController:self];
+    
+    
+    UINavigationController* navCont = [[UINavigationController alloc] initWithRootViewController:editorTableViewController];
+    [navCont.navigationBar setBarStyle:UIBarStyleBlack];
+    
+    [editorTableViewController release];
+    
+    UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(editorVCDoneButtonTouched:)];
+    [editorTableViewController.navigationItem setRightBarButtonItem:doneButton];
+    [doneButton release];
+    
+    UIBarButtonItem* cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(editorVCCancelButtonTouched:)];
+    [editorTableViewController.navigationItem setLeftBarButtonItem:cancelButton];
+    [cancelButton release];
+    
+    [_pullView setContentViewController:navCont];
+    
+    [navCont release];
+    
+    [_pullView show];
+}
+
+- (void)deselectSelectedPointObject
+{
+    [_selectedPointObjectBackgroundView removeFromSuperview];
+    [_selectedPointObjectBackgroundView release];
+    
+    [_selectedPointObject release], _selectedPointObject = nil;
+}
+
+- (void)saveChangesToTheOSMServer
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    
+    [_pullView hide];
+    
+    MZSavingPanelViewController* savingPanel = [[MZSavingPanelViewController alloc] initWithNibName:@"MZSavingPanelViewController" bundle:nil];
+    [savingPanel setModalPresentationStyle:UIModalPresentationFormSheet];
+    //[savingPanel setDelegate:self];
+    
+    [self presentViewController:savingPanel animated:YES completion:nil];
+    
+    
+//    MZUploadManager* uploadManager = [[MZUploadManager alloc] init];
+//    [uploadManager setDelegate:self];
+//    
+//    [uploadManager uploadChangesToOSMWithComment:@"aComment"];
+    
+    
+    
+//    [_editButton setImage:[UIImage imageNamed:@"icon_edit.png"] forState:UIControlStateNormal];
 }
 
 #pragma mark -
@@ -479,7 +595,7 @@
     {
         _editingModeIsActive = NO;
         
-        [_editButton setImage:[UIImage imageNamed:@"icon_edit.png"] forState:UIControlStateNormal];
+        [self saveChangesToTheOSMServer];
     }
     else //entering edit mode
     {
@@ -547,14 +663,27 @@
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
     
-    [self enterEditingMode];
+    [self showEditVC];
 }
 
 - (void)editorVCCancelButtonTouched:(id)sender
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
     
-    [self enterEditingMode];
+    [self deselectSelectedPointObject];
+    
+    if (_newlyAddedPointObject)
+    {
+        [[MZMapperContentManager sharedContentManager].actualPointObjects removeObject:_newlyAddedPointObject];
+        
+        [_newlyAddedPointObject release], _newlyAddedPointObject = nil;
+        
+        [_imageViewForNewlyAddedPointObject removeFromSuperview];
+        
+        [_imageViewForNewlyAddedPointObject release], _imageViewForNewlyAddedPointObject = nil;
+    }
+    
+    [self showEditVC];
 }
 
 #pragma mark -
@@ -602,6 +731,11 @@
         
         _waitingForLogInToSwitchToEditingMode = NO;
     }
+}
+
+- (void)uploadManagerDidFinishWithUploading:(MZUploadManager*)uploadManager
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
 }
 
 - (void)handleLongPress:(UILongPressGestureRecognizer*)gesture
@@ -817,7 +951,7 @@
     {
         if ([node.nodeid integerValue] == gesture.view.tag)
         {
-            _selectedPointObject = node;
+            _selectedPointObject = [node retain];
         }
     }
     
@@ -836,9 +970,9 @@
     [editorTableViewController.navigationItem setRightBarButtonItem:doneButton];
     [doneButton release];
     
-    UIBarButtonItem* cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(editorVCCancelButtonTouched:)];
-    [editorTableViewController.navigationItem setLeftBarButtonItem:cancelButton];
-    [cancelButton release];
+//    UIBarButtonItem* cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(editorVCCancelButtonTouched:)];
+//    [editorTableViewController.navigationItem setLeftBarButtonItem:cancelButton];
+//    [cancelButton release];
     
     [_pullView setContentViewController:navCont];
     
@@ -873,12 +1007,7 @@
     
     [_scrollView updateBackgroundImage];
     
-    [_selectedPointObjectBackgroundView removeFromSuperview];
-    [_selectedPointObjectBackgroundView release];
-    
-    [self editorVCCancelButtonTouched:nil];
-    
-    _selectedPointObject = nil;
+    [self editorVCCancelButtonTouched:nil];    
 }
 
 #pragma mark - View lifecycle

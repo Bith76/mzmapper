@@ -3,26 +3,171 @@
 <plist version="1.0">
 <dict>
 	<key>amenity</key>
-	<dict>
-		<key>New item</key>
-		<dict/>
-	</dict>
+	<dict/>
 	<key>shop</key>
 	<dict>
 		<key>alcohol</key>
 		<dict>
-			<key>tabBars</key>
+			<key>tags</key>
 			<array>
 				<dict>
-					<key>title</key>
-					<string>Basic</string>
-					<key>New item</key>
-					<string></string>
+					<key>attrName</key>
+					<string>name</string>
+					<key>cellType</key>
+					<string>GeneralCell</string>
+					<key>sectionTitle_en</key>
+					<string>Name</string>
+					<key>sectionTitle_hu</key>
+					<string>Név</string>
+				</dict>
+				<dict>
+					<key>attrName</key>
+					<string>addr:housename</string>
+					<key>cellType</key>
+					<string>GeneralCell</string>
+					<key>sectionTitle_en</key>
+					<string>Building Name</string>
+					<key>sectionTitle_hu</key>
+					<string>Épület neve</string>
+				</dict>
+				<dict>
+					<key>attrName</key>
+					<string>addr:housenumber</string>
+					<key>cellType</key>
+					<string>GeneralCell</string>
+					<key>sectionTitle_en</key>
+					<string>Postcode</string>
+					<key>sectionTitle_hu</key>
+					<string>Irányítószám</string>
+				</dict>
+				<dict>
+					<key>attrName</key>
+					<string>addr:street</string>
+					<key>cellType</key>
+					<string>GeneralCell</string>
+					<key>sectionTitle_en</key>
+					<string>Street Name</string>
+					<key>sectionTitle_hu</key>
+					<string>Utcanév</string>
+				</dict>
+				<dict>
+					<key>attrName</key>
+					<string>website</string>
+					<key>cellType</key>
+					<string>GeneralCell</string>
+					<key>sectionTitle_en</key>
+					<string>Website</string>
+					<key>sectionTitle_hu</key>
+					<string>Weboldal</string>
+				</dict>
+				<dict>
+					<key>attrName</key>
+					<string>source</string>
+					<key>cellType</key>
+					<string>GeneralCell</string>
+					<key>sectionTitle_en</key>
+					<string>Source</string>
+					<key>sectionTitle_hu</key>
+					<string>Forrás</string>
 				</dict>
 			</array>
 		</dict>
 		<key>supermarket</key>
-		<dict/>
+		<dict>
+			<key>tags</key>
+			<array>
+				<dict>
+					<key>attrName</key>
+					<string>name</string>
+					<key>cellType</key>
+					<string>GeneralCell</string>
+					<key>sectionTitle_en</key>
+					<string>Name</string>
+					<key>sectionTitle_hu</key>
+					<string>Név</string>
+				</dict>
+				<dict>
+					<key>attrName</key>
+					<string>int_name</string>
+					<key>cellType</key>
+					<string>GeneralCell</string>
+					<key>sectionTitle_en</key>
+					<string>International Name</string>
+					<key>sectionTitle_hu</key>
+					<string>Nemzetközi név</string>
+				</dict>
+				<dict>
+					<key>attrName</key>
+					<string>alt_name</string>
+					<key>cellType</key>
+					<string>GeneralCell</string>
+					<key>sectionTitle_en</key>
+					<string>Alternative Name</string>
+					<key>sectionTitle_hu</key>
+					<string>Alternatív név</string>
+				</dict>
+				<dict>
+					<key>attrName</key>
+					<string>old_name</string>
+					<key>cellType</key>
+					<string>GeneralCell</string>
+					<key>sectionTitle_en</key>
+					<string>Historical Name</string>
+					<key>sectionTitle_hu</key>
+					<string>Régi név</string>
+				</dict>
+				<dict>
+					<key>attrName</key>
+					<string>addr:housename</string>
+					<key>cellType</key>
+					<string>GeneralCell</string>
+					<key>sectionTitle_en</key>
+					<string>Building Name</string>
+					<key>sectionTitle_hu</key>
+					<string>Épület neve</string>
+				</dict>
+				<dict>
+					<key>attrName</key>
+					<string>addr:housenumber</string>
+					<key>cellType</key>
+					<string>GeneralCell</string>
+					<key>sectionTitle_en</key>
+					<string>Postcode</string>
+					<key>sectionTitle_hu</key>
+					<string>Irányítószám</string>
+				</dict>
+				<dict>
+					<key>attrName</key>
+					<string>addr:street</string>
+					<key>cellType</key>
+					<string>GeneralCell</string>
+					<key>sectionTitle_en</key>
+					<string>Street Name</string>
+					<key>sectionTitle_hu</key>
+					<string>Utcanév</string>
+				</dict>
+				<dict>
+					<key>attrName</key>
+					<string>website</string>
+					<key>cellType</key>
+					<string>GeneralCell</string>
+					<key>sectionTitle_en</key>
+					<string>Website</string>
+					<key>sectionTitle_hu</key>
+					<string>Weboldal</string>
+				</dict>
+				<dict>
+					<key>attrName</key>
+					<string>source</string>
+					<key>cellType</key>
+					<string>GeneralCell</string>
+					<key>sectionTitle_en</key>
+					<string>Source</string>
+					<key>sectionTitle_hu</key>
+					<string>Forrás</string>
+				</dict>
+			</array>
+		</dict>
 	</dict>
 	<key>tourism</key>
 	<dict/>

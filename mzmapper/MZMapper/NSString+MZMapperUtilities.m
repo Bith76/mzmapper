@@ -649,4 +649,11 @@
 //    return retVal;
 //}
 
+
++ (NSString*)loginPath
+{
+    return @"http://api06.dev.openstreetmap.org/api/0.6";
+    //return @"http://api.openstreetmap.org/api/0.6";
+}
+
 @end

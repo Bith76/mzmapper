@@ -13,6 +13,7 @@
 @synthesize latitude = _latitude;
 @synthesize longitude = _longitude;
 @synthesize nodeid = _nodeid;
+@synthesize version = _version;
 @synthesize tags = _tags;
 
 - (id)init

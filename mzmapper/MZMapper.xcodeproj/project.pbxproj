@@ -42,6 +42,15 @@
 		1319278E154ACE5900998A1B /* mapbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 1319278D154ACE5900998A1B /* mapbackground.png */; };
 		131F07411587CAC40049FED4 /* MZSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131F073F1587CAC40049FED4 /* MZSearchViewController.m */; };
 		131F07431587CAC40049FED4 /* MZSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 131F07401587CAC40049FED4 /* MZSearchViewController.xib */; };
+		13297A36166416E600F9C263 /* MZPointObjectGeneralCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13297A35166416E600F9C263 /* MZPointObjectGeneralCell.xib */; };
+		13297A391665512C00F9C263 /* MZUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 13297A381665512C00F9C263 /* MZUploadManager.m */; };
+		13297A3C16655AC400F9C263 /* NSURL+MZMapperUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 13297A3B16655AC400F9C263 /* NSURL+MZMapperUtilities.m */; };
+		13297A401665952100F9C263 /* MZSavingPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13297A3E1665952000F9C263 /* MZSavingPanelViewController.m */; };
+		13297A411665952100F9C263 /* MZSavingPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13297A3F1665952100F9C263 /* MZSavingPanelViewController.xib */; };
+		13297A461665987600F9C263 /* blueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 13297A421665987500F9C263 /* blueButton.png */; };
+		13297A471665987600F9C263 /* blueButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13297A431665987500F9C263 /* blueButton@2x.png */; };
+		13297A481665987600F9C263 /* blueButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 13297A441665987600F9C263 /* blueButtonHighlight.png */; };
+		13297A491665987600F9C263 /* blueButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13297A451665987600F9C263 /* blueButtonHighlight@2x.png */; };
 		132980CC153CAE2700979414 /* MZPullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 132980CB153CAE2700979414 /* MZPullView.m */; };
 		132980D1153CAEEB00979414 /* wood_pattern.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 132980D0153CAEEB00979414 /* wood_pattern.jpg */; };
 		132B3F8C163854AE0063C60F /* amenity_drinking_water.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B3F8A163854AE0063C60F /* amenity_drinking_water.png */; };
@@ -323,7 +332,7 @@
 		13DFCE43154493CB00CFFBD9 /* icon_current_location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DFCE3F154493CB00CFFBD9 /* icon_current_location@2x.png */; };
 		13DFCE4A1544976C00CFFBD9 /* icon_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DFCE461544976C00CFFBD9 /* icon_search.png */; };
 		13DFCE4B1544976C00CFFBD9 /* icon_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DFCE471544976C00CFFBD9 /* icon_search@2x.png */; };
-		13E246D714B383A50087C1AF /* MZDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E246D614B383A50087C1AF /* MZDownloader.m */; };
+		13E246D714B383A50087C1AF /* MZRESTRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E246D614B383A50087C1AF /* MZRESTRequestManager.m */; };
 		13E26810148D59960016A47B /* MZMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E2680F148D59960016A47B /* MZMapView.m */; };
 		13E26814148D5A650016A47B /* MZNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E26813148D5A650016A47B /* MZNode.m */; };
 		13E26817148D5A790016A47B /* MZWay.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E26816148D5A790016A47B /* MZWay.m */; };
@@ -417,6 +426,18 @@
 		131F073E1587CAC40049FED4 /* MZSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZSearchViewController.h; sourceTree = "<group>"; };
 		131F073F1587CAC40049FED4 /* MZSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSearchViewController.m; sourceTree = "<group>"; };
 		131F07401587CAC40049FED4 /* MZSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZSearchViewController.xib; sourceTree = "<group>"; };
+		13297A35166416E600F9C263 /* MZPointObjectGeneralCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZPointObjectGeneralCell.xib; sourceTree = "<group>"; };
+		13297A371665512C00F9C263 /* MZUploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZUploadManager.h; sourceTree = "<group>"; };
+		13297A381665512C00F9C263 /* MZUploadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZUploadManager.m; sourceTree = "<group>"; };
+		13297A3A16655AC400F9C263 /* NSURL+MZMapperUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+MZMapperUtilities.h"; sourceTree = "<group>"; };
+		13297A3B16655AC400F9C263 /* NSURL+MZMapperUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+MZMapperUtilities.m"; sourceTree = "<group>"; };
+		13297A3D1665952000F9C263 /* MZSavingPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZSavingPanelViewController.h; sourceTree = "<group>"; };
+		13297A3E1665952000F9C263 /* MZSavingPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSavingPanelViewController.m; sourceTree = "<group>"; };
+		13297A3F1665952100F9C263 /* MZSavingPanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZSavingPanelViewController.xib; sourceTree = "<group>"; };
+		13297A421665987500F9C263 /* blueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButton.png; sourceTree = "<group>"; };
+		13297A431665987500F9C263 /* blueButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueButton@2x.png"; sourceTree = "<group>"; };
+		13297A441665987600F9C263 /* blueButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButtonHighlight.png; sourceTree = "<group>"; };
+		13297A451665987600F9C263 /* blueButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueButtonHighlight@2x.png"; sourceTree = "<group>"; };
 		132980CA153CAE2700979414 /* MZPullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPullView.h; sourceTree = "<group>"; };
 		132980CB153CAE2700979414 /* MZPullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZPullView.m; sourceTree = "<group>"; };
 		132980D0153CAEEB00979414 /* wood_pattern.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wood_pattern.jpg; sourceTree = "<group>"; };
@@ -709,8 +730,8 @@
 		13DFCE3F154493CB00CFFBD9 /* icon_current_location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_current_location@2x.png"; sourceTree = "<group>"; };
 		13DFCE461544976C00CFFBD9 /* icon_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_search.png; sourceTree = "<group>"; };
 		13DFCE471544976C00CFFBD9 /* icon_search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_search@2x.png"; sourceTree = "<group>"; };
-		13E246D514B383A50087C1AF /* MZDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZDownloader.h; sourceTree = "<group>"; };
-		13E246D614B383A50087C1AF /* MZDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZDownloader.m; sourceTree = "<group>"; };
+		13E246D514B383A50087C1AF /* MZRESTRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZRESTRequestManager.h; sourceTree = "<group>"; };
+		13E246D614B383A50087C1AF /* MZRESTRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZRESTRequestManager.m; sourceTree = "<group>"; };
 		13E2680E148D59960016A47B /* MZMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMapView.h; sourceTree = "<group>"; };
 		13E2680F148D59960016A47B /* MZMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMapView.m; sourceTree = "<group>"; };
 		13E26812148D5A650016A47B /* MZNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZNode.h; sourceTree = "<group>"; };
@@ -939,6 +960,9 @@
 				13E40E1A1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.h */,
 				13E40E1B1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.m */,
 				13E40E1C1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.xib */,
+				13297A3D1665952000F9C263 /* MZSavingPanelViewController.h */,
+				13297A3E1665952000F9C263 /* MZSavingPanelViewController.m */,
+				13297A3F1665952100F9C263 /* MZSavingPanelViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -946,8 +970,10 @@
 		131F07361587C9F70049FED4 /* Other classes */ = {
 			isa = PBXGroup;
 			children = (
-				13E246D514B383A50087C1AF /* MZDownloader.h */,
-				13E246D614B383A50087C1AF /* MZDownloader.m */,
+				13E246D514B383A50087C1AF /* MZRESTRequestManager.h */,
+				13E246D614B383A50087C1AF /* MZRESTRequestManager.m */,
+				13297A371665512C00F9C263 /* MZUploadManager.h */,
+				13297A381665512C00F9C263 /* MZUploadManager.m */,
 				13E40E3316592E8400678C07 /* XMLWriter.h */,
 				13E40E3416592E8400678C07 /* XMLWriter.m */,
 			);
@@ -959,6 +985,10 @@
 			children = (
 				134D52181654277E003D49D1 /* rubbish.png */,
 				134D52171654277E003D49D1 /* rubbish@2x.png */,
+				13297A421665987500F9C263 /* blueButton.png */,
+				13297A431665987500F9C263 /* blueButton@2x.png */,
+				13297A441665987600F9C263 /* blueButtonHighlight.png */,
+				13297A451665987600F9C263 /* blueButtonHighlight@2x.png */,
 				13E40E1F16559AED00678C07 /* orangeButton.png */,
 				13E40E2016559AED00678C07 /* orangeButton@2x.png */,
 				13E40E2116559AED00678C07 /* orangeButtonHighlight.png */,
@@ -1388,6 +1418,8 @@
 				13D4814A1633FBCD00874395 /* NSString+MZMapperUtilities.m */,
 				136005EF1636C8A100616E9A /* UIImage+MZMapperUtilities.h */,
 				136005F01636C8A100616E9A /* UIImage+MZMapperUtilities.m */,
+				13297A3A16655AC400F9C263 /* NSURL+MZMapperUtilities.h */,
+				13297A3B16655AC400F9C263 /* NSURL+MZMapperUtilities.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -1417,6 +1449,7 @@
 			children = (
 				13E40E1616557A8B00678C07 /* MZPointObjectHeaderCell.xib */,
 				13E40E181655825D00678C07 /* MZPointObjectHeaderTypeCell.xib */,
+				13297A35166416E600F9C263 /* MZPointObjectGeneralCell.xib */,
 			);
 			name = "Custom cells";
 			sourceTree = "<group>";
@@ -1805,6 +1838,12 @@
 				13E40E2416559AED00678C07 /* orangeButton@2x.png in Resources */,
 				13E40E2516559AED00678C07 /* orangeButtonHighlight.png in Resources */,
 				13E40E2616559AED00678C07 /* orangeButtonHighlight@2x.png in Resources */,
+				13297A36166416E600F9C263 /* MZPointObjectGeneralCell.xib in Resources */,
+				13297A411665952100F9C263 /* MZSavingPanelViewController.xib in Resources */,
+				13297A461665987600F9C263 /* blueButton.png in Resources */,
+				13297A471665987600F9C263 /* blueButton@2x.png in Resources */,
+				13297A481665987600F9C263 /* blueButtonHighlight.png in Resources */,
+				13297A491665987600F9C263 /* blueButtonHighlight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1872,7 +1911,7 @@
 				13E26817148D5A790016A47B /* MZWay.m in Sources */,
 				13E26824148EA76F0016A47B /* MZTiledScrollView.m in Sources */,
 				13E26827148EA7B10016A47B /* MZTiledLayerView.m in Sources */,
-				13E246D714B383A50087C1AF /* MZDownloader.m in Sources */,
+				13E246D714B383A50087C1AF /* MZRESTRequestManager.m in Sources */,
 				13B1F4B6153A38AD003B4D06 /* MZMessageView.m in Sources */,
 				132980CC153CAE2700979414 /* MZPullView.m in Sources */,
 				131F07411587CAC40049FED4 /* MZSearchViewController.m in Sources */,
@@ -1895,6 +1934,9 @@
 				13E40E121655781000678C07 /* MZPointObjectEditorTableViewController.m in Sources */,
 				13E40E1D1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.m in Sources */,
 				13E40E3516592E8400678C07 /* XMLWriter.m in Sources */,
+				13297A391665512C00F9C263 /* MZUploadManager.m in Sources */,
+				13297A3C16655AC400F9C263 /* NSURL+MZMapperUtilities.m in Sources */,
+				13297A401665952100F9C263 /* MZSavingPanelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

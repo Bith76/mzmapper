@@ -8,7 +8,7 @@
 
 #import "MZSearchViewController.h"
 #import "MZMapperViewController.h"
-#import "MZDownloader.h"
+#import "MZRESTRequestManager.h"
 #import "MZPlace.h"
 
 @interface MZSearchViewController ()
@@ -64,7 +64,7 @@
     
     NSLog(@"searchurl: %@",url);
     
-    MZDownloader* downloader = [[MZDownloader alloc] init];
+    MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
     
     [downloader downloadRequestFromURL:url 
                        progressHandler:nil 

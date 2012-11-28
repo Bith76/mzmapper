@@ -1,5 +1,5 @@
 //
-//  MZDownloader.h
+//  MZRESTRequestManager.h
 //  MZMapper
 //
 //  Created by Benjamin Salanki on 1/3/12.
@@ -10,7 +10,7 @@
 #define HTTP_STATUS_CODE_AUTHORIZATION_REQUIRED @"401"
 #define HTTP_STATUS_CODE_CONNECTION_FAILED @"911"
 
-@interface MZDownloader : NSObject <NSURLConnectionDelegate>
+@interface MZRESTRequestManager : NSObject <NSURLConnectionDelegate>
 {
     NSMutableData*	_downloadData;
     
@@ -24,6 +24,12 @@
 - (void)downloadRequestFromURL:(NSURL*)requestURL 
                progressHandler:(void(^)(long long totalBytes, long long currentBytes))progressHandler 
              completionHandler:(void(^)(NSString* resultString))completionHandler;
+
+- (void)putRequestToURL:(NSURL*)requestURL body:(NSData*)UTF8EncodedBody completionHandler:(void (^)(id resultObject))completionHandler;
+- (void)deleteRequestToURL:(NSURL*)requestURL body:(NSData*)UTF8EncodedBody completionHandler:(void (^)(id resultObject))completionHandler;
+
+- (void)processPutRequestsForURLs:(NSMutableArray*)urls andBodies:(NSMutableArray*)bodies competionHandler:(void (^)(id resultObject))completionHandler;
+- (void)processDeleteRequestsForURLs:(NSMutableArray*)urls andBodies:(NSMutableArray*)bodies competionHandler:(void (^)(id resultObject))completionHandler;
 
 - (void)cancel;
 

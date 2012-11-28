@@ -8,14 +8,14 @@
 
 
 @protocol MZLoginViewControllerDelegate;
-@class MZDownloader;
+@class MZRESTRequestManager;
 
 @interface MZLoginViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 {
     IBOutlet UITableView*   _tableView;
     IBOutlet UIView*        _loadingBackgroundView;
     
-    MZDownloader*           _downloader;
+    MZRESTRequestManager*   _downloader;
 }
 
 @property (nonatomic, assign) id <MZLoginViewControllerDelegate> delegate;

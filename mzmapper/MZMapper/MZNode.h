@@ -12,12 +12,14 @@
     CGFloat                 _latitude;
     CGFloat                 _longitude;
     NSString*               _nodeid;
+    NSUInteger              _version;
     NSMutableDictionary*    _tags;
 }
 
-@property                       CGFloat                 latitude;
-@property                       CGFloat                 longitude;
-@property (nonatomic, retain)   NSString*               nodeid; 
+@property (nonatomic, assign)   CGFloat                 latitude;
+@property (nonatomic, assign)   CGFloat                 longitude;
+@property (nonatomic, retain)   NSString*               nodeid;
+@property (nonatomic, assign)   NSUInteger              version;
 @property (nonatomic, retain)   NSMutableDictionary*    tags;
 
 @end

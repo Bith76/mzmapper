@@ -11,6 +11,7 @@
 #import "MZTiledScrollView.h"
 #import "MZLoginViewController.h"
 #import "MZBlockView.h"
+#import "MZUploadManager.h"
 
 @class MZMessageView;
 @class MZPullView;
@@ -18,7 +19,7 @@
 @class MZLoginViewController;
 @class MZNode;
 
-@interface MZMapperViewController : UIViewController <CLLocationManagerDelegate, MZLoginViewControllerDelegate>
+@interface MZMapperViewController : UIViewController <CLLocationManagerDelegate, MZLoginViewControllerDelegate, MZUploadManagerDelegate>
 {
     MZTiledScrollView*      _scrollView;
 	MZMapView*              _map;
@@ -26,7 +27,9 @@
     BOOL                    _gettingCurrentLocationIsInProgress;
     BOOL                    _editingModeIsActive;
     BOOL                    _waitingForLogInToSwitchToEditingMode;
+    
     MZNode*                 _selectedPointObject;
+    MZNode*                 _newlyAddedPointObject;
     
     @private
     MZMessageView*          _messageView;
@@ -40,8 +43,11 @@
     MZLoginViewController*  _loginViewController;
     NSMutableArray*         _openStreetBugs;
     UIView*                 _openStreetBugView;
+    
     UIView*                 _pointObjectsLayerView;
     UIView*                 _selectedPointObjectBackgroundView;
+    UIImageView*            _imageViewForNewlyAddedPointObject;
+    NSUInteger              _indexOfNewlyAddedNode;
 }
 
 @property (nonatomic, assign)   BOOL gettingCurrentLocationIsInProgress;

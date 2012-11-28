@@ -11,7 +11,7 @@
 #import "MZTiledScrollView.h"
 #import "MZMapView.h"
 #import "MZTiledLayerView.h"
-#import "MZDownloader.h"
+#import "MZRESTRequestManager.h"
 #import "MZMapperViewController.h"
 
 @implementation MZTiledScrollView
@@ -175,7 +175,7 @@
     CGFloat right = lon + (bigMapWidthInMapCoordinates / 2.0);
     CGFloat top = lat + (bigMapHeightInMapCoordinates / 2.0);
     
-    MZDownloader* downloader = [[MZDownloader alloc] init];
+    MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
     
     //GET /api/0.6/map?bbox=left,bottom,right,top
     //NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://api.openstreetmap.org/api/0.6/map?bbox=%f,%f,%f,%f",left,bottom,right,top]];
@@ -499,7 +499,7 @@
         
         
         
-        MZDownloader* downloader = [[MZDownloader alloc] init];
+        MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
         
         //GET /api/0.6/map?bbox=left,bottom,right,top
         //NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://api.openstreetmap.org/api/0.6/map?bbox=%f,%f,%f,%f",left,bottom,right,top]];

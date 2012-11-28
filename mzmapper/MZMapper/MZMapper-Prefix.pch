@@ -16,6 +16,7 @@
     #import "MZMapperContentManager.h"
     #import "NSString+MZMapperUtilities.h"
     #import "UIImage+MZMapperUtilities.h"
+    #import "NSURL+MZMapperUtilities.h"
 #endif
 
 #define ShowNetworkActivityIndicator() [UIApplication sharedApplication].networkActivityIndicatorVisible = YES
