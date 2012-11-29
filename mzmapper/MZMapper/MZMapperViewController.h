@@ -12,14 +12,16 @@
 #import "MZLoginViewController.h"
 #import "MZBlockView.h"
 #import "MZUploadManager.h"
+#import "MZSavingPanelViewController.h"
 
 @class MZMessageView;
 @class MZPullView;
 @class MZLoupeView;
 @class MZLoginViewController;
 @class MZNode;
+@class MZPointObjectEditorTableViewController;
 
-@interface MZMapperViewController : UIViewController <CLLocationManagerDelegate, MZLoginViewControllerDelegate, MZUploadManagerDelegate>
+@interface MZMapperViewController : UIViewController <CLLocationManagerDelegate, MZLoginViewControllerDelegate, MZUploadManagerDelegate, MZSavingPanelViewControllerDelegate>
 {
     MZTiledScrollView*      _scrollView;
 	MZMapView*              _map;
@@ -30,6 +32,7 @@
     
     MZNode*                 _selectedPointObject;
     MZNode*                 _newlyAddedPointObject;
+    MZPointObjectEditorTableViewController* _editorTableViewController;
     
     @private
     MZMessageView*          _messageView;
@@ -51,6 +54,7 @@
 }
 
 @property (nonatomic, assign)   BOOL gettingCurrentLocationIsInProgress;
+@property (nonatomic, assign)   BOOL editingModeIsActive;
 @property (nonatomic, retain)   MZNode* selectedPointObject;
 
 - (void)showMessageViewWithMessage:(NSString*)message;

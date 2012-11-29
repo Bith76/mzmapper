@@ -14,6 +14,8 @@
 
 @implementation MZSavingPanelViewController
 
+@synthesize delegate = _delegate;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -46,16 +48,21 @@
 - (IBAction)okButtonTouched:(id)sender
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(savingPanelViewControllerWillSave:withComment:)])
+    {
+        [_delegate savingPanelViewControllerWillSave:self withComment:_textView.text];
+    }
 }
 
 - (IBAction)cancelButtonTouched:(id)sender
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
     
-//    if (_delegate && [_delegate respondsToSelector:@selector(loginViewControllerWillDismiss:)])
-//    {
-//        [_delegate loginViewControllerWillDismiss:self];
-//    }
+    if (_delegate && [_delegate respondsToSelector:@selector(savingPanelViewControllerWillDismiss:)])
+    {
+        [_delegate savingPanelViewControllerWillDismiss:self];
+    }
 }
 
 /*

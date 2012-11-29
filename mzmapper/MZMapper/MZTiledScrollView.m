@@ -45,6 +45,9 @@
     self.contentSize = CGSizeMake(self.bounds.size.width * 3.0, self.bounds.size.height * 3.0);
     self.contentInset = UIEdgeInsetsMake(self.bounds.size.height, self.bounds.size.width, self.bounds.size.height, self.bounds.size.width);
     self.contentOffset = CGPointMake(self.bounds.size.width, self.bounds.size.height);
+    self.showsHorizontalScrollIndicator = NO;
+    self.showsVerticalScrollIndicator = NO;
+    self.bounces = NO;
     self.scrollsToTop = NO;
     
     UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
@@ -294,27 +297,31 @@
     [super layoutSubviews];
     
     
-    // recenterIfNecessary method sets the _recenteredXTimes and _recenteredYTimes variables
-    [self recenterIfNecessary];
-    
-    if (_recenteredXTimes || _recenteredYTimes) 
+    if (!_controller.editingModeIsActive)
     {
-        _outOfBounds = YES;
+        // recenterIfNecessary method sets the _recenteredXTimes and _recenteredYTimes variables
+        [self recenterIfNecessary];
         
-        [_mapBackground setHidden:YES];
-    }
-    else 
-    {
-        // observe just the simple borders
-        if (self.contentOffset.x < 0.0 || self.contentOffset.x > 2.0 * self.bounds.size.width || self.contentOffset.y < 0.0 || self.contentOffset.y > 2.0 * self.bounds.size.height) 
+        if (_recenteredXTimes || _recenteredYTimes)
         {
             _outOfBounds = YES;
+            
+            [_mapBackground setHidden:YES];
         }
-        else 
+        else
         {
-            _outOfBounds = NO;
+            // observe just the simple borders
+            if (self.contentOffset.x < 0.0 || self.contentOffset.x > 2.0 * self.bounds.size.width || self.contentOffset.y < 0.0 || self.contentOffset.y > 2.0 * self.bounds.size.height)
+            {
+                _outOfBounds = YES;
+            }
+            else
+            {
+                _outOfBounds = NO;
+            }
         }
     }
+    
     
     
     
@@ -452,7 +459,7 @@
     NSLog(@"ujra kell rajzolnunk: %@",_outOfBounds?@"YES":@"NO");
     //NSLog(@"scrolledDistance: %@",NSStringFromCGPoint(_scrolledDistance));
     
-    if (_outOfBounds) 
+    if (_outOfBounds && !_controller.editingModeIsActive)
     {
         //kiszámoljuk, hány pixellel került arrébb a nagy térkép originje
         CGFloat bigMapOriginChangeX = 2.0 * _recenteredXTimes * self.bounds.size.width + (self.contentOffset.x - self.bounds.size.width);

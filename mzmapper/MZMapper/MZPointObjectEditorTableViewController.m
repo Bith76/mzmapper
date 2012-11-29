@@ -18,13 +18,19 @@
 
 @synthesize controller, editedPointObject;
 
+- (id)initWithDeleteButton:(BOOL)enableDeleteButton
+{
+    self = [super initWithStyle:UITableViewStyleGrouped];
+    if (self) {
+        _enableDeleteButton = enableDeleteButton;
+    }
+    
+    return self;
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    return [self initWithDeleteButton:NO];
 }
 
 - (void)viewDidLoad
@@ -49,12 +55,43 @@
     //prepare content
     MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
     
-    NSDictionary* schemaDictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PointObjectSchemas" ofType:@"plist"]];
+    NSMutableDictionary* schemaDictionary = [NSMutableDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PointObjectSchemas" ofType:@"plist"]];
     
     NSString* typeOfEditedPointObject = [cm typeNameInServerRepresentationForNode:self.editedPointObject];
     NSString* subTypeOfEditedPointObject = [cm subTypeNameInServerRepresentationForNode:self.editedPointObject];
     
-    _content = [[NSMutableArray arrayWithArray:[[[schemaDictionary valueForKey:typeOfEditedPointObject] valueForKey:subTypeOfEditedPointObject] valueForKey:@"tags"]] retain];
+    //fill content from point object schema
+    NSMutableArray* schema = [NSMutableArray arrayWithArray:[[[schemaDictionary valueForKey:typeOfEditedPointObject] valueForKey:subTypeOfEditedPointObject] valueForKey:@"tags"]];
+    
+    _content = [[NSMutableArray alloc] init];
+    
+    
+    //fill content with values
+    for (NSMutableDictionary* section in schema)
+    {
+        NSString* attributeName = [section valueForKey:@"attrName"];
+        
+        if ([[self.editedPointObject.tags allKeys] containsObject:attributeName])
+        {
+            NSMutableDictionary* sectionWithValue = [section mutableCopy];
+            
+            [sectionWithValue setValue:[self.editedPointObject.tags valueForKey:attributeName] forKey:@"value"];
+            
+            [_content addObject:sectionWithValue];
+            
+            [sectionWithValue release];
+            
+            //save name of the point object
+            if ([attributeName isEqualToString:@"name"])
+            {
+                _nameOfThePointObject = [[self.editedPointObject.tags valueForKey:attributeName] copy];
+            }
+        }
+        else
+        {
+            [_content addObject:section];
+        }
+    }
     
     NSLog(@"_content: %@",_content);
     
@@ -124,7 +161,7 @@
         [imageView setImage:[UIImage imageForPointCategoryElement:logicalTypeOfEditedPointObject]];
         
         UILabel* nameLabel = (UILabel*)[cell viewWithTag:2];
-        [nameLabel setText:[self.editedPointObject.tags valueForKey:@"name"]];
+        [nameLabel setText:_nameOfThePointObject];
     }
     else if (indexPath.section == 0 && indexPath.row == 1)
     {
@@ -137,7 +174,21 @@
     else
     {
         cell = [tableView dequeueReusableCellWithIdentifier:_generalCellIdentifier];
-        UITextView* textView = (UITextView*)[cell viewWithTag:1];
+        UITextField* textField = (UITextField*)[cell viewWithTag:1];
+        
+        [textField addTarget:self action:@selector(updateDataUsingContentsOfTextField:) forControlEvents:UIControlEventEditingChanged];
+        
+        NSString* value = [[_content objectAtIndex:indexPath.section - 1] valueForKey:@"value"];
+        
+        if (value)
+        {
+            [textField setText:value];
+        }
+        else
+        {
+            [textField setText:@""];
+        }
+    
     }
     
     return cell;
@@ -218,7 +269,7 @@
 {
     CGFloat retVal = 0.0;
     
-    if (section == [_content count])
+    if (section == [_content count] && _enableDeleteButton)
     {
         retVal = 100.0;
     }
@@ -230,7 +281,7 @@
 {
     UIView* retVal = nil;
     
-    if (section == [_content count])
+    if (section == [_content count] && _enableDeleteButton)
     {
         //allocate the view if it doesn't exist yet
         UIView* footerView  = [[UIView alloc] init];
@@ -288,6 +339,44 @@
 }
 
 #pragma mark -
+#pragma mark UITextField methods
+
+- (void)updateDataUsingContentsOfTextField:(id)sender
+{
+    NSLog(@"aktuális szöveg: %@",((UITextField*)sender).text);
+    
+    UITableViewCell* cell = (UITableViewCell*)[[sender superview] superview];
+    
+    NSIndexPath* indexPath = [self.tableView indexPathForCell:cell];
+    
+    //if cell is visible then indexPath is not nil
+    if (indexPath)
+    {
+        NSString* attributeName = [[_content objectAtIndex:indexPath.section - 1] valueForKey:@"attrName"];
+        
+        if ([attributeName isEqualToString:@"name"])
+        {
+            if (_nameOfThePointObject)
+            {
+                [_nameOfThePointObject release], _nameOfThePointObject = nil;
+            }
+            
+            _nameOfThePointObject = [((UITextField*)sender).text copy];
+            
+            [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+        }
+        
+        [[_content objectAtIndex:indexPath.section - 1] setValue:((UITextField*)sender).text forKey:@"value"];
+        
+        //add value to the edited node
+        NSMutableDictionary* newTags = [[self.editedPointObject.tags mutableCopy] autorelease];
+        [newTags setValue:((UITextField*)sender).text forKey:attributeName];
+        [self.editedPointObject setTags:newTags];
+    }
+    
+}
+
+#pragma mark -
 #pragma mark helper methods
 
 - (void)deleteButtonTouched:(UIButton*)sender
@@ -311,6 +400,8 @@
 - (void)dealloc
 {
     [_content release], _content = nil;
+    
+    [_nameOfThePointObject release], _nameOfThePointObject = nil;
     
     [super dealloc];
 }

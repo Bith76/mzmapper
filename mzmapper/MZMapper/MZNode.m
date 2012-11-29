@@ -29,6 +29,25 @@
     return self;
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    id newObject = [[[self class] alloc] init];
+    
+    if (newObject)
+    {
+        // Copy NSObject subclasses
+        [newObject setNodeid:[[self.nodeid copyWithZone:zone] autorelease]];
+        [newObject setTags:[[self.tags copyWithZone:zone] autorelease]];
+        
+        // Set primitives
+        [newObject setLatitude:self.latitude];
+        [newObject setLongitude:self.longitude];
+        [newObject setVersion:self.version];
+    }
+    
+    return newObject;
+}
+
 - (void)dealloc
 {
     [_tags release], _tags = nil;

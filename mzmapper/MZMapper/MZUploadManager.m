@@ -22,6 +22,7 @@
     NSLog(@"törlendő node-ok: %@",cm.deletedPointObjects);
     NSLog(@"módosított node-ok: %@",cm.updatedPointObjects);
     NSLog(@"feltöltendő node-ok: %@",cm.addedPointObjects);
+    NSLog(@"komment a feltöltéshez: %@",aComment);
     
     [MZMapperContentManager sharedContentManager].userName = @"mergl.zalan@stud.u-szeged.hu";
     [MZMapperContentManager sharedContentManager].password = @"jelszavak";
@@ -165,6 +166,11 @@
         if (![resultObject isEqualToString:HTTP_STATUS_CODE_CONNECTION_FAILED])
         {
             NSLog(@"changeset closed");
+            
+            if (_delegate && [_delegate respondsToSelector:@selector(uploadManagerDidFinishWithUploading:)])
+            {
+                [_delegate uploadManagerDidFinishWithUploading:self];
+            }
             
             [self cleanUp];
         }

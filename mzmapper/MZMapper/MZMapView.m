@@ -122,6 +122,14 @@
     
     cm.actualPointObjects = _pointObjects;
     
+    
+    [self updatePointObjectsLayerView];
+}
+
+- (void)updatePointObjectsLayerView
+{
+    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
+    
     if (_pointObjectsLayerView)
     {
         [_pointObjectsLayerView release];
@@ -526,11 +534,18 @@
 - (void)addNodeToTheMap:(NSNotification*)aNotif
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
+    NSLog(@"kapott node: %@",((MZNode*)[aNotif object]).tags);
+    
+    //MZNode* addedNode = (MZNode*)[aNotif object];
+    
+    [self updatePointObjectsLayerView];
 }
 
 - (void)updateNodeOnTheMap:(NSNotification*)aNotif
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
+    
+    [self updatePointObjectsLayerView];
 }
 
 - (void)dealloc

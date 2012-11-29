@@ -19,12 +19,12 @@
 #import "MZPointObjectEditorTableViewController.h"
 #import "MZDraggedCategoryItemView.h"
 #import "MZUploadManager.h"
-#import "MZSavingPanelViewController.h"
 
 @implementation MZMapperViewController
 
 @synthesize gettingCurrentLocationIsInProgress = _gettingCurrentLocationIsInProgress;
 @synthesize selectedPointObject = _selectedPointObject;
+@synthesize editingModeIsActive = _editingModeIsActive;
 
 #pragma mark - View lifecycle
 
@@ -210,13 +210,64 @@
     
     [_editButton setImage:[UIImage imageNamed:@"icon_save.png"] forState:UIControlStateNormal];
     
-      
+    
     MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
     
     cm.deletedPointObjects = [NSMutableArray array];
     cm.addedPointObjects = [NSMutableArray array];
     cm.updatedPointObjects = [NSMutableArray array];
     
+    [self animateButtonsOut];
+    
+    [self updatePointObjectsLayerView];
+    
+    [self showEditVC];
+}
+
+- (void)animateButtonsOut
+{
+    [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+        
+        [UIView animateWithDuration:0.15 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            [_editButton setFrame:_currentLocButton.frame];
+            
+        } completion:^(BOOL finished) {
+            
+        }];
+        
+        [UIView animateWithDuration:0.15 delay:0.05 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            [_openStreetBugButton setFrame:_searchButton.frame];
+        } completion:^(BOOL finished) {
+            
+        }];
+        
+        
+        
+        CGRect searchButtonFrame = _searchButton.frame;
+        searchButtonFrame.origin.y -= 100.0;
+        [_searchButton setFrame:searchButtonFrame];
+        
+        CGRect currentLocButtonFrame = _currentLocButton.frame;
+        currentLocButtonFrame.origin.y -= 100.0;
+        [_currentLocButton setFrame:currentLocButtonFrame];
+        
+        
+        
+    } completion:^(BOOL finished) {
+        ;
+    }];
+}
+
+- (void)updatePointObjectsLayerView
+{
+    if (_pointObjectsLayerView)
+    {
+        [_pointObjectsLayerView removeFromSuperview];
+        
+        [_pointObjectsLayerView release], _pointObjectsLayerView = nil;
+    }
+    
+    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
     
     //set point objects into editing mode
     _pointObjectsLayerView = [[UIView alloc] initWithFrame:_map.bounds];
@@ -247,8 +298,6 @@
     }
     
     [_scrollView addSubview:_pointObjectsLayerView];
-    
-    [self showEditVC];
 }
 
 - (void)showEditVC
@@ -519,30 +568,33 @@
     
     
     
-    [cm.actualPointObjects addObject:addedNode];
+//    [cm.actualPointObjects addObject:addedNode];
     //[cm.addedPointObjects addObject:addedNode];
     
     _selectedPointObject = [addedNode retain];
     _newlyAddedPointObject = [addedNode retain];
     
-    MZPointObjectEditorTableViewController* editorTableViewController = [[MZPointObjectEditorTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-    [editorTableViewController setEditedPointObject:_selectedPointObject];
-    editorTableViewController.view.layer.cornerRadius = 5.0;
-    [editorTableViewController setTitle:@"Edit"];
-    [editorTableViewController setController:self];
+    if (_editorTableViewController)
+    {
+        [_editorTableViewController release], _editorTableViewController = nil;
+    }
+    
+    _editorTableViewController = [[MZPointObjectEditorTableViewController alloc] initWithDeleteButton:NO];
+    [_editorTableViewController setEditedPointObject:_selectedPointObject];
+    _editorTableViewController.view.layer.cornerRadius = 5.0;
+    [_editorTableViewController setTitle:@"Edit"];
+    [_editorTableViewController setController:self];
     
     
-    UINavigationController* navCont = [[UINavigationController alloc] initWithRootViewController:editorTableViewController];
+    UINavigationController* navCont = [[UINavigationController alloc] initWithRootViewController:_editorTableViewController];
     [navCont.navigationBar setBarStyle:UIBarStyleBlack];
     
-    [editorTableViewController release];
-    
     UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(editorVCDoneButtonTouched:)];
-    [editorTableViewController.navigationItem setRightBarButtonItem:doneButton];
+    [_editorTableViewController.navigationItem setRightBarButtonItem:doneButton];
     [doneButton release];
     
     UIBarButtonItem* cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(editorVCCancelButtonTouched:)];
-    [editorTableViewController.navigationItem setLeftBarButtonItem:cancelButton];
+    [_editorTableViewController.navigationItem setLeftBarButtonItem:cancelButton];
     [cancelButton release];
     
     [_pullView setContentViewController:navCont];
@@ -568,19 +620,12 @@
     
     MZSavingPanelViewController* savingPanel = [[MZSavingPanelViewController alloc] initWithNibName:@"MZSavingPanelViewController" bundle:nil];
     [savingPanel setModalPresentationStyle:UIModalPresentationFormSheet];
-    //[savingPanel setDelegate:self];
+    [savingPanel setDelegate:self];
     
     [self presentViewController:savingPanel animated:YES completion:nil];
     
     
-//    MZUploadManager* uploadManager = [[MZUploadManager alloc] init];
-//    [uploadManager setDelegate:self];
-//    
-//    [uploadManager uploadChangesToOSMWithComment:@"aComment"];
-    
-    
-    
-//    [_editButton setImage:[UIImage imageNamed:@"icon_edit.png"] forState:UIControlStateNormal];
+
 }
 
 #pragma mark -
@@ -593,8 +638,6 @@
     
     if (_editingModeIsActive) //saving changed content
     {
-        _editingModeIsActive = NO;
-        
         [self saveChangesToTheOSMServer];
     }
     else //entering edit mode
@@ -662,6 +705,56 @@
 - (void)editorVCDoneButtonTouched:(id)sender
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
+    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
+    
+    if (_newlyAddedPointObject)
+    {
+        NSLog(@"új pont mentése");
+        
+        MZNode* newNode = _editorTableViewController.editedPointObject;
+        
+        for (NSString* key in [newNode.tags allKeys])
+        {
+            NSLog(@"%@ : %@",key, [newNode.tags valueForKey:key]);
+        }
+        
+        [cm.addedPointObjects addObject:newNode];
+        [cm.actualPointObjects addObject:newNode];
+        
+        [self deselectSelectedPointObject];
+        
+        //add image - which represents deleted point object - to the map
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"NodeAddedNotification" object:newNode];
+        
+        [_scrollView updateBackgroundImage];
+        
+        [self updatePointObjectsLayerView];
+        
+        [_newlyAddedPointObject release], _newlyAddedPointObject = nil;
+    }
+    else
+    {
+        NSLog(@"módosított pont mentése");
+        
+        MZNode* updatedNode = _editorTableViewController.editedPointObject;
+        
+        for (NSString* key in [updatedNode.tags allKeys])
+        {
+            NSLog(@"%@ : %@",key, [updatedNode.tags valueForKey:key]);
+        }
+        
+        [cm.updatedPointObjects addObject:updatedNode];
+        [cm.actualPointObjects replaceObjectAtIndex:[cm.actualPointObjects indexOfObject:self.selectedPointObject] withObject:updatedNode];
+        
+        [self deselectSelectedPointObject];
+        
+        //update image - which represents deleted point object - to the map
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"NodeUpdatedNotification" object:updatedNode];
+        
+        [_scrollView updateBackgroundImage];
+        
+        [self updatePointObjectsLayerView];
+    }
     
     [self showEditVC];
 }
@@ -674,7 +767,7 @@
     
     if (_newlyAddedPointObject)
     {
-        [[MZMapperContentManager sharedContentManager].actualPointObjects removeObject:_newlyAddedPointObject];
+//        [[MZMapperContentManager sharedContentManager].actualPointObjects removeObject:_newlyAddedPointObject];
         
         [_newlyAddedPointObject release], _newlyAddedPointObject = nil;
         
@@ -733,9 +826,50 @@
     }
 }
 
+- (void)savingPanelViewControllerWillDismiss:(MZSavingPanelViewController*)savingPanelViewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)savingPanelViewControllerWillSave:(MZSavingPanelViewController*)savingPanelViewController withComment:(NSString*)comment
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+        [_blockView show];
+    
+    }];
+    
+    MZUploadManager* uploadManager = [[MZUploadManager alloc] init];
+    [uploadManager setDelegate:self];
+
+    [uploadManager uploadChangesToOSMWithComment:comment];
+
+    [uploadManager release];
+
+    
+}
+
 - (void)uploadManagerDidFinishWithUploading:(MZUploadManager*)uploadManager
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
+    
+    [_editButton setImage:[UIImage imageNamed:@"icon_edit.png"] forState:UIControlStateNormal];
+    
+    [_blockView performSelector:@selector(hide) withObject:nil afterDelay:0.2];
+    
+    _editingModeIsActive = NO;
+    
+    [_pointObjectsLayerView removeFromSuperview];
+    
+    [_pointObjectsLayerView release], _pointObjectsLayerView = nil;
+    
+    UIAlertView* av = [[UIAlertView alloc] initWithTitle:@"Sikeres mentés" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    [av show];
+    
+    [av release];
 }
 
 - (void)handleLongPress:(UILongPressGestureRecognizer*)gesture
@@ -952,22 +1086,27 @@
         if ([node.nodeid integerValue] == gesture.view.tag)
         {
             _selectedPointObject = [node retain];
+            break;
         }
     }
     
-    MZPointObjectEditorTableViewController* editorTableViewController = [[MZPointObjectEditorTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-    editorTableViewController.view.layer.cornerRadius = 5.0;
-    [editorTableViewController setTitle:@"Edit"];
-    [editorTableViewController setController:self];
-    [editorTableViewController setEditedPointObject:_selectedPointObject];
+    if (_editorTableViewController)
+    {
+        [_editorTableViewController release], _editorTableViewController = nil;
+    }
     
-    UINavigationController* navCont = [[UINavigationController alloc] initWithRootViewController:editorTableViewController];
+    _editorTableViewController = [[MZPointObjectEditorTableViewController alloc] initWithDeleteButton:YES];
+    [_editorTableViewController setEditedPointObject:_selectedPointObject];
+    _editorTableViewController.view.layer.cornerRadius = 5.0;
+    [_editorTableViewController setTitle:@"Edit"];
+    [_editorTableViewController setController:self];
+    
+    
+    UINavigationController* navCont = [[UINavigationController alloc] initWithRootViewController:_editorTableViewController];
     [navCont.navigationBar setBarStyle:UIBarStyleBlack];
     
-    [editorTableViewController release];
-    
     UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(editorVCDoneButtonTouched:)];
-    [editorTableViewController.navigationItem setRightBarButtonItem:doneButton];
+    [_editorTableViewController.navigationItem setRightBarButtonItem:doneButton];
     [doneButton release];
     
 //    UIBarButtonItem* cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(editorVCCancelButtonTouched:)];
@@ -1038,6 +1177,11 @@
 
 - (void)dealloc
 {
+    if (_editorTableViewController)
+    {
+        [_editorTableViewController release], _editorTableViewController = nil;
+    }
+    
     [_map release];
     [_scrollView release];
     [_messageView release];
