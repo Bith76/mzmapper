@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MZMapperApplicationTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>MZMapperLogicTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +28,16 @@
 			<true/>
 		</dict>
 		<key>0543855813F9239A00C123A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>130B659A159B1004000AAE0F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>130B65B1159B104C000AAE0F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

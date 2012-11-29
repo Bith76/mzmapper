@@ -16,7 +16,6 @@
 
 @implementation MZMapperAppDelegate
 
-
 @synthesize window = _window;
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
