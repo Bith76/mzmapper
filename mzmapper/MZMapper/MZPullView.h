@@ -10,11 +10,11 @@
 @interface MZPullView : UIView
 {
     UILabel*        _titleLabel;
-    BOOL			_shown;
     CGFloat			_startingYCoord;
 }
 
 @property (nonatomic, retain) UIViewController* contentViewController;
+@property (nonatomic, assign) BOOL shown;
 
 - (void)show;
 - (void)hide;

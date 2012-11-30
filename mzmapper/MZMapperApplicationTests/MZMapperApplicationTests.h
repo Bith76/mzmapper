@@ -12,6 +12,18 @@
 #import "MZMapperAppDelegate.h"
 #import "MZMapperViewController.h"
 
+// Viewcontrollers with xib
+#import "MZStartViewController.h"
+#import "MZSearchViewController.h"
+#import "MZLoginViewController.h"
+#import "MZAboutViewController.h"
+#import "MZEditViewController.h"
+#import "MZCategoryViewController.h"
+#import "MZOpenStreetBugsViewController.h"
+#import "MZPointObjectEditorTableViewController.h"
+#import "MZPointObjectTypeSelectorTableViewController.h"
+#import "MZSavingPanelViewController.h"
+
 @interface MZMapperApplicationTests : SenTestCase
 {
     @private

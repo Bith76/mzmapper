@@ -7,6 +7,7 @@
 //
 
 #import "MZMapperLogicTests.h"
+#import "MZNode.h"
 
 @implementation MZMapperLogicTests
 
@@ -24,9 +25,21 @@
     [super tearDown];
 }
 
-- (void)testExample
+//- (void)testExample
+//{
+//    STFail(@"Unit tests are not implemented yet in MZMapperLogicTests");
+//}
+
+- (void)testTypeNameInServerRepresentationForNodeMethod
 {
-    STFail(@"Unit tests are not implemented yet in MZMapperLogicTests");
+    MZNode* aNode = [[MZNode alloc] init];
+    [aNode.tags setValue:@"supermarket" forKey:@"shop"];
+    
+    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
+    
+    NSString* type = [cm typeNameInServerRepresentationForNode:aNode];
+    
+    STAssertEquals(type, @"shop", @"");
 }
 
 @end

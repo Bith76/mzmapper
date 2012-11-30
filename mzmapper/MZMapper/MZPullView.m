@@ -11,6 +11,7 @@
 @implementation MZPullView
 
 @synthesize contentViewController = _contentViewController;
+@synthesize shown = _shown;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -183,6 +184,8 @@
 	{
 		[self hide];
 	}
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"PullViewToggledState" object:nil];
 }
 /*
 - (void)didPan:(UIPanGestureRecognizer*)pan

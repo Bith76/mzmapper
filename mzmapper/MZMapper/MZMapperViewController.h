@@ -20,8 +20,9 @@
 @class MZLoginViewController;
 @class MZNode;
 @class MZPointObjectEditorTableViewController;
+@class MZScaleView;
 
-@interface MZMapperViewController : UIViewController <CLLocationManagerDelegate, MZLoginViewControllerDelegate, MZUploadManagerDelegate, MZSavingPanelViewControllerDelegate>
+@interface MZMapperViewController : UIViewController <CLLocationManagerDelegate, MZLoginViewControllerDelegate, MZUploadManagerDelegate, MZSavingPanelViewControllerDelegate, UIAlertViewDelegate>
 {
     MZTiledScrollView*      _scrollView;
 	MZMapView*              _map;
@@ -51,6 +52,7 @@
     UIView*                 _selectedPointObjectBackgroundView;
     UIImageView*            _imageViewForNewlyAddedPointObject;
     NSUInteger              _indexOfNewlyAddedNode;
+    MZScaleView*            _scaleView;
 }
 
 @property (nonatomic, assign)   BOOL gettingCurrentLocationIsInProgress;

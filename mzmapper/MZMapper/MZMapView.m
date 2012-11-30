@@ -62,8 +62,6 @@
         
         _bezierPaths = [[NSMutableArray alloc] init];
         
-        _pointObjects = [[NSMutableArray alloc] init];
-        
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deleteNodeFromMap:) name:@"NodeDeletedNotification" object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addNodeToTheMap:) name:@"NodeAddedNotification" object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateNodeOnTheMap:) name:@"NodeUpdatedNotification" object:nil];
@@ -105,6 +103,15 @@
     {
         [_ways removeAllObjects];
     }
+    
+    if (_pointObjects)
+    {
+        [_pointObjects release];
+    }
+    
+    _pointObjects = [[NSMutableArray alloc] init];
+    
+    [[MZMapperContentManager sharedContentManager].actualPointObjects removeAllObjects];
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser
@@ -132,6 +139,8 @@
     
     if (_pointObjectsLayerView)
     {
+        [_pointObjectsLayerView removeFromSuperview];
+        
         [_pointObjectsLayerView release];
     }
     
@@ -565,7 +574,12 @@
     
     [_bezierPaths release], _bezierPaths = nil;
     
-    [_pointObjects release], _pointObjects = nil;
+    if (_pointObjects)
+    {
+        [_pointObjects release];
+    }
+    
+    _pointObjects = [[NSMutableArray alloc] init];
     
     [super dealloc];
 }

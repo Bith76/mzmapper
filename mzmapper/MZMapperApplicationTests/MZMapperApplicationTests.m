@@ -49,4 +49,21 @@
     STAssertNotNil([mapperViewController.view viewWithTag:6], @"Cannot find the loupe view");
 }
 
+#pragma mark -
+#pragma mark loading from xib tests
+
+- (void)testStartViewControllerLoadingFromXIB
+{
+    MZStartViewController* vc = [[MZStartViewController alloc] initWithNibName:@"MZStartViewController" bundle:nil];
+    
+    STAssertNotNil(vc, @"MZStartViewController could not be loaded");
+}
+
+- (void)testSearchViewControllerLoadingFromXIB
+{
+    MZSearchViewController* vc = [[MZSearchViewController alloc] initWithNibName:@"MZSearchViewController" bundle:nil];
+    
+    STAssertNotNil(vc, @"MZSearchViewController could not be loaded");
+}
+
 @end

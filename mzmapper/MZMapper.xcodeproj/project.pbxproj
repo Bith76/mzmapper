@@ -19,6 +19,86 @@
 		0543857B13F9253400C123A1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543857A13F9253400C123A1 /* QuartzCore.framework */; };
 		0543858A13F9283500C123A1 /* map-1.osm.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0543858913F9283500C123A1 /* map-1.osm.xml */; };
 		0543858D13F92AAF00C123A1 /* map.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0543858C13F92AAF00C123A1 /* map.xml */; };
+		057294261668C73700D1D2A0 /* MZAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 057294241668C73600D1D2A0 /* MZAboutViewController.m */; };
+		057294271668C73700D1D2A0 /* MZAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057294251668C73700D1D2A0 /* MZAboutViewController.xib */; };
+		0572942B1668EF4100D1D2A0 /* MZScaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0572942A1668EF4100D1D2A0 /* MZScaleView.m */; };
+		0572943016690C2E00D1D2A0 /* MZCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C7977F1629E027006C65AA /* MZCategoryViewController.m */; };
+		0572943116690C4900D1D2A0 /* MZMapperContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 135E8B78159CD7930084B918 /* MZMapperContentManager.m */; };
+		0572943216690C4A00D1D2A0 /* MZMapperContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 135E8B78159CD7930084B918 /* MZMapperContentManager.m */; };
+		0572943316690C6700D1D2A0 /* MZMapperAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543854913F9239900C123A1 /* MZMapperAppDelegate.m */; };
+		0572943416690C6700D1D2A0 /* MZMapperAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543854913F9239900C123A1 /* MZMapperAppDelegate.m */; };
+		0572943516690C7500D1D2A0 /* MZMapperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543854F13F9239900C123A1 /* MZMapperViewController.m */; };
+		0572943616690C7500D1D2A0 /* MZMapperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543854F13F9239900C123A1 /* MZMapperViewController.m */; };
+		0572943716690C7900D1D2A0 /* MZTiledScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E26823148EA76F0016A47B /* MZTiledScrollView.m */; };
+		0572943816690C7A00D1D2A0 /* MZTiledScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E26823148EA76F0016A47B /* MZTiledScrollView.m */; };
+		0572943916690C7C00D1D2A0 /* MZTiledLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E26826148EA7B10016A47B /* MZTiledLayerView.m */; };
+		0572943A16690C7D00D1D2A0 /* MZTiledLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E26826148EA7B10016A47B /* MZTiledLayerView.m */; };
+		0572943B16690C8000D1D2A0 /* MZMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E2680F148D59960016A47B /* MZMapView.m */; };
+		0572943C16690C8000D1D2A0 /* MZMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E2680F148D59960016A47B /* MZMapView.m */; };
+		0572943D16690C8400D1D2A0 /* MZNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E26813148D5A650016A47B /* MZNode.m */; };
+		0572943E16690C8500D1D2A0 /* MZNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E26813148D5A650016A47B /* MZNode.m */; };
+		0572943F16690C8700D1D2A0 /* MZWay.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E26816148D5A790016A47B /* MZWay.m */; };
+		0572944016690C8700D1D2A0 /* MZWay.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E26816148D5A790016A47B /* MZWay.m */; };
+		0572944116690C8A00D1D2A0 /* MZPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B515C1158A8C9600A258CD /* MZPlace.m */; };
+		0572944216690C8A00D1D2A0 /* MZPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B515C1158A8C9600A258CD /* MZPlace.m */; };
+		0572944316690C8D00D1D2A0 /* MZOpenStreetBug.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D4816A163536C400874395 /* MZOpenStreetBug.m */; };
+		0572944416690C8D00D1D2A0 /* MZOpenStreetBug.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D4816A163536C400874395 /* MZOpenStreetBug.m */; };
+		0572944516690C9000D1D2A0 /* Way.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52041651B410003D49D1 /* Way.m */; };
+		0572944616690C9000D1D2A0 /* Way.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52041651B410003D49D1 /* Way.m */; };
+		0572944716690C9200D1D2A0 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52001651B3F0003D49D1 /* Node.m */; };
+		0572944816690C9300D1D2A0 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52001651B3F0003D49D1 /* Node.m */; };
+		0572944916690C9600D1D2A0 /* MZStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F5991016236863007C44FC /* MZStartViewController.m */; };
+		0572944A16690C9600D1D2A0 /* MZStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F5991016236863007C44FC /* MZStartViewController.m */; };
+		0572944B16690C9E00D1D2A0 /* MZSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131F073F1587CAC40049FED4 /* MZSearchViewController.m */; };
+		0572944C16690C9E00D1D2A0 /* MZSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131F073F1587CAC40049FED4 /* MZSearchViewController.m */; };
+		0572944D16690CA100D1D2A0 /* MZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130B65C9159B4E60000AAE0F /* MZLoginViewController.m */; };
+		0572944E16690CA100D1D2A0 /* MZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130B65C9159B4E60000AAE0F /* MZLoginViewController.m */; };
+		0572944F16690CA400D1D2A0 /* MZAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 057294241668C73600D1D2A0 /* MZAboutViewController.m */; };
+		0572945016690CA500D1D2A0 /* MZAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 057294241668C73600D1D2A0 /* MZAboutViewController.m */; };
+		0572945116690CA700D1D2A0 /* MZEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BC60E21625FC53001B6DFC /* MZEditViewController.m */; };
+		0572945216690CA800D1D2A0 /* MZEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BC60E21625FC53001B6DFC /* MZEditViewController.m */; };
+		0572945316690CAD00D1D2A0 /* MZOpenStreetBugsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D4814F163436DB00874395 /* MZOpenStreetBugsViewController.m */; };
+		0572945416690CAD00D1D2A0 /* MZOpenStreetBugsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D4814F163436DB00874395 /* MZOpenStreetBugsViewController.m */; };
+		0572945516690CB000D1D2A0 /* MZPointObjectEditorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E40E101655781000678C07 /* MZPointObjectEditorTableViewController.m */; };
+		0572945616690CB100D1D2A0 /* MZPointObjectEditorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E40E101655781000678C07 /* MZPointObjectEditorTableViewController.m */; };
+		0572945716690CB300D1D2A0 /* MZPointObjectTypeSelectorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E40E1B1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.m */; };
+		0572945816690CB400D1D2A0 /* MZPointObjectTypeSelectorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E40E1B1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.m */; };
+		0572945916690CB700D1D2A0 /* MZSavingPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13297A3E1665952000F9C263 /* MZSavingPanelViewController.m */; };
+		0572945A16690CB700D1D2A0 /* MZSavingPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13297A3E1665952000F9C263 /* MZSavingPanelViewController.m */; };
+		0572945B16690CBD00D1D2A0 /* MZMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B1F4B5153A38AD003B4D06 /* MZMessageView.m */; };
+		0572945C16690CBE00D1D2A0 /* MZMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B1F4B5153A38AD003B4D06 /* MZMessageView.m */; };
+		0572945D16690CC000D1D2A0 /* MZBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 130E8E821639BA4B0006BAAB /* MZBlockView.m */; };
+		0572945E16690CC000D1D2A0 /* MZBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 130E8E821639BA4B0006BAAB /* MZBlockView.m */; };
+		0572945F16690CC200D1D2A0 /* MZPullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 132980CB153CAE2700979414 /* MZPullView.m */; };
+		0572946016690CC300D1D2A0 /* MZPullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 132980CB153CAE2700979414 /* MZPullView.m */; };
+		0572946116690CC500D1D2A0 /* MZLoupeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F591E11591CD5000929D74 /* MZLoupeView.m */; };
+		0572946216690CC600D1D2A0 /* MZLoupeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F591E11591CD5000929D74 /* MZLoupeView.m */; };
+		0572946316690CC900D1D2A0 /* MZCategoryItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BC60ED16260F22001B6DFC /* MZCategoryItemView.m */; };
+		0572946416690CCA00D1D2A0 /* MZCategoryItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BC60ED16260F22001B6DFC /* MZCategoryItemView.m */; };
+		0572946516690CCC00D1D2A0 /* MZDraggedCategoryItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13172E9A1644354C00D6CAA9 /* MZDraggedCategoryItemView.m */; };
+		0572946616690CCD00D1D2A0 /* MZDraggedCategoryItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13172E9A1644354C00D6CAA9 /* MZDraggedCategoryItemView.m */; };
+		0572946716690CD000D1D2A0 /* MZScaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0572942A1668EF4100D1D2A0 /* MZScaleView.m */; };
+		0572946816690CD000D1D2A0 /* MZScaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0572942A1668EF4100D1D2A0 /* MZScaleView.m */; };
+		0572946916690CD600D1D2A0 /* MZRESTRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E246D614B383A50087C1AF /* MZRESTRequestManager.m */; };
+		0572946A16690CD700D1D2A0 /* MZRESTRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E246D614B383A50087C1AF /* MZRESTRequestManager.m */; };
+		0572946B16690CD900D1D2A0 /* MZUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 13297A381665512C00F9C263 /* MZUploadManager.m */; };
+		0572946C16690CD900D1D2A0 /* MZUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 13297A381665512C00F9C263 /* MZUploadManager.m */; };
+		0572946D16690CDC00D1D2A0 /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E40E3416592E8400678C07 /* XMLWriter.m */; };
+		0572946E16690CDD00D1D2A0 /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E40E3416592E8400678C07 /* XMLWriter.m */; };
+		0572946F16690CE200D1D2A0 /* NSString+MZMapperUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D4814A1633FBCD00874395 /* NSString+MZMapperUtilities.m */; };
+		0572947016690CE200D1D2A0 /* NSString+MZMapperUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D4814A1633FBCD00874395 /* NSString+MZMapperUtilities.m */; };
+		0572947116690CE500D1D2A0 /* UIImage+MZMapperUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 136005F01636C8A100616E9A /* UIImage+MZMapperUtilities.m */; };
+		0572947216690CE500D1D2A0 /* UIImage+MZMapperUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 136005F01636C8A100616E9A /* UIImage+MZMapperUtilities.m */; };
+		0572947316690CE800D1D2A0 /* NSURL+MZMapperUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 13297A3B16655AC400F9C263 /* NSURL+MZMapperUtilities.m */; };
+		0572947416690CE800D1D2A0 /* NSURL+MZMapperUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 13297A3B16655AC400F9C263 /* NSURL+MZMapperUtilities.m */; };
+		0572947516690E7100D1D2A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543857A13F9253400C123A1 /* QuartzCore.framework */; };
+		0572947616690E8100D1D2A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543853D13F9239900C123A1 /* CoreGraphics.framework */; };
+		0572947716690E9200D1D2A0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13FF31DD164C5D8700A4CFD5 /* CoreData.framework */; };
+		0572947816690E9E00D1D2A0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13945E6D1540554D001B257E /* CoreLocation.framework */; };
+		0572947916690F9F00D1D2A0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13FF31DD164C5D8700A4CFD5 /* CoreData.framework */; };
+		0572947A16690FA600D1D2A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543853D13F9239900C123A1 /* CoreGraphics.framework */; };
+		0572947B16690FAF00D1D2A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543857A13F9253400C123A1 /* QuartzCore.framework */; };
+		0572947C16690FB500D1D2A0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13945E6D1540554D001B257E /* CoreLocation.framework */; };
 		05D79FD1140BB88C008E5960 /* melykut_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D79FD0140BB88C008E5960 /* melykut_01.png */; };
 		05D79FD3140BB959008E5960 /* melykut_01.xml in Resources */ = {isa = PBXBuildFile; fileRef = 05D79FD2140BB959008E5960 /* melykut_01.xml */; };
 		130B659E159B1004000AAE0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543853913F9239900C123A1 /* UIKit.framework */; };
@@ -392,6 +472,11 @@
 		0543857A13F9253400C123A1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0543858913F9283500C123A1 /* map-1.osm.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "map-1.osm.xml"; sourceTree = "<group>"; };
 		0543858C13F92AAF00C123A1 /* map.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map.xml; sourceTree = "<group>"; };
+		057294231668C73500D1D2A0 /* MZAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZAboutViewController.h; sourceTree = "<group>"; };
+		057294241668C73600D1D2A0 /* MZAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZAboutViewController.m; sourceTree = "<group>"; };
+		057294251668C73700D1D2A0 /* MZAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZAboutViewController.xib; sourceTree = "<group>"; };
+		057294291668EF4100D1D2A0 /* MZScaleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZScaleView.h; sourceTree = "<group>"; };
+		0572942A1668EF4100D1D2A0 /* MZScaleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZScaleView.m; sourceTree = "<group>"; };
 		05D79FD0140BB88C008E5960 /* melykut_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = melykut_01.png; sourceTree = "<group>"; };
 		05D79FD2140BB959008E5960 /* melykut_01.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = melykut_01.xml; sourceTree = "<group>"; };
 		130B659B159B1004000AAE0F /* MZMapperLogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MZMapperLogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -791,6 +876,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0572947C16690FB500D1D2A0 /* CoreLocation.framework in Frameworks */,
+				0572947B16690FAF00D1D2A0 /* QuartzCore.framework in Frameworks */,
+				0572947A16690FA600D1D2A0 /* CoreGraphics.framework in Frameworks */,
+				0572947916690F9F00D1D2A0 /* CoreData.framework in Frameworks */,
 				130B65C4159B1170000AAE0F /* SenTestingKit.framework in Frameworks */,
 				130B659E159B1004000AAE0F /* UIKit.framework in Frameworks */,
 				130B659F159B1004000AAE0F /* Foundation.framework in Frameworks */,
@@ -801,6 +890,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0572947816690E9E00D1D2A0 /* CoreLocation.framework in Frameworks */,
+				0572947716690E9200D1D2A0 /* CoreData.framework in Frameworks */,
+				0572947616690E8100D1D2A0 /* CoreGraphics.framework in Frameworks */,
+				0572947516690E7100D1D2A0 /* QuartzCore.framework in Frameworks */,
 				130B65C5159B117D000AAE0F /* SenTestingKit.framework in Frameworks */,
 				130B65B4159B104C000AAE0F /* UIKit.framework in Frameworks */,
 				130B65B5159B104C000AAE0F /* Foundation.framework in Frameworks */,
@@ -945,6 +1038,9 @@
 				130B65C8159B4E60000AAE0F /* MZLoginViewController.h */,
 				130B65C9159B4E60000AAE0F /* MZLoginViewController.m */,
 				130B65CA159B4E60000AAE0F /* MZLoginViewController.xib */,
+				057294231668C73500D1D2A0 /* MZAboutViewController.h */,
+				057294241668C73600D1D2A0 /* MZAboutViewController.m */,
+				057294251668C73700D1D2A0 /* MZAboutViewController.xib */,
 				13BC60E11625FC53001B6DFC /* MZEditViewController.h */,
 				13BC60E21625FC53001B6DFC /* MZEditViewController.m */,
 				13BC60E31625FC53001B6DFC /* MZEditViewController.xib */,
@@ -1407,6 +1503,8 @@
 				13BC60ED16260F22001B6DFC /* MZCategoryItemView.m */,
 				13172E991644354C00D6CAA9 /* MZDraggedCategoryItemView.h */,
 				13172E9A1644354C00D6CAA9 /* MZDraggedCategoryItemView.m */,
+				057294291668EF4100D1D2A0 /* MZScaleView.h */,
+				0572942A1668EF4100D1D2A0 /* MZScaleView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1844,6 +1942,7 @@
 				13297A471665987600F9C263 /* blueButton@2x.png in Resources */,
 				13297A481665987600F9C263 /* blueButtonHighlight.png in Resources */,
 				13297A491665987600F9C263 /* blueButtonHighlight@2x.png in Resources */,
+				057294271668C73700D1D2A0 /* MZAboutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1937,6 +2036,8 @@
 				13297A391665512C00F9C263 /* MZUploadManager.m in Sources */,
 				13297A3C16655AC400F9C263 /* NSURL+MZMapperUtilities.m in Sources */,
 				13297A401665952100F9C263 /* MZSavingPanelViewController.m in Sources */,
+				057294261668C73700D1D2A0 /* MZAboutViewController.m in Sources */,
+				0572942B1668EF4100D1D2A0 /* MZScaleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1946,6 +2047,40 @@
 			files = (
 				130B65A8159B1004000AAE0F /* MZMapperLogicTests.m in Sources */,
 				13C797811629E027006C65AA /* MZCategoryViewController.m in Sources */,
+				0572943216690C4A00D1D2A0 /* MZMapperContentManager.m in Sources */,
+				0572943316690C6700D1D2A0 /* MZMapperAppDelegate.m in Sources */,
+				0572943616690C7500D1D2A0 /* MZMapperViewController.m in Sources */,
+				0572943816690C7A00D1D2A0 /* MZTiledScrollView.m in Sources */,
+				0572943A16690C7D00D1D2A0 /* MZTiledLayerView.m in Sources */,
+				0572943C16690C8000D1D2A0 /* MZMapView.m in Sources */,
+				0572943E16690C8500D1D2A0 /* MZNode.m in Sources */,
+				0572944016690C8700D1D2A0 /* MZWay.m in Sources */,
+				0572944216690C8A00D1D2A0 /* MZPlace.m in Sources */,
+				0572944416690C8D00D1D2A0 /* MZOpenStreetBug.m in Sources */,
+				0572944616690C9000D1D2A0 /* Way.m in Sources */,
+				0572944816690C9300D1D2A0 /* Node.m in Sources */,
+				0572944A16690C9600D1D2A0 /* MZStartViewController.m in Sources */,
+				0572944B16690C9E00D1D2A0 /* MZSearchViewController.m in Sources */,
+				0572944D16690CA100D1D2A0 /* MZLoginViewController.m in Sources */,
+				0572944F16690CA400D1D2A0 /* MZAboutViewController.m in Sources */,
+				0572945116690CA700D1D2A0 /* MZEditViewController.m in Sources */,
+				0572945316690CAD00D1D2A0 /* MZOpenStreetBugsViewController.m in Sources */,
+				0572945516690CB000D1D2A0 /* MZPointObjectEditorTableViewController.m in Sources */,
+				0572945716690CB300D1D2A0 /* MZPointObjectTypeSelectorTableViewController.m in Sources */,
+				0572945916690CB700D1D2A0 /* MZSavingPanelViewController.m in Sources */,
+				0572945B16690CBD00D1D2A0 /* MZMessageView.m in Sources */,
+				0572945D16690CC000D1D2A0 /* MZBlockView.m in Sources */,
+				0572945F16690CC200D1D2A0 /* MZPullView.m in Sources */,
+				0572946116690CC500D1D2A0 /* MZLoupeView.m in Sources */,
+				0572946316690CC900D1D2A0 /* MZCategoryItemView.m in Sources */,
+				0572946516690CCC00D1D2A0 /* MZDraggedCategoryItemView.m in Sources */,
+				0572946716690CD000D1D2A0 /* MZScaleView.m in Sources */,
+				0572946916690CD600D1D2A0 /* MZRESTRequestManager.m in Sources */,
+				0572946B16690CD900D1D2A0 /* MZUploadManager.m in Sources */,
+				0572946D16690CDC00D1D2A0 /* XMLWriter.m in Sources */,
+				0572946F16690CE200D1D2A0 /* NSString+MZMapperUtilities.m in Sources */,
+				0572947116690CE500D1D2A0 /* UIImage+MZMapperUtilities.m in Sources */,
+				0572947316690CE800D1D2A0 /* NSURL+MZMapperUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1954,6 +2089,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				130B65BE159B104C000AAE0F /* MZMapperApplicationTests.m in Sources */,
+				0572943016690C2E00D1D2A0 /* MZCategoryViewController.m in Sources */,
+				0572943116690C4900D1D2A0 /* MZMapperContentManager.m in Sources */,
+				0572943416690C6700D1D2A0 /* MZMapperAppDelegate.m in Sources */,
+				0572943516690C7500D1D2A0 /* MZMapperViewController.m in Sources */,
+				0572943716690C7900D1D2A0 /* MZTiledScrollView.m in Sources */,
+				0572943916690C7C00D1D2A0 /* MZTiledLayerView.m in Sources */,
+				0572943B16690C8000D1D2A0 /* MZMapView.m in Sources */,
+				0572943D16690C8400D1D2A0 /* MZNode.m in Sources */,
+				0572943F16690C8700D1D2A0 /* MZWay.m in Sources */,
+				0572944116690C8A00D1D2A0 /* MZPlace.m in Sources */,
+				0572944316690C8D00D1D2A0 /* MZOpenStreetBug.m in Sources */,
+				0572944516690C9000D1D2A0 /* Way.m in Sources */,
+				0572944716690C9200D1D2A0 /* Node.m in Sources */,
+				0572944916690C9600D1D2A0 /* MZStartViewController.m in Sources */,
+				0572944C16690C9E00D1D2A0 /* MZSearchViewController.m in Sources */,
+				0572944E16690CA100D1D2A0 /* MZLoginViewController.m in Sources */,
+				0572945016690CA500D1D2A0 /* MZAboutViewController.m in Sources */,
+				0572945216690CA800D1D2A0 /* MZEditViewController.m in Sources */,
+				0572945416690CAD00D1D2A0 /* MZOpenStreetBugsViewController.m in Sources */,
+				0572945616690CB100D1D2A0 /* MZPointObjectEditorTableViewController.m in Sources */,
+				0572945816690CB400D1D2A0 /* MZPointObjectTypeSelectorTableViewController.m in Sources */,
+				0572945A16690CB700D1D2A0 /* MZSavingPanelViewController.m in Sources */,
+				0572945C16690CBE00D1D2A0 /* MZMessageView.m in Sources */,
+				0572945E16690CC000D1D2A0 /* MZBlockView.m in Sources */,
+				0572946016690CC300D1D2A0 /* MZPullView.m in Sources */,
+				0572946216690CC600D1D2A0 /* MZLoupeView.m in Sources */,
+				0572946416690CCA00D1D2A0 /* MZCategoryItemView.m in Sources */,
+				0572946616690CCD00D1D2A0 /* MZDraggedCategoryItemView.m in Sources */,
+				0572946816690CD000D1D2A0 /* MZScaleView.m in Sources */,
+				0572946A16690CD700D1D2A0 /* MZRESTRequestManager.m in Sources */,
+				0572946C16690CD900D1D2A0 /* MZUploadManager.m in Sources */,
+				0572946E16690CDD00D1D2A0 /* XMLWriter.m in Sources */,
+				0572947016690CE200D1D2A0 /* NSString+MZMapperUtilities.m in Sources */,
+				0572947216690CE500D1D2A0 /* UIImage+MZMapperUtilities.m in Sources */,
+				0572947416690CE800D1D2A0 /* NSURL+MZMapperUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

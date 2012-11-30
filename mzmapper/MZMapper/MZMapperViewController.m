@@ -19,6 +19,8 @@
 #import "MZPointObjectEditorTableViewController.h"
 #import "MZDraggedCategoryItemView.h"
 #import "MZUploadManager.h"
+#import "MZAboutViewController.h"
+#import "MZScaleView.h"
 
 @implementation MZMapperViewController
 
@@ -57,6 +59,11 @@
         [_scrollView setTag:1];
 	}
     
+    _scaleView = [[MZScaleView alloc] init];
+    [_scaleView setDisplayString:@"x m"];
+    [_scaleView setFrame:CGRectMake(300.0, self.view.bounds.size.height - 30.0, 174.5, 20.0)];
+    [self.view addSubview:_scaleView];
+    [_scaleView release];
     
     _messageView = [[MZMessageView alloc] initWithFrame:CGRectMake(530.0, self.view.bounds.size.height - 50.0, 480.0, 40.0)];
     _pullView = [[MZPullView alloc] initWithFrame:CGRectMake(0.0, 4.0, 300.0, 740.0)];
@@ -66,6 +73,7 @@
     [self.view addSubview:_pullView];
     [_pullView setTag:3];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(adjustScaleView) name:@"PullViewToggledState" object:nil];
     
     _currentLocButton = [[UIButton alloc] initWithFrame:CGRectMake(960.0, 20.0, 44.0, 44.0)];
     _searchButton = [[UIButton alloc] initWithFrame:CGRectMake(908.0, 20.0, 44.0, 44.0)];
@@ -141,6 +149,19 @@
     CGFloat top = _map.maxLatitude + height;
     
     
+    CLLocation* bottomLeftLocation = [[CLLocation alloc] initWithLatitude:bottom longitude:left];
+    CLLocation* bottomRightLocation = [[CLLocation alloc] initWithLatitude:bottom longitude:right];
+    
+    //represent a distance in meters
+    CGFloat distance = [bottomLeftLocation distanceFromLocation:bottomRightLocation];
+    CGFloat mapWidth = _map.frame.size.width;
+    
+    NSLog(@"távolság: %f",distance);
+    NSLog(@"térképszélesség: %f",mapWidth);
+    
+    CGFloat displayableMeters = (distance * _scaleView.frame.size.width) / mapWidth;
+    [_scaleView setDisplayString:[NSString stringWithFormat:@"%.0f m", displayableMeters]];
+    
     
     //    NSLog(@"kezdeti koordinatak: %f,%f,%f,%f",_map.minLongitude,_map.minLatitude,_map.maxLongitude,_map.maxLatitude);
     //    NSLog(@"ezek lettek: %f,%f,%f,%f",left,bottom,right,top);
@@ -167,6 +188,9 @@
                          {
                              [_map setupWithXML:resultString];
                              [_scrollView updateBackgroundImage];
+                             
+                             
+                             [self showAboutVC];
                              
                              [[((MZMapperAppDelegate*)[[UIApplication sharedApplication] delegate]) startController] hide];
                          }
@@ -224,38 +248,84 @@
     [self showEditVC];
 }
 
+- (void)exitFromEditingMode
+{
+    [_editButton setImage:[UIImage imageNamed:@"icon_edit.png"] forState:UIControlStateNormal];
+    
+    [self performSelector:@selector(animateButtonsIn) withObject:nil afterDelay:0.8];
+    
+    _editingModeIsActive = NO;
+    
+    [_pointObjectsLayerView removeFromSuperview];
+    [_pointObjectsLayerView release], _pointObjectsLayerView = nil;
+    
+    //create and set the about view controller
+    MZAboutViewController* aboutVC = [[MZAboutViewController alloc] initWithNibName:@"MZAboutViewController" bundle:nil];
+    
+    [_pullView setContentViewController:aboutVC];
+    
+    [aboutVC release];
+}
+
 - (void)animateButtonsOut
 {
-    [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+    NSLog(@"bugframe: %@",NSStringFromCGRect(_openStreetBugButton.frame));
+        NSLog(@"editframe: %@",NSStringFromCGRect(_editButton.frame));
+    //animate edit button to the right
+    [UIView animateWithDuration:0.15 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        [_editButton setFrame:_currentLocButton.frame];
         
-        [UIView animateWithDuration:0.15 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            [_editButton setFrame:_currentLocButton.frame];
-            
-        } completion:^(BOOL finished) {
-            
-        }];
-        
-        [UIView animateWithDuration:0.15 delay:0.05 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            [_openStreetBugButton setFrame:_searchButton.frame];
-        } completion:^(BOOL finished) {
-            
-        }];
-        
-        
-        
-        CGRect searchButtonFrame = _searchButton.frame;
-        searchButtonFrame.origin.y -= 100.0;
-        [_searchButton setFrame:searchButtonFrame];
-        
+    } completion:nil];
+    
+    //animate open street bugs button to the right
+    [UIView animateWithDuration:0.15 delay:0.05 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        [_openStreetBugButton setFrame:_searchButton.frame];
+    } completion:nil];
+    
+    //animate current loc button out
+    [UIView animateWithDuration:0.15 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         CGRect currentLocButtonFrame = _currentLocButton.frame;
         currentLocButtonFrame.origin.y -= 100.0;
         [_currentLocButton setFrame:currentLocButtonFrame];
-        
-        
-        
-    } completion:^(BOOL finished) {
-        ;
-    }];
+        [_currentLocButton setAlpha:0.0];
+    } completion:nil];
+    
+    //animate search button out
+    [UIView animateWithDuration:0.15 delay:0.05 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        CGRect searchButtonFrame = _searchButton.frame;
+        searchButtonFrame.origin.y -= 100.0;
+        [_searchButton setFrame:searchButtonFrame];
+        [_searchButton setAlpha:0.0];
+    } completion:nil];
+}
+
+- (void)animateButtonsIn
+{
+    //animate current loc button in
+    [UIView animateWithDuration:0.15 delay:0.00 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        [_currentLocButton setFrame:_editButton.frame];
+        [_currentLocButton setAlpha:1.0];
+    } completion:nil];
+    
+    //animate search button in
+    [UIView animateWithDuration:0.15 delay:0.05 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        [_searchButton setFrame:_openStreetBugButton.frame];
+        [_searchButton setAlpha:1.0];
+    } completion:nil];
+    
+    //animate open street bugs button to the left
+    [UIView animateWithDuration:0.15 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        CGRect openStreetBugButtonFrame = _openStreetBugButton.frame;
+        openStreetBugButtonFrame.origin.x = 804.0;
+        [_openStreetBugButton setFrame:openStreetBugButtonFrame];
+    } completion:nil];
+    
+    //animate edit button to the left
+    [UIView animateWithDuration:0.15 delay:0.05 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        CGRect editButtonFrame = _editButton.frame;
+        editButtonFrame.origin.x = 856.0;
+        [_editButton setFrame:editButtonFrame];
+    } completion:nil];
 }
 
 - (void)updatePointObjectsLayerView
@@ -311,6 +381,42 @@
     [editVC release];
     
     [_pullView show];
+}
+
+- (void)showAboutVC
+{
+    //create and pull in the about view controller
+    MZAboutViewController* aboutVC = [[MZAboutViewController alloc] initWithNibName:@"MZAboutViewController" bundle:nil];
+    
+    [_pullView setContentViewController:aboutVC];
+    
+    [aboutVC release];
+    
+    [_pullView show];
+}
+
+- (void)adjustScaleView
+{
+    if (_pullView.shown)
+    {
+        //_pullView animated in so adjust scaleView to get visible
+        
+        [UIView animateWithDuration:0.15 delay:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            CGRect scaleViewFrame = _scaleView.frame;
+            scaleViewFrame.origin.x += 270.0;
+            [_scaleView setFrame:scaleViewFrame];
+        } completion:nil];
+    }
+    else
+    {
+        //_pullView animated out so adjust scaleView to follow it
+        
+        [UIView animateWithDuration:0.15 delay:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            CGRect scaleViewFrame = _scaleView.frame;
+            scaleViewFrame.origin.x -= 270.0;
+            [_scaleView setFrame:scaleViewFrame];
+        } completion:nil];
+    }
 }
 
 //collects bug data from resultString and returns an array which contains MZOpenStreetBug objects
@@ -618,6 +724,8 @@
     
     [_pullView hide];
     
+    [self adjustScaleView];
+    
     MZSavingPanelViewController* savingPanel = [[MZSavingPanelViewController alloc] initWithNibName:@"MZSavingPanelViewController" bundle:nil];
     [savingPanel setModalPresentationStyle:UIModalPresentationFormSheet];
     [savingPanel setDelegate:self];
@@ -743,17 +851,33 @@
             NSLog(@"%@ : %@",key, [updatedNode.tags valueForKey:key]);
         }
         
-        [cm.updatedPointObjects addObject:updatedNode];
-        [cm.actualPointObjects replaceObjectAtIndex:[cm.actualPointObjects indexOfObject:self.selectedPointObject] withObject:updatedNode];
+        NSLog(@"eredeti pont");
+        for (NSString* key in [_selectedPointObject.tags allKeys])
+        {
+            NSLog(@"%@ : %@",key, [_selectedPointObject.tags valueForKey:key]);
+        }
+        
+        
+        
+        
+        if (![updatedNode.tags isEqualToDictionary:_selectedPointObject.tags])
+        {
+            [cm.updatedPointObjects addObject:updatedNode];
+            
+            NSLog(@"self.selectedObject: %@",_selectedPointObject);
+            NSLog(@"actualobjects: %@",cm.actualPointObjects);
+            
+            [cm.actualPointObjects replaceObjectAtIndex:[cm.actualPointObjects indexOfObject:_selectedPointObject] withObject:updatedNode];
+            
+            //update image - which represents deleted point object - to the map
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"NodeUpdatedNotification" object:updatedNode];
+            
+            [_scrollView updateBackgroundImage];
+            
+            [self updatePointObjectsLayerView];
+        }
         
         [self deselectSelectedPointObject];
-        
-        //update image - which represents deleted point object - to the map
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"NodeUpdatedNotification" object:updatedNode];
-        
-        [_scrollView updateBackgroundImage];
-        
-        [self updatePointObjectsLayerView];
     }
     
     [self showEditVC];
@@ -831,6 +955,15 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)savingPanelViewControllerWillCancelEditing:(MZSavingPanelViewController *)savingPanelViewController
+{
+    UIAlertView* av = [[UIAlertView alloc] initWithTitle:@"Biztos?" message:@"Minden el nem mentett változtatás el fog veszni. Biztos, hogy megszakítod a szerkesztést?" delegate:self cancelButtonTitle:@"Nem" otherButtonTitles:@"Igen", nil];
+    
+    [av show];
+    
+    [av release];
+}
+
 - (void)savingPanelViewControllerWillSave:(MZSavingPanelViewController*)savingPanelViewController withComment:(NSString*)comment
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
@@ -855,15 +988,12 @@
 {
     NSLog(@"%s",__PRETTY_FUNCTION__);
     
-    [_editButton setImage:[UIImage imageNamed:@"icon_edit.png"] forState:UIControlStateNormal];
+    
     
     [_blockView performSelector:@selector(hide) withObject:nil afterDelay:0.2];
     
-    _editingModeIsActive = NO;
     
-    [_pointObjectsLayerView removeFromSuperview];
-    
-    [_pointObjectsLayerView release], _pointObjectsLayerView = nil;
+    [self exitFromEditingMode];
     
     UIAlertView* av = [[UIAlertView alloc] initWithTitle:@"Sikeres mentés" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     
@@ -1090,6 +1220,9 @@
         }
     }
     
+    NSLog(@"self.selectedObject: %@",_selectedPointObject);
+    NSLog(@"actualobjects: %@",[MZMapperContentManager sharedContentManager].actualPointObjects);
+    
     if (_editorTableViewController)
     {
         [_editorTableViewController release], _editorTableViewController = nil;
@@ -1149,6 +1282,19 @@
     [self editorVCCancelButtonTouched:nil];    
 }
 
+#pragma mark -
+#pragma mark UIAlertView delegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1)
+    {
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+        [self exitFromEditingMode];
+    }
+}
+
 #pragma mark - View lifecycle
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -1177,6 +1323,8 @@
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
     if (_editorTableViewController)
     {
         [_editorTableViewController release], _editorTableViewController = nil;
@@ -1192,6 +1340,7 @@
     [_openStreetBugButton release];
     [_loupeView release];
     [_blockView release];
+    [_scaleView release];
     
     [_locationManager stopUpdatingLocation];
 	[_locationManager release];

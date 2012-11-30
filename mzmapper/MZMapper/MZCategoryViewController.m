@@ -80,7 +80,7 @@
         case MZMapperPointCategoryAmenity:
         {
             NSUInteger j = 0;
-            for (NSUInteger i = MZMapperPointCategoryAmenityElementUnknown + 1; i < MZMapperPointCategoryAmenityElementCountOfElements - 1; i++, j++)
+            for (NSUInteger i = MZMapperPointCategoryAmenityElementUnknown + 1; i < MZMapperPointCategoryAmenityElementCountOfElements; i++, j++)
             {
                 MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (j * ITEM_HEIGHT), self.view.bounds.size.width, ITEM_HEIGHT)];
                 [itemView setCategoryViewController:self];
@@ -103,7 +103,7 @@
         case MZMapperPointCategoryFoodAndDrink:
         {
             NSUInteger j = 0;
-            for (NSUInteger i = MZMapperPointCategoryFoodAndDrinkElementUnknown + 1; i < MZMapperPointCategoryFoodAndDrinkElementCountOfElements - 1; i++, j++)
+            for (NSUInteger i = MZMapperPointCategoryFoodAndDrinkElementUnknown + 1; i < MZMapperPointCategoryFoodAndDrinkElementCountOfElements; i++, j++)
             {
                 MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (j * ITEM_HEIGHT), self.view.bounds.size.width, ITEM_HEIGHT)];
                 [itemView setCategoryViewController:self];
@@ -119,7 +119,7 @@
         case MZMapperPointCategoryShopping:
         {
             NSUInteger j = 0;
-            for (NSUInteger i = MZMapperPointCategoryShoppingElementUnknown + 1; i < MZMapperPointCategoryShoppingElementCountOfElements - 1; i++, j++)
+            for (NSUInteger i = MZMapperPointCategoryShoppingElementUnknown + 1; i < MZMapperPointCategoryShoppingElementCountOfElements; i++, j++)
             {
                 MZCategoryItemView* itemView = [[MZCategoryItemView alloc] initWithFrame:CGRectMake(0.0, _titleLabel.frame.size.height + (j * ITEM_HEIGHT), self.view.bounds.size.width, ITEM_HEIGHT)];
                 [itemView setCategoryViewController:self];

@@ -13,6 +13,7 @@
 {
     IBOutlet UIButton*      _okButton;
     IBOutlet UIButton*      _cancelButton;
+    IBOutlet UIButton*      _endEditingButton;
     IBOutlet UITextView*    _textView;
 }
 
@@ -20,6 +21,7 @@
 
 - (IBAction)okButtonTouched:(id)sender;
 - (IBAction)cancelButtonTouched:(id)sender;
+- (IBAction)endEditingButtonTouched:(id)sender;
 
 @end
 
@@ -29,5 +31,6 @@
 @optional
 - (void)savingPanelViewControllerWillDismiss:(MZSavingPanelViewController*)savingPanelViewController;
 - (void)savingPanelViewControllerWillSave:(MZSavingPanelViewController*)savingPanelViewController withComment:(NSString*)comment;
+- (void)savingPanelViewControllerWillCancelEditing:(MZSavingPanelViewController*)savingPanelViewController;
 
 @end

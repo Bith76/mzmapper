@@ -43,6 +43,9 @@
     
     [_cancelButton setBackgroundImage:buttonBackgroundImage forState:UIControlStateNormal];
     [_cancelButton setBackgroundImage:highlightedButtonBGImage forState:UIControlStateHighlighted];
+    
+    [_endEditingButton setBackgroundImage:buttonBackgroundImage forState:UIControlStateNormal];
+    [_endEditingButton setBackgroundImage:highlightedButtonBGImage forState:UIControlStateHighlighted];
 }
 
 - (IBAction)okButtonTouched:(id)sender
@@ -62,6 +65,16 @@
     if (_delegate && [_delegate respondsToSelector:@selector(savingPanelViewControllerWillDismiss:)])
     {
         [_delegate savingPanelViewControllerWillDismiss:self];
+    }
+}
+
+- (IBAction)endEditingButtonTouched:(id)sender
+{
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(savingPanelViewControllerWillCancelEditing:)])
+    {
+        [_delegate savingPanelViewControllerWillCancelEditing:self];
     }
 }
 
