@@ -45,7 +45,7 @@
         
         _scrollView.decelerationRate = UIScrollViewDecelerationRateFast;
         
-		_scrollView.maximumZoomScale = 3.5;
+		_scrollView.maximumZoomScale = /*3.5*/1.0; //temporarly disable zooming
 		_scrollView.minimumZoomScale = 1.0;
 		_scrollView.scale = 1.0;
         _scrollView.controller = self;
@@ -174,8 +174,7 @@
     //ezt ideiglenesen kikapcsolom, ne töltögessen feleslegesen...
 //    [_scrollView updateBackgroundImage];
 //    [[((MZMapperAppDelegate*)[[UIApplication sharedApplication] delegate]) startController] hide];
-    //NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://api.openstreetmap.org/api/0.6/map?bbox=%f,%f,%f,%f",left,bottom,right,top]];
-    NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://api06.dev.openstreetmap.org/api/0.6/map?bbox=%f,%f,%f,%f",left,bottom,right,top]];
+    NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"%@/map?bbox=%f,%f,%f,%f",[NSString loginPath],left,bottom,right,top]];
     
     [downloader downloadRequestFromURL:url
                        progressHandler:^(long long totalBytes, long long currentBytes){
@@ -1009,45 +1008,57 @@
     //NSLog(@"loc: %@",NSStringFromCGPoint([gesture locationInView:self.view]));
     
     //NSLog(@"self.view.frame: %@",NSStringFromCGRect(self.view.frame));
-    CGPoint location = [gesture locationInView:self.view];
+    CGPoint locationInVC = [gesture locationInView:self.view];
+    CGPoint locationInPointObjectsLayerView = [gesture locationInView:_pointObjectsLayerView];
     
+    NSLog(@"location: %@",NSStringFromCGPoint(locationInVC));
     if (gesture.state == UIGestureRecognizerStateEnded)
     {
         [_loupeView setHidden:YES];
         
+        UIView* touchedView = [_pointObjectsLayerView hitTest:locationInPointObjectsLayerView withEvent:nil];
+        
+        NSLog(@"touchedview: %@",touchedView);
+        
+        if ([touchedView isMemberOfClass:[UIImageView class]])
+        {
+            [self handlePointObjectTap:[touchedView.gestureRecognizers objectAtIndex:0]];
+        }
+        
+        
         //[_scrollView selectPoint:_loupeView.touchPointInViewToMagnify];
     }
-    else
+    else if (_editingModeIsActive)
     {
         CGFloat sizeOfEnlargedArea = 50.0;
         CGFloat borderWidth = sizeOfEnlargedArea / 2.0;
         
         // Set limiters
-        if (location.x < borderWidth)
+        if (locationInVC.x < borderWidth)
         {
             NSLog(@"védelemx<");
-            location.x = borderWidth;
+            locationInVC.x = borderWidth;
         }
-        if (location.x > self.view.bounds.size.width - borderWidth)
+        if (locationInVC.x > self.view.bounds.size.width - borderWidth)
         {
             NSLog(@"védelemx>");
-            location.x = self.view.bounds.size.width - borderWidth;
+            locationInVC.x = self.view.bounds.size.width - borderWidth;
         }
-        if (location.y < borderWidth)
+        if (locationInVC.y < borderWidth)
         {
             NSLog(@"védelemy<");
-            location.y = borderWidth;
+            locationInVC.y = borderWidth;
         }
-        if (location.y > self.view.bounds.size.height - borderWidth)
+        if (locationInVC.y > self.view.bounds.size.height - borderWidth)
         {
             NSLog(@"védelemy>");
-            location.y = self.view.bounds.size.height - borderWidth;
+            locationInVC.y = self.view.bounds.size.height - borderWidth;
         }
         
         CGPoint offset = _scrollView.contentOffset;
         
-        location.x += offset.x;
-        location.y += offset.y;
+        locationInVC.x += offset.x;
+        locationInVC.y += offset.y;
         
         //        CGPoint offset = _scrollView.contentOffset;
         //
@@ -1070,7 +1081,7 @@
         // Create and show the new image from bitmap data
         //_loupeView.zoomImage = img;
         _loupeView.viewToMagnify = _map;
-        _loupeView.touchPointInViewToMagnify = location;
+        _loupeView.touchPointInViewToMagnify = locationInVC;
         
         // Refresh view
         [_loupeView setNeedsDisplay];

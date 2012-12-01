@@ -33,19 +33,9 @@
             NSMutableArray* categoryItemNames = [NSMutableArray array];
             NSMutableArray* categoryItemImages = [NSMutableArray array];
             
-            
-            if (i == MZMapperPointCategoryShopping)
+            if (i == MZMapperPointCategoryAccomodation)
             {
-                for (NSUInteger j = MZMapperPointCategoryShoppingElementUnknown + 1; j < MZMapperPointCategoryShoppingElementCountOfElements - 1; j++)
-                {
-                    [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
-                    [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
-                    [categoryItemImages addObject:[UIImage imageForPointCategoryElement:j]];
-                }
-            }
-            else if (i == MZMapperPointCategoryFoodAndDrink)
-            {
-                for (NSUInteger j = MZMapperPointCategoryFoodAndDrinkElementUnknown + 1; j < MZMapperPointCategoryFoodAndDrinkElementCountOfElements - 1; j++)
+                for (NSUInteger j = MZMapperPointCategoryAccomodationElementUnknown + 1; j < MZMapperPointCategoryAccomodationElementCountOfElements; j++)
                 {
                     [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
                     [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
@@ -54,7 +44,115 @@
             }
             else if (i == MZMapperPointCategoryAmenity)
             {
-                for (NSUInteger j = MZMapperPointCategoryAmenityElementUnknown + 1; j < MZMapperPointCategoryAmenityElementCountOfElements - 1; j++)
+                for (NSUInteger j = MZMapperPointCategoryAmenityElementUnknown + 1; j < MZMapperPointCategoryAmenityElementCountOfElements; j++)
+                {
+                    [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
+                    [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
+                    [categoryItemImages addObject:[UIImage imageForPointCategoryElement:j]];
+                }
+            }
+            else if (i == MZMapperPointCategoryBarrier)
+            {
+                for (NSUInteger j = MZMapperPointCategoryBarrierElementUnknown + 1; j < MZMapperPointCategoryBarrierElementCountOfElements; j++)
+                {
+                    [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
+                    [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
+                    [categoryItemImages addObject:[UIImage imageForPointCategoryElement:j]];
+                }
+            }
+            else if (i == MZMapperPointCategoryEducation)
+            {
+                for (NSUInteger j = MZMapperPointCategoryEducationElementUnknown + 1; j < MZMapperPointCategoryEducationElementCountOfElements; j++)
+                {
+                    [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
+                    [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
+                    [categoryItemImages addObject:[UIImage imageForPointCategoryElement:j]];
+                }
+            }
+            else if (i == MZMapperPointCategoryEntertainmentArtsCulture)
+            {
+                for (NSUInteger j = MZMapperPointCategoryEntertainmentArtsCultureElementUnknown + 1; j < MZMapperPointCategoryEntertainmentArtsCultureElementCountOfElements; j++)
+                {
+                    [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
+                    [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
+                    [categoryItemImages addObject:[UIImage imageForPointCategoryElement:j]];
+                }
+            }
+            else if (i == MZMapperPointCategoryFoodAndDrink)
+            {
+                for (NSUInteger j = MZMapperPointCategoryFoodAndDrinkElementUnknown + 1; j < MZMapperPointCategoryFoodAndDrinkElementCountOfElements; j++)
+                {
+                    [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
+                    [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
+                    [categoryItemImages addObject:[UIImage imageForPointCategoryElement:j]];
+                }
+            }
+            else if (i == MZMapperPointCategoryHealthCare)
+            {
+                for (NSUInteger j = MZMapperPointCategoryHealthcareElementUnknown + 1; j < MZMapperPointCategoryHealthcareElementCountOfElements; j++)
+                {
+                    [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
+                    [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
+                    [categoryItemImages addObject:[UIImage imageForPointCategoryElement:j]];
+                }
+            }
+            else if (i == MZMapperPointCategoryLanduse)
+            {
+                for (NSUInteger j = MZMapperPointCategoryLanduseElementUnknown + 1; j < MZMapperPointCategoryLanduseElementCountOfElements; j++)
+                {
+                    [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
+                    [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
+                    [categoryItemImages addObject:[UIImage imageForPointCategoryElement:j]];
+                }
+            }
+            else if (i == MZMapperPointCategoryPlaces)
+            {
+                for (NSUInteger j = MZMapperPointCategoryPlacesElementUnknown + 1; j < MZMapperPointCategoryPlacesElementCountOfElements; j++)
+                {
+                    [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
+                    [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
+                    [categoryItemImages addObject:[UIImage imageForPointCategoryElement:j]];
+                }
+            }
+            else if (i == MZMapperPointCategoryPower)
+            {
+                for (NSUInteger j = MZMapperPointCategoryPowerElementUnknown + 1; j < MZMapperPointCategoryPowerElementCountOfElements; j++)
+                {
+                    [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
+                    [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
+                    [categoryItemImages addObject:[UIImage imageForPointCategoryElement:j]];
+                }
+            }
+            else if (i == MZMapperPointCategoryShopping)
+            {
+                for (NSUInteger j = MZMapperPointCategoryShoppingElementUnknown + 1; j < MZMapperPointCategoryShoppingElementCountOfElements; j++)
+                {
+                    [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
+                    [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
+                    [categoryItemImages addObject:[UIImage imageForPointCategoryElement:j]];
+                }
+            }
+            else if (i == MZMapperPointCategorySportAndLeisure)
+            {
+                for (NSUInteger j = MZMapperPointCategorySportAndLeisureElementUnknown + 1; j < MZMapperPointCategorySportAndLeisureElementCountOfElements; j++)
+                {
+                    [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
+                    [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
+                    [categoryItemImages addObject:[UIImage imageForPointCategoryElement:j]];
+                }
+            }
+            else if (i == MZMapperPointCategoryTourism)
+            {
+                for (NSUInteger j = MZMapperPointCategoryTourismElementUnknown + 1; j < MZMapperPointCategoryTourismElementCountOfElements; j++)
+                {
+                    [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
+                    [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];
+                    [categoryItemImages addObject:[UIImage imageForPointCategoryElement:j]];
+                }
+            }
+            else if (i == MZMapperPointCategoryTransport)
+            {
+                for (NSUInteger j = MZMapperPointCategoryTransportElementUnknown + 1; j < MZMapperPointCategoryTransportElementCountOfElements; j++)
                 {
                     [categoryItems addObject:[NSNumber numberWithUnsignedInteger:j]];
                     [categoryItemNames addObject:[NSString nameOfPointCategoryElement:j]];

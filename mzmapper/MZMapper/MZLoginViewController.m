@@ -220,7 +220,7 @@
     [userNameTextField resignFirstResponder];
     [passwordTextField resignFirstResponder];
     
-    NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://api06.dev.openstreetmap.org/api/0.6/user/details"]];
+    NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"%@/user/details", [NSString loginPath]]];
         
     
     

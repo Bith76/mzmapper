@@ -181,9 +181,9 @@
     MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
     
     //GET /api/0.6/map?bbox=left,bottom,right,top
-    //NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://api.openstreetmap.org/api/0.6/map?bbox=%f,%f,%f,%f",left,bottom,right,top]];
-    NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://api06.dev.openstreetmap.org/api/0.6/map?bbox=%f,%f,%f,%f",left,bottom,right,top]];
+    NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"%@/map?bbox=%f,%f,%f,%f",[NSString loginPath],left,bottom,right,top]];
     
+    NSLog(@"geturl: %@",[NSString stringWithFormat:@"%@/map?bbox=%f,%f,%f,%f",[NSString loginPath],left,bottom,right,top]);
     [_controller showMessageViewWithMessage:@"Downloading map..."];
     [_controller showBlockView];
     
@@ -196,7 +196,7 @@
                          if (![resultString isEqualToString:HTTP_STATUS_CODE_AUTHORIZATION_REQUIRED] && ![resultString isEqualToString:HTTP_STATUS_CODE_CONNECTION_FAILED])
                          {
                              NSLog(@"download finished");
-                             //NSLog(@"resultString: %@",resultString);
+                             NSLog(@"resultString: %@",resultString);
                              
                              [_controller showMessageViewWithMessage:@"Downloading map:\t\t\tParsolás"];
                              [_sourceView setupWithXML:resultString];
@@ -509,8 +509,7 @@
         MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
         
         //GET /api/0.6/map?bbox=left,bottom,right,top
-        //NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://api.openstreetmap.org/api/0.6/map?bbox=%f,%f,%f,%f",left,bottom,right,top]];
-        NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://api06.dev.openstreetmap.org/api/0.6/map?bbox=%f,%f,%f,%f",left,bottom,right,top]];
+        NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"%@/map?bbox=%f,%f,%f,%f",[NSString loginPath],left,bottom,right,top]];
         
         [_controller showMessageViewWithMessage:@"Downloading map..."];
         [_controller showBlockView];

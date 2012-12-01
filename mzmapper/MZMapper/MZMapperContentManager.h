@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+
+// point category types
 enum
 {
     MZMapperPointCategoryNone = 0,
@@ -21,13 +23,14 @@ enum
     MZMapperPointCategoryPlaces,
     MZMapperPointCategorySportAndLeisure,
     MZMapperPointCategoryHealthCare,
-    MZMapperPointCategoryEntertainment,
+    MZMapperPointCategoryEntertainmentArtsCulture,
     MZMapperPointCategoryEducation,
     MZMapperPointCategoryCountOfCategories
 };
 typedef NSUInteger MZMapperPointCategory;
 
 
+// point category item types
 enum
 {
     MZMapperPointCategoryShoppingElementUnknown = 1000,
@@ -99,17 +102,22 @@ enum
 };
 typedef NSUInteger MZMapperPointCategoryAmenityElement;
 
-
-
-
-
-
-//innen van meló
 enum
 {
     MZMapperPointCategoryTourismElementUnknown = 4000,
     MZMapperPointCategoryTourismElementMuseum,
-    //...
+    MZMapperPointCategoryTourismElementArcheologicalSite,
+    MZMapperPointCategoryTourismElementBattlefield,
+    MZMapperPointCategoryTourismElementCastle,
+    MZMapperPointCategoryTourismElementMemorial,
+    MZMapperPointCategoryTourismElementMonument,
+    MZMapperPointCategoryTourismElementRuins,
+    MZMapperPointCategoryTourismElementPicnicSite,
+    MZMapperPointCategoryTourismElementViewPoint,
+    MZMapperPointCategoryTourismElementZoo,
+    MZMapperPointCategoryTourismElementInformation,
+    MZMapperPointCategoryTourismElementArtWork,
+    MZMapperPointCategoryTourismElementThemePark,
     MZMapperPointCategoryTourismElementCountOfElements
 };
 typedef NSUInteger MZMapperPointCategoryTourismElement;
@@ -118,7 +126,12 @@ enum
 {
     MZMapperPointCategoryAccomodationElementUnknown = 5000,
     MZMapperPointCategoryAccomodationElementHotel,
-    //...
+    MZMapperPointCategoryAccomodationElementMotel,
+    MZMapperPointCategoryAccomodationElementHostel,
+    MZMapperPointCategoryAccomodationElementGuestHouse,
+    MZMapperPointCategoryAccomodationElementCampSite,
+    MZMapperPointCategoryAccomodationElementCaravanPark,
+    MZMapperPointCategoryAccomodationElementAlpineHut,
     MZMapperPointCategoryAccomodationElementCountOfElements
 };
 typedef NSUInteger MZMapperPointCategoryAccomodationElement;
@@ -127,7 +140,19 @@ enum
 {
     MZMapperPointCategoryTransportElementUnknown = 6000,
     MZMapperPointCategoryTransportElementAirport,
-    //...
+    MZMapperPointCategoryTransportElementAirportTerminal,
+    MZMapperPointCategoryTransportElementAirportGate,
+    MZMapperPointCategoryTransportElementHelipad,
+    MZMapperPointCategoryTransportElementRailwayStation,
+    MZMapperPointCategoryTransportElementTramStop,
+    MZMapperPointCategoryTransportElementBusStation,
+    MZMapperPointCategoryTransportElementBusStop,
+    MZMapperPointCategoryTransportElementCarParking,
+    MZMapperPointCategoryTransportElementTaxiRank,
+    MZMapperPointCategoryTransportElementBicycleParking,
+    MZMapperPointCategoryTransportElementCarRental,
+    MZMapperPointCategoryTransportElementBicycleRental,
+    MZMapperPointCategoryTransportElementFuel,
     MZMapperPointCategoryTransportElementCountOfElements
 };
 typedef NSUInteger MZMapperPointCategoryTransportElement;
@@ -136,7 +161,11 @@ enum
 {
     MZMapperPointCategoryBarrierElementUnknown = 7000,
     MZMapperPointCategoryBarrierElementBollard,
-    //...
+    MZMapperPointCategoryBarrierElementGate,
+    MZMapperPointCategoryBarrierElementLiftGate,
+    MZMapperPointCategoryBarrierElementCycleBarrier,
+    MZMapperPointCategoryBarrierElementBigConcreteBlocks,
+    MZMapperPointCategoryBarrierElementTollBooth,
     MZMapperPointCategoryBarrierElementCountOfElements
 };
 typedef NSUInteger MZMapperPointCategoryBarrierElement;
@@ -145,7 +174,10 @@ enum
 {
     MZMapperPointCategoryPowerElementUnknown = 8000,
     MZMapperPointCategoryPowerElementHighVoltage,
-    //...
+    MZMapperPointCategoryPowerElementPowerPole,
+    MZMapperPointCategoryPowerElementPlantStation,
+    MZMapperPointCategoryPowerElementSubstation,
+    MZMapperPointCategoryPowerElementTransformer,
     MZMapperPointCategoryPowerElementCountOfElements
 };
 typedef NSUInteger MZMapperPointCategoryPowerElement;
@@ -163,7 +195,10 @@ enum
 {
     MZMapperPointCategoryPlacesElementUnknown = 10000,
     MZMapperPointCategoryPlacesElementHamlet,
-    //...
+    MZMapperPointCategoryPlacesElementVillage,
+    MZMapperPointCategoryPlacesElementTown,
+    MZMapperPointCategoryPlacesElementSuburb,
+    MZMapperPointCategoryPlacesElementCity,
     MZMapperPointCategoryPlacesElementCountOfElements
 };
 typedef NSUInteger MZMapperPointCategoryPlacesElement;
@@ -172,7 +207,10 @@ enum
 {
     MZMapperPointCategorySportAndLeisureElementUnknown = 11000,
     MZMapperPointCategorySportAndLeisureElementSwimmingPool,
-    //...
+    MZMapperPointCategorySportAndLeisureElementPlayground,
+    MZMapperPointCategorySportAndLeisureElementSportCentre,
+    MZMapperPointCategorySportAndLeisureElementMarina,
+    MZMapperPointCategorySportAndLeisureElementSlipway,
     MZMapperPointCategorySportAndLeisureElementCountOfElements
 };
 typedef NSUInteger MZMapperPointCategorySportAndLeisureElement;
@@ -181,7 +219,8 @@ enum
 {
     MZMapperPointCategoryHealthcareElementUnknown = 12000,
     MZMapperPointCategoryHealthcareElementPharmacy,
-    //...
+    MZMapperPointCategoryHealthcareElementHospital,
+    MZMapperPointCategoryHealthcareElementVeterinary,
     MZMapperPointCategoryHealthcareElementCountOfElements
 };
 typedef NSUInteger MZMapperPointCategoryHealthcareElement;
@@ -190,7 +229,8 @@ enum
 {
     MZMapperPointCategoryEntertainmentArtsCultureElementUnknown = 13000,
     MZMapperPointCategoryEntertainmentArtsCultureElementCinema,
-    //...
+    MZMapperPointCategoryEntertainmentArtsCultureElementTheatre,
+    MZMapperPointCategoryEntertainmentArtsCultureElementFountain,
     MZMapperPointCategoryEntertainmentArtsCultureElementCountOfElements
 };
 typedef NSUInteger MZMapperPointCategoryEntertainmentArtsCultureElement;
@@ -199,16 +239,14 @@ enum
 {
     MZMapperPointCategoryEducationElementUnknown = 14000,
     MZMapperPointCategoryEducationElementKindergarten,
-    //...
+    MZMapperPointCategoryEducationElementLibrary,
+    MZMapperPointCategoryEducationElementSchool,
     MZMapperPointCategoryEducationElementCountOfElements
 };
 typedef NSUInteger MZMapperPointCategoryEducationElement;
 
 
 
-
-
-//idáig van meló
 @class MZNode;
 
 @interface MZMapperContentManager : NSObject
