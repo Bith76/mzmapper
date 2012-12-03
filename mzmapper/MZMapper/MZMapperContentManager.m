@@ -150,7 +150,6 @@ static MZMapperContentManager* sharedContentManager = nil;
                             @"power:tower",                     [NSNumber numberWithUnsignedInteger:MZMapperPointCategoryPowerElementHighVoltage],
                             @"power:pole",                      [NSNumber numberWithUnsignedInteger:MZMapperPointCategoryPowerElementPowerPole],
                             @"power:generator",                 [NSNumber numberWithUnsignedInteger:MZMapperPointCategoryPowerElementPlantStation],
-                            @"power:station",                   [NSNumber numberWithUnsignedInteger:MZMapperPointCategoryPowerElementSubstation],
                             @"power:sub_station",               [NSNumber numberWithUnsignedInteger:MZMapperPointCategoryPowerElementTransformer],
 
                             @"landuse:cemetery",                [NSNumber numberWithUnsignedInteger:MZMapperPointCategoryLanduseElementCemetery],

@@ -1,10 +1,22 @@
-/* 
-  Localizable.strings
-  MZMapper
+/*
+ Localizable.strings
+ MZMapper
+ 
+ Created by Zalan Mergl on 9/9/12.
+ 
+ */
 
-  Created by Zalan Mergl on 9/9/12.
+/* Alert view message - alert view displays when user doesn't add his name by creating OSMBug report */
+"AddNamePleaseKey" = "Kérlek, add meg a neved!";
 
-*/
+/* All right button title on login view controller */
+"AllRightKey" = "Rendben";
+
+/* When user want to exit from editing mode without saving - alert view title */
+"AreYouSureKey" = "Biztosan kilépsz?";
+
+/* Title of the cancel button. */
+"CancelKey" = "Mégse";
 
 /* Message of connection problem alert view. */
 "CommunicationErrorMessageKey" = "Hálózati hiba lépett fel. Kérlek próbáld meg később.";
@@ -12,14 +24,68 @@
 /* Title of connection problem alert view. */
 "CommunicationErrorTitleKey" = "Hálózati hiba";
 
-/* "Text of the notification label which appears while user is logging in." */
-"LoggingInKey" = "Bejelentkezés";
+/* Title of the delete button */
+"DeleteKey" = "Törlés";
+
+/* Message of the alert view, which appears when user want to delete a point object. */
+"DeletePointObjectAlertViewMessageKey" = "Biztosan törlöd?";
+
+/* Title of the alert view, which appears when user want to delete a point object. */
+"DeletePointObjectAlertViewTitleKey" = "Figyelem!";
+
+/* Text displays on the message view when map downloading is in progress */
+"DownloadingMapKey" = "Térkép letöltése";
+
+/* Title of the edit controller */
+"EditKey" = "Szerkesztés";
+
+/* Alert view title - alert view displays when user makes a mistake by creating OSMBug report */
+"ErrorKey" = "Hiba";
+
+/* Forgotten password button title on login view controller */
+"ForgottenPasswordKey" = "Elfelejtett jelszó";
+
+/* When location manager failed this string will be displayed in the messageview before the error string */
+"LocationManagerFailedWithErrorKey" = "A helymeghatározás nem sikerült";
 
 /* Title of login error alert view. */
 "LoginErrorMessageKey" = "Sajnálom, ilyen adatokkal nem tudsz bejelentkezni.";
 
 /* Title of login error alert view. */
 "LoginErrorTitleKey" = "Bejelentkezés";
+
+/* When user want to exit from editing mode without saving - alert view NO button title */
+"NoKey" = "Nem";
+
+/* Title of the ok button. */
+"OkKey" = "OK";
+
+/* Password text on login view controller */
+"PasswordNameKey" = "Jelszó";
+
+/* Alert view message - alert view displays when user doesn't comment his OSMBug report */
+"PleaseAddCommentKey" = "Kérlek, kommentáld a bugjelentést!";
+
+/* Name of the AlpineHut point category element */
+"PointCategoryAccomodationElementNameAlpineHutKey" = "Menedékház";
+
+/* Name of the CampSite point category element */
+"PointCategoryAccomodationElementNameCampSiteKey" = "Kemping";
+
+/* Name of the CaravanPark point category element */
+"PointCategoryAccomodationElementNameCaravanParkKey" = "Lakókocsi parkoló";
+
+/* Name of the GuestHouse point category element */
+"PointCategoryAccomodationElementNameGuestHouseKey" = "Vendégház";
+
+/* Name of the Hostel point category element */
+"PointCategoryAccomodationElementNameHostelKey" = "Hostel";
+
+/* Name of the Hotel point category element */
+"PointCategoryAccomodationElementNameHotelKey" = "Hotel";
+
+/* Name of the Motel point category element */
+"PointCategoryAccomodationElementNameMotelKey" = "Motel";
 
 /* Name of the Atm point category element */
 "PointCategoryAmenityElementNameAtmKey" = "ATM";
@@ -72,6 +138,42 @@
 /* Name of the WasteBasket point category element */
 "PointCategoryAmenityElementNameWasteBasketKey" = "Szemetes";
 
+/* Name of the BigConcreteBlocks point category element */
+"PointCategoryBarrierElementNameBigConcreteBlocksKey" = "Betontömb";
+
+/* Name of the Bollard point category element */
+"PointCategoryBarrierElementNameBollardKey" = "Fémcölöp";
+
+/* Name of the CycleBarrier point category element */
+"PointCategoryBarrierElementNameCycleBarrierKey" = "Terelőkorlát";
+
+/* Name of the Gate point category element */
+"PointCategoryBarrierElementNameGateKey" = "Kerítés";
+
+/* Name of the LiftGate point category element */
+"PointCategoryBarrierElementNameLiftGateKey" = "Sorompó";
+
+/* Name of the TollBooth point category element */
+"PointCategoryBarrierElementNameTollBoothKey" = "Fizetőkapu";
+
+/* Name of the Kindergarten point category element */
+"PointCategoryEducationElementNameKindergartenKey" = "Óvoda";
+
+/* Name of the Library point category element */
+"PointCategoryEducationElementNameLibraryKey" = "Könyvtár";
+
+/* Name of the School point category element */
+"PointCategoryEducationElementNameSchoolKey" = "Iskola";
+
+/* Name of the Cinema point category element */
+"PointCategoryEntertainmentArtsCultureElementNameCinemaKey" = "Mozi";
+
+/* Name of the Fountain point category element */
+"PointCategoryEntertainmentArtsCultureElementNameFountainKey" = "Szökőkút";
+
+/* Name of the Theatre point category element */
+"PointCategoryEntertainmentArtsCultureElementNameTheatreKey" = "Színház";
+
 /* Name of the Bar point category element */
 "PointCategoryFoodAndDrinkElementNameBarKey" = "Bár";
 
@@ -92,6 +194,21 @@
 
 /* Name of the WaterFountain point category element */
 "PointCategoryFoodAndDrinkElementNameWaterFountainKey" = "Ivókút";
+
+/* Name of the Hospital point category element */
+"PointCategoryHealthcareElementNameHospitalKey" = "Kórház";
+
+/* Name of the Pharmacy point category element */
+"PointCategoryHealthcareElementNamePharmacyKey" = "Gyógyszertár";
+
+/* Name of the Veterinary point category element */
+"PointCategoryHealthcareElementNameVeterinaryKey" = "Állatorvos";
+
+/* Name of the Cemetery point category element */
+"PointCategoryLanduseElementNameCemeteryKey" = "Temető";
+
+/* Name of the GraveYard point category element */
+"PointCategoryLanduseElementNameGraveYardKey" = "Sírkert";
 
 /* Name of the Accomodation-type point category */
 "PointCategoryNameAccomodationKey" = "Szállás";
@@ -134,6 +251,33 @@
 
 /* Name of the Transport-type point category */
 "PointCategoryNameTransportKey" = "Közlekedés";
+
+/* Name of the City point category element */
+"PointCategoryPlacesElementNameCityKey" = "Város";
+
+/* Name of the Hamlet point category element */
+"PointCategoryPlacesElementNameHamletKey" = "Falu";
+
+/* Name of the Suburb point category element */
+"PointCategoryPlacesElementNameSuburbKey" = "Külváros";
+
+/* Name of the Town point category element */
+"PointCategoryPlacesElementNameTownKey" = "Kisváros";
+
+/* Name of the Village point category element */
+"PointCategoryPlacesElementNameVillageKey" = "Község";
+
+/* Name of the HighVoltage point category element */
+"PointCategoryPowerElementNameHighVoltageKey" = "Nagyfeszültség";
+
+/* Name of the PlantStation point category element */
+"PointCategoryPowerElementNamePlantStationKey" = "Erőmű";
+
+/* Name of the PowerPole point category element */
+"PointCategoryPowerElementNamePowerPoleKey" = "Villanypózna";
+
+/* Name of the Transformer point category element */
+"PointCategoryPowerElementNameTransformerKey" = "Transzformátorállomás";
 
 /* Name of the AlcoholShop point category element */
 "PointCategoryShoppingElementNameAlcoholShopKey" = "Italbolt";
@@ -213,8 +357,126 @@
 /* Name of the ToyShop point category element */
 "PointCategoryShoppingElementNameToyShopKey" = "Játékbolt";
 
+/* Name of the Marina point category element */
+"PointCategorySportAndLeisureElementNameMarinaKey" = "Kikötő";
+
+/* Name of the Playground point category element */
+"PointCategorySportAndLeisureElementNamePlaygroundKey" = "Játszótér";
+
+/* Name of the Slipway point category element */
+"PointCategorySportAndLeisureElementNameSlipwayKey" = "Rámpa";
+
+/* Name of the SportCentre point category element */
+"PointCategorySportAndLeisureElementNameSportCentreKey" = "Sportközpont";
+
+/* Name of the SwimmingPool point category element */
+"PointCategorySportAndLeisureElementNameSwimmingPoolKey" = "Uszoda";
+
+/* Name of the ArcheologicalSite point category element */
+"PointCategoryTourismElementNameArcheologicalSiteKey" = "Régészeti terület";
+
+/* Name of the ArtWork point category element */
+"PointCategoryTourismElementNameArtWorkKey" = "Műalkotás";
+
+/* Name of the Battlefield point category element */
+"PointCategoryTourismElementNameBattlefieldKey" = "Harctér";
+
+/* Name of the Castle point category element */
+"PointCategoryTourismElementNameCastleKey" = "Kastély";
+
+/* Name of the Information point category element */
+"PointCategoryTourismElementNameInformationKey" = "Tourinform";
+
+/* Name of the Memorial point category element */
+"PointCategoryTourismElementNameMemorialKey" = "Emlékhely";
+
+/* Name of the Monument point category element */
+"PointCategoryTourismElementNameMonumentKey" = "Emlékmű";
+
+/* Name of the Museum point category element */
+"PointCategoryTourismElementNameMuseumKey" = "Múzeum";
+
+/* Name of the PicnicSite point category element */
+"PointCategoryTourismElementNamePicnicSiteKey" = "Piknikező hely";
+
+/* Name of the Ruins point category element */
+"PointCategoryTourismElementNameRuinsKey" = "Romok";
+
+/* Name of the ThemePark point category element */
+"PointCategoryTourismElementNameThemeParkKey" = "Kalandpark";
+
+/* Name of the ViewPoint point category element */
+"PointCategoryTourismElementNameViewPointKey" = "Kilátó";
+
+/* Name of the Zoo point category element */
+"PointCategoryTourismElementNameZooKey" = "Állatkert";
+
+/* Name of the AirportGate point category element */
+"PointCategoryTransportElementNameAirportGateKey" = "Reptéri kapu";
+
+/* Name of the Airport point category element */
+"PointCategoryTransportElementNameAirportKey" = "Reptér";
+
+/* Name of the AirportTerminal point category element */
+"PointCategoryTransportElementNameAirportTerminalKey" = "Reptéri terminál";
+
+/* Name of the BicycleParking point category element */
+"PointCategoryTransportElementNameBicycleParkingKey" = "Biciklitároló";
+
+/* Name of the BicycleRental point category element */
+"PointCategoryTransportElementNameBicycleRentalKey" = "Biciklikölcsönző";
+
+/* Name of the BusStation point category element */
+"PointCategoryTransportElementNameBusStationKey" = "Autóbusz-állomás";
+
+/* Name of the BusStop point category element */
+"PointCategoryTransportElementNameBusStopKey" = "Buszmegálló";
+
+/* Name of the CarParking point category element */
+"PointCategoryTransportElementNameCarParkingKey" = "Parkoló";
+
+/* Name of the CarRental point category element */
+"PointCategoryTransportElementNameCarRentalKey" = "Autókölcsönző";
+
+/* Name of the Fuel point category element */
+"PointCategoryTransportElementNameFuelKey" = "Benzinkút";
+
+/* Name of the Helipad point category element */
+"PointCategoryTransportElementNameHelipadKey" = "Helikopter leszálló";
+
+/* Name of the RailwayStation point category element */
+"PointCategoryTransportElementNameRailwayStationKey" = "Vasútállomás";
+
+/* Name of the TaxiRank point category element */
+"PointCategoryTransportElementNameTaxiRankKey" = "Taxiállomás";
+
+/* Name of the TramStop point category element */
+"PointCategoryTransportElementNameTramStopKey" = "Villamosmegálló";
+
+/* Registration button title on login view controller */
+"RegistrationKey" = "Regisztráció";
+
+/* Message view displays this text while searching is in progress */
+"SearchingKey" = "Keresés";
+
+/* Text displays when user will change the type of a point object - in the header of the table view */
+"SelectTypeKey" = "Válassz kategóriát!";
+
+/* When user saved a changeset succesfully - alert view title */
+"SuccessfulSavingKey" = "Sikeres mentés";
+
+/* Title of the point object type selector controller */
+"TypesKey" = "Kategóriák";
+
 /* Name of a point category which hasn't got predefined name */
 "UnnamedPointCategoryNameKey" = "Ismeretlen kategória";
 
-/* Name of a point category which is shopping point and hasn't got predefined name */
-"UnnamedPointCategoryElementNameKey" = "Ismeretlen elem";
+/* User name text on login view controller */
+"UserNameKey" = "Felhasználónév";
+
+/* When user want to exit from editing mode without saving - alert view message */
+"WithoutSavingAlertViewMessageKey" = "Minden el nem mentett változtatás el fog veszni. Biztos, hogy megszakítod a szerkesztést?";
+
+/* When user want to exit from editing mode without saving - alert view YES button title */
+"YesKey" = "Igen";
+

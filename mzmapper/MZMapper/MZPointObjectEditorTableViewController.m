@@ -254,7 +254,7 @@
     if (indexPath.section == 0 && indexPath.row == 1)
     {
         MZPointObjectTypeSelectorTableViewController *detailViewController = [[MZPointObjectTypeSelectorTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-        [detailViewController setTitle:@"Types"];
+        [detailViewController setTitle:NSLocalizedString(@"TypesKey", @"Title of the point object type selector controller")/* @"Types"*/];
         [detailViewController setDelegate:self];
         [detailViewController setEditedPointObject:self.editedPointObject];
         detailViewController.view.layer.cornerRadius = 5.0;
@@ -300,7 +300,7 @@
         [button setFrame:CGRectMake(10.0, 28.0, 240.0, 44.0)];
         
         //set title, font size and font color
-        [button setTitle:@"Delete" forState:UIControlStateNormal];
+        [button setTitle:NSLocalizedString(@"DeleteKey", @"Title of the delete button") forState:UIControlStateNormal];
         [button.titleLabel setFont:[UIFont boldSystemFontOfSize:20.0]];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         

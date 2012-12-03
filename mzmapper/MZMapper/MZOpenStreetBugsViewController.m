@@ -334,16 +334,16 @@
     
     if ([description isEqualToString:@""])
     {
-        message = @"Valamit azé csak írgyá, hogy mi itt a bug!";
+        message = NSLocalizedString(@"PleaseAddCommentKey", @"Alert view message - alert view displays when user doesn't comment his OSMBug report") /*@"Kérlek írd le, hogy mi itt a bug!"*/;
     }
     else if ([author isEqualToString:@""])
     {
-        message = @"Név megadása kötelező!";
+        message = NSLocalizedString(@"AddNamePleaseKey", @"Alert view message - alert view displays when user doesn't add his name by creating OSMBug report")/*@"Név megadása kötelező!"*/;
     }
     
     if (message)
     {
-        UIAlertView* av = [[UIAlertView alloc] initWithTitle:@"HIBA" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView* av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ErrorKey", @"Alert view title - alert view displays when user makes a mistake by creating OSMBug report")/*@"HIBA"*/ message:message delegate:nil cancelButtonTitle:NSLocalizedString(@"OkKey", @"") otherButtonTitles:nil];
         [av show];
         [av release];
     }
@@ -399,16 +399,16 @@
     
     if ([comment isEqualToString:@""])
     {
-        message = @"Valamit azé csak írgyá, hogy mit szeretnél hozzáfűzni!";
+        message = NSLocalizedString(@"PleaseAddCommentKey", @"Alert view message - alert view displays when user doesn't comment his OSMBug report");
     }
     else if ([author isEqualToString:@""])
     {
-        message = @"Név megadása kötelező!";
+        message = NSLocalizedString(@"AddNamePleaseKey", @"Alert view message - alert view displays when user doesn't add his name by creating OSMBug report");
     }
     
     if (message)
     {
-        UIAlertView* av = [[UIAlertView alloc] initWithTitle:@"HIBA" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView* av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ErrorKey", @"Alert view title - alert view displays when user makes a mistake by creating OSMBug report") message:message delegate:nil cancelButtonTitle:NSLocalizedString(@"OkKey", @"") otherButtonTitles:nil];
         [av show];
         [av release];
     }
@@ -478,7 +478,7 @@
     footerViewFrame.size.height = size.height + 20.0;
     [_markAsFixedFooterView setFrame:footerViewFrame];
     
-    [_markAsFixedViewController setTitle:@"OpenStreetBugs"];
+    [_markAsFixedViewController setTitle:@"OpenStreetBug"];
     [_markAsFixedViewController.navigationItem setHidesBackButton:YES];
     
     //self.navigationController.delegate = self;
@@ -624,7 +624,7 @@
     footerViewFrame.origin.y = _addCommentDescriptionLabel.frame.origin.y + size.height + 10.0;
     [_addCommentFooterView setFrame:footerViewFrame];
        
-    [_addCommentViewController setTitle:@"OpenStreetBugs"];
+    [_addCommentViewController setTitle:@"OpenStreetBug"];
     [_addCommentViewController.navigationItem setHidesBackButton:YES];
     
     //self.navigationController.delegate = self;

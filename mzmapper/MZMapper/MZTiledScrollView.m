@@ -184,13 +184,13 @@
     NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"%@/map?bbox=%f,%f,%f,%f",[NSString loginPath],left,bottom,right,top]];
     
     NSLog(@"geturl: %@",[NSString stringWithFormat:@"%@/map?bbox=%f,%f,%f,%f",[NSString loginPath],left,bottom,right,top]);
-    [_controller showMessageViewWithMessage:@"Downloading map..."];
+    [_controller showMessageViewWithMessage:[NSString stringWithFormat:@"%@...",NSLocalizedString(@"DownloadingMapKey", @"Text displays on the message view when map downloading is in progress")/* @"Downloading map..."*/]];
     [_controller showBlockView];
     
     [downloader downloadRequestFromURL:url
                        progressHandler:^(long long totalBytes, long long currentBytes){
                            NSLog(@"download is in progress: %lld/%lld",currentBytes,totalBytes);
-                           [_controller showMessageViewWithMessage:[NSString stringWithFormat:@"Downloading map:\t\t\t%.2f MB",currentBytes / 1024.0 / 1024.0]];
+                           [_controller showMessageViewWithMessage:[NSString stringWithFormat:@"%@:\t\t\t%.2f MB",NSLocalizedString(@"DownloadingMapKey", @"Text displays on the message view when map downloading is in progress"),currentBytes / 1024.0 / 1024.0]];
                        }
                      completionHandler:^(NSString* resultString){
                          if (![resultString isEqualToString:HTTP_STATUS_CODE_AUTHORIZATION_REQUIRED] && ![resultString isEqualToString:HTTP_STATUS_CODE_CONNECTION_FAILED])
@@ -198,10 +198,8 @@
                              NSLog(@"download finished");
                              NSLog(@"resultString: %@",resultString);
                              
-                             [_controller showMessageViewWithMessage:@"Downloading map:\t\t\tParsolás"];
                              [_sourceView setupWithXML:resultString];
                              
-                             [_controller showMessageViewWithMessage:@"Downloading map:\t\t\tRajzolás"];
                              [self updateBackgroundImage];
                              
                              [_mapBackground setHidden:NO];
@@ -511,22 +509,20 @@
         //GET /api/0.6/map?bbox=left,bottom,right,top
         NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"%@/map?bbox=%f,%f,%f,%f",[NSString loginPath],left,bottom,right,top]];
         
-        [_controller showMessageViewWithMessage:@"Downloading map..."];
+        [_controller showMessageViewWithMessage:[NSString stringWithFormat:@"%@...",NSLocalizedString(@"DownloadingMapKey", @"Text displays on the message view when map downloading is in progress")]];
         [_controller showBlockView];
         
         [downloader downloadRequestFromURL:url
                            progressHandler:^(long long totalBytes, long long currentBytes){
                                NSLog(@"download is in progress: %lld/%lld",currentBytes,totalBytes);
-                               [_controller showMessageViewWithMessage:[NSString stringWithFormat:@"Downloading map:\t\t\t%.2f MB",currentBytes / 1024.0 / 1024.0]];
+                               [_controller showMessageViewWithMessage:[NSString stringWithFormat:@"%@:\t\t\t%.2f MB",NSLocalizedString(@"DownloadingMapKey", @"Text displays on the message view when map downloading is in progress"),currentBytes / 1024.0 / 1024.0]];
                            }
                          completionHandler:^(NSString* resultString){
                              NSLog(@"download finished");
                              //NSLog(@"resultString: %@",resultString);
                              
-                             [_controller showMessageViewWithMessage:@"Downloading map:\t\t\tParsolás"];
                              [_sourceView setupWithXML:resultString];
                              
-                             [_controller showMessageViewWithMessage:@"Downloading map:\t\t\tRajzolás"];
                              [self updateBackgroundImage];
                              
                              [_mapBackground setHidden:NO];

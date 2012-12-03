@@ -142,7 +142,7 @@
             UITextField* userNameTextField = (UITextField*)[cell viewWithTag:1];
             [userNameTextField setSecureTextEntry:NO];
             [userNameTextField setReturnKeyType:UIReturnKeyNext];
-            [userNameTextField setPlaceholder:@"Felhasználónév"];
+            [userNameTextField setPlaceholder:NSLocalizedString(@"UserNameKey", @"User name text on login view controller")/* @"Felhasználónév"*/];
         }
             break;
         case 1:
@@ -150,28 +150,28 @@
             UITextField* passwordTextField = (UITextField*)[cell viewWithTag:1];
             [passwordTextField setSecureTextEntry:YES];
             [passwordTextField setReturnKeyType:UIReturnKeyGo];
-            [passwordTextField setPlaceholder:@"Jelszó"];
+            [passwordTextField setPlaceholder:NSLocalizedString(@"PasswordNameKey", @"Password text on login view controller")/*@"Jelszó"*/];
         }
             break;
         case 2:
         {
             UIButton* loginButton = (UIButton*)[cell viewWithTag:1];
             [loginButton addTarget:self action:@selector(tryLogin) forControlEvents:UIControlEventTouchUpInside];
-            [loginButton setTitle:@"Rendben" forState:UIControlStateNormal];
+            [loginButton setTitle:NSLocalizedString(@"AllRightKey", @"All right button title on login view controller")/* @"Rendben"*/ forState:UIControlStateNormal];
         }
             break;
         case 3:
         {
             UIButton* registrationButton = (UIButton*)[cell viewWithTag:1];
             [registrationButton addTarget:self action:@selector(goToRegistration) forControlEvents:UIControlEventTouchUpInside];
-            [registrationButton setTitle:@"Regisztráció" forState:UIControlStateNormal];
+            [registrationButton setTitle:NSLocalizedString(@"RegistrationKey", @"Registration button title on login view controller")/* @"Regisztráció"*/ forState:UIControlStateNormal];
         }
             break;
         case 4:
         {
             UIButton* lostPasswordButton = (UIButton*)[cell viewWithTag:1];
             [lostPasswordButton addTarget:self action:@selector(goToLostPasswordHelp) forControlEvents:UIControlEventTouchUpInside];
-            [lostPasswordButton setTitle:@"Elfelejtett jelszó" forState:UIControlStateNormal];
+            [lostPasswordButton setTitle:NSLocalizedString(@"ForgottenPasswordKey", @"Forgotten password button title on login view controller") /*@"Elfelejtett jelszó"*/ forState:UIControlStateNormal];
         }
             break;
         default:

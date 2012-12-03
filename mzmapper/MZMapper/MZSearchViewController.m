@@ -91,7 +91,7 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    [_controller showMessageViewWithMessage:@"Searching..."];
+    [_controller showMessageViewWithMessage:NSLocalizedString(@"SearchingKey", @"Message view displays this text while searching is in progress")/* @"Searching..."*/];
     
     [self searchForString:searchBar.text];
     

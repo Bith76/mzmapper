@@ -580,11 +580,6 @@
             retVal = NSLocalizedString(@"PointCategoryPowerElementNamePlantStationKey", @"Name of the PlantStation point category element");
         }
             break;
-        case MZMapperPointCategoryPowerElementSubstation:
-        {
-            retVal = NSLocalizedString(@"PointCategoryPowerElementNameSubstationKey", @"Name of the Substation point category element");
-        }
-            break;
         case MZMapperPointCategoryPowerElementTransformer:
         {
             retVal = NSLocalizedString(@"PointCategoryPowerElementNameTransformerKey", @"Name of the Transformer point category element");
@@ -704,8 +699,8 @@
 
 + (NSString*)loginPath
 {
-    //return @"http://api06.dev.openstreetmap.org/api/0.6";
-    return @"http://api.openstreetmap.org/api/0.6";
+    return @"http://api06.dev.openstreetmap.org/api/0.6";
+    //return @"http://api.openstreetmap.org/api/0.6";
 }
 
 @end

@@ -487,11 +487,6 @@
             retVal = [UIImage imageNamed:@"power_station.png"];
         }
             break;
-        case MZMapperPointCategoryPowerElementSubstation:
-        {
-            retVal = [UIImage imageNamed:@"power_sub_station.png"];
-        }
-            break;
         case MZMapperPointCategoryPowerElementTransformer:
         {
             retVal = [UIImage imageNamed:@"power_generator.png"];

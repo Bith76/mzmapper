@@ -191,7 +191,7 @@
     [headerLabel setNumberOfLines:0];
     [headerLabel setLineBreakMode:UILineBreakModeCharacterWrap];
     [headerLabel setTextAlignment:UITextAlignmentCenter];
-    [headerLabel setText:@"Please select a type for the point object."];
+    [headerLabel setText:NSLocalizedString(@"SelectTypeKey", @"Text displays when user will change the type of a point object - in the header of the table view")/* @"Please select a type for the point object."*/];
     [headerLabel setFont:[UIFont systemFontOfSize:12.0]];
     
     [self.tableView setTableHeaderView:headerLabel];

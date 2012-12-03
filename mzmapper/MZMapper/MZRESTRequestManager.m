@@ -274,7 +274,7 @@
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"CommunicationErrorTitleKey", @"Title of connection problem alert view.")
                                                         message:NSLocalizedString(@"CommunicationErrorMessageKey", @"Message of connection problem alert view.")
-                                                       delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                       delegate:self cancelButtonTitle:NSLocalizedString(@"OkKey", @"") otherButtonTitles:nil];
         
         [alert show];
         [alert release];
@@ -298,7 +298,7 @@
             
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"LoginErrorTitleKey", @"Title of login error alert view.")
                                                             message:NSLocalizedString(@"LoginErrorMessageKey", @"Title of login error alert view.")
-                                                           delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                           delegate:self cancelButtonTitle:NSLocalizedString(@"OkKey", @"") otherButtonTitles:nil];
             
             [alert show];
             [alert release];

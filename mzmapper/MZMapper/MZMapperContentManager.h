@@ -176,7 +176,6 @@ enum
     MZMapperPointCategoryPowerElementHighVoltage,
     MZMapperPointCategoryPowerElementPowerPole,
     MZMapperPointCategoryPowerElementPlantStation,
-    MZMapperPointCategoryPowerElementSubstation,
     MZMapperPointCategoryPowerElementTransformer,
     MZMapperPointCategoryPowerElementCountOfElements
 };

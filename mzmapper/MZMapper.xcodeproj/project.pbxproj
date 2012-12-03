@@ -17,10 +17,8 @@
 		0543855013F9239900C123A1 /* MZMapperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0543854F13F9239900C123A1 /* MZMapperViewController.m */; };
 		0543855313F9239900C123A1 /* MZMapperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0543855113F9239900C123A1 /* MZMapperViewController.xib */; };
 		0543857B13F9253400C123A1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543857A13F9253400C123A1 /* QuartzCore.framework */; };
-		0543858A13F9283500C123A1 /* map-1.osm.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0543858913F9283500C123A1 /* map-1.osm.xml */; };
 		0543858D13F92AAF00C123A1 /* map.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0543858C13F92AAF00C123A1 /* map.xml */; };
 		057294261668C73700D1D2A0 /* MZAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 057294241668C73600D1D2A0 /* MZAboutViewController.m */; };
-		057294271668C73700D1D2A0 /* MZAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 057294251668C73700D1D2A0 /* MZAboutViewController.xib */; };
 		0572942B1668EF4100D1D2A0 /* MZScaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0572942A1668EF4100D1D2A0 /* MZScaleView.m */; };
 		0572943016690C2E00D1D2A0 /* MZCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C7977F1629E027006C65AA /* MZCategoryViewController.m */; };
 		0572943116690C4900D1D2A0 /* MZMapperContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 135E8B78159CD7930084B918 /* MZMapperContentManager.m */; };
@@ -99,8 +97,6 @@
 		0572947A16690FA600D1D2A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543853D13F9239900C123A1 /* CoreGraphics.framework */; };
 		0572947B16690FAF00D1D2A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543857A13F9253400C123A1 /* QuartzCore.framework */; };
 		0572947C16690FB500D1D2A0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13945E6D1540554D001B257E /* CoreLocation.framework */; };
-		05D79FD1140BB88C008E5960 /* melykut_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D79FD0140BB88C008E5960 /* melykut_01.png */; };
-		05D79FD3140BB959008E5960 /* melykut_01.xml in Resources */ = {isa = PBXBuildFile; fileRef = 05D79FD2140BB959008E5960 /* melykut_01.xml */; };
 		130B659E159B1004000AAE0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543853913F9239900C123A1 /* UIKit.framework */; };
 		130B659F159B1004000AAE0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0543853B13F9239900C123A1 /* Foundation.framework */; };
 		130B65A5159B1004000AAE0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 130B65A3159B1004000AAE0F /* InfoPlist.strings */; };
@@ -122,11 +118,12 @@
 		1319278E154ACE5900998A1B /* mapbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 1319278D154ACE5900998A1B /* mapbackground.png */; };
 		131F07411587CAC40049FED4 /* MZSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131F073F1587CAC40049FED4 /* MZSearchViewController.m */; };
 		131F07431587CAC40049FED4 /* MZSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 131F07401587CAC40049FED4 /* MZSearchViewController.xib */; };
-		13297A36166416E600F9C263 /* MZPointObjectGeneralCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13297A35166416E600F9C263 /* MZPointObjectGeneralCell.xib */; };
+		1324C0DB166B8BF000A13BAF /* MZAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1324C0DD166B8BF000A13BAF /* MZAboutViewController.xib */; };
+		1324C0E0166B8C3200A13BAF /* MZSavingPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1324C0E2166B8C3200A13BAF /* MZSavingPanelViewController.xib */; };
+		1324C0E4166B8CA200A13BAF /* MZPointObjectGeneralCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1324C0E6166B8CA200A13BAF /* MZPointObjectGeneralCell.xib */; };
 		13297A391665512C00F9C263 /* MZUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 13297A381665512C00F9C263 /* MZUploadManager.m */; };
 		13297A3C16655AC400F9C263 /* NSURL+MZMapperUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 13297A3B16655AC400F9C263 /* NSURL+MZMapperUtilities.m */; };
 		13297A401665952100F9C263 /* MZSavingPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13297A3E1665952000F9C263 /* MZSavingPanelViewController.m */; };
-		13297A411665952100F9C263 /* MZSavingPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13297A3F1665952100F9C263 /* MZSavingPanelViewController.xib */; };
 		13297A461665987600F9C263 /* blueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 13297A421665987500F9C263 /* blueButton.png */; };
 		13297A471665987600F9C263 /* blueButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13297A431665987500F9C263 /* blueButton@2x.png */; };
 		13297A481665987600F9C263 /* blueButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 13297A441665987600F9C263 /* blueButtonHighlight.png */; };
@@ -265,10 +262,8 @@
 		132B4099163876030063C60F /* power_pole@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B408F163876030063C60F /* power_pole@2x.png */; };
 		132B409A163876030063C60F /* power_generator.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4090163876030063C60F /* power_generator.png */; };
 		132B409B163876030063C60F /* power_generator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4091163876030063C60F /* power_generator@2x.png */; };
-		132B409C163876030063C60F /* power_station.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4092163876030063C60F /* power_station.png */; };
-		132B409D163876030063C60F /* power_station@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4093163876030063C60F /* power_station@2x.png */; };
-		132B409E163876030063C60F /* power_sub_station.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4094163876030063C60F /* power_sub_station.png */; };
-		132B409F163876030063C60F /* power_sub_station@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4095163876030063C60F /* power_sub_station@2x.png */; };
+		132B409E163876030063C60F /* power_station.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4094163876030063C60F /* power_station.png */; };
+		132B409F163876030063C60F /* power_station@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4095163876030063C60F /* power_station@2x.png */; };
 		132B40A2163879570063C60F /* man_made_tower.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40A0163879520063C60F /* man_made_tower.png */; };
 		132B40A3163879570063C60F /* man_made_tower@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40A1163879550063C60F /* man_made_tower@2x.png */; };
 		132B40A916387AC60063C60F /* landuse_cemetery.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40A516387AC60063C60F /* landuse_cemetery.png */; };
@@ -393,7 +388,6 @@
 		13BC60E41625FC53001B6DFC /* MZEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BC60E21625FC53001B6DFC /* MZEditViewController.m */; };
 		13BC60E51625FC53001B6DFC /* MZEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13BC60E31625FC53001B6DFC /* MZEditViewController.xib */; };
 		13BC60EE16260F22001B6DFC /* MZCategoryItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BC60ED16260F22001B6DFC /* MZCategoryItemView.m */; };
-		13C4F0AB1481624900557F7A /* melykut_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 13C4F0A91481624900557F7A /* melykut_02.png */; };
 		13C4F0AC1481624900557F7A /* melykut_02.osm in Resources */ = {isa = PBXBuildFile; fileRef = 13C4F0AA1481624900557F7A /* melykut_02.osm */; };
 		13C7976616297498006C65AA /* icon_bookshop.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 13C7976516297498006C65AA /* icon_bookshop.jpeg */; };
 		13C797811629E027006C65AA /* MZCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C7977F1629E027006C65AA /* MZCategoryViewController.m */; };
@@ -474,7 +468,6 @@
 		0543858C13F92AAF00C123A1 /* map.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map.xml; sourceTree = "<group>"; };
 		057294231668C73500D1D2A0 /* MZAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZAboutViewController.h; sourceTree = "<group>"; };
 		057294241668C73600D1D2A0 /* MZAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZAboutViewController.m; sourceTree = "<group>"; };
-		057294251668C73700D1D2A0 /* MZAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZAboutViewController.xib; sourceTree = "<group>"; };
 		057294291668EF4100D1D2A0 /* MZScaleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZScaleView.h; sourceTree = "<group>"; };
 		0572942A1668EF4100D1D2A0 /* MZScaleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZScaleView.m; sourceTree = "<group>"; };
 		05D79FD0140BB88C008E5960 /* melykut_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = melykut_01.png; sourceTree = "<group>"; };
@@ -511,14 +504,19 @@
 		131F073E1587CAC40049FED4 /* MZSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZSearchViewController.h; sourceTree = "<group>"; };
 		131F073F1587CAC40049FED4 /* MZSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSearchViewController.m; sourceTree = "<group>"; };
 		131F07401587CAC40049FED4 /* MZSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZSearchViewController.xib; sourceTree = "<group>"; };
-		13297A35166416E600F9C263 /* MZPointObjectGeneralCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZPointObjectGeneralCell.xib; sourceTree = "<group>"; };
+		1324C0DC166B8BF000A13BAF /* hu */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = hu; path = hu.lproj/MZAboutViewController.xib; sourceTree = "<group>"; };
+		1324C0DE166B8BFE00A13BAF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MZAboutViewController.xib; sourceTree = "<group>"; };
+		1324C0DF166B8C2400A13BAF /* hu */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = hu; path = hu.lproj/MZOpenStreetBugsViewController.xib; sourceTree = "<group>"; };
+		1324C0E1166B8C3200A13BAF /* hu */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = hu; path = hu.lproj/MZSavingPanelViewController.xib; sourceTree = "<group>"; };
+		1324C0E3166B8C3800A13BAF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MZSavingPanelViewController.xib; sourceTree = "<group>"; };
+		1324C0E5166B8CA200A13BAF /* hu */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = hu; path = hu.lproj/MZPointObjectGeneralCell.xib; sourceTree = "<group>"; };
+		1324C0E7166B8CAC00A13BAF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MZPointObjectGeneralCell.xib; sourceTree = "<group>"; };
 		13297A371665512C00F9C263 /* MZUploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZUploadManager.h; sourceTree = "<group>"; };
 		13297A381665512C00F9C263 /* MZUploadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZUploadManager.m; sourceTree = "<group>"; };
 		13297A3A16655AC400F9C263 /* NSURL+MZMapperUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+MZMapperUtilities.h"; sourceTree = "<group>"; };
 		13297A3B16655AC400F9C263 /* NSURL+MZMapperUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+MZMapperUtilities.m"; sourceTree = "<group>"; };
 		13297A3D1665952000F9C263 /* MZSavingPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZSavingPanelViewController.h; sourceTree = "<group>"; };
 		13297A3E1665952000F9C263 /* MZSavingPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSavingPanelViewController.m; sourceTree = "<group>"; };
-		13297A3F1665952100F9C263 /* MZSavingPanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZSavingPanelViewController.xib; sourceTree = "<group>"; };
 		13297A421665987500F9C263 /* blueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButton.png; sourceTree = "<group>"; };
 		13297A431665987500F9C263 /* blueButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueButton@2x.png"; sourceTree = "<group>"; };
 		13297A441665987600F9C263 /* blueButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueButtonHighlight.png; sourceTree = "<group>"; };
@@ -658,10 +656,8 @@
 		132B408F163876030063C60F /* power_pole@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power_pole@2x.png"; sourceTree = "<group>"; };
 		132B4090163876030063C60F /* power_generator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = power_generator.png; sourceTree = "<group>"; };
 		132B4091163876030063C60F /* power_generator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power_generator@2x.png"; sourceTree = "<group>"; };
-		132B4092163876030063C60F /* power_station.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = power_station.png; sourceTree = "<group>"; };
-		132B4093163876030063C60F /* power_station@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power_station@2x.png"; sourceTree = "<group>"; };
-		132B4094163876030063C60F /* power_sub_station.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = power_sub_station.png; sourceTree = "<group>"; };
-		132B4095163876030063C60F /* power_sub_station@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power_sub_station@2x.png"; sourceTree = "<group>"; };
+		132B4094163876030063C60F /* power_station.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = power_station.png; sourceTree = "<group>"; };
+		132B4095163876030063C60F /* power_station@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power_station@2x.png"; sourceTree = "<group>"; };
 		132B40A0163879520063C60F /* man_made_tower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man_made_tower.png; sourceTree = "<group>"; };
 		132B40A1163879550063C60F /* man_made_tower@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "man_made_tower@2x.png"; sourceTree = "<group>"; };
 		132B40A516387AC60063C60F /* landuse_cemetery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = landuse_cemetery.png; sourceTree = "<group>"; };
@@ -927,9 +923,9 @@
 		0543853813F9239900C123A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				13FF31DD164C5D8700A4CFD5 /* CoreData.framework */,
-				0543853913F9239900C123A1 /* UIKit.framework */,
 				0543853B13F9239900C123A1 /* Foundation.framework */,
+				0543853913F9239900C123A1 /* UIKit.framework */,
+				13FF31DD164C5D8700A4CFD5 /* CoreData.framework */,
 				0543853D13F9239900C123A1 /* CoreGraphics.framework */,
 				13945E6D1540554D001B257E /* CoreLocation.framework */,
 				0543857A13F9253400C123A1 /* QuartzCore.framework */,
@@ -1040,7 +1036,7 @@
 				130B65CA159B4E60000AAE0F /* MZLoginViewController.xib */,
 				057294231668C73500D1D2A0 /* MZAboutViewController.h */,
 				057294241668C73600D1D2A0 /* MZAboutViewController.m */,
-				057294251668C73700D1D2A0 /* MZAboutViewController.xib */,
+				1324C0DD166B8BF000A13BAF /* MZAboutViewController.xib */,
 				13BC60E11625FC53001B6DFC /* MZEditViewController.h */,
 				13BC60E21625FC53001B6DFC /* MZEditViewController.m */,
 				13BC60E31625FC53001B6DFC /* MZEditViewController.xib */,
@@ -1058,7 +1054,7 @@
 				13E40E1C1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.xib */,
 				13297A3D1665952000F9C263 /* MZSavingPanelViewController.h */,
 				13297A3E1665952000F9C263 /* MZSavingPanelViewController.m */,
-				13297A3F1665952100F9C263 /* MZSavingPanelViewController.xib */,
+				1324C0E2166B8C3200A13BAF /* MZSavingPanelViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1291,10 +1287,8 @@
 				132B4091163876030063C60F /* power_generator@2x.png */,
 				132B408E163876030063C60F /* power_pole.png */,
 				132B408F163876030063C60F /* power_pole@2x.png */,
-				132B4092163876030063C60F /* power_station.png */,
-				132B4093163876030063C60F /* power_station@2x.png */,
-				132B4094163876030063C60F /* power_sub_station.png */,
-				132B4095163876030063C60F /* power_sub_station@2x.png */,
+				132B4094163876030063C60F /* power_station.png */,
+				132B4095163876030063C60F /* power_station@2x.png */,
 				132B408C163876030063C60F /* power_tower.png */,
 				132B408D163876030063C60F /* power_tower@2x.png */,
 			);
@@ -1547,7 +1541,7 @@
 			children = (
 				13E40E1616557A8B00678C07 /* MZPointObjectHeaderCell.xib */,
 				13E40E181655825D00678C07 /* MZPointObjectHeaderTypeCell.xib */,
-				13297A35166416E600F9C263 /* MZPointObjectGeneralCell.xib */,
+				1324C0E6166B8CA200A13BAF /* MZPointObjectGeneralCell.xib */,
 			);
 			name = "Custom cells";
 			sourceTree = "<group>";
@@ -1646,11 +1640,7 @@
 				0543854413F9239900C123A1 /* InfoPlist.strings in Resources */,
 				0543854D13F9239900C123A1 /* MainWindow.xib in Resources */,
 				0543855313F9239900C123A1 /* MZMapperViewController.xib in Resources */,
-				0543858A13F9283500C123A1 /* map-1.osm.xml in Resources */,
 				0543858D13F92AAF00C123A1 /* map.xml in Resources */,
-				05D79FD1140BB88C008E5960 /* melykut_01.png in Resources */,
-				05D79FD3140BB959008E5960 /* melykut_01.xml in Resources */,
-				13C4F0AB1481624900557F7A /* melykut_02.png in Resources */,
 				13C4F0AC1481624900557F7A /* melykut_02.osm in Resources */,
 				132980D1153CAEEB00979414 /* wood_pattern.jpg in Resources */,
 				13DFCE42154493CB00CFFBD9 /* icon_current_location.png in Resources */,
@@ -1873,10 +1863,8 @@
 				132B4099163876030063C60F /* power_pole@2x.png in Resources */,
 				132B409A163876030063C60F /* power_generator.png in Resources */,
 				132B409B163876030063C60F /* power_generator@2x.png in Resources */,
-				132B409C163876030063C60F /* power_station.png in Resources */,
-				132B409D163876030063C60F /* power_station@2x.png in Resources */,
-				132B409E163876030063C60F /* power_sub_station.png in Resources */,
-				132B409F163876030063C60F /* power_sub_station@2x.png in Resources */,
+				132B409E163876030063C60F /* power_station.png in Resources */,
+				132B409F163876030063C60F /* power_station@2x.png in Resources */,
 				132B40A2163879570063C60F /* man_made_tower.png in Resources */,
 				132B40A3163879570063C60F /* man_made_tower@2x.png in Resources */,
 				132B40A916387AC60063C60F /* landuse_cemetery.png in Resources */,
@@ -1936,13 +1924,13 @@
 				13E40E2416559AED00678C07 /* orangeButton@2x.png in Resources */,
 				13E40E2516559AED00678C07 /* orangeButtonHighlight.png in Resources */,
 				13E40E2616559AED00678C07 /* orangeButtonHighlight@2x.png in Resources */,
-				13297A36166416E600F9C263 /* MZPointObjectGeneralCell.xib in Resources */,
-				13297A411665952100F9C263 /* MZSavingPanelViewController.xib in Resources */,
+				1324C0E4166B8CA200A13BAF /* MZPointObjectGeneralCell.xib in Resources */,
+				1324C0E0166B8C3200A13BAF /* MZSavingPanelViewController.xib in Resources */,
 				13297A461665987600F9C263 /* blueButton.png in Resources */,
 				13297A471665987600F9C263 /* blueButton@2x.png in Resources */,
 				13297A481665987600F9C263 /* blueButtonHighlight.png in Resources */,
 				13297A491665987600F9C263 /* blueButtonHighlight@2x.png in Resources */,
-				057294271668C73700D1D2A0 /* MZAboutViewController.xib in Resources */,
+				1324C0DB166B8BF000A13BAF /* MZAboutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2187,6 +2175,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				130E8E85163B39EB0006BAAB /* en */,
+				1324C0DF166B8C2400A13BAF /* hu */,
 			);
 			name = MZOpenStreetBugsViewController.xib;
 			sourceTree = "<group>";
@@ -2198,6 +2187,33 @@
 				1310F6A715FCF17900FB7FAA /* hu */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		1324C0DD166B8BF000A13BAF /* MZAboutViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1324C0DC166B8BF000A13BAF /* hu */,
+				1324C0DE166B8BFE00A13BAF /* en */,
+			);
+			name = MZAboutViewController.xib;
+			sourceTree = "<group>";
+		};
+		1324C0E2166B8C3200A13BAF /* MZSavingPanelViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1324C0E1166B8C3200A13BAF /* hu */,
+				1324C0E3166B8C3800A13BAF /* en */,
+			);
+			name = MZSavingPanelViewController.xib;
+			sourceTree = "<group>";
+		};
+		1324C0E6166B8CA200A13BAF /* MZPointObjectGeneralCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1324C0E5166B8CA200A13BAF /* hu */,
+				1324C0E7166B8CAC00A13BAF /* en */,
+			);
+			name = MZPointObjectGeneralCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

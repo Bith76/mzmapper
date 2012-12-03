@@ -24,8 +24,8 @@
     NSLog(@"feltöltendő node-ok: %@",cm.addedPointObjects);
     NSLog(@"komment a feltöltéshez: %@",aComment);
     
-    [MZMapperContentManager sharedContentManager].userName = @"mergl.zalan@stud.u-szeged.hu";
-    [MZMapperContentManager sharedContentManager].password = @"jelszavak";
+    //[MZMapperContentManager sharedContentManager].userName = @"mergl.zalan@stud.u-szeged.hu";
+    //[MZMapperContentManager sharedContentManager].password = @"jelszavak";
     
     
     

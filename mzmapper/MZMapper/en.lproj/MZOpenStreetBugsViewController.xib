@@ -36,7 +36,7 @@
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
 			<object class="IBUIView" id="766721923">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUILabel" id="771264230">
@@ -270,6 +270,7 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{400, 200}</string>
+				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="771264230"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -433,7 +434,7 @@
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
 			<object class="IBUIScrollView" id="430988562">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUILabel" id="965918550">
@@ -598,6 +599,7 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{400, 200}</string>
+				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="965918550"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<reference key="IBUIBackgroundColor" ref="439196594"/>
@@ -860,7 +862,7 @@
 			</object>
 			<object class="IBUIViewController" id="438523245">
 				<object class="IBUIView" key="IBUIView" id="95899633">
-					<nil key="NSNextResponder"/>
+					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">292</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="IBUILabel" id="1070240174">
@@ -1113,6 +1115,7 @@
 						</object>
 					</array>
 					<string key="NSFrameSize">{400, 280}</string>
+					<reference key="NSSuperview"/>
 					<reference key="NSNextKeyView" ref="1070240174"/>
 					<object class="NSColor" key="IBUIBackgroundColor">
 						<int key="NSColorSpace">3</int>
@@ -1879,201 +1882,7 @@
 			<nil key="sourceID"/>
 			<int key="maxID">165</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">MZOpenStreetBugsViewController</string>
-					<string key="superclassName">UIViewController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="addCommentButtonTouched:">id</string>
-						<string key="addCommentOkButtonTouched:">id</string>
-						<string key="cancelButtonTouched:">id</string>
-						<string key="createViewOkButtonTouched:">id</string>
-						<string key="markAsFixedButtonTouched:">id</string>
-						<string key="markAsFixedYesButtonTouched:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="addCommentButtonTouched:">
-							<string key="name">addCommentButtonTouched:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="addCommentOkButtonTouched:">
-							<string key="name">addCommentOkButtonTouched:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="cancelButtonTouched:">
-							<string key="name">cancelButtonTouched:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="createViewOkButtonTouched:">
-							<string key="name">createViewOkButtonTouched:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="markAsFixedButtonTouched:">
-							<string key="name">markAsFixedButtonTouched:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="markAsFixedYesButtonTouched:">
-							<string key="name">markAsFixedYesButtonTouched:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="_addCommentCancelButton">UIButton</string>
-						<string key="_addCommentCommentTextField">UITextField</string>
-						<string key="_addCommentDescriptionLabel">UILabel</string>
-						<string key="_addCommentFooterView">UIView</string>
-						<string key="_addCommentNicknameTextField">UITextField</string>
-						<string key="_addCommentOkButton">UIButton</string>
-						<string key="_addCommentViewController">UIViewController</string>
-						<string key="_createView">UIView</string>
-						<string key="_createViewCancelButton">UIButton</string>
-						<string key="_createViewDescriptionTextField">UITextField</string>
-						<string key="_createViewNicknameTextField">UITextField</string>
-						<string key="_createViewOkButton">UIButton</string>
-						<string key="_fixedView">UIScrollView</string>
-						<string key="_fixedViewCommentTitleLabel">UILabel</string>
-						<string key="_fixedViewDescriptionLabel">UILabel</string>
-						<string key="_fixedViewFooterView">UIView</string>
-						<string key="_markAsFixedCommentTextField">UITextField</string>
-						<string key="_markAsFixedDescriptionLabel">UILabel</string>
-						<string key="_markAsFixedFooterView">UIView</string>
-						<string key="_markAsFixedNicknameTextField">UITextField</string>
-						<string key="_markAsFixedNoButton">UIButton</string>
-						<string key="_markAsFixedViewController">UIViewController</string>
-						<string key="_markAsFixedYesButton">UIButton</string>
-						<string key="_unresolvedAddCommentButton">UIButton</string>
-						<string key="_unresolvedMarkAsFixedButton">UIButton</string>
-						<string key="_unresolvedView">UIScrollView</string>
-						<string key="_unresolvedViewCommentTitleLabel">UILabel</string>
-						<string key="_unresolvedViewDescriptionLabel">UILabel</string>
-						<string key="_unresolvedViewFooterView">UIView</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="_addCommentCancelButton">
-							<string key="name">_addCommentCancelButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_addCommentCommentTextField">
-							<string key="name">_addCommentCommentTextField</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_addCommentDescriptionLabel">
-							<string key="name">_addCommentDescriptionLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_addCommentFooterView">
-							<string key="name">_addCommentFooterView</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_addCommentNicknameTextField">
-							<string key="name">_addCommentNicknameTextField</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_addCommentOkButton">
-							<string key="name">_addCommentOkButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_addCommentViewController">
-							<string key="name">_addCommentViewController</string>
-							<string key="candidateClassName">UIViewController</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_createView">
-							<string key="name">_createView</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_createViewCancelButton">
-							<string key="name">_createViewCancelButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_createViewDescriptionTextField">
-							<string key="name">_createViewDescriptionTextField</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_createViewNicknameTextField">
-							<string key="name">_createViewNicknameTextField</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_createViewOkButton">
-							<string key="name">_createViewOkButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_fixedView">
-							<string key="name">_fixedView</string>
-							<string key="candidateClassName">UIScrollView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_fixedViewCommentTitleLabel">
-							<string key="name">_fixedViewCommentTitleLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_fixedViewDescriptionLabel">
-							<string key="name">_fixedViewDescriptionLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_fixedViewFooterView">
-							<string key="name">_fixedViewFooterView</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_markAsFixedCommentTextField">
-							<string key="name">_markAsFixedCommentTextField</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_markAsFixedDescriptionLabel">
-							<string key="name">_markAsFixedDescriptionLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_markAsFixedFooterView">
-							<string key="name">_markAsFixedFooterView</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_markAsFixedNicknameTextField">
-							<string key="name">_markAsFixedNicknameTextField</string>
-							<string key="candidateClassName">UITextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_markAsFixedNoButton">
-							<string key="name">_markAsFixedNoButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_markAsFixedViewController">
-							<string key="name">_markAsFixedViewController</string>
-							<string key="candidateClassName">UIViewController</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_markAsFixedYesButton">
-							<string key="name">_markAsFixedYesButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_unresolvedAddCommentButton">
-							<string key="name">_unresolvedAddCommentButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_unresolvedMarkAsFixedButton">
-							<string key="name">_unresolvedMarkAsFixedButton</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_unresolvedView">
-							<string key="name">_unresolvedView</string>
-							<string key="candidateClassName">UIScrollView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_unresolvedViewCommentTitleLabel">
-							<string key="name">_unresolvedViewCommentTitleLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_unresolvedViewDescriptionLabel">
-							<string key="name">_unresolvedViewDescriptionLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="_unresolvedViewFooterView">
-							<string key="name">_unresolvedViewFooterView</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/MZOpenStreetBugsViewController.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

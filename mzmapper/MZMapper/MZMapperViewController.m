@@ -687,7 +687,7 @@
     _editorTableViewController = [[MZPointObjectEditorTableViewController alloc] initWithDeleteButton:NO];
     [_editorTableViewController setEditedPointObject:_selectedPointObject];
     _editorTableViewController.view.layer.cornerRadius = 5.0;
-    [_editorTableViewController setTitle:@"Edit"];
+    [_editorTableViewController setTitle:NSLocalizedString(@"EditKey", @"Title of the edit controller")];
     [_editorTableViewController setController:self];
     
     
@@ -749,7 +749,7 @@
     }
     else //entering edit mode
     {
-        if (1/*[MZMapperContentManager sharedContentManager].loggedIn*/) //temporarly this functionality is switched off
+        if ([MZMapperContentManager sharedContentManager].loggedIn) //temporarly this functionality is switched off
         {
             [self enterEditingMode];
         }
@@ -929,7 +929,7 @@
     
     [_locationManager stopUpdatingLocation];
     
-    [self showMessageViewWithMessage:[NSString stringWithFormat:NSLocalizedString(@"Location manager failed with error: %@", nil),[error localizedDescription]]];
+    [self showMessageViewWithMessage:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"LocationManagerFailedWithErrorKey", @"When location manager failed this string will be displayed in the messageview before the error string")/*@"Location manager failed with error: */,[error localizedDescription]]];
     
     [self performSelector:@selector(hideMessageView) withObject:nil afterDelay:3.0];
 }
@@ -956,7 +956,7 @@
 
 - (void)savingPanelViewControllerWillCancelEditing:(MZSavingPanelViewController *)savingPanelViewController
 {
-    UIAlertView* av = [[UIAlertView alloc] initWithTitle:@"Biztos?" message:@"Minden el nem mentett változtatás el fog veszni. Biztos, hogy megszakítod a szerkesztést?" delegate:self cancelButtonTitle:@"Nem" otherButtonTitles:@"Igen", nil];
+    UIAlertView* av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"AreYouSureKey", @"When user want to exit from editing mode without saving - alert view title")/*Biztos?"*/ message:NSLocalizedString(@"WithoutSavingAlertViewMessageKey", @"When user want to exit from editing mode without saving - alert view message")/*@"Minden el nem mentett változtatás el fog veszni. Biztos, hogy megszakítod a szerkesztést?"*/ delegate:self cancelButtonTitle:NSLocalizedString(@"NoKey", @"When user want to exit from editing mode without saving - alert view NO button title") /*@"Nem"*/ otherButtonTitles:NSLocalizedString(@"YesKey", @"When user want to exit from editing mode without saving - alert view YES button title")/*@"Igen"*/, nil];
     
     [av show];
     
@@ -994,7 +994,7 @@
     
     [self exitFromEditingMode];
     
-    UIAlertView* av = [[UIAlertView alloc] initWithTitle:@"Sikeres mentés" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView* av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SuccessfulSavingKey", @"When user saved a changeset succesfully - alert view title")/* @"Sikeres mentés"*/ message:@"" delegate:nil cancelButtonTitle:NSLocalizedString(@"OkKey", @"") otherButtonTitles:nil];
     
     [av show];
     
@@ -1109,7 +1109,7 @@
     
     UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:bugController];
     
-    [bugController.navigationItem setTitle:@"OpenStreetBugs"];
+    [bugController.navigationItem setTitle:@"OpenStreetBug"];
     
     UIPopoverController* popoverController = [[UIPopoverController alloc] initWithContentViewController:navController];
     bugController.aPopoverController = popoverController;
@@ -1184,7 +1184,7 @@
             
             UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:bugController];
             
-            [bugController.navigationItem setTitle:@"OpenStreetBugs"];
+            [bugController.navigationItem setTitle:@"OpenStreetBug"];
             
             UIPopoverController* popoverController = [[UIPopoverController alloc] initWithContentViewController:navController];
             bugController.aPopoverController = popoverController;
@@ -1242,7 +1242,7 @@
     _editorTableViewController = [[MZPointObjectEditorTableViewController alloc] initWithDeleteButton:YES];
     [_editorTableViewController setEditedPointObject:_selectedPointObject];
     _editorTableViewController.view.layer.cornerRadius = 5.0;
-    [_editorTableViewController setTitle:@"Edit"];
+    [_editorTableViewController setTitle:NSLocalizedString(@"EditKey", @"Title of the edit controller")];
     [_editorTableViewController setController:self];
     
     

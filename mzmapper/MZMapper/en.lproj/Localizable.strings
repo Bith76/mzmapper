@@ -1,10 +1,22 @@
-/* 
-  Localizable.strings
-  MZMapper
+/*
+ Localizable.strings
+ MZMapper
+ 
+ Created by Zalan Mergl on 9/9/12.
+ 
+ */
 
-  Created by Zalan Mergl on 9/9/12.
+/* Alert view message - alert view displays when user doesn't add his name by creating OSMBug report */
+"AddNamePleaseKey" = "Please, add your name!";
 
-*/
+/* All right button title on login view controller */
+"AllRightKey" = "All right";
+
+/* When user want to exit from editing mode without saving - alert view title */
+"AreYouSureKey" = "Are you sure?";
+
+/* Title of the cancel button. */
+"CancelKey" = "Cancel";
 
 /* Message of connection problem alert view. */
 "CommunicationErrorMessageKey" = "A connection error occurred. Please try again later.";
@@ -12,14 +24,68 @@
 /* Title of connection problem alert view. */
 "CommunicationErrorTitleKey" = "Connection error";
 
-/* "Text of the notification label which appears while user is logging in." */
-"LoggingInKey" = "Logging in...";
+/* Title of the delete button */
+"DeleteKey" = "Delete";
+
+/* Message of the alert view, which appears when user want to delete a point object. */
+"DeletePointObjectAlertViewMessageKey" = "Do you want to delete it?";
+
+/* Title of the alert view, which appears when user want to delete a point object. */
+"DeletePointObjectAlertViewTitleKey" = "Attention!";
+
+/* Text displays on the message view when map downloading is in progress */
+"DownloadingMapKey" = "Downloading map";
+
+/* Title of the edit controller */
+"EditKey" = "Edit";
+
+/* Alert view title - alert view displays when user makes a mistake by creating OSMBug report */
+"ErrorKey" = "Error";
+
+/* Forgotten password button title on login view controller */
+"ForgottenPasswordKey" = "Forgotten password";
+
+/* When location manager failed this string will be displayed in the messageview before the error string */
+"LocationManagerFailedWithErrorKey" = "Location manager failed with error";
 
 /* Title of login error alert view. */
 "LoginErrorMessageKey" = "The username or password you entered is incorrect.";
 
 /* Title of login error alert view. */
-"LoginErrorTitleKey" = "Authentication Error";
+"LoginErrorTitleKey" = "Authentication error";
+
+/* When user want to exit from editing mode without saving - alert view NO button title */
+"NoKey" = "No";
+
+/* Title of the ok button. */
+"OkKey" = "OK";
+
+/* Password text on login view controller */
+"PasswordNameKey" = "Password";
+
+/* Alert view message - alert view displays when user doesn't comment his OSMBug report */
+"PleaseAddCommentKey" = "Please add comment";
+
+/* Name of the AlpineHut point category element */
+"PointCategoryAccomodationElementNameAlpineHutKey" = "Alpine hut";
+
+/* Name of the CampSite point category element */
+"PointCategoryAccomodationElementNameCampSiteKey" = "Camp site";
+
+/* Name of the CaravanPark point category element */
+"PointCategoryAccomodationElementNameCaravanParkKey" = "Caravan park";
+
+/* Name of the GuestHouse point category element */
+"PointCategoryAccomodationElementNameGuestHouseKey" = "Guest house";
+
+/* Name of the Hostel point category element */
+"PointCategoryAccomodationElementNameHostelKey" = "Hostel";
+
+/* Name of the Hotel point category element */
+"PointCategoryAccomodationElementNameHotelKey" = "Hotel";
+
+/* Name of the Motel point category element */
+"PointCategoryAccomodationElementNameMotelKey" = "Motel";
 
 /* Name of the Atm point category element */
 "PointCategoryAmenityElementNameAtmKey" = "ATM";
@@ -72,6 +138,42 @@
 /* Name of the WasteBasket point category element */
 "PointCategoryAmenityElementNameWasteBasketKey" = "Waste basket";
 
+/* Name of the BigConcreteBlocks point category element */
+"PointCategoryBarrierElementNameBigConcreteBlocksKey" = "Concrete blocks";
+
+/* Name of the Bollard point category element */
+"PointCategoryBarrierElementNameBollardKey" = "Bollard";
+
+/* Name of the CycleBarrier point category element */
+"PointCategoryBarrierElementNameCycleBarrierKey" = "Cycle barrier";
+
+/* Name of the Gate point category element */
+"PointCategoryBarrierElementNameGateKey" = "Gate";
+
+/* Name of the LiftGate point category element */
+"PointCategoryBarrierElementNameLiftGateKey" = "Lift gate";
+
+/* Name of the TollBooth point category element */
+"PointCategoryBarrierElementNameTollBoothKey" = "Toll booth";
+
+/* Name of the Kindergarten point category element */
+"PointCategoryEducationElementNameKindergartenKey" = "Kindergarten";
+
+/* Name of the Library point category element */
+"PointCategoryEducationElementNameLibraryKey" = "Library";
+
+/* Name of the School point category element */
+"PointCategoryEducationElementNameSchoolKey" = "School";
+
+/* Name of the Cinema point category element */
+"PointCategoryEntertainmentArtsCultureElementNameCinemaKey" = "Cinema";
+
+/* Name of the Fountain point category element */
+"PointCategoryEntertainmentArtsCultureElementNameFountainKey" = "Fountain";
+
+/* Name of the Theatre point category element */
+"PointCategoryEntertainmentArtsCultureElementNameTheatreKey" = "Theatre";
+
 /* Name of the Bar point category element */
 "PointCategoryFoodAndDrinkElementNameBarKey" = "Bar";
 
@@ -92,6 +194,21 @@
 
 /* Name of the WaterFountain point category element */
 "PointCategoryFoodAndDrinkElementNameWaterFountainKey" = "Water fountain";
+
+/* Name of the Hospital point category element */
+"PointCategoryHealthcareElementNameHospitalKey" = "Hospital";
+
+/* Name of the Pharmacy point category element */
+"PointCategoryHealthcareElementNamePharmacyKey" = "Pharmacy";
+
+/* Name of the Veterinary point category element */
+"PointCategoryHealthcareElementNameVeterinaryKey" = "Veterinary";
+
+/* Name of the Cemetery point category element */
+"PointCategoryLanduseElementNameCemeteryKey" = "Cemetery";
+
+/* Name of the GraveYard point category element */
+"PointCategoryLanduseElementNameGraveYardKey" = "Graveyard";
 
 /* Name of the Accomodation-type point category */
 "PointCategoryNameAccomodationKey" = "Accomodation";
@@ -134,6 +251,33 @@
 
 /* Name of the Transport-type point category */
 "PointCategoryNameTransportKey" = "Transport";
+
+/* Name of the City point category element */
+"PointCategoryPlacesElementNameCityKey" = "City";
+
+/* Name of the Hamlet point category element */
+"PointCategoryPlacesElementNameHamletKey" = "Hamlet";
+
+/* Name of the Suburb point category element */
+"PointCategoryPlacesElementNameSuburbKey" = "Suburb";
+
+/* Name of the Town point category element */
+"PointCategoryPlacesElementNameTownKey" = "Town";
+
+/* Name of the Village point category element */
+"PointCategoryPlacesElementNameVillageKey" = "Village";
+
+/* Name of the HighVoltage point category element */
+"PointCategoryPowerElementNameHighVoltageKey" = "High voltage";
+
+/* Name of the PlantStation point category element */
+"PointCategoryPowerElementNamePlantStationKey" = "Plant station";
+
+/* Name of the PowerPole point category element */
+"PointCategoryPowerElementNamePowerPoleKey" = "Power pole";
+
+/* Name of the Transformer point category element */
+"PointCategoryPowerElementNameTransformerKey" = "Transformer";
 
 /* Name of the AlcoholShop point category element */
 "PointCategoryShoppingElementNameAlcoholShopKey" = "Alcohol shop";
@@ -213,8 +357,126 @@
 /* Name of the ToyShop point category element */
 "PointCategoryShoppingElementNameToyShopKey" = "Toy shop";
 
+/* Name of the Marina point category element */
+"PointCategorySportAndLeisureElementNameMarinaKey" = "Marina";
+
+/* Name of the Playground point category element */
+"PointCategorySportAndLeisureElementNamePlaygroundKey" = "Playground";
+
+/* Name of the Slipway point category element */
+"PointCategorySportAndLeisureElementNameSlipwayKey" = "Slipway";
+
+/* Name of the SportCentre point category element */
+"PointCategorySportAndLeisureElementNameSportCentreKey" = "Sport centre";
+
+/* Name of the SwimmingPool point category element */
+"PointCategorySportAndLeisureElementNameSwimmingPoolKey" = "Swimming pool";
+
+/* Name of the ArcheologicalSite point category element */
+"PointCategoryTourismElementNameArcheologicalSiteKey" = "Archeological site";
+
+/* Name of the ArtWork point category element */
+"PointCategoryTourismElementNameArtWorkKey" = "Art work";
+
+/* Name of the Battlefield point category element */
+"PointCategoryTourismElementNameBattlefieldKey" = "Battlefield";
+
+/* Name of the Castle point category element */
+"PointCategoryTourismElementNameCastleKey" = "Castle";
+
+/* Name of the Information point category element */
+"PointCategoryTourismElementNameInformationKey" = "Information";
+
+/* Name of the Memorial point category element */
+"PointCategoryTourismElementNameMemorialKey" = "Memorial";
+
+/* Name of the Monument point category element */
+"PointCategoryTourismElementNameMonumentKey" = "Monument";
+
+/* Name of the Museum point category element */
+"PointCategoryTourismElementNameMuseumKey" = "Museum";
+
+/* Name of the PicnicSite point category element */
+"PointCategoryTourismElementNamePicnicSiteKey" = "Picnic site";
+
+/* Name of the Ruins point category element */
+"PointCategoryTourismElementNameRuinsKey" = "Ruins";
+
+/* Name of the ThemePark point category element */
+"PointCategoryTourismElementNameThemeParkKey" = "Theme park";
+
+/* Name of the ViewPoint point category element */
+"PointCategoryTourismElementNameViewPointKey" = "View point";
+
+/* Name of the Zoo point category element */
+"PointCategoryTourismElementNameZooKey" = "Zoo";
+
+/* Name of the AirportGate point category element */
+"PointCategoryTransportElementNameAirportGateKey" = "Airport gate";
+
+/* Name of the Airport point category element */
+"PointCategoryTransportElementNameAirportKey" = "Airport";
+
+/* Name of the AirportTerminal point category element */
+"PointCategoryTransportElementNameAirportTerminalKey" = "Airport terminal";
+
+/* Name of the BicycleParking point category element */
+"PointCategoryTransportElementNameBicycleParkingKey" = "Bicycle parking";
+
+/* Name of the BicycleRental point category element */
+"PointCategoryTransportElementNameBicycleRentalKey" = "Bicycle rental";
+
+/* Name of the BusStation point category element */
+"PointCategoryTransportElementNameBusStationKey" = "Bus station";
+
+/* Name of the BusStop point category element */
+"PointCategoryTransportElementNameBusStopKey" = "Bus stop";
+
+/* Name of the CarParking point category element */
+"PointCategoryTransportElementNameCarParkingKey" = "Car parking";
+
+/* Name of the CarRental point category element */
+"PointCategoryTransportElementNameCarRentalKey" = "Car rental";
+
+/* Name of the Fuel point category element */
+"PointCategoryTransportElementNameFuelKey" = "Fuel";
+
+/* Name of the Helipad point category element */
+"PointCategoryTransportElementNameHelipadKey" = "Helipad";
+
+/* Name of the RailwayStation point category element */
+"PointCategoryTransportElementNameRailwayStationKey" = "Railway station";
+
+/* Name of the TaxiRank point category element */
+"PointCategoryTransportElementNameTaxiRankKey" = "Taxi rank";
+
+/* Name of the TramStop point category element */
+"PointCategoryTransportElementNameTramStopKey" = "Tram stop";
+
+/* Registration button title on login view controller */
+"RegistrationKey" = "Registration";
+
+/* Message view displays this text while searching is in progress */
+"SearchingKey" = "Searching";
+
+/* Text displays when user will change the type of a point object - in the header of the table view */
+"SelectTypeKey" = "Select type";
+
+/* When user saved a changeset succesfully - alert view title */
+"SuccessfulSavingKey" = "Successful saving";
+
+/* Title of the point object type selector controller */
+"TypesKey" = "Types";
+
 /* Name of a point category which hasn't got predefined name */
 "UnnamedPointCategoryNameKey" = "Unknown category";
 
-/* Name of a point category which is shopping point and hasn't got predefined name */
-"UnnamedPointCategoryElementNameKey" = "Unknown element";
+/* User name text on login view controller */
+"UserNameKey" = "Username";
+
+/* When user want to exit from editing mode without saving - alert view message */
+"WithoutSavingAlertViewMessageKey" = "Do you want to quit without saving data?";
+
+/* When user want to exit from editing mode without saving - alert view YES button title */
+"YesKey" = "Yes";
+
