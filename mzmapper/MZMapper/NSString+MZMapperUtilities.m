@@ -353,18 +353,6 @@
             retVal = NSLocalizedString(@"PointCategoryAmenityElementNameTowerKey", @"Name of the Tower point category element");
         }
             break;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
         case MZMapperPointCategoryTourismElementMuseum:
         {
             retVal = NSLocalizedString(@"PointCategoryTourismElementNameMuseumKey", @"Name of the Museum point category element");

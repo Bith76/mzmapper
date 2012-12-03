@@ -108,7 +108,6 @@
 		130B65C4159B1170000AAE0F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130B65C3159B1170000AAE0F /* SenTestingKit.framework */; };
 		130B65C5159B117D000AAE0F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130B65C3159B1170000AAE0F /* SenTestingKit.framework */; };
 		130B65CB159B4E60000AAE0F /* MZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130B65C9159B4E60000AAE0F /* MZLoginViewController.m */; };
-		130B65CC159B4E60000AAE0F /* MZLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 130B65CA159B4E60000AAE0F /* MZLoginViewController.xib */; };
 		130E8E831639BA4B0006BAAB /* MZBlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 130E8E821639BA4B0006BAAB /* MZBlockView.m */; };
 		130E8E84163B39EB0006BAAB /* MZOpenStreetBugsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 130E8E86163B39EB0006BAAB /* MZOpenStreetBugsViewController.xib */; };
 		1310F69E15FCF05A00FB7FAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1310F6A215FCF05A00FB7FAA /* Localizable.strings */; };
@@ -121,6 +120,9 @@
 		1324C0DB166B8BF000A13BAF /* MZAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1324C0DD166B8BF000A13BAF /* MZAboutViewController.xib */; };
 		1324C0E0166B8C3200A13BAF /* MZSavingPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1324C0E2166B8C3200A13BAF /* MZSavingPanelViewController.xib */; };
 		1324C0E4166B8CA200A13BAF /* MZPointObjectGeneralCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1324C0E6166B8CA200A13BAF /* MZPointObjectGeneralCell.xib */; };
+		1324C0F5166D4DF400A13BAF /* map_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 1324C0F4166D4DF300A13BAF /* map_72.png */; };
+		1324C0F7166D4E0800A13BAF /* map_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 1324C0F6166D4E0700A13BAF /* map_144.png */; };
+		1324C0F8166D541400A13BAF /* MZLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1324C0FA166D541400A13BAF /* MZLoginViewController.xib */; };
 		13297A391665512C00F9C263 /* MZUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 13297A381665512C00F9C263 /* MZUploadManager.m */; };
 		13297A3C16655AC400F9C263 /* NSURL+MZMapperUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 13297A3B16655AC400F9C263 /* NSURL+MZMapperUtilities.m */; };
 		13297A401665952100F9C263 /* MZSavingPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13297A3E1665952000F9C263 /* MZSavingPanelViewController.m */; };
@@ -308,17 +310,12 @@
 		132B40FF1638818E0063C60F /* amenity_hospital@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40F91638818E0063C60F /* amenity_hospital@2x.png */; };
 		132B4104163881B00063C60F /* amenity_veterinary.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4102163881B00063C60F /* amenity_veterinary.png */; };
 		132B4105163881B00063C60F /* amenity_veterinary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4103163881B00063C60F /* amenity_veterinary@2x.png */; };
-		132E9760162F2B2C0075AC7B /* shopping_alcohol.n.16.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E975F162F2B2C0075AC7B /* shopping_alcohol.n.16.png */; };
-		132E97701630838A0075AC7B /* transport_bus_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E976E1630838A0075AC7B /* transport_bus_stop.png */; };
-		132E97711630838A0075AC7B /* transport_bus_stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E976F1630838A0075AC7B /* transport_bus_stop@2x.png */; };
 		134D52011651B3F0003D49D1 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52001651B3F0003D49D1 /* Node.m */; };
 		134D52051651B410003D49D1 /* Way.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52041651B410003D49D1 /* Way.m */; };
 		134D520F1652FEBC003D49D1 /* blackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D520B1652FEBC003D49D1 /* blackButton.png */; };
 		134D52101652FEBC003D49D1 /* blackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D520C1652FEBC003D49D1 /* blackButton@2x.png */; };
 		134D52111652FEBC003D49D1 /* blackButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D520D1652FEBC003D49D1 /* blackButtonHighlight.png */; };
 		134D52121652FEBC003D49D1 /* blackButtonHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D520E1652FEBC003D49D1 /* blackButtonHighlight@2x.png */; };
-		134D52191654277E003D49D1 /* rubbish@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D52171654277E003D49D1 /* rubbish@2x.png */; };
-		134D521A1654277E003D49D1 /* rubbish.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D52181654277E003D49D1 /* rubbish.png */; };
 		134D521C165430CB003D49D1 /* PointObjectSchemas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 134D521B165430CB003D49D1 /* PointObjectSchemas.plist */; };
 		135E8B79159CD7930084B918 /* MZMapperContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 135E8B78159CD7930084B918 /* MZMapperContentManager.m */; };
 		136005A7163699F700616E9A /* shop_confectionery.png in Resources */ = {isa = PBXBuildFile; fileRef = 136005A5163699F700616E9A /* shop_confectionery.png */; };
@@ -389,7 +386,6 @@
 		13BC60E51625FC53001B6DFC /* MZEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13BC60E31625FC53001B6DFC /* MZEditViewController.xib */; };
 		13BC60EE16260F22001B6DFC /* MZCategoryItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BC60ED16260F22001B6DFC /* MZCategoryItemView.m */; };
 		13C4F0AC1481624900557F7A /* melykut_02.osm in Resources */ = {isa = PBXBuildFile; fileRef = 13C4F0AA1481624900557F7A /* melykut_02.osm */; };
-		13C7976616297498006C65AA /* icon_bookshop.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 13C7976516297498006C65AA /* icon_bookshop.jpeg */; };
 		13C797811629E027006C65AA /* MZCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C7977F1629E027006C65AA /* MZCategoryViewController.m */; };
 		13C797821629E027006C65AA /* MZCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13C797801629E027006C65AA /* MZCategoryViewController.xib */; };
 		13C797831629E07C006C65AA /* MZCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C7977F1629E027006C65AA /* MZCategoryViewController.m */; };
@@ -487,7 +483,6 @@
 		130B65C3159B1170000AAE0F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		130B65C8159B4E60000AAE0F /* MZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZLoginViewController.h; sourceTree = "<group>"; };
 		130B65C9159B4E60000AAE0F /* MZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZLoginViewController.m; sourceTree = "<group>"; };
-		130B65CA159B4E60000AAE0F /* MZLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZLoginViewController.xib; sourceTree = "<group>"; };
 		130E8E811639BA4B0006BAAB /* MZBlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZBlockView.h; sourceTree = "<group>"; };
 		130E8E821639BA4B0006BAAB /* MZBlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZBlockView.m; sourceTree = "<group>"; };
 		130E8E85163B39EB0006BAAB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MZOpenStreetBugsViewController.xib; sourceTree = "<group>"; };
@@ -511,6 +506,11 @@
 		1324C0E3166B8C3800A13BAF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MZSavingPanelViewController.xib; sourceTree = "<group>"; };
 		1324C0E5166B8CA200A13BAF /* hu */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = hu; path = hu.lproj/MZPointObjectGeneralCell.xib; sourceTree = "<group>"; };
 		1324C0E7166B8CAC00A13BAF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MZPointObjectGeneralCell.xib; sourceTree = "<group>"; };
+		1324C0EE166D376200A13BAF /* Screen Shot 2012-12-03 at 11.24.12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2012-12-03 at 11.24.12.png"; sourceTree = "<group>"; };
+		1324C0F4166D4DF300A13BAF /* map_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_72.png; sourceTree = "<group>"; };
+		1324C0F6166D4E0700A13BAF /* map_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_144.png; sourceTree = "<group>"; };
+		1324C0F9166D541400A13BAF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MZLoginViewController.xib; sourceTree = "<group>"; };
+		1324C0FB166D541C00A13BAF /* hu */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = hu; path = hu.lproj/MZLoginViewController.xib; sourceTree = "<group>"; };
 		13297A371665512C00F9C263 /* MZUploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZUploadManager.h; sourceTree = "<group>"; };
 		13297A381665512C00F9C263 /* MZUploadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZUploadManager.m; sourceTree = "<group>"; };
 		13297A3A16655AC400F9C263 /* NSURL+MZMapperUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+MZMapperUtilities.h"; sourceTree = "<group>"; };
@@ -702,9 +702,6 @@
 		132B40F91638818E0063C60F /* amenity_hospital@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_hospital@2x.png"; sourceTree = "<group>"; };
 		132B4102163881B00063C60F /* amenity_veterinary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_veterinary.png; sourceTree = "<group>"; };
 		132B4103163881B00063C60F /* amenity_veterinary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_veterinary@2x.png"; sourceTree = "<group>"; };
-		132E975F162F2B2C0075AC7B /* shopping_alcohol.n.16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopping_alcohol.n.16.png; sourceTree = "<group>"; };
-		132E976E1630838A0075AC7B /* transport_bus_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transport_bus_stop.png; sourceTree = "<group>"; };
-		132E976F1630838A0075AC7B /* transport_bus_stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transport_bus_stop@2x.png"; sourceTree = "<group>"; };
 		134D51FF1651B3F0003D49D1 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		134D52001651B3F0003D49D1 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
 		134D52031651B410003D49D1 /* Way.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Way.h; sourceTree = "<group>"; };
@@ -713,8 +710,6 @@
 		134D520C1652FEBC003D49D1 /* blackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackButton@2x.png"; sourceTree = "<group>"; };
 		134D520D1652FEBC003D49D1 /* blackButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackButtonHighlight.png; sourceTree = "<group>"; };
 		134D520E1652FEBC003D49D1 /* blackButtonHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackButtonHighlight@2x.png"; sourceTree = "<group>"; };
-		134D52171654277E003D49D1 /* rubbish@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rubbish@2x.png"; sourceTree = "<group>"; };
-		134D52181654277E003D49D1 /* rubbish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rubbish.png; sourceTree = "<group>"; };
 		134D521B165430CB003D49D1 /* PointObjectSchemas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PointObjectSchemas.plist; sourceTree = "<group>"; };
 		135E8B77159CD7930084B918 /* MZMapperContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZMapperContentManager.h; sourceTree = "<group>"; };
 		135E8B78159CD7930084B918 /* MZMapperContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZMapperContentManager.m; sourceTree = "<group>"; };
@@ -792,7 +787,6 @@
 		13BC60ED16260F22001B6DFC /* MZCategoryItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZCategoryItemView.m; sourceTree = "<group>"; };
 		13C4F0A91481624900557F7A /* melykut_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = melykut_02.png; sourceTree = "<group>"; };
 		13C4F0AA1481624900557F7A /* melykut_02.osm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = melykut_02.osm; sourceTree = "<group>"; };
-		13C7976516297498006C65AA /* icon_bookshop.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon_bookshop.jpeg; sourceTree = "<group>"; };
 		13C7977E1629E027006C65AA /* MZCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZCategoryViewController.h; sourceTree = "<group>"; };
 		13C7977F1629E027006C65AA /* MZCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZCategoryViewController.m; sourceTree = "<group>"; };
 		13C797801629E027006C65AA /* MZCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZCategoryViewController.xib; sourceTree = "<group>"; };
@@ -902,6 +896,8 @@
 		0543852A13F9239900C123A1 = {
 			isa = PBXGroup;
 			children = (
+				1324C0F6166D4E0700A13BAF /* map_144.png */,
+				1324C0F4166D4DF300A13BAF /* map_72.png */,
 				0543853F13F9239900C123A1 /* MZMapper */,
 				130B65A0159B1004000AAE0F /* MZMapperLogicTests */,
 				130B65B6159B104C000AAE0F /* MZMapperApplicationTests */,
@@ -1033,7 +1029,7 @@
 				131F07401587CAC40049FED4 /* MZSearchViewController.xib */,
 				130B65C8159B4E60000AAE0F /* MZLoginViewController.h */,
 				130B65C9159B4E60000AAE0F /* MZLoginViewController.m */,
-				130B65CA159B4E60000AAE0F /* MZLoginViewController.xib */,
+				1324C0FA166D541400A13BAF /* MZLoginViewController.xib */,
 				057294231668C73500D1D2A0 /* MZAboutViewController.h */,
 				057294241668C73600D1D2A0 /* MZAboutViewController.m */,
 				1324C0DD166B8BF000A13BAF /* MZAboutViewController.xib */,
@@ -1072,11 +1068,9 @@
 			name = "Other classes";
 			sourceTree = "<group>";
 		};
-		132980CF153CAEE000979414 /* Images */ = {
+		1324C0F3166D378200A13BAF /* Button backgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				134D52181654277E003D49D1 /* rubbish.png */,
-				134D52171654277E003D49D1 /* rubbish@2x.png */,
 				13297A421665987500F9C263 /* blueButton.png */,
 				13297A431665987500F9C263 /* blueButton@2x.png */,
 				13297A441665987600F9C263 /* blueButtonHighlight.png */,
@@ -1093,17 +1087,22 @@
 				13D481541634439400874395 /* greyButton@2x.png */,
 				13D4815B1634472D00874395 /* greyButtonHighlight.png */,
 				13D481561634439400874395 /* greyButtonHighlight@2x.png */,
-				132E976E1630838A0075AC7B /* transport_bus_stop.png */,
-				132E976F1630838A0075AC7B /* transport_bus_stop@2x.png */,
-				132E975F162F2B2C0075AC7B /* shopping_alcohol.n.16.png */,
+			);
+			name = "Button backgrounds";
+			sourceTree = "<group>";
+		};
+		132980CF153CAEE000979414 /* Images */ = {
+			isa = PBXGroup;
+			children = (
 				13C797871629F57F006C65AA /* open_close_arrow.png */,
-				13C7976516297498006C65AA /* icon_bookshop.jpeg */,
 				13F5991816236989007C44FC /* Default-Landscape~ipad.png */,
 				13F599191623698A007C44FC /* Default-Landscape@2x~ipad.png */,
 				1319278D154ACE5900998A1B /* mapbackground.png */,
 				132980D0153CAEEB00979414 /* wood_pattern.jpg */,
 				13F5991416236916007C44FC /* openstreetmap-logo.png */,
 				13F5991516236916007C44FC /* openstreetmap-logo@2x.png */,
+				1324C0EE166D376200A13BAF /* Screen Shot 2012-12-03 at 11.24.12.png */,
+				1324C0F3166D378200A13BAF /* Button backgrounds */,
 				13A69A5D1636933D009CFB60 /* App icons */,
 				13A69A5C16369316009CFB60 /* Rendering point objects */,
 			);
@@ -1649,7 +1648,7 @@
 				13DFCE4B1544976C00CFFBD9 /* icon_search@2x.png in Resources */,
 				1319278E154ACE5900998A1B /* mapbackground.png in Resources */,
 				131F07431587CAC40049FED4 /* MZSearchViewController.xib in Resources */,
-				130B65CC159B4E60000AAE0F /* MZLoginViewController.xib in Resources */,
+				1324C0F8166D541400A13BAF /* MZLoginViewController.xib in Resources */,
 				1310F69E15FCF05A00FB7FAA /* Localizable.strings in Resources */,
 				13F598F8161E185F007C44FC /* icon_edit.png in Resources */,
 				13F598F9161E185F007C44FC /* icon_edit@2x.png in Resources */,
@@ -1661,11 +1660,7 @@
 				13F5991A1623698A007C44FC /* Default-Landscape~ipad.png in Resources */,
 				13F5991B1623698A007C44FC /* Default-Landscape@2x~ipad.png in Resources */,
 				13BC60E51625FC53001B6DFC /* MZEditViewController.xib in Resources */,
-				13C7976616297498006C65AA /* icon_bookshop.jpeg in Resources */,
 				13C797881629F57F006C65AA /* open_close_arrow.png in Resources */,
-				132E9760162F2B2C0075AC7B /* shopping_alcohol.n.16.png in Resources */,
-				132E97701630838A0075AC7B /* transport_bus_stop.png in Resources */,
-				132E97711630838A0075AC7B /* transport_bus_stop@2x.png in Resources */,
 				130E8E84163B39EB0006BAAB /* MZOpenStreetBugsViewController.xib in Resources */,
 				13D481571634439400874395 /* greyButton.png in Resources */,
 				13D481581634439400874395 /* greyButton@2x.png in Resources */,
@@ -1913,8 +1908,6 @@
 				134D52101652FEBC003D49D1 /* blackButton@2x.png in Resources */,
 				134D52111652FEBC003D49D1 /* blackButtonHighlight.png in Resources */,
 				134D52121652FEBC003D49D1 /* blackButtonHighlight@2x.png in Resources */,
-				134D52191654277E003D49D1 /* rubbish@2x.png in Resources */,
-				134D521A1654277E003D49D1 /* rubbish.png in Resources */,
 				134D521C165430CB003D49D1 /* PointObjectSchemas.plist in Resources */,
 				13E40E131655781000678C07 /* MZPointObjectEditorTableViewController.xib in Resources */,
 				13E40E1716557A8B00678C07 /* MZPointObjectHeaderCell.xib in Resources */,
@@ -1931,6 +1924,8 @@
 				13297A481665987600F9C263 /* blueButtonHighlight.png in Resources */,
 				13297A491665987600F9C263 /* blueButtonHighlight@2x.png in Resources */,
 				1324C0DB166B8BF000A13BAF /* MZAboutViewController.xib in Resources */,
+				1324C0F5166D4DF400A13BAF /* map_72.png in Resources */,
+				1324C0F7166D4E0800A13BAF /* map_144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2214,6 +2209,15 @@
 				1324C0E7166B8CAC00A13BAF /* en */,
 			);
 			name = MZPointObjectGeneralCell.xib;
+			sourceTree = "<group>";
+		};
+		1324C0FA166D541400A13BAF /* MZLoginViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1324C0F9166D541400A13BAF /* en */,
+				1324C0FB166D541C00A13BAF /* hu */,
+			);
+			name = MZLoginViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

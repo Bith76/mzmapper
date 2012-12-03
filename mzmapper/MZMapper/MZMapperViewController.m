@@ -61,7 +61,7 @@
     
     _scaleView = [[MZScaleView alloc] init];
     [_scaleView setDisplayString:@"x m"];
-    [_scaleView setFrame:CGRectMake(300.0, self.view.bounds.size.height - 30.0, 174.5, 20.0)];
+    [_scaleView setFrame:CGRectMake(30.0, self.view.bounds.size.height - 30.0, 174.5, 20.0)];
     [self.view addSubview:_scaleView];
     [_scaleView release];
     

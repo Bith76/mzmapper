@@ -184,8 +184,6 @@
 	{
 		[self hide];
 	}
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"PullViewToggledState" object:nil];
 }
 /*
 - (void)didPan:(UIPanGestureRecognizer*)pan
@@ -300,6 +298,8 @@
 	[UIView commitAnimations];
 	
 	_shown = YES;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"PullViewToggledState" object:nil];
 }
 
 - (void)hide
@@ -318,6 +318,8 @@
 	[UIView commitAnimations];
 	
 	_shown = NO;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"PullViewToggledState" object:nil];
 }
 
 - (void)dealloc

@@ -37,7 +37,7 @@
 "DownloadingMapKey" = "Térkép letöltése";
 
 /* Title of the edit controller */
-"EditKey" = "Szerkesztés";
+"EditKey" = "Szerk.";
 
 /* Alert view title - alert view displays when user makes a mistake by creating OSMBug report */
 "ErrorKey" = "Hiba";
@@ -103,7 +103,7 @@
 "PointCategoryAmenityElementNameHuntingStandKey" = "Vadászles";
 
 /* Name of the Phone point category element */
-"PointCategoryAmenityElementNamePhoneKey" = "Telefon";
+"PointCategoryAmenityElementNamePhoneKey" = "Segélyhívó";
 
 /* Name of the PlaceOfWorship point category element */
 "PointCategoryAmenityElementNamePlaceOfWorshipKey" = "Kegyhely";
@@ -124,7 +124,7 @@
 "PointCategoryAmenityElementNameShelterKey" = "Menedékház";
 
 /* Name of the Telephone point category element */
-"PointCategoryAmenityElementNameTelephoneKey" = "Segélyhívó";
+"PointCategoryAmenityElementNameTelephoneKey" = "Telefon";
 
 /* Name of the Toilet point category element */
 "PointCategoryAmenityElementNameToiletKey" = "WC";

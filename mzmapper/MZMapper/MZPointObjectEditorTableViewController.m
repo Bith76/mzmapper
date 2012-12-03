@@ -134,7 +134,9 @@
     
     if (section != 0)
     {
-        retVal = [[_content objectAtIndex:section-1] valueForKey:@"sectionTitle_en"];
+        NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
+        
+        retVal = [[_content objectAtIndex:section-1] valueForKey:([language hasPrefix:@"hu"] ? @"sectionTitle_hu" : @"sectionTitle_en")];
     }
     
     return retVal;

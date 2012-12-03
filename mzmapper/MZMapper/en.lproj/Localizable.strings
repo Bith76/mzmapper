@@ -103,7 +103,7 @@
 "PointCategoryAmenityElementNameHuntingStandKey" = "Hunting stand";
 
 /* Name of the Phone point category element */
-"PointCategoryAmenityElementNamePhoneKey" = "Phone";
+"PointCategoryAmenityElementNamePhoneKey" = "Emergency phone";
 
 /* Name of the PlaceOfWorship point category element */
 "PointCategoryAmenityElementNamePlaceOfWorshipKey" = "Place of worship";
@@ -124,7 +124,7 @@
 "PointCategoryAmenityElementNameShelterKey" = "Shelter";
 
 /* Name of the Telephone point category element */
-"PointCategoryAmenityElementNameTelephoneKey" = "Emergency phone";
+"PointCategoryAmenityElementNameTelephoneKey" = "Phone";
 
 /* Name of the Toilet point category element */
 "PointCategoryAmenityElementNameToiletKey" = "Toilet";

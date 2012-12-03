@@ -6,11 +6,8 @@
 //
 //
 
-
 @interface UIImage (MZMapperUtilities)
 
 + (UIImage*)imageForPointCategoryElement:(NSUInteger)element;
-//+ (UIImage*)imageForPointCategoryFoodAndDrinkElement:(MZMapperPointCategoryFoodAndDrinkElement)element;
-//+ (UIImage*)imageForPointCategoryAmenityElement:(MZMapperPointCategoryAmenityElement)element;
 
 @end
