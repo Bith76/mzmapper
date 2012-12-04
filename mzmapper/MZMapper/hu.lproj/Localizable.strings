@@ -412,7 +412,7 @@
 "PointCategoryTourismElementNameZooKey" = "Állatkert";
 
 /* Name of the AirportGate point category element */
-"PointCategoryTransportElementNameAirportGateKey" = "Reptéri kapu";
+"PointCategoryTransportElementNameAirportGateKey" = "Beszálló kapu";
 
 /* Name of the Airport point category element */
 "PointCategoryTransportElementNameAirportKey" = "Reptér";

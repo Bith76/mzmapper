@@ -42,4 +42,75 @@
     STAssertEquals(type, @"shop", @"");
 }
 
+- (void)testSubTypeNameInServerRepresentationForNodeMethod
+{
+    MZNode* aNode = [[MZNode alloc] init];
+    [aNode.tags setValue:@"shelter" forKey:@"amenity"];
+    
+    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
+    
+    NSString* subType = [cm subTypeNameInServerRepresentationForNode:aNode];
+    
+    STAssertEquals(subType, @"shelter", @"");
+}
+
+- (void)testFullTypeNameInServerRepresentationForNodeMethod
+{
+    MZNode* aNode = [[MZNode alloc] init];
+    [aNode.tags setValue:@"phone" forKey:@"emergency"];
+    
+    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
+    
+    NSString* fullType = [cm fullTypeNameInServerRepresentationForNode:aNode];
+    
+    STAssertEquals(fullType, @"emergency:phone", @"");
+}
+
+- (void)testTypeNameInServerRepresentationForLogicalTypeMethod
+{
+    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
+    
+    NSString* type = [cm typeNameInServerRepresentationForLogicalType:MZMapperPointCategoryTourismElementBattlefield];
+    
+    STAssertEquals(type, @"historic", @"");
+}
+
+- (void)testSubTypeNameInServerRepresentationForLogicalTypeMethod
+{
+    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
+    
+    NSString* subType = [cm subTypeNameInServerRepresentationForLogicalType:MZMapperPointCategoryShoppingElementMusicShop];
+    
+    STAssertEquals(subType, @"music", @"");
+}
+
+- (void)testFullTypeNameInServerRepresentationForLogicalTypeMethod
+{
+    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
+    
+    NSString* fullType = [cm fullTypeNameInServerRepresentationForLogicalType:MZMapperPointCategoryHealthcareElementHospital];
+    
+    STAssertEquals(fullType, @"amenity:hospital", @"");
+}
+
+- (void)testLogicalTypeForServerTypeNameMethod
+{
+    NSString* serverTypeName = @"aeroway:aerodrome";
+    
+    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
+    
+    NSUInteger logicalType = [cm logicalTypeForServerTypeName:serverTypeName];
+    
+    STAssertEquals(logicalType, MZMapperPointCategoryTransportElementAirport, @"");
+}
+
+- (void)testServerTypeNameForLogicalTypeMethod
+{
+    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
+    
+    NSString* serverType = [cm serverTypeNameForLogicalType:MZMapperPointCategorySportAndLeisureElementPlayground];
+    
+    STAssertEquals(serverType, @"leisure", @"");
+}
+
 @end

@@ -124,7 +124,7 @@ static MZMapperContentManager* sharedContentManager = nil;
                             @"tourism:camp_site",               [NSNumber numberWithUnsignedInteger:MZMapperPointCategoryAccomodationElementCampSite],
                             @"tourism:caravan_site",            [NSNumber numberWithUnsignedInteger:MZMapperPointCategoryAccomodationElementCaravanPark],
                             @"tourism:alpine_hut",              [NSNumber numberWithUnsignedInteger:MZMapperPointCategoryAccomodationElementAlpineHut],
-//egyelőre eddig van kész--------------------------------------------------------------------------------------------------------------------------------
+                                                    
                             @"aeroway:aerodrome",               [NSNumber numberWithUnsignedInteger:MZMapperPointCategoryTransportElementAirport],
                             @"aeroway:terminal",                [NSNumber numberWithUnsignedInteger:MZMapperPointCategoryTransportElementAirportTerminal],
                             @"aeroway:gate",                    [NSNumber numberWithUnsignedInteger:MZMapperPointCategoryTransportElementAirportGate],

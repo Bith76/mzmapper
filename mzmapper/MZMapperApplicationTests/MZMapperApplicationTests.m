@@ -66,4 +66,60 @@
     STAssertNotNil(vc, @"MZSearchViewController could not be loaded");
 }
 
+- (void)testLoginViewControllerLoadingFromXIB
+{
+    MZLoginViewController* vc = [[MZLoginViewController alloc] initWithNibName:@"MZLoginViewController" bundle:nil];
+    
+    STAssertNotNil(vc, @"MZLoginViewController could not be loaded");
+}
+
+- (void)testAboutViewControllerLoadingFromXIB
+{
+    MZAboutViewController* vc = [[MZAboutViewController alloc] initWithNibName:@"MZAboutViewController" bundle:nil];
+    
+    STAssertNotNil(vc, @"MZAboutViewController could not be loaded");
+}
+
+- (void)testEditViewControllerLoadingFromXIB
+{
+    MZEditViewController* vc = [[MZEditViewController alloc] initWithNibName:@"MZEditViewController" bundle:nil];
+    
+    STAssertNotNil(vc, @"MZEditViewController could not be loaded");
+}
+
+- (void)testCategoryViewControllerLoadingFromXIB
+{
+    MZCategoryViewController* vc = [[MZCategoryViewController alloc] initWithNibName:@"MZCategoryViewController" bundle:nil];
+    
+    STAssertNotNil(vc, @"MZCategoryViewController could not be loaded");
+}
+
+- (void)testOpenStreetBugsViewControllerLoadingFromXIB
+{
+    MZOpenStreetBugsViewController* vc = [[MZOpenStreetBugsViewController alloc] initWithNibName:@"MZOpenStreetBugsViewController" bundle:nil];
+    
+    STAssertNotNil(vc, @"MZOpenStreetBugsViewController could not be loaded");
+}
+
+- (void)testPointObjectEditorTableViewControllerLoadingFromXIB
+{
+    MZPointObjectEditorTableViewController* vc = [[MZPointObjectEditorTableViewController alloc] initWithNibName:@"MZPointObjectEditorTableViewController" bundle:nil];
+    
+    STAssertNotNil(vc, @"MZPointObjectEditorTableViewController could not be loaded");
+}
+
+- (void)testPointObjectTypeSelectorTableViewControllerLoadingFromXIB
+{
+    MZPointObjectTypeSelectorTableViewController* vc = [[MZPointObjectTypeSelectorTableViewController alloc] initWithNibName:@"MZPointObjectTypeSelectorTableViewController" bundle:nil];
+    
+    STAssertNotNil(vc, @"MZPointObjectTypeSelectorTableViewController could not be loaded");
+}
+
+- (void)testSavingPanelViewControllerLoadingFromXIB
+{
+    MZSavingPanelViewController* vc = [[MZSavingPanelViewController alloc] initWithNibName:@"MZSavingPanelViewController" bundle:nil];
+    
+    STAssertNotNil(vc, @"MZSavingPanelViewController could not be loaded");
+}
+
 @end

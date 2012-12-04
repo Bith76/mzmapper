@@ -402,7 +402,7 @@
         
         [UIView animateWithDuration:0.15 delay:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             CGRect scaleViewFrame = _scaleView.frame;
-            scaleViewFrame.origin.x += 270.0;
+            scaleViewFrame.origin.x = 300.0;
             [_scaleView setFrame:scaleViewFrame];
         } completion:nil];
     }
@@ -412,7 +412,7 @@
         
         [UIView animateWithDuration:0.15 delay:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             CGRect scaleViewFrame = _scaleView.frame;
-            scaleViewFrame.origin.x -= 270.0;
+            scaleViewFrame.origin.x = 30.0;
             [_scaleView setFrame:scaleViewFrame];
         } completion:nil];
     }

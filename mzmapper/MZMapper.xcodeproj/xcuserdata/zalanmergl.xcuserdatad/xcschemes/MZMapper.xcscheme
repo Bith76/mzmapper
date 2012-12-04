@@ -24,7 +24,7 @@
    </BuildAction>
    <TestAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
@@ -35,6 +35,16 @@
                BlueprintIdentifier = "130B65B1159B104C000AAE0F"
                BuildableName = "MZMapperApplicationTests.octest"
                BlueprintName = "MZMapperApplicationTests"
+               ReferencedContainer = "container:MZMapper.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "130B659A159B1004000AAE0F"
+               BuildableName = "MZMapperLogicTests.octest"
+               BlueprintName = "MZMapperLogicTests"
                ReferencedContainer = "container:MZMapper.xcodeproj">
             </BuildableReference>
          </TestableReference>
