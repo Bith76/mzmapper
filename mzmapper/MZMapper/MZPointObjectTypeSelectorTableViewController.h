@@ -17,11 +17,14 @@
 @end
 
 
+@class MZBlockView;
 
-@interface MZPointObjectTypeSelectorTableViewController : UITableViewController <UIPopoverControllerDelegate>
+@interface MZPointObjectTypeSelectorTableViewController : UITableViewController <UIPopoverControllerDelegate, UIWebViewDelegate>
 {
 @private
     NSMutableArray* _content;
+    //UIActivityIndicatorView* _activityIndicator;
+    MZBlockView* _blockView;
 }
 
 @property (nonatomic, retain) MZNode*   editedPointObject;

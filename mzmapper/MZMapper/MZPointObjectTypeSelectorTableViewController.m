@@ -8,6 +8,7 @@
 
 #import "MZPointObjectTypeSelectorTableViewController.h"
 #import "MZMapperContentManager.h"
+#import "MZBlockView.h"
 
 @interface MZPointObjectTypeSelectorTableViewController ()
 
@@ -397,7 +398,10 @@
     [infoViewController setContentSizeForViewInPopover:CGSizeMake(800.0, 500.0)];
     UIWebView* infoWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0.0, 0.0, 735.0, 500.0)];
     [infoViewController.view addSubview:infoWebView];
+    [infoWebView setDelegate:self];
     [infoWebView loadRequest:request];
+    _blockView = [[MZBlockView alloc] initWithView:infoWebView];
+    [_blockView show];
     [infoWebView release];
     
     UIPopoverController* popoverController = [[UIPopoverController alloc] initWithContentViewController:infoViewController];
@@ -406,6 +410,28 @@
     
     [infoViewController release];
 }
+
+#pragma mark -
+#pragma mark UIWebViewController delegate methods
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{    
+    if (_blockView)
+    {
+        [_blockView hide];
+        [_blockView release], _blockView = nil;
+    }
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{    
+    if (_blockView)
+    {
+        [_blockView hide];
+        [_blockView release], _blockView = nil;
+    }
+}
+
 
 #pragma mark -
 #pragma mark UIPopoverControllerDelegate methods

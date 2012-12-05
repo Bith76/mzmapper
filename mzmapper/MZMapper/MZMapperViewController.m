@@ -1003,92 +1003,60 @@
 
 - (void)handleLongPress:(UILongPressGestureRecognizer*)gesture
 {
-    NSLog(@"self.view: %@",NSStringFromCGPoint([gesture locationInView:self.view]));
-    NSLog(@"view: %@",NSStringFromCGPoint([gesture locationInView:_pullView]));
-    //NSLog(@"loc: %@",NSStringFromCGPoint([gesture locationInView:self.view]));
-    
-    //NSLog(@"self.view.frame: %@",NSStringFromCGRect(self.view.frame));
-    CGPoint locationInVC = [gesture locationInView:self.view];
-    CGPoint locationInPointObjectsLayerView = [gesture locationInView:_pointObjectsLayerView];
-    
-    NSLog(@"location: %@",NSStringFromCGPoint(locationInVC));
-    if (gesture.state == UIGestureRecognizerStateEnded)
+    if (_editingModeIsActive)
     {
-        [_loupeView setHidden:YES];
+        CGPoint locationInVC = [gesture locationInView:self.view];
+        CGPoint locationInPointObjectsLayerView = [gesture locationInView:_pointObjectsLayerView];
         
-        UIView* touchedView = [_pointObjectsLayerView hitTest:locationInPointObjectsLayerView withEvent:nil];
-        
-        NSLog(@"touchedview: %@",touchedView);
-        
-        if ([touchedView isMemberOfClass:[UIImageView class]])
+        if (gesture.state == UIGestureRecognizerStateEnded)
         {
-            [self handlePointObjectTap:[touchedView.gestureRecognizers objectAtIndex:0]];
+            [_loupeView setHidden:YES];
+            
+            UIView* touchedView = [_pointObjectsLayerView hitTest:locationInPointObjectsLayerView withEvent:nil];
+                        
+            if ([touchedView isMemberOfClass:[UIImageView class]])
+            {
+                [self handlePointObjectTap:[touchedView.gestureRecognizers objectAtIndex:0]];
+            }
         }
-        
-        
-        //[_scrollView selectPoint:_loupeView.touchPointInViewToMagnify];
+        else
+        {
+            CGFloat sizeOfEnlargedArea = 50.0;
+            CGFloat borderWidth = sizeOfEnlargedArea / 2.0;
+            
+            // Set limiters
+            if (locationInVC.x < borderWidth)
+            {
+                locationInVC.x = borderWidth;
+            }
+            if (locationInVC.x > self.view.bounds.size.width - borderWidth)
+            {
+                locationInVC.x = self.view.bounds.size.width - borderWidth;
+            }
+            if (locationInVC.y < borderWidth)
+            {
+                locationInVC.y = borderWidth;
+            }
+            if (locationInVC.y > self.view.bounds.size.height - borderWidth)
+            {
+                locationInVC.y = self.view.bounds.size.height - borderWidth;
+            }
+            
+            CGPoint offset = _scrollView.contentOffset;
+            
+            locationInVC.x += offset.x;
+            locationInVC.y += offset.y;
+            
+            // Create and show the new image from bitmap data
+            _loupeView.viewToMagnify = _map;
+            _loupeView.touchPointInViewToMagnify = locationInVC;
+            
+            // Refresh view
+            [_loupeView setNeedsDisplay];
+            
+            [_loupeView setHidden:NO];
+        }
     }
-    else if (_editingModeIsActive)
-    {
-        CGFloat sizeOfEnlargedArea = 50.0;
-        CGFloat borderWidth = sizeOfEnlargedArea / 2.0;
-        
-        // Set limiters
-        if (locationInVC.x < borderWidth)
-        {
-            NSLog(@"védelemx<");
-            locationInVC.x = borderWidth;
-        }
-        if (locationInVC.x > self.view.bounds.size.width - borderWidth)
-        {
-            NSLog(@"védelemx>");
-            locationInVC.x = self.view.bounds.size.width - borderWidth;
-        }
-        if (locationInVC.y < borderWidth)
-        {
-            NSLog(@"védelemy<");
-            locationInVC.y = borderWidth;
-        }
-        if (locationInVC.y > self.view.bounds.size.height - borderWidth)
-        {
-            NSLog(@"védelemy>");
-            locationInVC.y = self.view.bounds.size.height - borderWidth;
-        }
-        
-        CGPoint offset = _scrollView.contentOffset;
-        
-        locationInVC.x += offset.x;
-        locationInVC.y += offset.y;
-        
-        //        CGPoint offset = _scrollView.contentOffset;
-        //
-        //        // Make rect around the touched point
-        //        CGRect rect = CGRectMake(offset.x + location.x - (sizeOfEnlargedArea / 2.0), offset.y + location.y - (sizeOfEnlargedArea / 2.0), sizeOfEnlargedArea, sizeOfEnlargedArea);
-        //
-        //        // Create bitmap image from original image data, using rectangle to specify desired crop area
-        //        UIGraphicsBeginImageContextWithOptions(_map.bounds.size, _map.opaque, 0.0);
-        //
-        //        [_map.layer renderInContext:UIGraphicsGetCurrentContext()];
-        //        UIImage* mapImg = UIGraphicsGetImageFromCurrentImageContext();
-        //
-        //        UIGraphicsEndImageContext();
-        //
-        //        CGImageRef imageRef = CGImageCreateWithImageInRect([mapImg CGImage], rect);
-        //        UIImage *img = [UIImage imageWithCGImage:imageRef];
-        //        CGImageRelease(imageRef);
-        
-        
-        // Create and show the new image from bitmap data
-        //_loupeView.zoomImage = img;
-        _loupeView.viewToMagnify = _map;
-        _loupeView.touchPointInViewToMagnify = locationInVC;
-        
-        // Refresh view
-        [_loupeView setNeedsDisplay];
-        
-        [_loupeView setHidden:NO];
-    }
-    
 }
 
 //when user taps on an empty area on the _openStreetBugView

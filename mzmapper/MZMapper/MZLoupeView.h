@@ -9,7 +9,6 @@
 
 @interface MZLoupeView : UIView
 
-//@property(nonatomic, retain) UIImage *zoomImage;
 @property (nonatomic, retain)   UIView* viewToMagnify;
 @property (nonatomic, assign)   CGPoint touchPointInViewToMagnify;
 

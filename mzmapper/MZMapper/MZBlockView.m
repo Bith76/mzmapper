@@ -54,6 +54,8 @@
         [self addSubview:_activityIndicator];
         
         UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hide)];
+        tap.numberOfTapsRequired = 2;
+        tap.numberOfTouchesRequired = 3;
         [self addGestureRecognizer:tap];
         [tap release];
     }

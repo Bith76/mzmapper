@@ -122,4 +122,21 @@
     STAssertNotNil(vc, @"MZSavingPanelViewController could not be loaded");
 }
 
+- (void)testBlockView
+{
+    UIView* mockView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    MZBlockView* blockView = [[MZBlockView alloc] initWithView:mockView];
+    
+    [blockView show];
+    
+    STAssertNotNil(blockView.superview, @"");
+    
+//    [blockView hide];
+//    
+//    STAssertNotNil(blockView.superview, @"");
+    
+    
+}
+
 @end
