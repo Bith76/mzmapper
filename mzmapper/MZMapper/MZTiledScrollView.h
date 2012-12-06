@@ -39,6 +39,5 @@
 - (id)initWithFrame:(CGRect)frame source:(MZMapView*)source;
 - (void)updateBackgroundImage;
 - (void)jumpToCoordinateLongitude:(CGFloat)lon latitude:(CGFloat)lat;
-- (void)selectPoint:(CGPoint)point;
 
 @end

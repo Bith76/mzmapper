@@ -78,7 +78,6 @@
 
 - (void)categoryVC:(MZCategoryViewController*)categoryVC addedItemWithType:(NSUInteger)aType toPoint:(CGPoint)aPoint
 {
-    NSLog(@"%s",__PRETTY_FUNCTION__);
     [self.controller addedPointObjectWithType:aType toPoint:aPoint];
 }
 

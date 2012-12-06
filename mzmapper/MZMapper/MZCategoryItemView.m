@@ -21,7 +21,7 @@
 
 @implementation MZCategoryItemView
 
-@synthesize categoryViewController, itemType;//itemImage, itemName;
+@synthesize categoryViewController, itemType;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -40,7 +40,6 @@
 - (void)didMoveToSuperview
 {
     UILabel* titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(50.0, 10.0, self.bounds.size.width - 60.0, 30.0)];
-    //[titleLabel setBackgroundColor:[UIColor purpleColor]];
     [titleLabel setFont:[UIFont systemFontOfSize:15.0]];
     [titleLabel setText:[NSString nameOfPointCategoryElement:itemType]];
     
@@ -48,9 +47,7 @@
 }
 
 - (void)enableMove:(UILongPressGestureRecognizer *)gestureRecognizer
-{
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
+{    
     CGPoint recognizedAtPoint = [gestureRecognizer locationInView:self.window.rootViewController.view];
     
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan)
@@ -83,7 +80,6 @@
             [_draggedView setFrame:newFrame];
         
         } completion:^(BOOL finished) {
-            NSLog(@"finised animation: %@", NSStringFromCGPoint(_draggedView.center));
             [self.categoryViewController addCategoryItemType:self.itemType toPoint:_draggedView.center];
             
             [_draggedView release], _draggedView = nil;
@@ -98,17 +94,7 @@
     // Drawing code
     
     //draw item image
-    //[self.itemImage drawInRect:CGRectMake(3.0, 3.0, 44.0, 44.0)];
     [[UIImage imageForPointCategoryElement:itemType] drawInRect:CGRectMake(17.0, 17.0, 16.0, 16.0)];
-
-    //maybe unneeded
-    //draw item name
-//    CGSize constraint = CGSizeMake(20000.0f, 20000.0f);
-//    
-//    CGSize size = [self.itemName sizeWithFont:[UIFont systemFontOfSize:17.0] constrainedToSize:constraint lineBreakMode:OS_IS_LOWER_THAN_6_0 ? UILineBreakModeWordWrap : NSLineBreakByWordWrapping];
-//    CGRect itemNameRect = CGRectMake(53.0, (self.frame.size.height - size.height) / 2.0, self.frame.size.width - 56.0, size.height);
-//    
-//    [self.itemName drawInRect:itemNameRect withFont:[UIFont systemFontOfSize:17.0]];
 }
 
 - (void)dealloc

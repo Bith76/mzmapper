@@ -26,11 +26,6 @@
     [super tearDown];
 }
 
-//- (void)testExample
-//{
-//    STFail(@"Unit tests are not implemented yet in MZMapperLogicTests");
-//}
-
 - (void)testTypeNameInServerRepresentationForNodeMethod
 {
     MZNode* aNode = [[MZNode alloc] init];
@@ -63,9 +58,7 @@
     MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
     
     NSString* fullType = [cm fullTypeNameInServerRepresentationForNode:aNode];
-    
-    NSLog(@"isequal: %d",[@"emergency:phone" isEqual:fullType]);
-    
+        
     STAssertEqualObjects(fullType, @"emergency:phone", @"");
 }
 
@@ -115,40 +108,5 @@
     
     STAssertEqualObjects(serverType, @"leisure:playground", @"");
 }
-
-- (void)testRealPositionForNodeMethod
-{
-    MZNode* node = [[MZNode alloc] init];
-    node.latitude = 46.2152;
-    node.longitude = 19.3792;
-    
-    MZMapView* _mapView = [[MZMapView alloc] init];
-
-    NSString* xml = [[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"melykut_02" ofType:@"osm"] encoding:NSUTF8StringEncoding error:nil];
-    
-	[_mapView setupWithXML:xml];
-    
-    CGPoint realPosition = [_mapView realPositionForNode:node];
-    
-    STAssertEquals(realPosition, CGPointMake(208.702, 87.7451), @"");
-}
-
-- (void)testnodeForRealPositionMethod
-{
-    MZMapView* _mapView = [[MZMapView alloc] init];
-    
-    NSString* xml = [[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"melykut_02" ofType:@"osm"] encoding:NSUTF8StringEncoding error:nil];
-    
-	[_mapView setupWithXML:xml];
-    
-    MZNode* node = [_mapView nodeForRealPosition:CGPointMake(1576, 957)];
-    
-    STAssertEquals(node.latitude, 46.2114, @"");
-    STAssertEquals(node.longitude, 19.3935, @"");
-}
-
-
-//- (CGPoint)realPositionForNode:(MZNode*)node;
-//- (MZNode*)nodeForRealPosition:(CGPoint)point;
 
 @end

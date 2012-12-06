@@ -17,28 +17,13 @@
 
 - (void)uploadChangesToOSMWithComment:(NSString*)aComment
 {
-    MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
-    
-    NSLog(@"törlendő node-ok: %@",cm.deletedPointObjects);
-    NSLog(@"módosított node-ok: %@",cm.updatedPointObjects);
-    NSLog(@"feltöltendő node-ok: %@",cm.addedPointObjects);
-    NSLog(@"komment a feltöltéshez: %@",aComment);
-    
-    //[MZMapperContentManager sharedContentManager].userName = @"mergl.zalan@stud.u-szeged.hu";
-    //[MZMapperContentManager sharedContentManager].password = @"jelszavak";
-    
-    
-    
-    
     NSString* createChangesetXML = [self generateChangesetCreationXMLWithComment:aComment];
     
     MZRESTRequestManager* requestManager = [[MZRESTRequestManager alloc] init];
     
     [requestManager putRequestToURL:[NSURL urlForChangesetCreation] body:[createChangesetXML dataUsingEncoding:NSUTF8StringEncoding] completionHandler:^(id resultObject) {
         if (![resultObject isEqualToString:HTTP_STATUS_CODE_CONNECTION_FAILED])
-        {
-            NSLog(@"changeset created: %@",resultObject);
-            
+        {            
             _changesetId = [resultObject retain];
             
             [self startDeleteRequests];
@@ -62,8 +47,6 @@
             
             [urls addObject:deleteURL];
             [bodies addObject:deleteBody];
-            
-            NSLog(@"törlés: %@",[self generateDeletionXMLForNode:node]);
         }
         
         MZRESTRequestManager* requestManager = [[MZRESTRequestManager alloc] init];
@@ -82,10 +65,6 @@
 
 - (void)startAddRequests
 {
-    
-    
-    
-    
     if ([[MZMapperContentManager sharedContentManager].addedPointObjects count])
     {
         NSMutableArray* urls = [NSMutableArray array];
@@ -98,13 +77,7 @@
             
             [urls addObject:createURL];
             [bodies addObject:createBody];
-            
-            NSLog(@"hozzáadás: %@",[self generateNodeCreationXMLWithNode:node]);
         }
-        
-        
-        
-        //to-do tesztelni---------------------------------
         
         MZRESTRequestManager* requestManager = [[MZRESTRequestManager alloc] init];
         
@@ -121,9 +94,7 @@
 }
 
 - (void)startUpdateRequests
-{
-    //to-do tesztelni---------------------------------kell hozzá a gui
-    
+{    
     if ([[MZMapperContentManager sharedContentManager].updatedPointObjects count])
     {
         NSMutableArray* urls = [NSMutableArray array];
@@ -136,13 +107,7 @@
             
             [urls addObject:createURL];
             [bodies addObject:createBody];
-            
-            NSLog(@"update-elés: %@",[self generateNodeCreationXMLWithNode:node]);
         }
-        
-        
-        
-        //to-do tesztelni---------------------------------
         
         MZRESTRequestManager* requestManager = [[MZRESTRequestManager alloc] init];
         
@@ -164,9 +129,7 @@
     
     [requestManager putRequestToURL:[NSURL urlForChangesetClosingForChangesetID:_changesetId] body:[@"" dataUsingEncoding:NSUTF8StringEncoding] completionHandler:^(id resultObject) {
         if (![resultObject isEqualToString:HTTP_STATUS_CODE_CONNECTION_FAILED])
-        {
-            NSLog(@"changeset closed");
-            
+        {            
             if (_delegate && [_delegate respondsToSelector:@selector(uploadManagerDidFinishWithUploading:)])
             {
                 [_delegate uploadManagerDidFinishWithUploading:self];

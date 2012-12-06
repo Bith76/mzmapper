@@ -24,9 +24,9 @@
 
 @implementation MZMapperViewController
 
-@synthesize gettingCurrentLocationIsInProgress = _gettingCurrentLocationIsInProgress;
-@synthesize selectedPointObject = _selectedPointObject;
-@synthesize editingModeIsActive = _editingModeIsActive;
+@synthesize gettingCurrentLocationIsInProgress  = _gettingCurrentLocationIsInProgress;
+@synthesize selectedPointObject                 = _selectedPointObject;
+@synthesize editingModeIsActive                 = _editingModeIsActive;
 
 #pragma mark - View lifecycle
 
@@ -37,11 +37,11 @@
     
     if (!_map) 
 	{
-		_map = [[MZMapView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width*3, self.view.frame.size.height*3/*self.view.frame.size.width * 360.0 / 412.0*/)];
+		_map = [[MZMapView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width*3, self.view.frame.size.height*3)];
         
 		[_map.layer setNeedsDisplayOnBoundsChange:YES];
         
-		_scrollView = [[MZTiledScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height/*self.view.frame.size.width * 360.0 / 412.0*/) source:_map];
+		_scrollView = [[MZTiledScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height) source:_map];
         
         _scrollView.decelerationRate = UIScrollViewDecelerationRateFast;
         
@@ -53,14 +53,13 @@
         [_scrollView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"mapbackground.png"]]];
 	}
 	
-	if(![_scrollView superview])
+	if (![_scrollView superview])
 	{
 		[self.view addSubview:_scrollView];
         [_scrollView setTag:1];
 	}
     
     _scaleView = [[MZScaleView alloc] init];
-    [_scaleView setDisplayString:@"x m"];
     [_scaleView setFrame:CGRectMake(30.0, self.view.bounds.size.height - 30.0, 174.5, 20.0)];
     [self.view addSubview:_scaleView];
     [_scaleView release];
@@ -82,9 +81,7 @@
     
     [_editButton setImage:[UIImage imageNamed:@"icon_edit.png"] forState:UIControlStateNormal];
     [_currentLocButton setImage:[UIImage imageNamed:@"icon_current_location.png"] forState:UIControlStateNormal];
-    //[_currentLocButton setImage:[UIImage imageNamed:@"icon_current_location_reversed.png"] forState:UIControlStateHighlighted];
     [_searchButton setImage:[UIImage imageNamed:@"icon_search.png"] forState:UIControlStateNormal];
-    //[_searchButton setImage:[UIImage imageNamed:@"icon_search_reversed.png"] forState:UIControlStateHighlighted];
     [_openStreetBugButton setImage:[UIImage imageNamed:@"icon_bug.png"] forState:UIControlStateNormal];
     
     [_editButton setExclusiveTouch:YES];
@@ -108,8 +105,7 @@
     
     
     _locationManager = [[CLLocationManager alloc] init];
-	_locationManager.delegate = self;
-	//[_locationManager startUpdatingLocation];
+	_locationManager.delegate = self;    
     
     
     //loupe section
@@ -136,7 +132,6 @@
     NSString* xml = [[NSString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"melykut_02" ofType:@"osm"] encoding:NSUTF8StringEncoding error:nil];
     
 	[_map setupWithXML:xml];
-    //    [_map setupWithXML:[[NSBundle mainBundle] pathForResource:@"map" ofType:@"xml"]];
 	
     [xml release];
     
@@ -156,24 +151,13 @@
     CGFloat distance = [bottomLeftLocation distanceFromLocation:bottomRightLocation];
     CGFloat mapWidth = _map.frame.size.width;
     
-    NSLog(@"távolság: %f",distance);
-    NSLog(@"térképszélesség: %f",mapWidth);
-    
     CGFloat displayableMeters = (distance * _scaleView.frame.size.width) / mapWidth;
     [_scaleView setDisplayString:[NSString stringWithFormat:@"%.0f m", displayableMeters]];
     
     
-    //    NSLog(@"kezdeti koordinatak: %f,%f,%f,%f",_map.minLongitude,_map.minLatitude,_map.maxLongitude,_map.maxLatitude);
-    //    NSLog(@"ezek lettek: %f,%f,%f,%f",left,bottom,right,top);
-    //
-    //    NSLog(@"downloader is called");
-    
     MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
     
     //GET /api/0.6/map?bbox=left,bottom,right,top
-    //ezt ideiglenesen kikapcsolom, ne töltögessen feleslegesen...
-//    [_scrollView updateBackgroundImage];
-//    [[((MZMapperAppDelegate*)[[UIApplication sharedApplication] delegate]) startController] hide];
     NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"%@/map?bbox=%f,%f,%f,%f",[NSString loginPath],left,bottom,right,top]];
     
     [downloader downloadRequestFromURL:url
@@ -181,13 +165,10 @@
                            //                           NSLog(@"download is in progress: %lld/%lld",currentBytes,totalBytes);
                        }
                      completionHandler:^(NSString* resultString){
-                         //                         NSLog(@"download finished");
-                         //NSLog(@"resultString: %@",resultString);
                          if (![resultString isEqualToString:HTTP_STATUS_CODE_AUTHORIZATION_REQUIRED] && ![resultString isEqualToString:HTTP_STATUS_CODE_CONNECTION_FAILED])
                          {
                              [_map setupWithXML:resultString];
                              [_scrollView updateBackgroundImage];
-                             
                              
                              [self showAboutVC];
                              
@@ -268,8 +249,6 @@
 
 - (void)animateButtonsOut
 {
-    NSLog(@"bugframe: %@",NSStringFromCGRect(_openStreetBugButton.frame));
-        NSLog(@"editframe: %@",NSStringFromCGRect(_editButton.frame));
     //animate edit button to the right
     [UIView animateWithDuration:0.15 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         [_editButton setFrame:_currentLocButton.frame];
@@ -476,7 +455,6 @@
              }
          }
          
-         
 //         NSLog(@"\tbugId: %@",bugID);
 //         NSLog(@"\tlon: %f",longitude);
 //         NSLog(@"\tlat: %f",latitude);
@@ -486,7 +464,6 @@
 //         {
 //             NSLog(@"\tcommentx: %@",comment);
 //         }
-         
          
          MZOpenStreetBug* bug = [[MZOpenStreetBug alloc] init];
          [bug setBugID:bugID];
@@ -542,13 +519,9 @@
                              //_openStreetBugView is a container view for open street bugs
                              if (_openStreetBugView)
                              {
-                                 NSLog(@"subviews: %@",_openStreetBugView.subviews);
                                  for (id subview in [_openStreetBugView subviews])
                                  {
-//                                     if ([subview isKindOfClass:[UIImageView class]])
-//                                     {
-                                         [subview removeFromSuperview];
-//                                     }
+                                     [subview removeFromSuperview];
                                  }
                              }
                              else
@@ -622,9 +595,7 @@
 }
 
 - (void)addedPointObjectWithType:(NSUInteger)aType toPoint:(CGPoint)aPoint
-{
-    NSLog(@"addedpointwittype: %d topoint: %@",aType, NSStringFromCGPoint(aPoint));
-        
+{        
     CGPoint convertedCenterPoint = [self.view.window.rootViewController.view convertPoint:aPoint toView:_pointObjectsLayerView];
     
     _imageViewForNewlyAddedPointObject = [[UIImageView alloc] initWithImage:[UIImage imageForPointCategoryElement:aType]];
@@ -670,12 +641,6 @@
     [addedNode setNodeid:[NSString stringWithFormat:@"%d",_indexOfNewlyAddedNode++]];
     [addedNode.tags setValue:[cm subTypeNameInServerRepresentationForLogicalType:aType] forKey:[cm typeNameInServerRepresentationForLogicalType:aType]];
     
-    
-    
-    
-//    [cm.actualPointObjects addObject:addedNode];
-    //[cm.addedPointObjects addObject:addedNode];
-    
     _selectedPointObject = [addedNode retain];
     _newlyAddedPointObject = [addedNode retain];
     
@@ -718,9 +683,7 @@
 }
 
 - (void)saveChangesToTheOSMServer
-{
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
+{    
     [_pullView hide];
     
     [self adjustScaleView];
@@ -730,9 +693,6 @@
     [savingPanel setDelegate:self];
     
     [self presentViewController:savingPanel animated:YES completion:nil];
-    
-    
-
 }
 
 #pragma mark -
@@ -740,16 +700,13 @@
 
 - (void)editButtonTouched:(id)sender
 {
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
-    
     if (_editingModeIsActive) //saving changed content
     {
         [self saveChangesToTheOSMServer];
     }
     else //entering edit mode
     {
-        if ([MZMapperContentManager sharedContentManager].loggedIn) //temporarly this functionality is switched off
+        if ([MZMapperContentManager sharedContentManager].loggedIn)
         {
             [self enterEditingMode];
         }
@@ -767,9 +724,7 @@
 }
 
 - (void)searchButtonTouched:(UIButton*)sender
-{
-    //    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
+{    
     MZSearchViewController* searchVC = [[MZSearchViewController alloc] initWithNibName:@"MZSearchViewController" bundle:nil];
     searchVC.controller = self;
     
@@ -781,10 +736,7 @@
 }
 
 - (void)currentLocButtonTouched:(UIButton*)sender
-{
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
-//    NSLog(@"gettinginprogress: %i",_gettingCurrentLocationIsInProgress);
+{    
     if (!_gettingCurrentLocationIsInProgress)
     {
         [_locationManager startUpdatingLocation];
@@ -792,9 +744,7 @@
 }
 
 - (void)openStreetBugsButtonTouched:(id)sender
-{
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
+{    
     if ([MZMapperContentManager sharedContentManager].openStreetBugModeIsActive)
     {
         [MZMapperContentManager sharedContentManager].openStreetBugModeIsActive = NO;
@@ -811,19 +761,11 @@
 
 - (void)editorVCDoneButtonTouched:(id)sender
 {
-    NSLog(@"%s",__PRETTY_FUNCTION__);
     MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
     
     if (_newlyAddedPointObject)
-    {
-        NSLog(@"új pont mentése");
-        
+    {        
         MZNode* newNode = _editorTableViewController.editedPointObject;
-        
-        for (NSString* key in [newNode.tags allKeys])
-        {
-            NSLog(@"%@ : %@",key, [newNode.tags valueForKey:key]);
-        }
         
         [cm.addedPointObjects addObject:newNode];
         [cm.actualPointObjects addObject:newNode];
@@ -840,31 +782,12 @@
         [_newlyAddedPointObject release], _newlyAddedPointObject = nil;
     }
     else
-    {
-        NSLog(@"módosított pont mentése");
-        
+    {        
         MZNode* updatedNode = _editorTableViewController.editedPointObject;
-        
-        for (NSString* key in [updatedNode.tags allKeys])
-        {
-            NSLog(@"%@ : %@",key, [updatedNode.tags valueForKey:key]);
-        }
-        
-        NSLog(@"eredeti pont");
-        for (NSString* key in [_selectedPointObject.tags allKeys])
-        {
-            NSLog(@"%@ : %@",key, [_selectedPointObject.tags valueForKey:key]);
-        }
-        
-        
-        
         
         if (![updatedNode.tags isEqualToDictionary:_selectedPointObject.tags])
         {
             [cm.updatedPointObjects addObject:updatedNode];
-            
-            NSLog(@"self.selectedObject: %@",_selectedPointObject);
-            NSLog(@"actualobjects: %@",cm.actualPointObjects);
             
             [cm.actualPointObjects replaceObjectAtIndex:[cm.actualPointObjects indexOfObject:_selectedPointObject] withObject:updatedNode];
             
@@ -883,15 +806,11 @@
 }
 
 - (void)editorVCCancelButtonTouched:(id)sender
-{
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
+{    
     [self deselectSelectedPointObject];
     
     if (_newlyAddedPointObject)
-    {
-//        [[MZMapperContentManager sharedContentManager].actualPointObjects removeObject:_newlyAddedPointObject];
-        
+    {        
         [_newlyAddedPointObject release], _newlyAddedPointObject = nil;
         
         [_imageViewForNewlyAddedPointObject removeFromSuperview];
@@ -906,9 +825,7 @@
 #pragma mark CLLocationManagerDelegate methods
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
-{
-//    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
+{    
     [_locationManager stopUpdatingLocation];
     
     [self showMessageViewWithMessage:[NSString stringWithFormat:@"Location: %.4f, %.4f",newLocation.coordinate.longitude,newLocation.coordinate.latitude]];
@@ -924,12 +841,10 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
-{
-//    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
+{    
     [_locationManager stopUpdatingLocation];
     
-    [self showMessageViewWithMessage:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"LocationManagerFailedWithErrorKey", @"When location manager failed this string will be displayed in the messageview before the error string")/*@"Location manager failed with error: */,[error localizedDescription]]];
+    [self showMessageViewWithMessage:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"LocationManagerFailedWithErrorKey", @"When location manager failed this string will be displayed in the messageview before the error string"),[error localizedDescription]]];
     
     [self performSelector:@selector(hideMessageView) withObject:nil afterDelay:3.0];
 }
@@ -956,7 +871,7 @@
 
 - (void)savingPanelViewControllerWillCancelEditing:(MZSavingPanelViewController *)savingPanelViewController
 {
-    UIAlertView* av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"AreYouSureKey", @"When user want to exit from editing mode without saving - alert view title")/*Biztos?"*/ message:NSLocalizedString(@"WithoutSavingAlertViewMessageKey", @"When user want to exit from editing mode without saving - alert view message")/*@"Minden el nem mentett változtatás el fog veszni. Biztos, hogy megszakítod a szerkesztést?"*/ delegate:self cancelButtonTitle:NSLocalizedString(@"NoKey", @"When user want to exit from editing mode without saving - alert view NO button title") /*@"Nem"*/ otherButtonTitles:NSLocalizedString(@"YesKey", @"When user want to exit from editing mode without saving - alert view YES button title")/*@"Igen"*/, nil];
+    UIAlertView* av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"AreYouSureKey", @"When user want to exit from editing mode without saving - alert view title") message:NSLocalizedString(@"WithoutSavingAlertViewMessageKey", @"When user want to exit from editing mode without saving - alert view message") delegate:self cancelButtonTitle:NSLocalizedString(@"NoKey", @"When user want to exit from editing mode without saving - alert view NO button title") otherButtonTitles:NSLocalizedString(@"YesKey", @"When user want to exit from editing mode without saving - alert view YES button title"), nil];
     
     [av show];
     
@@ -964,9 +879,7 @@
 }
 
 - (void)savingPanelViewControllerWillSave:(MZSavingPanelViewController*)savingPanelViewController withComment:(NSString*)comment
-{
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
+{    
     [self dismissViewControllerAnimated:YES completion:^{
         
         [_blockView show];
@@ -979,22 +892,15 @@
     [uploadManager uploadChangesToOSMWithComment:comment];
 
     [uploadManager release];
-
-    
 }
 
 - (void)uploadManagerDidFinishWithUploading:(MZUploadManager*)uploadManager
 {
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
-    
-    
     [_blockView performSelector:@selector(hide) withObject:nil afterDelay:0.2];
-    
     
     [self exitFromEditingMode];
     
-    UIAlertView* av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SuccessfulSavingKey", @"When user saved a changeset succesfully - alert view title")/* @"Sikeres mentés"*/ message:@"" delegate:nil cancelButtonTitle:NSLocalizedString(@"OkKey", @"") otherButtonTitles:nil];
+    UIAlertView* av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SuccessfulSavingKey", @"When user saved a changeset succesfully - alert view title") message:@"" delegate:nil cancelButtonTitle:NSLocalizedString(@"OkKey", @"") otherButtonTitles:nil];
     
     [av show];
     
@@ -1062,7 +968,6 @@
 //when user taps on an empty area on the _openStreetBugView
 - (void)handleBugViewTap:(UITapGestureRecognizer*)gesture
 {
-    NSLog(@"%s",__PRETTY_FUNCTION__);
     CGPoint gestureRecognizedAtPoint = [gesture locationInView:[gesture view]];
     
     MZOpenStreetBugsViewController* bugController = [[MZOpenStreetBugsViewController alloc] initWithControllerType:MZOpenStreetBugsViewControllerTypeCreateBug andWithBug:nil];
@@ -1072,7 +977,6 @@
     
     bugController.controller = self;
     
-    //[bugController setDelegate:self];
     [bugController setContentSizeForViewInPopover:CGSizeMake(400.0, 200.0)];
     
     UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:bugController];
@@ -1088,38 +992,15 @@
     bugController.imageViewForBug = newBugImageView;
     [newBugImageView release];
     
-    [popoverController presentPopoverFromRect:newBugImageView.frame/*CGRectMake(gestureRecognizedAtPoint.x, gestureRecognizedAtPoint.y, 1.0, 1.0)*/ inView:[gesture view] permittedArrowDirections:UIPopoverArrowDirectionDown | UIPopoverArrowDirectionLeft | UIPopoverArrowDirectionRight animated:YES];
+    [popoverController presentPopoverFromRect:newBugImageView.frame inView:[gesture view] permittedArrowDirections:UIPopoverArrowDirectionDown | UIPopoverArrowDirectionLeft | UIPopoverArrowDirectionRight animated:YES];
     
     [navController release];
     [bugController release];
-    
-//    popOverMenu.delegate = self;
-//    popOverMenu.noResultsLabelText = noResultsLabelText;
-//    popOverMenu.contentSizeForViewInPopover = CGSizeMake(300.0, 44.0 * 10.0);
-//    
-//    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-//    {
-//        UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:popOverMenu];
-//        
-//        popOverMenu.navigationItem.title = title;
-//        
-//        UIPopoverController* popoverController = [[UIPopoverController alloc] initWithContentViewController:navController];
-//        popoverController.delegate = popOverMenu;
-//        popOverMenu.aPopoverController = popoverController;
-//        
-//        UITableViewCell* selectedCell = [self.tableView cellForRowAtIndexPath:indexPath];
-//        
-//        [popoverController presentPopoverFromRect:selectedCell.bounds inView:selectedCell permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
-//        
-//        [navController release];
-//        [popOverMenu release];
 }
 
 //when user taps on an existing bug
 - (void)handleBugTap:(UITapGestureRecognizer*)gesture
-{
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
+{    
     UIImageView* bugImageView = (UIImageView*)gesture.view;
     
     for (MZOpenStreetBug* bug in _openStreetBugs)
@@ -1146,7 +1027,6 @@
                 bugController = [[MZOpenStreetBugsViewController alloc] initWithControllerType:MZOpenStreetBugsViewControllerTypeUnresolvedBug andWithBug:bug];
             }
             
-            //[bugController setDelegate:self];
             [bugController setContentSizeForViewInPopover:CGSizeMake(400.0, 200.0)];
             [bugController setController:self];
             
@@ -1199,9 +1079,6 @@
         }
     }
     
-    NSLog(@"self.selectedObject: %@",_selectedPointObject);
-    NSLog(@"actualobjects: %@",[MZMapperContentManager sharedContentManager].actualPointObjects);
-    
     if (_editorTableViewController)
     {
         [_editorTableViewController release], _editorTableViewController = nil;
@@ -1221,10 +1098,6 @@
     [_editorTableViewController.navigationItem setRightBarButtonItem:doneButton];
     [doneButton release];
     
-//    UIBarButtonItem* cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(editorVCCancelButtonTouched:)];
-//    [editorTableViewController.navigationItem setLeftBarButtonItem:cancelButton];
-//    [cancelButton release];
-    
     [_pullView setContentViewController:navCont];
     
     [navCont release];
@@ -1236,9 +1109,7 @@
 #pragma mark editing methods
 
 - (void)deleteEditedPointObject
-{
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
+{    
     MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
     
     [cm.deletedPointObjects addObject:_selectedPointObject];

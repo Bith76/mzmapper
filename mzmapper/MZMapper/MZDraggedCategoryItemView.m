@@ -28,10 +28,6 @@
         
         _arrowHeight = ARROW_HEIGHT;
         
-        //[self setBounds:CGRectMake(0.0, 0.0, frame.size.width, frame.size.height + ARROW_HEIGHT)];
-        
-        //[self setCenter:CGPointMake(self.center.x, self.center.y + ARROW_HEIGHT / 2.0)];
-        
         [self setBackgroundColor:[UIColor clearColor]];
     }
     return self;
@@ -75,8 +71,6 @@
 - (void)drawRect:(CGRect)rect
 {
     CGFloat arrowWidth = 16.0;
-    
-    
     
     if (_arrowIsVisible)
     {

@@ -131,12 +131,6 @@
     [blockView show];
     
     STAssertNotNil(blockView.superview, @"");
-    
-//    [blockView hide];
-//    
-//    STAssertNotNil(blockView.superview, @"");
-    
-    
 }
 
 @end

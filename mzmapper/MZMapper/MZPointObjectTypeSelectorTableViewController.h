@@ -6,7 +6,6 @@
 //
 //
 
-#import <UIKit/UIKit.h>
 
 @class MZPointObjectTypeSelectorTableViewController;
 
@@ -23,7 +22,6 @@
 {
 @private
     NSMutableArray* _content;
-    //UIActivityIndicatorView* _activityIndicator;
     MZBlockView* _blockView;
 }
 

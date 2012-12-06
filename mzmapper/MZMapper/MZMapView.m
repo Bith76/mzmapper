@@ -20,17 +20,13 @@
 
 @synthesize minLatitude = _minLatitude, maxLatitude = _maxLatitude, minLongitude = _minLongitude, maxLongitude = _maxLongitude;
 @synthesize scale = _scale;
-@synthesize bezierPaths = _bezierPaths;
-@synthesize selectedPath = _selectedPath;
  
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) 
     {
-        
-        _logging = YES;
-        
+        _logging = NO;
         
         // Initialization code
         //[self setBackgroundColor:[UIColor colorWithRed:0.8 green:0.8 blue:0.8 alpha:1.0]];
@@ -59,9 +55,7 @@
         [_levels setValue:level6 forKey:@"level6"];
         
         _scale = 1.0;
-        
-        _bezierPaths = [[NSMutableArray alloc] init];
-        
+                
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deleteNodeFromMap:) name:@"NodeDeletedNotification" object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addNodeToTheMap:) name:@"NodeAddedNotification" object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateNodeOnTheMap:) name:@"NodeUpdatedNotification" object:nil];
@@ -75,9 +69,7 @@
     if(_logging) NSLog(@"---%s",__PRETTY_FUNCTION__);
     
     _parser = [[NSXMLParser alloc] initWithData:[xml dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    //_parser = [[NSXMLParser alloc] initWithContentsOfURL:[NSURL fileURLWithPath:pathToXML]];
-    
+        
     [_parser setDelegate:self];
     
     [_parser parse];
@@ -118,17 +110,11 @@
 {
     if(_logging) NSLog(@"---%s",__PRETTY_FUNCTION__);
     
-    NSLog(@"parsing finished in %.2f seconds", [[NSDate date] timeIntervalSinceDate:_startTime]);
-    
-    
-    
     [self setNeedsDisplay];
-    
     
     MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
     
     cm.actualPointObjects = _pointObjects;
-    
     
     [self updatePointObjectsLayerView];
 }
@@ -390,11 +376,6 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-    NSLog(@"drawrect");
-    [_bezierPaths removeAllObjects];
-    
-    //int harminc = 126;
-    //int index = 0;
     // Drawing code
     //if(_logging) NSLog(@"---%s",__PRETTY_FUNCTION__);
     
@@ -410,26 +391,6 @@
             
             for (MZNode* node in way.nodes) 
             {
-//                ++index;
-//                NSLog(@"%i == %i: %i",++index,harminc,(index == harminc));
-//                if (index == harminc) 
-//                {
-//                    CGContextRef context = UIGraphicsGetCurrentContext();
-//                    
-//                    CGContextSetLineWidth(context, 2.0);
-//                    
-//                    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
-//                    
-//                    CGPoint pont = [self realPositionForNode:node];
-//                    CGRect rectangle = CGRectMake(pont.x -20,pont.y-20,40,40);
-//                    
-//                    CGContextAddEllipseInRect(context, rectangle);
-//                    
-//                    CGContextStrokePath(context);
-//                }
-                
-                
-                
                 if ([bp isEmpty]) 
                 {
                     [bp moveToPoint:[self realPositionForNode:node]];
@@ -456,25 +417,14 @@
                 [[UIColor blackColor] set];
             }
             
-            
-            
-            if (CGPathEqualToPath(bp.CGPath, _selectedPath.CGPath)) 
-            {
-                NSLog(@"egyezik");
-                [[UIColor redColor] set];
-            }
-            
-            
             [bp stroke];
-            
-            [_bezierPaths addObject:bp];
         }
         
     }
     
     
     //egyelőre csak a városnevet csapatjuk ki (még lehetne optimalizálni ezt a részt)
-    [[UIColor blackColor] set];
+    //[[UIColor blackColor] set];
     
 //    for (NSString* nodeID in _nodes) 
 //    {
@@ -523,9 +473,6 @@
 
 - (void)deleteNodeFromMap:(NSNotification*)aNotif
 {
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    NSLog(@"kapott node: %@",((MZNode*)[aNotif object]).tags);
-    
     MZNode* deletedNode = (MZNode*)[aNotif object];
     
     for (UIView* v in _pointObjectsLayerView.subviews)
@@ -542,18 +489,11 @@
 
 - (void)addNodeToTheMap:(NSNotification*)aNotif
 {
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    NSLog(@"kapott node: %@",((MZNode*)[aNotif object]).tags);
-    
-    //MZNode* addedNode = (MZNode*)[aNotif object];
-    
     [self updatePointObjectsLayerView];
 }
 
 - (void)updateNodeOnTheMap:(NSNotification*)aNotif
-{
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
+{    
     [self updatePointObjectsLayerView];
 }
 
@@ -571,9 +511,7 @@
     [_ways release], _ways = nil;
     
     [_levels release], _levels = nil;
-    
-    [_bezierPaths release], _bezierPaths = nil;
-    
+        
     if (_pointObjects)
     {
         [_pointObjects release];

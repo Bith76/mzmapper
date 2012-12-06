@@ -260,9 +260,6 @@ static MZMapperContentManager* sharedContentManager = nil;
 
 - (NSString*)typeNameInServerRepresentationForLogicalType:(NSUInteger)logicalType
 {
-    NSLog(@"servername: %@",[self serverTypeNameForLogicalType:logicalType]);
-    NSLog(@"components: %@",[[self serverTypeNameForLogicalType:logicalType] componentsSeparatedByString:@":"]);
-    NSLog(@"0. index: %@",[[[self serverTypeNameForLogicalType:logicalType] componentsSeparatedByString:@":"] objectAtIndex:0]);
     return [[[self serverTypeNameForLogicalType:logicalType] componentsSeparatedByString:@":"] objectAtIndex:0];
 }
 

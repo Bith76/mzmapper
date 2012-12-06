@@ -41,10 +41,6 @@
 		0572944216690C8A00D1D2A0 /* MZPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B515C1158A8C9600A258CD /* MZPlace.m */; };
 		0572944316690C8D00D1D2A0 /* MZOpenStreetBug.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D4816A163536C400874395 /* MZOpenStreetBug.m */; };
 		0572944416690C8D00D1D2A0 /* MZOpenStreetBug.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D4816A163536C400874395 /* MZOpenStreetBug.m */; };
-		0572944516690C9000D1D2A0 /* Way.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52041651B410003D49D1 /* Way.m */; };
-		0572944616690C9000D1D2A0 /* Way.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52041651B410003D49D1 /* Way.m */; };
-		0572944716690C9200D1D2A0 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52001651B3F0003D49D1 /* Node.m */; };
-		0572944816690C9300D1D2A0 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52001651B3F0003D49D1 /* Node.m */; };
 		0572944916690C9600D1D2A0 /* MZStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F5991016236863007C44FC /* MZStartViewController.m */; };
 		0572944A16690C9600D1D2A0 /* MZStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F5991016236863007C44FC /* MZStartViewController.m */; };
 		0572944B16690C9E00D1D2A0 /* MZSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131F073F1587CAC40049FED4 /* MZSearchViewController.m */; };
@@ -310,8 +306,6 @@
 		132B40FF1638818E0063C60F /* amenity_hospital@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B40F91638818E0063C60F /* amenity_hospital@2x.png */; };
 		132B4104163881B00063C60F /* amenity_veterinary.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4102163881B00063C60F /* amenity_veterinary.png */; };
 		132B4105163881B00063C60F /* amenity_veterinary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132B4103163881B00063C60F /* amenity_veterinary@2x.png */; };
-		134D52011651B3F0003D49D1 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52001651B3F0003D49D1 /* Node.m */; };
-		134D52051651B410003D49D1 /* Way.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D52041651B410003D49D1 /* Way.m */; };
 		134D520F1652FEBC003D49D1 /* blackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D520B1652FEBC003D49D1 /* blackButton.png */; };
 		134D52101652FEBC003D49D1 /* blackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D520C1652FEBC003D49D1 /* blackButton@2x.png */; };
 		134D52111652FEBC003D49D1 /* blackButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 134D520D1652FEBC003D49D1 /* blackButtonHighlight.png */; };
@@ -430,7 +424,6 @@
 		13F5991716236916007C44FC /* openstreetmap-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F5991516236916007C44FC /* openstreetmap-logo@2x.png */; };
 		13F5991A1623698A007C44FC /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F5991816236989007C44FC /* Default-Landscape~ipad.png */; };
 		13F5991B1623698A007C44FC /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F599191623698A007C44FC /* Default-Landscape@2x~ipad.png */; };
-		13FF31D1164C4BA100A4CFD5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13FF31CF164C4BA100A4CFD5 /* Model.xcdatamodeld */; };
 		13FF31DE164C5D8700A4CFD5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13FF31DD164C5D8700A4CFD5 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
@@ -702,10 +695,6 @@
 		132B40F91638818E0063C60F /* amenity_hospital@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_hospital@2x.png"; sourceTree = "<group>"; };
 		132B4102163881B00063C60F /* amenity_veterinary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amenity_veterinary.png; sourceTree = "<group>"; };
 		132B4103163881B00063C60F /* amenity_veterinary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amenity_veterinary@2x.png"; sourceTree = "<group>"; };
-		134D51FF1651B3F0003D49D1 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
-		134D52001651B3F0003D49D1 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
-		134D52031651B410003D49D1 /* Way.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Way.h; sourceTree = "<group>"; };
-		134D52041651B410003D49D1 /* Way.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Way.m; sourceTree = "<group>"; };
 		134D520B1652FEBC003D49D1 /* blackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackButton.png; sourceTree = "<group>"; };
 		134D520C1652FEBC003D49D1 /* blackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackButton@2x.png"; sourceTree = "<group>"; };
 		134D520D1652FEBC003D49D1 /* blackButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackButtonHighlight.png; sourceTree = "<group>"; };
@@ -844,7 +833,6 @@
 		13F5991516236916007C44FC /* openstreetmap-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "openstreetmap-logo@2x.png"; sourceTree = "<group>"; };
 		13F5991816236989007C44FC /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		13F599191623698A007C44FC /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
-		13FF31D0164C4BA100A4CFD5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		13FF31DD164C5D8700A4CFD5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -1526,11 +1514,6 @@
 				13B515C1158A8C9600A258CD /* MZPlace.m */,
 				13D48169163536C400874395 /* MZOpenStreetBug.h */,
 				13D4816A163536C400874395 /* MZOpenStreetBug.m */,
-				13FF31CF164C4BA100A4CFD5 /* Model.xcdatamodeld */,
-				134D52031651B410003D49D1 /* Way.h */,
-				134D52041651B410003D49D1 /* Way.m */,
-				134D51FF1651B3F0003D49D1 /* Node.h */,
-				134D52001651B3F0003D49D1 /* Node.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -2010,9 +1993,6 @@
 				136005F11636C8A100616E9A /* UIImage+MZMapperUtilities.m in Sources */,
 				130E8E831639BA4B0006BAAB /* MZBlockView.m in Sources */,
 				13172E9B1644354C00D6CAA9 /* MZDraggedCategoryItemView.m in Sources */,
-				13FF31D1164C4BA100A4CFD5 /* Model.xcdatamodeld in Sources */,
-				134D52011651B3F0003D49D1 /* Node.m in Sources */,
-				134D52051651B410003D49D1 /* Way.m in Sources */,
 				13E40E121655781000678C07 /* MZPointObjectEditorTableViewController.m in Sources */,
 				13E40E1D1655884F00678C07 /* MZPointObjectTypeSelectorTableViewController.m in Sources */,
 				13E40E3516592E8400678C07 /* XMLWriter.m in Sources */,
@@ -2040,8 +2020,6 @@
 				0572944016690C8700D1D2A0 /* MZWay.m in Sources */,
 				0572944216690C8A00D1D2A0 /* MZPlace.m in Sources */,
 				0572944416690C8D00D1D2A0 /* MZOpenStreetBug.m in Sources */,
-				0572944616690C9000D1D2A0 /* Way.m in Sources */,
-				0572944816690C9300D1D2A0 /* Node.m in Sources */,
 				0572944A16690C9600D1D2A0 /* MZStartViewController.m in Sources */,
 				0572944B16690C9E00D1D2A0 /* MZSearchViewController.m in Sources */,
 				0572944D16690CA100D1D2A0 /* MZLoginViewController.m in Sources */,
@@ -2083,8 +2061,6 @@
 				0572943F16690C8700D1D2A0 /* MZWay.m in Sources */,
 				0572944116690C8A00D1D2A0 /* MZPlace.m in Sources */,
 				0572944316690C8D00D1D2A0 /* MZOpenStreetBug.m in Sources */,
-				0572944516690C9000D1D2A0 /* Way.m in Sources */,
-				0572944716690C9200D1D2A0 /* Node.m in Sources */,
 				0572944916690C9600D1D2A0 /* MZStartViewController.m in Sources */,
 				0572944C16690C9E00D1D2A0 /* MZSearchViewController.m in Sources */,
 				0572944E16690CA100D1D2A0 /* MZLoginViewController.m in Sources */,
@@ -2425,19 +2401,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		13FF31CF164C4BA100A4CFD5 /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				13FF31D0164C4BA100A4CFD5 /* Model.xcdatamodel */,
-			);
-			currentVersion = 13FF31D0164C4BA100A4CFD5 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 0543852C13F9239900C123A1 /* Project object */;
 }

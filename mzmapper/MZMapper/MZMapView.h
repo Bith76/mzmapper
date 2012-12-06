@@ -29,12 +29,9 @@
     
     CGFloat                 _scale;
     
-    NSMutableArray*         _bezierPaths;
-    UIBezierPath*           _selectedPath;
+    NSDate*                 _startTime;
     
-    NSDate* _startTime;
-    
-    BOOL _logging;
+    BOOL                    _logging;
     
     UIView*                 _pointObjectsLayerView;
 }
@@ -44,8 +41,6 @@
 @property (nonatomic, assign) CGFloat           minLongitude;
 @property (nonatomic, assign) CGFloat           maxLongitude;
 @property (nonatomic, assign) CGFloat           scale;
-@property (nonatomic, retain) NSMutableArray*   bezierPaths;
-@property (nonatomic, retain) UIBezierPath*     selectedPath;
 
 - (void)setupWithXML:(NSString*)xml;
 

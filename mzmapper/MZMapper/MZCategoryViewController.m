@@ -277,7 +277,6 @@
 
 - (IBAction)showMoreButtonTouched:(id)sender
 {
-    NSLog(@"sender.frame: %@",NSStringFromCGRect(((UIButton*)sender).frame));
     CGFloat growingValue = 0.0;
     
     if (_isOpen)
@@ -312,8 +311,6 @@
 
 - (void)addCategoryItemType:(NSUInteger)type toPoint:(CGPoint)toPoint
 {
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    NSLog(@"topoint: %@",NSStringFromCGPoint(toPoint));
     [self.editViewController categoryVC:self addedItemWithType:type toPoint:toPoint];
 }
 

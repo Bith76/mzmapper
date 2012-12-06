@@ -69,9 +69,6 @@
         {
             [self setView:_fixedView];
             
-            
-            
-            
             CGSize constraint = CGSizeMake(_fixedViewDescriptionLabel.frame.size.width, 20000.0f);
             
             CGSize size = [_bug.description sizeWithFont:_fixedViewDescriptionLabel.font constrainedToSize:constraint lineBreakMode:_fixedViewDescriptionLabel.lineBreakMode];
@@ -171,12 +168,6 @@
             {
                 [_fixedViewCommentTitleLabel setHidden:YES];
             }
-            
-            
-            
-            
-            
-            
         }
             break;
         case MZOpenStreetBugsViewControllerTypeUnresolvedBug:
@@ -188,10 +179,6 @@
             
             [_unresolvedMarkAsFixedButton setBackgroundImage:buttonBackgroundImage forState:UIControlStateNormal];
             [_unresolvedMarkAsFixedButton setBackgroundImage:highlightedButtonBGImage forState:UIControlStateHighlighted];
-            
-            
-            
-            
             
             CGSize constraint = CGSizeMake(_unresolvedViewDescriptionLabel.frame.size.width, 20000.0f);
             
@@ -292,18 +279,11 @@
             {
                 [_unresolvedViewCommentTitleLabel setHidden:YES];
             }
-            
-            
-            
-            
-            
         }
             break;
         default:
             break;
     }
-    
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -334,16 +314,16 @@
     
     if ([description isEqualToString:@""])
     {
-        message = NSLocalizedString(@"PleaseAddCommentKey", @"Alert view message - alert view displays when user doesn't comment his OSMBug report") /*@"Kérlek írd le, hogy mi itt a bug!"*/;
+        message = NSLocalizedString(@"PleaseAddCommentKey", @"Alert view message - alert view displays when user doesn't comment his OSMBug report");
     }
     else if ([author isEqualToString:@""])
     {
-        message = NSLocalizedString(@"AddNamePleaseKey", @"Alert view message - alert view displays when user doesn't add his name by creating OSMBug report")/*@"Név megadása kötelező!"*/;
+        message = NSLocalizedString(@"AddNamePleaseKey", @"Alert view message - alert view displays when user doesn't add his name by creating OSMBug report");
     }
     
     if (message)
     {
-        UIAlertView* av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ErrorKey", @"Alert view title - alert view displays when user makes a mistake by creating OSMBug report")/*@"HIBA"*/ message:message delegate:nil cancelButtonTitle:NSLocalizedString(@"OkKey", @"") otherButtonTitles:nil];
+        UIAlertView* av = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ErrorKey", @"Alert view title - alert view displays when user makes a mistake by creating OSMBug report") message:message delegate:nil cancelButtonTitle:NSLocalizedString(@"OkKey", @"") otherButtonTitles:nil];
         [av show];
         [av release];
     }
@@ -357,9 +337,7 @@
         //http://openstreetbugs.schokokeks.org/api/0.1/addPOIexec?lat=<Latitude>&lon=<Longitude>&text=<Bug description with author and date>&format=<Output format>
         
         NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://openstreetbugs.schokokeks.org/api/0.1/addPOIexec?lat=%f&lon=%f&text=%@", self.node.latitude, self.node.longitude, textParameter]];
-        
-        NSLog(@"url: %@",url);
-        
+                
         MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
         
         [downloader downloadRequestFromURL:url
@@ -367,18 +345,12 @@
                          completionHandler:^(NSString* resultString){
                              
                              if (![resultString isEqualToString:HTTP_STATUS_CODE_CONNECTION_FAILED])
-                             {
-                                 NSLog(@"siker");
-                                 
+                             {                                 
                                  [self.controller refreshOpenStreetBugs];
                                  
                                  [self.aPopoverController dismissPopoverAnimated:YES];
                                  
                                  [self.aPopoverController performSelector:@selector(release) withObject:nil afterDelay:0.5];
-                             }
-                             else
-                             {
-                                 NSLog(@"Hiba, mégpedig: %@",resultString);
                              }
                          }];
         
@@ -390,8 +362,6 @@
 
 - (IBAction)addCommentOkButtonTouched:(id)sender
 {
-    NSLog(@"bug: %@",_bug);
-    
     NSString* comment = _addCommentCommentTextField.text;
     NSString* author = _addCommentNicknameTextField.text;
     
@@ -422,9 +392,7 @@
         //http://openstreetbugs.schokokeks.org/api/0.1/editPOIexec?id=<Bug ID>&text=<Comment with author and date>&format=<Output format>
         
         NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://openstreetbugs.schokokeks.org/api/0.1/editPOIexec?id=%@&text=%@", _bug.bugID, textParameter]];
-        
-        NSLog(@"url: %@",url);
-        
+                
         MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
         
         [downloader downloadRequestFromURL:url
@@ -432,18 +400,12 @@
                          completionHandler:^(NSString* resultString){
                              
                              if (![resultString isEqualToString:HTTP_STATUS_CODE_CONNECTION_FAILED])
-                             {
-                                 NSLog(@"sikeresen módosítva");
-                                 
+                             {                                 
                                  [self.controller refreshOpenStreetBugs];
                                  
                                  [self.aPopoverController dismissPopoverAnimated:YES];
                                  
                                  [self.aPopoverController performSelector:@selector(release) withObject:nil afterDelay:0.5];
-                             }
-                             else
-                             {
-                                 NSLog(@"Hiba, mégpedig: %@",resultString);
                              }
                          }];
         
@@ -481,14 +443,11 @@
     [_markAsFixedViewController setTitle:@"OpenStreetBug"];
     [_markAsFixedViewController.navigationItem setHidesBackButton:YES];
     
-    //self.navigationController.delegate = self;
     [self.navigationController pushViewController:_markAsFixedViewController animated:YES];
 }
 
 - (IBAction)markAsFixedYesButtonTouched:(id)sender
-{
-    NSLog(@"bug: %@",_bug);
-    
+{    
     NSString* comment = _markAsFixedCommentTextField.text;
     NSString* author = _markAsFixedNicknameTextField.text;
     
@@ -502,9 +461,7 @@
         //http://openstreetbugs.schokokeks.org/api/0.1/editPOIexec?id=<Bug ID>&text=<Comment with author and date>&format=<Output format>
         
         NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://openstreetbugs.schokokeks.org/api/0.1/editPOIexec?id=%@&text=%@", _bug.bugID, textParameter]];
-        
-        NSLog(@"url: %@",url);
-        
+                
         MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
         
         [downloader downloadRequestFromURL:url
@@ -516,9 +473,7 @@
                                  //http://openstreetbugs.schokokeks.org/api/0.1/closePOIexec?id=<Bug ID>
                                  
                                  NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://openstreetbugs.schokokeks.org/api/0.1/closePOIexec?id=%@", _bug.bugID]];
-                                 
-                                 NSLog(@"url: %@",url);
-                                 
+                                                                  
                                  MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
                                  
                                  [downloader downloadRequestFromURL:url
@@ -526,27 +481,17 @@
                                                   completionHandler:^(NSString* resultString){
                                                       
                                                       if (![resultString isEqualToString:HTTP_STATUS_CODE_CONNECTION_FAILED])
-                                                      {
-                                                          NSLog(@"sikeresen lezárva");
-                                                          
+                                                      {                                                          
                                                           [self.controller refreshOpenStreetBugs];
                                                           
                                                           [self.aPopoverController dismissPopoverAnimated:YES];
                                                           
                                                           [self.aPopoverController performSelector:@selector(release) withObject:nil afterDelay:0.5];
                                                       }
-                                                      else
-                                                      {
-                                                          NSLog(@"Hiba, mégpedig: %@",resultString);
-                                                      }
                                                   }];
                                  
                                  [downloader release];
                                  [url release];
-                             }
-                             else
-                             {
-                                 NSLog(@"Hiba, mégpedig: %@",resultString);
                              }
                          }];
         
@@ -558,9 +503,7 @@
         //http://openstreetbugs.schokokeks.org/api/0.1/closePOIexec?id=<Bug ID>
         
         NSURL* url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://openstreetbugs.schokokeks.org/api/0.1/closePOIexec?id=%@", _bug.bugID]];
-        
-        NSLog(@"url: %@",url);
-        
+                
         MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
         
         [downloader downloadRequestFromURL:url
@@ -568,18 +511,12 @@
                          completionHandler:^(NSString* resultString){
                              
                              if (![resultString isEqualToString:HTTP_STATUS_CODE_CONNECTION_FAILED])
-                             {
-                                 NSLog(@"sikeresen lezárva");
-                                 
+                             {                                 
                                  [self.controller refreshOpenStreetBugs];
                                  
                                  [self.aPopoverController dismissPopoverAnimated:YES];
                                  
                                  [self.aPopoverController performSelector:@selector(release) withObject:nil afterDelay:0.5];
-                             }
-                             else
-                             {
-                                 NSLog(@"Hiba, mégpedig: %@",resultString);
                              }
                          }];
         

@@ -26,7 +26,6 @@
         
         _content = [[NSMutableArray alloc] init];
         
-        
         for (NSInteger i = 1; i < MZMapperPointCategoryCountOfCategories; i++)
         {
             
@@ -169,8 +168,6 @@
             
             [_content addObject:sectionData];
         }
-        
-        NSLog(@"content: %@",_content);
     }
     return self;
 }
@@ -185,14 +182,12 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    
-        
     UILabel* headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 20.0, self.view.frame.size.width, 60.0)];
     [headerLabel setBackgroundColor:[UIColor clearColor]];
     [headerLabel setNumberOfLines:0];
     [headerLabel setLineBreakMode:UILineBreakModeCharacterWrap];
     [headerLabel setTextAlignment:UITextAlignmentCenter];
-    [headerLabel setText:NSLocalizedString(@"SelectTypeKey", @"Text displays when user will change the type of a point object - in the header of the table view")/* @"Please select a type for the point object."*/];
+    [headerLabel setText:NSLocalizedString(@"SelectTypeKey", @"Text displays when user will change the type of a point object - in the header of the table view")];
     [headerLabel setFont:[UIFont systemFontOfSize:12.0]];
     
     [self.tableView setTableHeaderView:headerLabel];
@@ -305,7 +300,6 @@
         [tableView deselectRowAtIndexPath:indexPath animated:NO];
     }
     
-    
     return cell;
 }
 
@@ -393,7 +387,6 @@
     NSURL* infoUrl = [NSURL URLWithString:[[NSString stringWithFormat:@"http://wiki.openstreetmap.org/wiki/Tag:%@=%@",type,subType] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSURLRequest* request = [NSURLRequest requestWithURL:infoUrl];
     
-    
     UIViewController* infoViewController = [[UIViewController alloc] init];
     [infoViewController setContentSizeForViewInPopover:CGSizeMake(800.0, 500.0)];
     UIWebView* infoWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0.0, 0.0, 735.0, 500.0)];
@@ -431,7 +424,6 @@
         [_blockView release], _blockView = nil;
     }
 }
-
 
 #pragma mark -
 #pragma mark UIPopoverControllerDelegate methods

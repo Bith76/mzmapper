@@ -61,18 +61,14 @@
     searchString = [searchString stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     
     NSURL* url = [NSURL URLWithString:[[NSString stringWithFormat:@"http://open.mapquestapi.com/nominatim/v1/search?format=xml&q=%@", searchString] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    
-    NSLog(@"searchurl: %@",url);
-    
+        
     MZRESTRequestManager* downloader = [[MZRESTRequestManager alloc] init];
     
     [downloader downloadRequestFromURL:url 
                        progressHandler:nil 
                      completionHandler:^(NSString *resultString) {
                          if (![resultString isEqualToString:HTTP_STATUS_CODE_AUTHORIZATION_REQUIRED] && ![resultString isEqualToString:HTTP_STATUS_CODE_CONNECTION_FAILED])
-                         {
-                             NSLog(@"resultstring: %@",resultString);
-                             
+                         {                             
                              _parser = [[NSXMLParser alloc] initWithData:[resultString dataUsingEncoding:NSUTF8StringEncoding]];
                              
                              [_parser setDelegate:self];
@@ -111,8 +107,6 @@
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser
 {    
-    NSLog(@"parsing finished; _searchResults: %@",_searchResults);
-    
     [_controller hideMessageView];
     
     if (![_searchResults count]) 
@@ -234,7 +228,6 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"indp.row: %i",indexPath.row);
     if (indexPath.row > [_searchResults count]) 
     {
         return 44.0;

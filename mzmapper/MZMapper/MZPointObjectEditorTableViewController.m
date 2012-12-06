@@ -92,9 +92,6 @@
             [_content addObject:section];
         }
     }
-    
-    NSLog(@"_content: %@",_content);
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -190,7 +187,6 @@
         {
             [textField setText:@""];
         }
-    
     }
     
     return cell;
@@ -323,11 +319,7 @@
 #pragma mark typeSelectorTableView delegate methods
 
 - (void)typeSelectorTableView:(MZPointObjectTypeSelectorTableViewController*)tableView didSelectObject:(NSUInteger)selectedObject
-{
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
-    NSLog(@"selectedObject: %d",selectedObject);
-    
+{    
     MZMapperContentManager* cm = [MZMapperContentManager sharedContentManager];
     
     NSString* actualTypeName = [cm typeNameInServerRepresentationForNode:self.editedPointObject];
@@ -344,9 +336,7 @@
 #pragma mark UITextField methods
 
 - (void)updateDataUsingContentsOfTextField:(id)sender
-{
-    NSLog(@"aktuális szöveg: %@",((UITextField*)sender).text);
-    
+{    
     UITableViewCell* cell = (UITableViewCell*)[[sender superview] superview];
     
     NSIndexPath* indexPath = [self.tableView indexPathForCell:cell];
@@ -375,7 +365,6 @@
         [newTags setValue:((UITextField*)sender).text forKey:attributeName];
         [self.editedPointObject setTags:newTags];
     }
-    
 }
 
 #pragma mark -

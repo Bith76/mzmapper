@@ -49,9 +49,7 @@
 }
 
 - (IBAction)okButtonTouched:(id)sender
-{
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
+{    
     if (_delegate && [_delegate respondsToSelector:@selector(savingPanelViewControllerWillSave:withComment:)])
     {
         [_delegate savingPanelViewControllerWillSave:self withComment:_textView.text];
@@ -59,9 +57,7 @@
 }
 
 - (IBAction)cancelButtonTouched:(id)sender
-{
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
+{    
     if (_delegate && [_delegate respondsToSelector:@selector(savingPanelViewControllerWillDismiss:)])
     {
         [_delegate savingPanelViewControllerWillDismiss:self];
@@ -69,9 +65,7 @@
 }
 
 - (IBAction)endEditingButtonTouched:(id)sender
-{
-    NSLog(@"%s",__PRETTY_FUNCTION__);
-    
+{    
     if (_delegate && [_delegate respondsToSelector:@selector(savingPanelViewControllerWillCancelEditing:)])
     {
         [_delegate savingPanelViewControllerWillCancelEditing:self];

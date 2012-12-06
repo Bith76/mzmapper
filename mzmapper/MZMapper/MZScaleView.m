@@ -41,12 +41,6 @@
 - (void)drawRect:(CGRect)rect
 {
     // Drawing code
-    
-//    UIBezierPath* bp = [UIBezierPath bezierPathWithRect:rect];
-//    [[UIColor lightGrayColor] set];
-//    
-//    [bp fill];
-    
     [[UIColor blackColor] set];
     
     UIBezierPath* bp = [UIBezierPath bezierPath];
@@ -56,25 +50,11 @@
     [bp addLineToPoint:CGPointMake(rect.size.width - lineWidth, rect.size.height - lineWidth)];
     [bp addLineToPoint:CGPointMake(rect.size.width - lineWidth, 0.0)];
     
-    
-    
     [bp setLineWidth:lineWidth];
     
     [bp stroke];
     
     [_displayString drawAtPoint:CGPointMake(5.0, 2.0) withFont:[UIFont systemFontOfSize:12.0]];
-    
-//    //draw little arrow
-//    UIBezierPath* bp = [UIBezierPath bezierPath];
-//    [bp moveToPoint:CGPointMake((rect.size.width / 2.0) - (arrowWidth / 2.0), _originalSize.height)];
-//    [bp addLineToPoint:CGPointMake((rect.size.width / 2.0) + (arrowWidth / 2.0), _originalSize.height)];
-//    [bp addLineToPoint:CGPointMake(rect.size.width / 2.0, rect.size.height)];
-//    [bp closePath];
-//    
-//    [[UIColor blackColor] set];
-//    
-//    [bp fill];
 }
-
 
 @end

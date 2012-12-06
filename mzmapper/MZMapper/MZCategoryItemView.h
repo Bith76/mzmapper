@@ -17,7 +17,5 @@
 
 @property (nonatomic, assign)   MZCategoryViewController* categoryViewController;
 @property (nonatomic, assign)   NSUInteger itemType;
-//@property (nonatomic, retain)   UIImage*    itemImage;
-//@property (nonatomic, retain)   NSString*   itemName;
 
 @end
