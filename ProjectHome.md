@@ -1,0 +1,1 @@
+This iPad application displays OpenStreetMap data and users can edit these data.
